@@ -4,7 +4,7 @@ import 'base.dart';
 import '../types/lifecycle.dart';
 
 class TxClient extends BaseClient {
-  TxClient({required super.baseUrl, required super.headers});
+  TxClient({required super.baseUrl, required super.headers, required super.logger});
 
   /// Submit a signed base64 encoded transaction to be broadcast
   /// to the specified network. On successful submission, the status
@@ -69,5 +69,36 @@ class TxClient extends BaseClient {
   /// Get the status of the specified transaction and any subsequent IBC or
   /// Axelar transfers if routing assets cross chain. The transaction must
   /// have previously been submitted to either the /submit or /track endpoints.
-  
+  Future<TxStatusResponse> transactionStatus({
+    required String chainID,
+    required String txHash,
+    // Retry Option
+    int maxRetries = 5,
+    int retryInterval = 1000,
+    double backoffMultiplier = 2,
+  }) async {
+    final path = '/v2/tx/status';
+
+    int retries = 0;
+    dynamic lastError;
+
+    while (retries < maxRetries) {
+      try {
+        final queryParams = {
+          'chain_id': chainID,
+          'tx_hash': txHash,
+        };
+
+        final resp = await super.call(path, 'GET', queryParams: queryParams);
+        return TxStatusResponse.fromJson(resp);
+      } catch (error) {
+        lastError = error;
+        retries++;
+        await Future.delayed(Duration(
+            milliseconds:
+                (retryInterval * pow(backoffMultiplier, retries - 1)).toInt()));
+      }
+    }
+    throw lastError;
+  }
 }

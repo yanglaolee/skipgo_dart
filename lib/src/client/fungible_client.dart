@@ -5,7 +5,7 @@ import '../types/unified.dart';
 import '../types/shared.dart';
 
 class FungibleClient extends BaseClient {
-  FungibleClient({required super.baseUrl, required super.headers});
+  FungibleClient({required super.baseUrl, required super.headers, required super.logger});
 
   /// Get supported swap venues.
   Future<List<SwapVenue>> venues({bool? onlyTestnets}) async {

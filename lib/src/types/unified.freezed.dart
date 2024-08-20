@@ -20,12 +20,19 @@ AssetsRequest _$AssetsRequestFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$AssetsRequest {
+  @JsonKey(name: 'chain_ids')
   List<String>? get chainIDs => throw _privateConstructorUsedError;
+  @JsonKey(name: 'native_only')
   bool? get nativeOnly => throw _privateConstructorUsedError;
+  @JsonKey(name: 'include_no_metadata_assets')
   bool? get includeNoMetadataAssets => throw _privateConstructorUsedError;
+  @JsonKey(name: 'include_cw20_assets')
   bool? get includeCW20Assets => throw _privateConstructorUsedError;
+  @JsonKey(name: 'include_evm_assets')
   bool? get includeEvmAssets => throw _privateConstructorUsedError;
+  @JsonKey(name: 'include_svm_assets')
   bool? get includeSvmAssets => throw _privateConstructorUsedError;
+  @JsonKey(name: 'only_testnets')
   bool? get onlyTestnets => throw _privateConstructorUsedError;
 
   /// Serializes this AssetsRequest to a JSON map.
@@ -45,13 +52,14 @@ abstract class $AssetsRequestCopyWith<$Res> {
       _$AssetsRequestCopyWithImpl<$Res, AssetsRequest>;
   @useResult
   $Res call(
-      {List<String>? chainIDs,
-      bool? nativeOnly,
+      {@JsonKey(name: 'chain_ids') List<String>? chainIDs,
+      @JsonKey(name: 'native_only') bool? nativeOnly,
+      @JsonKey(name: 'include_no_metadata_assets')
       bool? includeNoMetadataAssets,
-      bool? includeCW20Assets,
-      bool? includeEvmAssets,
-      bool? includeSvmAssets,
-      bool? onlyTestnets});
+      @JsonKey(name: 'include_cw20_assets') bool? includeCW20Assets,
+      @JsonKey(name: 'include_evm_assets') bool? includeEvmAssets,
+      @JsonKey(name: 'include_svm_assets') bool? includeSvmAssets,
+      @JsonKey(name: 'only_testnets') bool? onlyTestnets});
 }
 
 /// @nodoc
@@ -119,13 +127,14 @@ abstract class _$$AssetsRequestImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {List<String>? chainIDs,
-      bool? nativeOnly,
+      {@JsonKey(name: 'chain_ids') List<String>? chainIDs,
+      @JsonKey(name: 'native_only') bool? nativeOnly,
+      @JsonKey(name: 'include_no_metadata_assets')
       bool? includeNoMetadataAssets,
-      bool? includeCW20Assets,
-      bool? includeEvmAssets,
-      bool? includeSvmAssets,
-      bool? onlyTestnets});
+      @JsonKey(name: 'include_cw20_assets') bool? includeCW20Assets,
+      @JsonKey(name: 'include_evm_assets') bool? includeEvmAssets,
+      @JsonKey(name: 'include_svm_assets') bool? includeSvmAssets,
+      @JsonKey(name: 'only_testnets') bool? onlyTestnets});
 }
 
 /// @nodoc
@@ -186,13 +195,13 @@ class __$$AssetsRequestImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$AssetsRequestImpl implements _AssetsRequest {
   const _$AssetsRequestImpl(
-      {final List<String>? chainIDs,
-      this.nativeOnly,
-      this.includeNoMetadataAssets,
-      this.includeCW20Assets,
-      this.includeEvmAssets,
-      this.includeSvmAssets,
-      this.onlyTestnets})
+      {@JsonKey(name: 'chain_ids') final List<String>? chainIDs,
+      @JsonKey(name: 'native_only') this.nativeOnly,
+      @JsonKey(name: 'include_no_metadata_assets') this.includeNoMetadataAssets,
+      @JsonKey(name: 'include_cw20_assets') this.includeCW20Assets,
+      @JsonKey(name: 'include_evm_assets') this.includeEvmAssets,
+      @JsonKey(name: 'include_svm_assets') this.includeSvmAssets,
+      @JsonKey(name: 'only_testnets') this.onlyTestnets})
       : _chainIDs = chainIDs;
 
   factory _$AssetsRequestImpl.fromJson(Map<String, dynamic> json) =>
@@ -200,6 +209,7 @@ class _$AssetsRequestImpl implements _AssetsRequest {
 
   final List<String>? _chainIDs;
   @override
+  @JsonKey(name: 'chain_ids')
   List<String>? get chainIDs {
     final value = _chainIDs;
     if (value == null) return null;
@@ -209,16 +219,22 @@ class _$AssetsRequestImpl implements _AssetsRequest {
   }
 
   @override
+  @JsonKey(name: 'native_only')
   final bool? nativeOnly;
   @override
+  @JsonKey(name: 'include_no_metadata_assets')
   final bool? includeNoMetadataAssets;
   @override
+  @JsonKey(name: 'include_cw20_assets')
   final bool? includeCW20Assets;
   @override
+  @JsonKey(name: 'include_evm_assets')
   final bool? includeEvmAssets;
   @override
+  @JsonKey(name: 'include_svm_assets')
   final bool? includeSvmAssets;
   @override
+  @JsonKey(name: 'only_testnets')
   final bool? onlyTestnets;
 
   @override
@@ -277,30 +293,39 @@ class _$AssetsRequestImpl implements _AssetsRequest {
 
 abstract class _AssetsRequest implements AssetsRequest {
   const factory _AssetsRequest(
-      {final List<String>? chainIDs,
-      final bool? nativeOnly,
-      final bool? includeNoMetadataAssets,
-      final bool? includeCW20Assets,
-      final bool? includeEvmAssets,
-      final bool? includeSvmAssets,
-      final bool? onlyTestnets}) = _$AssetsRequestImpl;
+          {@JsonKey(name: 'chain_ids') final List<String>? chainIDs,
+          @JsonKey(name: 'native_only') final bool? nativeOnly,
+          @JsonKey(name: 'include_no_metadata_assets')
+          final bool? includeNoMetadataAssets,
+          @JsonKey(name: 'include_cw20_assets') final bool? includeCW20Assets,
+          @JsonKey(name: 'include_evm_assets') final bool? includeEvmAssets,
+          @JsonKey(name: 'include_svm_assets') final bool? includeSvmAssets,
+          @JsonKey(name: 'only_testnets') final bool? onlyTestnets}) =
+      _$AssetsRequestImpl;
 
   factory _AssetsRequest.fromJson(Map<String, dynamic> json) =
       _$AssetsRequestImpl.fromJson;
 
   @override
+  @JsonKey(name: 'chain_ids')
   List<String>? get chainIDs;
   @override
+  @JsonKey(name: 'native_only')
   bool? get nativeOnly;
   @override
+  @JsonKey(name: 'include_no_metadata_assets')
   bool? get includeNoMetadataAssets;
   @override
+  @JsonKey(name: 'include_cw20_assets')
   bool? get includeCW20Assets;
   @override
+  @JsonKey(name: 'include_evm_assets')
   bool? get includeEvmAssets;
   @override
+  @JsonKey(name: 'include_svm_assets')
   bool? get includeSvmAssets;
   @override
+  @JsonKey(name: 'only_testnets')
   bool? get onlyTestnets;
 
   /// Create a copy of AssetsRequest
@@ -318,9 +343,13 @@ AssetsFromSourceRequest _$AssetsFromSourceRequestFromJson(
 
 /// @nodoc
 mixin _$AssetsFromSourceRequest {
+  @JsonKey(name: 'source_asset_denom')
   String get sourceAssetDenom => throw _privateConstructorUsedError;
+  @JsonKey(name: 'source_asset_chain_id')
   String get sourceAssetChainID => throw _privateConstructorUsedError;
+  @JsonKey(name: 'allow_multi_tx')
   bool? get allowMultiTx => throw _privateConstructorUsedError;
+  @JsonKey(name: 'include_cw20_assets')
   bool get includeCW20Assets => throw _privateConstructorUsedError;
 
   /// Serializes this AssetsFromSourceRequest to a JSON map.
@@ -340,10 +369,10 @@ abstract class $AssetsFromSourceRequestCopyWith<$Res> {
       _$AssetsFromSourceRequestCopyWithImpl<$Res, AssetsFromSourceRequest>;
   @useResult
   $Res call(
-      {String sourceAssetDenom,
-      String sourceAssetChainID,
-      bool? allowMultiTx,
-      bool includeCW20Assets});
+      {@JsonKey(name: 'source_asset_denom') String sourceAssetDenom,
+      @JsonKey(name: 'source_asset_chain_id') String sourceAssetChainID,
+      @JsonKey(name: 'allow_multi_tx') bool? allowMultiTx,
+      @JsonKey(name: 'include_cw20_assets') bool includeCW20Assets});
 }
 
 /// @nodoc
@@ -398,10 +427,10 @@ abstract class _$$AssetsFromSourceRequestImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {String sourceAssetDenom,
-      String sourceAssetChainID,
-      bool? allowMultiTx,
-      bool includeCW20Assets});
+      {@JsonKey(name: 'source_asset_denom') String sourceAssetDenom,
+      @JsonKey(name: 'source_asset_chain_id') String sourceAssetChainID,
+      @JsonKey(name: 'allow_multi_tx') bool? allowMultiTx,
+      @JsonKey(name: 'include_cw20_assets') bool includeCW20Assets});
 }
 
 /// @nodoc
@@ -449,21 +478,25 @@ class __$$AssetsFromSourceRequestImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$AssetsFromSourceRequestImpl implements _AssetsFromSourceRequest {
   const _$AssetsFromSourceRequestImpl(
-      {required this.sourceAssetDenom,
-      required this.sourceAssetChainID,
-      this.allowMultiTx,
-      required this.includeCW20Assets});
+      {@JsonKey(name: 'source_asset_denom') required this.sourceAssetDenom,
+      @JsonKey(name: 'source_asset_chain_id') required this.sourceAssetChainID,
+      @JsonKey(name: 'allow_multi_tx') this.allowMultiTx,
+      @JsonKey(name: 'include_cw20_assets') required this.includeCW20Assets});
 
   factory _$AssetsFromSourceRequestImpl.fromJson(Map<String, dynamic> json) =>
       _$$AssetsFromSourceRequestImplFromJson(json);
 
   @override
+  @JsonKey(name: 'source_asset_denom')
   final String sourceAssetDenom;
   @override
+  @JsonKey(name: 'source_asset_chain_id')
   final String sourceAssetChainID;
   @override
+  @JsonKey(name: 'allow_multi_tx')
   final bool? allowMultiTx;
   @override
+  @JsonKey(name: 'include_cw20_assets')
   final bool includeCW20Assets;
 
   @override
@@ -510,21 +543,28 @@ class _$AssetsFromSourceRequestImpl implements _AssetsFromSourceRequest {
 
 abstract class _AssetsFromSourceRequest implements AssetsFromSourceRequest {
   const factory _AssetsFromSourceRequest(
-      {required final String sourceAssetDenom,
+      {@JsonKey(name: 'source_asset_denom')
+      required final String sourceAssetDenom,
+      @JsonKey(name: 'source_asset_chain_id')
       required final String sourceAssetChainID,
-      final bool? allowMultiTx,
+      @JsonKey(name: 'allow_multi_tx') final bool? allowMultiTx,
+      @JsonKey(name: 'include_cw20_assets')
       required final bool includeCW20Assets}) = _$AssetsFromSourceRequestImpl;
 
   factory _AssetsFromSourceRequest.fromJson(Map<String, dynamic> json) =
       _$AssetsFromSourceRequestImpl.fromJson;
 
   @override
+  @JsonKey(name: 'source_asset_denom')
   String get sourceAssetDenom;
   @override
+  @JsonKey(name: 'source_asset_chain_id')
   String get sourceAssetChainID;
   @override
+  @JsonKey(name: 'allow_multi_tx')
   bool? get allowMultiTx;
   @override
+  @JsonKey(name: 'include_cw20_assets')
   bool get includeCW20Assets;
 
   /// Create a copy of AssetsFromSourceRequest
@@ -542,9 +582,13 @@ AssetRecommendationRequest _$AssetRecommendationRequestFromJson(
 
 /// @nodoc
 mixin _$AssetRecommendationRequest {
+  @JsonKey(name: 'source_asset_denom')
   String get sourceAssetDenom => throw _privateConstructorUsedError;
+  @JsonKey(name: 'source_asset_chain_id')
   String get sourceAssetChainID => throw _privateConstructorUsedError;
+  @JsonKey(name: 'dest_chain_id')
   String get destChainID => throw _privateConstructorUsedError;
+  @JsonKey(name: 'reason')
   Reason? get reason => throw _privateConstructorUsedError;
 
   /// Serializes this AssetRecommendationRequest to a JSON map.
@@ -565,10 +609,10 @@ abstract class $AssetRecommendationRequestCopyWith<$Res> {
           AssetRecommendationRequest>;
   @useResult
   $Res call(
-      {String sourceAssetDenom,
-      String sourceAssetChainID,
-      String destChainID,
-      Reason? reason});
+      {@JsonKey(name: 'source_asset_denom') String sourceAssetDenom,
+      @JsonKey(name: 'source_asset_chain_id') String sourceAssetChainID,
+      @JsonKey(name: 'dest_chain_id') String destChainID,
+      @JsonKey(name: 'reason') Reason? reason});
 }
 
 /// @nodoc
@@ -623,10 +667,10 @@ abstract class _$$AssetRecommendationRequestImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {String sourceAssetDenom,
-      String sourceAssetChainID,
-      String destChainID,
-      Reason? reason});
+      {@JsonKey(name: 'source_asset_denom') String sourceAssetDenom,
+      @JsonKey(name: 'source_asset_chain_id') String sourceAssetChainID,
+      @JsonKey(name: 'dest_chain_id') String destChainID,
+      @JsonKey(name: 'reason') Reason? reason});
 }
 
 /// @nodoc
@@ -674,22 +718,26 @@ class __$$AssetRecommendationRequestImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$AssetRecommendationRequestImpl implements _AssetRecommendationRequest {
   const _$AssetRecommendationRequestImpl(
-      {required this.sourceAssetDenom,
-      required this.sourceAssetChainID,
-      required this.destChainID,
-      this.reason});
+      {@JsonKey(name: 'source_asset_denom') required this.sourceAssetDenom,
+      @JsonKey(name: 'source_asset_chain_id') required this.sourceAssetChainID,
+      @JsonKey(name: 'dest_chain_id') required this.destChainID,
+      @JsonKey(name: 'reason') this.reason});
 
   factory _$AssetRecommendationRequestImpl.fromJson(
           Map<String, dynamic> json) =>
       _$$AssetRecommendationRequestImplFromJson(json);
 
   @override
+  @JsonKey(name: 'source_asset_denom')
   final String sourceAssetDenom;
   @override
+  @JsonKey(name: 'source_asset_chain_id')
   final String sourceAssetChainID;
   @override
+  @JsonKey(name: 'dest_chain_id')
   final String destChainID;
   @override
+  @JsonKey(name: 'reason')
   final Reason? reason;
 
   @override
@@ -736,21 +784,28 @@ class _$AssetRecommendationRequestImpl implements _AssetRecommendationRequest {
 abstract class _AssetRecommendationRequest
     implements AssetRecommendationRequest {
   const factory _AssetRecommendationRequest(
-      {required final String sourceAssetDenom,
-      required final String sourceAssetChainID,
-      required final String destChainID,
-      final Reason? reason}) = _$AssetRecommendationRequestImpl;
+          {@JsonKey(name: 'source_asset_denom')
+          required final String sourceAssetDenom,
+          @JsonKey(name: 'source_asset_chain_id')
+          required final String sourceAssetChainID,
+          @JsonKey(name: 'dest_chain_id') required final String destChainID,
+          @JsonKey(name: 'reason') final Reason? reason}) =
+      _$AssetRecommendationRequestImpl;
 
   factory _AssetRecommendationRequest.fromJson(Map<String, dynamic> json) =
       _$AssetRecommendationRequestImpl.fromJson;
 
   @override
+  @JsonKey(name: 'source_asset_denom')
   String get sourceAssetDenom;
   @override
+  @JsonKey(name: 'source_asset_chain_id')
   String get sourceAssetChainID;
   @override
+  @JsonKey(name: 'dest_chain_id')
   String get destChainID;
   @override
+  @JsonKey(name: 'reason')
   Reason? get reason;
 
   /// Create a copy of AssetRecommendationRequest
@@ -1317,6 +1372,7 @@ RecommendAssetsResponse _$RecommendAssetsResponseFromJson(
 mixin _$RecommendAssetsResponse {
   List<AssetRecommendation> get recommendations =>
       throw _privateConstructorUsedError;
+  @JsonKey(name: 'recommendation_entries')
   List<RecommendationEntry> get recommendationEntries =>
       throw _privateConstructorUsedError;
 
@@ -1338,6 +1394,7 @@ abstract class $RecommendAssetsResponseCopyWith<$Res> {
   @useResult
   $Res call(
       {List<AssetRecommendation> recommendations,
+      @JsonKey(name: 'recommendation_entries')
       List<RecommendationEntry> recommendationEntries});
 }
 
@@ -1384,6 +1441,7 @@ abstract class _$$RecommendAssetsResponseImplCopyWith<$Res>
   @useResult
   $Res call(
       {List<AssetRecommendation> recommendations,
+      @JsonKey(name: 'recommendation_entries')
       List<RecommendationEntry> recommendationEntries});
 }
 
@@ -1423,6 +1481,7 @@ class __$$RecommendAssetsResponseImplCopyWithImpl<$Res>
 class _$RecommendAssetsResponseImpl implements _RecommendAssetsResponse {
   const _$RecommendAssetsResponseImpl(
       {required final List<AssetRecommendation> recommendations,
+      @JsonKey(name: 'recommendation_entries')
       required final List<RecommendationEntry> recommendationEntries})
       : _recommendations = recommendations,
         _recommendationEntries = recommendationEntries;
@@ -1440,6 +1499,7 @@ class _$RecommendAssetsResponseImpl implements _RecommendAssetsResponse {
 
   final List<RecommendationEntry> _recommendationEntries;
   @override
+  @JsonKey(name: 'recommendation_entries')
   List<RecommendationEntry> get recommendationEntries {
     if (_recommendationEntries is EqualUnmodifiableListView)
       return _recommendationEntries;
@@ -1490,6 +1550,7 @@ class _$RecommendAssetsResponseImpl implements _RecommendAssetsResponse {
 abstract class _RecommendAssetsResponse implements RecommendAssetsResponse {
   const factory _RecommendAssetsResponse(
           {required final List<AssetRecommendation> recommendations,
+          @JsonKey(name: 'recommendation_entries')
           required final List<RecommendationEntry> recommendationEntries}) =
       _$RecommendAssetsResponseImpl;
 
@@ -1499,6 +1560,7 @@ abstract class _RecommendAssetsResponse implements RecommendAssetsResponse {
   @override
   List<AssetRecommendation> get recommendations;
   @override
+  @JsonKey(name: 'recommendation_entries')
   List<RecommendationEntry> get recommendationEntries;
 
   /// Create a copy of RecommendAssetsResponse
@@ -1526,27 +1588,45 @@ Tx _$TxFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Tx {
+  @JsonKey(name: 'operations_indices')
   List<int> get operationsIndices => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(CosmosTx cosmosTx, List<int> operationsIndices)
+    required TResult Function(@JsonKey(name: 'cosmos_tx') CosmosTx cosmosTx,
+            @JsonKey(name: 'operations_indices') List<int> operationsIndices)
         cosmosTx,
-    required TResult Function(EvmTx evmTx, List<int> operationsIndices) evmTx,
-    required TResult Function(SvmTx svmTx, List<int> operationsIndices) svmTx,
+    required TResult Function(@JsonKey(name: 'evm_tx') EvmTx evmTx,
+            @JsonKey(name: 'operations_indices') List<int> operationsIndices)
+        evmTx,
+    required TResult Function(@JsonKey(name: 'svm_tx') SvmTx svmTx,
+            @JsonKey(name: 'operations_indices') List<int> operationsIndices)
+        svmTx,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(CosmosTx cosmosTx, List<int> operationsIndices)? cosmosTx,
-    TResult? Function(EvmTx evmTx, List<int> operationsIndices)? evmTx,
-    TResult? Function(SvmTx svmTx, List<int> operationsIndices)? svmTx,
+    TResult? Function(@JsonKey(name: 'cosmos_tx') CosmosTx cosmosTx,
+            @JsonKey(name: 'operations_indices') List<int> operationsIndices)?
+        cosmosTx,
+    TResult? Function(@JsonKey(name: 'evm_tx') EvmTx evmTx,
+            @JsonKey(name: 'operations_indices') List<int> operationsIndices)?
+        evmTx,
+    TResult? Function(@JsonKey(name: 'svm_tx') SvmTx svmTx,
+            @JsonKey(name: 'operations_indices') List<int> operationsIndices)?
+        svmTx,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(CosmosTx cosmosTx, List<int> operationsIndices)? cosmosTx,
-    TResult Function(EvmTx evmTx, List<int> operationsIndices)? evmTx,
-    TResult Function(SvmTx svmTx, List<int> operationsIndices)? svmTx,
+    TResult Function(@JsonKey(name: 'cosmos_tx') CosmosTx cosmosTx,
+            @JsonKey(name: 'operations_indices') List<int> operationsIndices)?
+        cosmosTx,
+    TResult Function(@JsonKey(name: 'evm_tx') EvmTx evmTx,
+            @JsonKey(name: 'operations_indices') List<int> operationsIndices)?
+        evmTx,
+    TResult Function(@JsonKey(name: 'svm_tx') SvmTx svmTx,
+            @JsonKey(name: 'operations_indices') List<int> operationsIndices)?
+        svmTx,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -1587,7 +1667,7 @@ abstract class $TxCopyWith<$Res> {
   factory $TxCopyWith(Tx value, $Res Function(Tx) then) =
       _$TxCopyWithImpl<$Res, Tx>;
   @useResult
-  $Res call({List<int> operationsIndices});
+  $Res call({@JsonKey(name: 'operations_indices') List<int> operationsIndices});
 }
 
 /// @nodoc
@@ -1622,7 +1702,9 @@ abstract class _$$CosmosTxImplCopyWith<$Res> implements $TxCopyWith<$Res> {
       __$$CosmosTxImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({CosmosTx cosmosTx, List<int> operationsIndices});
+  $Res call(
+      {@JsonKey(name: 'cosmos_tx') CosmosTx cosmosTx,
+      @JsonKey(name: 'operations_indices') List<int> operationsIndices});
 
   $CosmosTxCopyWith<$Res> get cosmosTx;
 }
@@ -1670,7 +1752,8 @@ class __$$CosmosTxImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$CosmosTxImpl implements _CosmosTx {
   const _$CosmosTxImpl(
-      {required this.cosmosTx,
+      {@JsonKey(name: 'cosmos_tx') required this.cosmosTx,
+      @JsonKey(name: 'operations_indices')
       required final List<int> operationsIndices,
       final String? $type})
       : _operationsIndices = operationsIndices,
@@ -1680,9 +1763,11 @@ class _$CosmosTxImpl implements _CosmosTx {
       _$$CosmosTxImplFromJson(json);
 
   @override
+  @JsonKey(name: 'cosmos_tx')
   final CosmosTx cosmosTx;
   final List<int> _operationsIndices;
   @override
+  @JsonKey(name: 'operations_indices')
   List<int> get operationsIndices {
     if (_operationsIndices is EqualUnmodifiableListView)
       return _operationsIndices;
@@ -1725,10 +1810,15 @@ class _$CosmosTxImpl implements _CosmosTx {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(CosmosTx cosmosTx, List<int> operationsIndices)
+    required TResult Function(@JsonKey(name: 'cosmos_tx') CosmosTx cosmosTx,
+            @JsonKey(name: 'operations_indices') List<int> operationsIndices)
         cosmosTx,
-    required TResult Function(EvmTx evmTx, List<int> operationsIndices) evmTx,
-    required TResult Function(SvmTx svmTx, List<int> operationsIndices) svmTx,
+    required TResult Function(@JsonKey(name: 'evm_tx') EvmTx evmTx,
+            @JsonKey(name: 'operations_indices') List<int> operationsIndices)
+        evmTx,
+    required TResult Function(@JsonKey(name: 'svm_tx') SvmTx svmTx,
+            @JsonKey(name: 'operations_indices') List<int> operationsIndices)
+        svmTx,
   }) {
     return cosmosTx(this.cosmosTx, operationsIndices);
   }
@@ -1736,9 +1826,15 @@ class _$CosmosTxImpl implements _CosmosTx {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(CosmosTx cosmosTx, List<int> operationsIndices)? cosmosTx,
-    TResult? Function(EvmTx evmTx, List<int> operationsIndices)? evmTx,
-    TResult? Function(SvmTx svmTx, List<int> operationsIndices)? svmTx,
+    TResult? Function(@JsonKey(name: 'cosmos_tx') CosmosTx cosmosTx,
+            @JsonKey(name: 'operations_indices') List<int> operationsIndices)?
+        cosmosTx,
+    TResult? Function(@JsonKey(name: 'evm_tx') EvmTx evmTx,
+            @JsonKey(name: 'operations_indices') List<int> operationsIndices)?
+        evmTx,
+    TResult? Function(@JsonKey(name: 'svm_tx') SvmTx svmTx,
+            @JsonKey(name: 'operations_indices') List<int> operationsIndices)?
+        svmTx,
   }) {
     return cosmosTx?.call(this.cosmosTx, operationsIndices);
   }
@@ -1746,9 +1842,15 @@ class _$CosmosTxImpl implements _CosmosTx {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(CosmosTx cosmosTx, List<int> operationsIndices)? cosmosTx,
-    TResult Function(EvmTx evmTx, List<int> operationsIndices)? evmTx,
-    TResult Function(SvmTx svmTx, List<int> operationsIndices)? svmTx,
+    TResult Function(@JsonKey(name: 'cosmos_tx') CosmosTx cosmosTx,
+            @JsonKey(name: 'operations_indices') List<int> operationsIndices)?
+        cosmosTx,
+    TResult Function(@JsonKey(name: 'evm_tx') EvmTx evmTx,
+            @JsonKey(name: 'operations_indices') List<int> operationsIndices)?
+        evmTx,
+    TResult Function(@JsonKey(name: 'svm_tx') SvmTx svmTx,
+            @JsonKey(name: 'operations_indices') List<int> operationsIndices)?
+        svmTx,
     required TResult orElse(),
   }) {
     if (cosmosTx != null) {
@@ -1801,14 +1903,17 @@ class _$CosmosTxImpl implements _CosmosTx {
 
 abstract class _CosmosTx implements Tx {
   const factory _CosmosTx(
-      {required final CosmosTx cosmosTx,
+      {@JsonKey(name: 'cosmos_tx') required final CosmosTx cosmosTx,
+      @JsonKey(name: 'operations_indices')
       required final List<int> operationsIndices}) = _$CosmosTxImpl;
 
   factory _CosmosTx.fromJson(Map<String, dynamic> json) =
       _$CosmosTxImpl.fromJson;
 
+  @JsonKey(name: 'cosmos_tx')
   CosmosTx get cosmosTx;
   @override
+  @JsonKey(name: 'operations_indices')
   List<int> get operationsIndices;
 
   /// Create a copy of Tx
@@ -1826,7 +1931,9 @@ abstract class _$$EvmTxImplCopyWith<$Res> implements $TxCopyWith<$Res> {
       __$$EvmTxImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({EvmTx evmTx, List<int> operationsIndices});
+  $Res call(
+      {@JsonKey(name: 'evm_tx') EvmTx evmTx,
+      @JsonKey(name: 'operations_indices') List<int> operationsIndices});
 
   $EvmTxCopyWith<$Res> get evmTx;
 }
@@ -1874,7 +1981,8 @@ class __$$EvmTxImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$EvmTxImpl implements _EvmTx {
   const _$EvmTxImpl(
-      {required this.evmTx,
+      {@JsonKey(name: 'evm_tx') required this.evmTx,
+      @JsonKey(name: 'operations_indices')
       required final List<int> operationsIndices,
       final String? $type})
       : _operationsIndices = operationsIndices,
@@ -1884,9 +1992,11 @@ class _$EvmTxImpl implements _EvmTx {
       _$$EvmTxImplFromJson(json);
 
   @override
+  @JsonKey(name: 'evm_tx')
   final EvmTx evmTx;
   final List<int> _operationsIndices;
   @override
+  @JsonKey(name: 'operations_indices')
   List<int> get operationsIndices {
     if (_operationsIndices is EqualUnmodifiableListView)
       return _operationsIndices;
@@ -1928,10 +2038,15 @@ class _$EvmTxImpl implements _EvmTx {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(CosmosTx cosmosTx, List<int> operationsIndices)
+    required TResult Function(@JsonKey(name: 'cosmos_tx') CosmosTx cosmosTx,
+            @JsonKey(name: 'operations_indices') List<int> operationsIndices)
         cosmosTx,
-    required TResult Function(EvmTx evmTx, List<int> operationsIndices) evmTx,
-    required TResult Function(SvmTx svmTx, List<int> operationsIndices) svmTx,
+    required TResult Function(@JsonKey(name: 'evm_tx') EvmTx evmTx,
+            @JsonKey(name: 'operations_indices') List<int> operationsIndices)
+        evmTx,
+    required TResult Function(@JsonKey(name: 'svm_tx') SvmTx svmTx,
+            @JsonKey(name: 'operations_indices') List<int> operationsIndices)
+        svmTx,
   }) {
     return evmTx(this.evmTx, operationsIndices);
   }
@@ -1939,9 +2054,15 @@ class _$EvmTxImpl implements _EvmTx {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(CosmosTx cosmosTx, List<int> operationsIndices)? cosmosTx,
-    TResult? Function(EvmTx evmTx, List<int> operationsIndices)? evmTx,
-    TResult? Function(SvmTx svmTx, List<int> operationsIndices)? svmTx,
+    TResult? Function(@JsonKey(name: 'cosmos_tx') CosmosTx cosmosTx,
+            @JsonKey(name: 'operations_indices') List<int> operationsIndices)?
+        cosmosTx,
+    TResult? Function(@JsonKey(name: 'evm_tx') EvmTx evmTx,
+            @JsonKey(name: 'operations_indices') List<int> operationsIndices)?
+        evmTx,
+    TResult? Function(@JsonKey(name: 'svm_tx') SvmTx svmTx,
+            @JsonKey(name: 'operations_indices') List<int> operationsIndices)?
+        svmTx,
   }) {
     return evmTx?.call(this.evmTx, operationsIndices);
   }
@@ -1949,9 +2070,15 @@ class _$EvmTxImpl implements _EvmTx {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(CosmosTx cosmosTx, List<int> operationsIndices)? cosmosTx,
-    TResult Function(EvmTx evmTx, List<int> operationsIndices)? evmTx,
-    TResult Function(SvmTx svmTx, List<int> operationsIndices)? svmTx,
+    TResult Function(@JsonKey(name: 'cosmos_tx') CosmosTx cosmosTx,
+            @JsonKey(name: 'operations_indices') List<int> operationsIndices)?
+        cosmosTx,
+    TResult Function(@JsonKey(name: 'evm_tx') EvmTx evmTx,
+            @JsonKey(name: 'operations_indices') List<int> operationsIndices)?
+        evmTx,
+    TResult Function(@JsonKey(name: 'svm_tx') SvmTx svmTx,
+            @JsonKey(name: 'operations_indices') List<int> operationsIndices)?
+        svmTx,
     required TResult orElse(),
   }) {
     if (evmTx != null) {
@@ -2004,13 +2131,16 @@ class _$EvmTxImpl implements _EvmTx {
 
 abstract class _EvmTx implements Tx {
   const factory _EvmTx(
-      {required final EvmTx evmTx,
+      {@JsonKey(name: 'evm_tx') required final EvmTx evmTx,
+      @JsonKey(name: 'operations_indices')
       required final List<int> operationsIndices}) = _$EvmTxImpl;
 
   factory _EvmTx.fromJson(Map<String, dynamic> json) = _$EvmTxImpl.fromJson;
 
+  @JsonKey(name: 'evm_tx')
   EvmTx get evmTx;
   @override
+  @JsonKey(name: 'operations_indices')
   List<int> get operationsIndices;
 
   /// Create a copy of Tx
@@ -2028,7 +2158,9 @@ abstract class _$$SvmTxImplCopyWith<$Res> implements $TxCopyWith<$Res> {
       __$$SvmTxImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({SvmTx svmTx, List<int> operationsIndices});
+  $Res call(
+      {@JsonKey(name: 'svm_tx') SvmTx svmTx,
+      @JsonKey(name: 'operations_indices') List<int> operationsIndices});
 
   $SvmTxCopyWith<$Res> get svmTx;
 }
@@ -2076,7 +2208,8 @@ class __$$SvmTxImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$SvmTxImpl implements _SvmTx {
   const _$SvmTxImpl(
-      {required this.svmTx,
+      {@JsonKey(name: 'svm_tx') required this.svmTx,
+      @JsonKey(name: 'operations_indices')
       required final List<int> operationsIndices,
       final String? $type})
       : _operationsIndices = operationsIndices,
@@ -2086,9 +2219,11 @@ class _$SvmTxImpl implements _SvmTx {
       _$$SvmTxImplFromJson(json);
 
   @override
+  @JsonKey(name: 'svm_tx')
   final SvmTx svmTx;
   final List<int> _operationsIndices;
   @override
+  @JsonKey(name: 'operations_indices')
   List<int> get operationsIndices {
     if (_operationsIndices is EqualUnmodifiableListView)
       return _operationsIndices;
@@ -2130,10 +2265,15 @@ class _$SvmTxImpl implements _SvmTx {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(CosmosTx cosmosTx, List<int> operationsIndices)
+    required TResult Function(@JsonKey(name: 'cosmos_tx') CosmosTx cosmosTx,
+            @JsonKey(name: 'operations_indices') List<int> operationsIndices)
         cosmosTx,
-    required TResult Function(EvmTx evmTx, List<int> operationsIndices) evmTx,
-    required TResult Function(SvmTx svmTx, List<int> operationsIndices) svmTx,
+    required TResult Function(@JsonKey(name: 'evm_tx') EvmTx evmTx,
+            @JsonKey(name: 'operations_indices') List<int> operationsIndices)
+        evmTx,
+    required TResult Function(@JsonKey(name: 'svm_tx') SvmTx svmTx,
+            @JsonKey(name: 'operations_indices') List<int> operationsIndices)
+        svmTx,
   }) {
     return svmTx(this.svmTx, operationsIndices);
   }
@@ -2141,9 +2281,15 @@ class _$SvmTxImpl implements _SvmTx {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(CosmosTx cosmosTx, List<int> operationsIndices)? cosmosTx,
-    TResult? Function(EvmTx evmTx, List<int> operationsIndices)? evmTx,
-    TResult? Function(SvmTx svmTx, List<int> operationsIndices)? svmTx,
+    TResult? Function(@JsonKey(name: 'cosmos_tx') CosmosTx cosmosTx,
+            @JsonKey(name: 'operations_indices') List<int> operationsIndices)?
+        cosmosTx,
+    TResult? Function(@JsonKey(name: 'evm_tx') EvmTx evmTx,
+            @JsonKey(name: 'operations_indices') List<int> operationsIndices)?
+        evmTx,
+    TResult? Function(@JsonKey(name: 'svm_tx') SvmTx svmTx,
+            @JsonKey(name: 'operations_indices') List<int> operationsIndices)?
+        svmTx,
   }) {
     return svmTx?.call(this.svmTx, operationsIndices);
   }
@@ -2151,9 +2297,15 @@ class _$SvmTxImpl implements _SvmTx {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(CosmosTx cosmosTx, List<int> operationsIndices)? cosmosTx,
-    TResult Function(EvmTx evmTx, List<int> operationsIndices)? evmTx,
-    TResult Function(SvmTx svmTx, List<int> operationsIndices)? svmTx,
+    TResult Function(@JsonKey(name: 'cosmos_tx') CosmosTx cosmosTx,
+            @JsonKey(name: 'operations_indices') List<int> operationsIndices)?
+        cosmosTx,
+    TResult Function(@JsonKey(name: 'evm_tx') EvmTx evmTx,
+            @JsonKey(name: 'operations_indices') List<int> operationsIndices)?
+        evmTx,
+    TResult Function(@JsonKey(name: 'svm_tx') SvmTx svmTx,
+            @JsonKey(name: 'operations_indices') List<int> operationsIndices)?
+        svmTx,
     required TResult orElse(),
   }) {
     if (svmTx != null) {
@@ -2206,13 +2358,16 @@ class _$SvmTxImpl implements _SvmTx {
 
 abstract class _SvmTx implements Tx {
   const factory _SvmTx(
-      {required final SvmTx svmTx,
+      {@JsonKey(name: 'svm_tx') required final SvmTx svmTx,
+      @JsonKey(name: 'operations_indices')
       required final List<int> operationsIndices}) = _$SvmTxImpl;
 
   factory _SvmTx.fromJson(Map<String, dynamic> json) = _$SvmTxImpl.fromJson;
 
+  @JsonKey(name: 'svm_tx')
   SvmTx get svmTx;
   @override
+  @JsonKey(name: 'operations_indices')
   List<int> get operationsIndices;
 
   /// Create a copy of Tx
@@ -2242,23 +2397,29 @@ Msg _$MsgFromJson(Map<String, dynamic> json) {
 mixin _$Msg {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(MultiChainMsg multiChainMsg) multiChainMsg,
-    required TResult Function(EvmTx evmTx) evmTx,
-    required TResult Function(SvmTx svmTx) svmTx,
+    required TResult Function(
+            @JsonKey(name: 'multi_chain_msg') MultiChainMsg multiChainMsg)
+        multiChainMsg,
+    required TResult Function(@JsonKey(name: 'evm_tx') EvmTx evmTx) evmTx,
+    required TResult Function(@JsonKey(name: 'svm_tx') SvmTx svmTx) svmTx,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(MultiChainMsg multiChainMsg)? multiChainMsg,
-    TResult? Function(EvmTx evmTx)? evmTx,
-    TResult? Function(SvmTx svmTx)? svmTx,
+    TResult? Function(
+            @JsonKey(name: 'multi_chain_msg') MultiChainMsg multiChainMsg)?
+        multiChainMsg,
+    TResult? Function(@JsonKey(name: 'evm_tx') EvmTx evmTx)? evmTx,
+    TResult? Function(@JsonKey(name: 'svm_tx') SvmTx svmTx)? svmTx,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(MultiChainMsg multiChainMsg)? multiChainMsg,
-    TResult Function(EvmTx evmTx)? evmTx,
-    TResult Function(SvmTx svmTx)? svmTx,
+    TResult Function(
+            @JsonKey(name: 'multi_chain_msg') MultiChainMsg multiChainMsg)?
+        multiChainMsg,
+    TResult Function(@JsonKey(name: 'evm_tx') EvmTx evmTx)? evmTx,
+    TResult Function(@JsonKey(name: 'svm_tx') SvmTx svmTx)? svmTx,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -2314,7 +2475,7 @@ abstract class _$$MsgMultiChainMsgImplCopyWith<$Res> {
           $Res Function(_$MsgMultiChainMsgImpl) then) =
       __$$MsgMultiChainMsgImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({MultiChainMsg multiChainMsg});
+  $Res call({@JsonKey(name: 'multi_chain_msg') MultiChainMsg multiChainMsg});
 
   $MultiChainMsgCopyWith<$Res> get multiChainMsg;
 }
@@ -2356,13 +2517,16 @@ class __$$MsgMultiChainMsgImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$MsgMultiChainMsgImpl implements _MsgMultiChainMsg {
-  const _$MsgMultiChainMsgImpl(this.multiChainMsg, {final String? $type})
+  const _$MsgMultiChainMsgImpl(
+      @JsonKey(name: 'multi_chain_msg') this.multiChainMsg,
+      {final String? $type})
       : $type = $type ?? 'multiChainMsg';
 
   factory _$MsgMultiChainMsgImpl.fromJson(Map<String, dynamic> json) =>
       _$$MsgMultiChainMsgImplFromJson(json);
 
   @override
+  @JsonKey(name: 'multi_chain_msg')
   final MultiChainMsg multiChainMsg;
 
   @JsonKey(name: 'runtimeType')
@@ -2398,9 +2562,11 @@ class _$MsgMultiChainMsgImpl implements _MsgMultiChainMsg {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(MultiChainMsg multiChainMsg) multiChainMsg,
-    required TResult Function(EvmTx evmTx) evmTx,
-    required TResult Function(SvmTx svmTx) svmTx,
+    required TResult Function(
+            @JsonKey(name: 'multi_chain_msg') MultiChainMsg multiChainMsg)
+        multiChainMsg,
+    required TResult Function(@JsonKey(name: 'evm_tx') EvmTx evmTx) evmTx,
+    required TResult Function(@JsonKey(name: 'svm_tx') SvmTx svmTx) svmTx,
   }) {
     return multiChainMsg(this.multiChainMsg);
   }
@@ -2408,9 +2574,11 @@ class _$MsgMultiChainMsgImpl implements _MsgMultiChainMsg {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(MultiChainMsg multiChainMsg)? multiChainMsg,
-    TResult? Function(EvmTx evmTx)? evmTx,
-    TResult? Function(SvmTx svmTx)? svmTx,
+    TResult? Function(
+            @JsonKey(name: 'multi_chain_msg') MultiChainMsg multiChainMsg)?
+        multiChainMsg,
+    TResult? Function(@JsonKey(name: 'evm_tx') EvmTx evmTx)? evmTx,
+    TResult? Function(@JsonKey(name: 'svm_tx') SvmTx svmTx)? svmTx,
   }) {
     return multiChainMsg?.call(this.multiChainMsg);
   }
@@ -2418,9 +2586,11 @@ class _$MsgMultiChainMsgImpl implements _MsgMultiChainMsg {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(MultiChainMsg multiChainMsg)? multiChainMsg,
-    TResult Function(EvmTx evmTx)? evmTx,
-    TResult Function(SvmTx svmTx)? svmTx,
+    TResult Function(
+            @JsonKey(name: 'multi_chain_msg') MultiChainMsg multiChainMsg)?
+        multiChainMsg,
+    TResult Function(@JsonKey(name: 'evm_tx') EvmTx evmTx)? evmTx,
+    TResult Function(@JsonKey(name: 'svm_tx') SvmTx svmTx)? svmTx,
     required TResult orElse(),
   }) {
     if (multiChainMsg != null) {
@@ -2472,12 +2642,14 @@ class _$MsgMultiChainMsgImpl implements _MsgMultiChainMsg {
 }
 
 abstract class _MsgMultiChainMsg implements Msg {
-  const factory _MsgMultiChainMsg(final MultiChainMsg multiChainMsg) =
+  const factory _MsgMultiChainMsg(
+          @JsonKey(name: 'multi_chain_msg') final MultiChainMsg multiChainMsg) =
       _$MsgMultiChainMsgImpl;
 
   factory _MsgMultiChainMsg.fromJson(Map<String, dynamic> json) =
       _$MsgMultiChainMsgImpl.fromJson;
 
+  @JsonKey(name: 'multi_chain_msg')
   MultiChainMsg get multiChainMsg;
 
   /// Create a copy of Msg
@@ -2493,7 +2665,7 @@ abstract class _$$MsgEvmTxImplCopyWith<$Res> {
           _$MsgEvmTxImpl value, $Res Function(_$MsgEvmTxImpl) then) =
       __$$MsgEvmTxImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({EvmTx evmTx});
+  $Res call({@JsonKey(name: 'evm_tx') EvmTx evmTx});
 
   $EvmTxCopyWith<$Res> get evmTx;
 }
@@ -2535,13 +2707,15 @@ class __$$MsgEvmTxImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$MsgEvmTxImpl implements _MsgEvmTx {
-  const _$MsgEvmTxImpl(this.evmTx, {final String? $type})
+  const _$MsgEvmTxImpl(@JsonKey(name: 'evm_tx') this.evmTx,
+      {final String? $type})
       : $type = $type ?? 'evmTx';
 
   factory _$MsgEvmTxImpl.fromJson(Map<String, dynamic> json) =>
       _$$MsgEvmTxImplFromJson(json);
 
   @override
+  @JsonKey(name: 'evm_tx')
   final EvmTx evmTx;
 
   @JsonKey(name: 'runtimeType')
@@ -2575,9 +2749,11 @@ class _$MsgEvmTxImpl implements _MsgEvmTx {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(MultiChainMsg multiChainMsg) multiChainMsg,
-    required TResult Function(EvmTx evmTx) evmTx,
-    required TResult Function(SvmTx svmTx) svmTx,
+    required TResult Function(
+            @JsonKey(name: 'multi_chain_msg') MultiChainMsg multiChainMsg)
+        multiChainMsg,
+    required TResult Function(@JsonKey(name: 'evm_tx') EvmTx evmTx) evmTx,
+    required TResult Function(@JsonKey(name: 'svm_tx') SvmTx svmTx) svmTx,
   }) {
     return evmTx(this.evmTx);
   }
@@ -2585,9 +2761,11 @@ class _$MsgEvmTxImpl implements _MsgEvmTx {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(MultiChainMsg multiChainMsg)? multiChainMsg,
-    TResult? Function(EvmTx evmTx)? evmTx,
-    TResult? Function(SvmTx svmTx)? svmTx,
+    TResult? Function(
+            @JsonKey(name: 'multi_chain_msg') MultiChainMsg multiChainMsg)?
+        multiChainMsg,
+    TResult? Function(@JsonKey(name: 'evm_tx') EvmTx evmTx)? evmTx,
+    TResult? Function(@JsonKey(name: 'svm_tx') SvmTx svmTx)? svmTx,
   }) {
     return evmTx?.call(this.evmTx);
   }
@@ -2595,9 +2773,11 @@ class _$MsgEvmTxImpl implements _MsgEvmTx {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(MultiChainMsg multiChainMsg)? multiChainMsg,
-    TResult Function(EvmTx evmTx)? evmTx,
-    TResult Function(SvmTx svmTx)? svmTx,
+    TResult Function(
+            @JsonKey(name: 'multi_chain_msg') MultiChainMsg multiChainMsg)?
+        multiChainMsg,
+    TResult Function(@JsonKey(name: 'evm_tx') EvmTx evmTx)? evmTx,
+    TResult Function(@JsonKey(name: 'svm_tx') SvmTx svmTx)? svmTx,
     required TResult orElse(),
   }) {
     if (evmTx != null) {
@@ -2649,11 +2829,13 @@ class _$MsgEvmTxImpl implements _MsgEvmTx {
 }
 
 abstract class _MsgEvmTx implements Msg {
-  const factory _MsgEvmTx(final EvmTx evmTx) = _$MsgEvmTxImpl;
+  const factory _MsgEvmTx(@JsonKey(name: 'evm_tx') final EvmTx evmTx) =
+      _$MsgEvmTxImpl;
 
   factory _MsgEvmTx.fromJson(Map<String, dynamic> json) =
       _$MsgEvmTxImpl.fromJson;
 
+  @JsonKey(name: 'evm_tx')
   EvmTx get evmTx;
 
   /// Create a copy of Msg
@@ -2669,7 +2851,7 @@ abstract class _$$MsgSvmTxImplCopyWith<$Res> {
           _$MsgSvmTxImpl value, $Res Function(_$MsgSvmTxImpl) then) =
       __$$MsgSvmTxImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({SvmTx svmTx});
+  $Res call({@JsonKey(name: 'svm_tx') SvmTx svmTx});
 
   $SvmTxCopyWith<$Res> get svmTx;
 }
@@ -2711,13 +2893,15 @@ class __$$MsgSvmTxImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$MsgSvmTxImpl implements _MsgSvmTx {
-  const _$MsgSvmTxImpl(this.svmTx, {final String? $type})
+  const _$MsgSvmTxImpl(@JsonKey(name: 'svm_tx') this.svmTx,
+      {final String? $type})
       : $type = $type ?? 'svmTx';
 
   factory _$MsgSvmTxImpl.fromJson(Map<String, dynamic> json) =>
       _$$MsgSvmTxImplFromJson(json);
 
   @override
+  @JsonKey(name: 'svm_tx')
   final SvmTx svmTx;
 
   @JsonKey(name: 'runtimeType')
@@ -2751,9 +2935,11 @@ class _$MsgSvmTxImpl implements _MsgSvmTx {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(MultiChainMsg multiChainMsg) multiChainMsg,
-    required TResult Function(EvmTx evmTx) evmTx,
-    required TResult Function(SvmTx svmTx) svmTx,
+    required TResult Function(
+            @JsonKey(name: 'multi_chain_msg') MultiChainMsg multiChainMsg)
+        multiChainMsg,
+    required TResult Function(@JsonKey(name: 'evm_tx') EvmTx evmTx) evmTx,
+    required TResult Function(@JsonKey(name: 'svm_tx') SvmTx svmTx) svmTx,
   }) {
     return svmTx(this.svmTx);
   }
@@ -2761,9 +2947,11 @@ class _$MsgSvmTxImpl implements _MsgSvmTx {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(MultiChainMsg multiChainMsg)? multiChainMsg,
-    TResult? Function(EvmTx evmTx)? evmTx,
-    TResult? Function(SvmTx svmTx)? svmTx,
+    TResult? Function(
+            @JsonKey(name: 'multi_chain_msg') MultiChainMsg multiChainMsg)?
+        multiChainMsg,
+    TResult? Function(@JsonKey(name: 'evm_tx') EvmTx evmTx)? evmTx,
+    TResult? Function(@JsonKey(name: 'svm_tx') SvmTx svmTx)? svmTx,
   }) {
     return svmTx?.call(this.svmTx);
   }
@@ -2771,9 +2959,11 @@ class _$MsgSvmTxImpl implements _MsgSvmTx {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(MultiChainMsg multiChainMsg)? multiChainMsg,
-    TResult Function(EvmTx evmTx)? evmTx,
-    TResult Function(SvmTx svmTx)? svmTx,
+    TResult Function(
+            @JsonKey(name: 'multi_chain_msg') MultiChainMsg multiChainMsg)?
+        multiChainMsg,
+    TResult Function(@JsonKey(name: 'evm_tx') EvmTx evmTx)? evmTx,
+    TResult Function(@JsonKey(name: 'svm_tx') SvmTx svmTx)? svmTx,
     required TResult orElse(),
   }) {
     if (svmTx != null) {
@@ -2825,11 +3015,13 @@ class _$MsgSvmTxImpl implements _MsgSvmTx {
 }
 
 abstract class _MsgSvmTx implements Msg {
-  const factory _MsgSvmTx(final SvmTx svmTx) = _$MsgSvmTxImpl;
+  const factory _MsgSvmTx(@JsonKey(name: 'svm_tx') final SvmTx svmTx) =
+      _$MsgSvmTxImpl;
 
   factory _MsgSvmTx.fromJson(Map<String, dynamic> json) =
       _$MsgSvmTxImpl.fromJson;
 
+  @JsonKey(name: 'svm_tx')
   SvmTx get svmTx;
 
   /// Create a copy of Msg
@@ -2866,89 +3058,168 @@ Operation _$OperationFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Operation {
+  @JsonKey(name: 'tx_index')
   int get txIndex => throw _privateConstructorUsedError;
+  @JsonKey(name: 'amount_in')
   String get amountIn => throw _privateConstructorUsedError;
+  @JsonKey(name: 'amount_out')
   String get amountOut => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(
-            Transfer transfer, int txIndex, String amountIn, String amountOut)
+            @JsonKey(name: 'transfer') Transfer transfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)
         transfer,
     required TResult Function(
-            BankSend bankSend, int txIndex, String amountIn, String amountOut)
+            @JsonKey(name: 'bank_send') BankSend bankSend,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)
         bankSend,
     required TResult Function(
-            Swap swap, int txIndex, String amountIn, String amountOut)
+            @JsonKey(name: 'swap') Swap swap,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)
         swap,
-    required TResult Function(AxelarTransfer axelarTransfer, int txIndex,
-            String amountIn, String amountOut)
+    required TResult Function(
+            @JsonKey(name: 'axelar_transfer') AxelarTransfer axelarTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)
         axelarTransfer,
-    required TResult Function(CCTPTransfer cctpTransfer, int txIndex,
-            String amountIn, String amountOut)
+    required TResult Function(
+            @JsonKey(name: 'cctp_transfer') CCTPTransfer cctpTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)
         cctpTransfer,
-    required TResult Function(HyperlaneTransfer hyperlaneTransfer, int txIndex,
-            String amountIn, String amountOut)
+    required TResult Function(
+            @JsonKey(name: 'hyperlane_transfer')
+            HyperlaneTransfer hyperlaneTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)
         hyperlaneTransfer,
     required TResult Function(
-            EvmSwap evmSwap, int txIndex, String amountIn, String amountOut)
+            @JsonKey(name: 'evm_swap') EvmSwap evmSwap,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)
         evmSwap,
-    required TResult Function(OPInitTransfer opInitTransfer, int txIndex,
-            String amountIn, String amountOut)
+    required TResult Function(
+            @JsonKey(name: 'op_init_transfer') OPInitTransfer opInitTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)
         opInitTransfer,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(
-            Transfer transfer, int txIndex, String amountIn, String amountOut)?
+            @JsonKey(name: 'transfer') Transfer transfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         transfer,
     TResult? Function(
-            BankSend bankSend, int txIndex, String amountIn, String amountOut)?
+            @JsonKey(name: 'bank_send') BankSend bankSend,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         bankSend,
     TResult? Function(
-            Swap swap, int txIndex, String amountIn, String amountOut)?
+            @JsonKey(name: 'swap') Swap swap,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         swap,
-    TResult? Function(AxelarTransfer axelarTransfer, int txIndex,
-            String amountIn, String amountOut)?
+    TResult? Function(
+            @JsonKey(name: 'axelar_transfer') AxelarTransfer axelarTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         axelarTransfer,
-    TResult? Function(CCTPTransfer cctpTransfer, int txIndex, String amountIn,
-            String amountOut)?
+    TResult? Function(
+            @JsonKey(name: 'cctp_transfer') CCTPTransfer cctpTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         cctpTransfer,
-    TResult? Function(HyperlaneTransfer hyperlaneTransfer, int txIndex,
-            String amountIn, String amountOut)?
+    TResult? Function(
+            @JsonKey(name: 'hyperlane_transfer')
+            HyperlaneTransfer hyperlaneTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         hyperlaneTransfer,
     TResult? Function(
-            EvmSwap evmSwap, int txIndex, String amountIn, String amountOut)?
+            @JsonKey(name: 'evm_swap') EvmSwap evmSwap,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         evmSwap,
-    TResult? Function(OPInitTransfer opInitTransfer, int txIndex,
-            String amountIn, String amountOut)?
+    TResult? Function(
+            @JsonKey(name: 'op_init_transfer') OPInitTransfer opInitTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         opInitTransfer,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(
-            Transfer transfer, int txIndex, String amountIn, String amountOut)?
+            @JsonKey(name: 'transfer') Transfer transfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         transfer,
     TResult Function(
-            BankSend bankSend, int txIndex, String amountIn, String amountOut)?
+            @JsonKey(name: 'bank_send') BankSend bankSend,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         bankSend,
-    TResult Function(Swap swap, int txIndex, String amountIn, String amountOut)?
+    TResult Function(
+            @JsonKey(name: 'swap') Swap swap,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         swap,
-    TResult Function(AxelarTransfer axelarTransfer, int txIndex,
-            String amountIn, String amountOut)?
+    TResult Function(
+            @JsonKey(name: 'axelar_transfer') AxelarTransfer axelarTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         axelarTransfer,
-    TResult Function(CCTPTransfer cctpTransfer, int txIndex, String amountIn,
-            String amountOut)?
+    TResult Function(
+            @JsonKey(name: 'cctp_transfer') CCTPTransfer cctpTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         cctpTransfer,
-    TResult Function(HyperlaneTransfer hyperlaneTransfer, int txIndex,
-            String amountIn, String amountOut)?
+    TResult Function(
+            @JsonKey(name: 'hyperlane_transfer')
+            HyperlaneTransfer hyperlaneTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         hyperlaneTransfer,
     TResult Function(
-            EvmSwap evmSwap, int txIndex, String amountIn, String amountOut)?
+            @JsonKey(name: 'evm_swap') EvmSwap evmSwap,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         evmSwap,
-    TResult Function(OPInitTransfer opInitTransfer, int txIndex,
-            String amountIn, String amountOut)?
+    TResult Function(
+            @JsonKey(name: 'op_init_transfer') OPInitTransfer opInitTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         opInitTransfer,
     required TResult orElse(),
   }) =>
@@ -3006,7 +3277,10 @@ abstract class $OperationCopyWith<$Res> {
   factory $OperationCopyWith(Operation value, $Res Function(Operation) then) =
       _$OperationCopyWithImpl<$Res, Operation>;
   @useResult
-  $Res call({int txIndex, String amountIn, String amountOut});
+  $Res call(
+      {@JsonKey(name: 'tx_index') int txIndex,
+      @JsonKey(name: 'amount_in') String amountIn,
+      @JsonKey(name: 'amount_out') String amountOut});
 }
 
 /// @nodoc
@@ -3054,7 +3328,10 @@ abstract class _$$TransferImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Transfer transfer, int txIndex, String amountIn, String amountOut});
+      {@JsonKey(name: 'transfer') Transfer transfer,
+      @JsonKey(name: 'tx_index') int txIndex,
+      @JsonKey(name: 'amount_in') String amountIn,
+      @JsonKey(name: 'amount_out') String amountOut});
 
   $TransferCopyWith<$Res> get transfer;
 }
@@ -3112,10 +3389,10 @@ class __$$TransferImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$TransferImpl implements _Transfer {
   const _$TransferImpl(
-      {required this.transfer,
-      required this.txIndex,
-      required this.amountIn,
-      required this.amountOut,
+      {@JsonKey(name: 'transfer') required this.transfer,
+      @JsonKey(name: 'tx_index') required this.txIndex,
+      @JsonKey(name: 'amount_in') required this.amountIn,
+      @JsonKey(name: 'amount_out') required this.amountOut,
       final String? $type})
       : $type = $type ?? 'transfer';
 
@@ -3123,12 +3400,16 @@ class _$TransferImpl implements _Transfer {
       _$$TransferImplFromJson(json);
 
   @override
+  @JsonKey(name: 'transfer')
   final Transfer transfer;
   @override
+  @JsonKey(name: 'tx_index')
   final int txIndex;
   @override
+  @JsonKey(name: 'amount_in')
   final String amountIn;
   @override
+  @JsonKey(name: 'amount_out')
   final String amountOut;
 
   @JsonKey(name: 'runtimeType')
@@ -3170,28 +3451,53 @@ class _$TransferImpl implements _Transfer {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(
-            Transfer transfer, int txIndex, String amountIn, String amountOut)
+            @JsonKey(name: 'transfer') Transfer transfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)
         transfer,
     required TResult Function(
-            BankSend bankSend, int txIndex, String amountIn, String amountOut)
+            @JsonKey(name: 'bank_send') BankSend bankSend,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)
         bankSend,
     required TResult Function(
-            Swap swap, int txIndex, String amountIn, String amountOut)
+            @JsonKey(name: 'swap') Swap swap,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)
         swap,
-    required TResult Function(AxelarTransfer axelarTransfer, int txIndex,
-            String amountIn, String amountOut)
+    required TResult Function(
+            @JsonKey(name: 'axelar_transfer') AxelarTransfer axelarTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)
         axelarTransfer,
-    required TResult Function(CCTPTransfer cctpTransfer, int txIndex,
-            String amountIn, String amountOut)
+    required TResult Function(
+            @JsonKey(name: 'cctp_transfer') CCTPTransfer cctpTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)
         cctpTransfer,
-    required TResult Function(HyperlaneTransfer hyperlaneTransfer, int txIndex,
-            String amountIn, String amountOut)
+    required TResult Function(
+            @JsonKey(name: 'hyperlane_transfer')
+            HyperlaneTransfer hyperlaneTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)
         hyperlaneTransfer,
     required TResult Function(
-            EvmSwap evmSwap, int txIndex, String amountIn, String amountOut)
+            @JsonKey(name: 'evm_swap') EvmSwap evmSwap,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)
         evmSwap,
-    required TResult Function(OPInitTransfer opInitTransfer, int txIndex,
-            String amountIn, String amountOut)
+    required TResult Function(
+            @JsonKey(name: 'op_init_transfer') OPInitTransfer opInitTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)
         opInitTransfer,
   }) {
     return transfer(this.transfer, txIndex, amountIn, amountOut);
@@ -3201,28 +3507,53 @@ class _$TransferImpl implements _Transfer {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(
-            Transfer transfer, int txIndex, String amountIn, String amountOut)?
+            @JsonKey(name: 'transfer') Transfer transfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         transfer,
     TResult? Function(
-            BankSend bankSend, int txIndex, String amountIn, String amountOut)?
+            @JsonKey(name: 'bank_send') BankSend bankSend,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         bankSend,
     TResult? Function(
-            Swap swap, int txIndex, String amountIn, String amountOut)?
+            @JsonKey(name: 'swap') Swap swap,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         swap,
-    TResult? Function(AxelarTransfer axelarTransfer, int txIndex,
-            String amountIn, String amountOut)?
+    TResult? Function(
+            @JsonKey(name: 'axelar_transfer') AxelarTransfer axelarTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         axelarTransfer,
-    TResult? Function(CCTPTransfer cctpTransfer, int txIndex, String amountIn,
-            String amountOut)?
+    TResult? Function(
+            @JsonKey(name: 'cctp_transfer') CCTPTransfer cctpTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         cctpTransfer,
-    TResult? Function(HyperlaneTransfer hyperlaneTransfer, int txIndex,
-            String amountIn, String amountOut)?
+    TResult? Function(
+            @JsonKey(name: 'hyperlane_transfer')
+            HyperlaneTransfer hyperlaneTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         hyperlaneTransfer,
     TResult? Function(
-            EvmSwap evmSwap, int txIndex, String amountIn, String amountOut)?
+            @JsonKey(name: 'evm_swap') EvmSwap evmSwap,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         evmSwap,
-    TResult? Function(OPInitTransfer opInitTransfer, int txIndex,
-            String amountIn, String amountOut)?
+    TResult? Function(
+            @JsonKey(name: 'op_init_transfer') OPInitTransfer opInitTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         opInitTransfer,
   }) {
     return transfer?.call(this.transfer, txIndex, amountIn, amountOut);
@@ -3232,27 +3563,53 @@ class _$TransferImpl implements _Transfer {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(
-            Transfer transfer, int txIndex, String amountIn, String amountOut)?
+            @JsonKey(name: 'transfer') Transfer transfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         transfer,
     TResult Function(
-            BankSend bankSend, int txIndex, String amountIn, String amountOut)?
+            @JsonKey(name: 'bank_send') BankSend bankSend,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         bankSend,
-    TResult Function(Swap swap, int txIndex, String amountIn, String amountOut)?
+    TResult Function(
+            @JsonKey(name: 'swap') Swap swap,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         swap,
-    TResult Function(AxelarTransfer axelarTransfer, int txIndex,
-            String amountIn, String amountOut)?
+    TResult Function(
+            @JsonKey(name: 'axelar_transfer') AxelarTransfer axelarTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         axelarTransfer,
-    TResult Function(CCTPTransfer cctpTransfer, int txIndex, String amountIn,
-            String amountOut)?
+    TResult Function(
+            @JsonKey(name: 'cctp_transfer') CCTPTransfer cctpTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         cctpTransfer,
-    TResult Function(HyperlaneTransfer hyperlaneTransfer, int txIndex,
-            String amountIn, String amountOut)?
+    TResult Function(
+            @JsonKey(name: 'hyperlane_transfer')
+            HyperlaneTransfer hyperlaneTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         hyperlaneTransfer,
     TResult Function(
-            EvmSwap evmSwap, int txIndex, String amountIn, String amountOut)?
+            @JsonKey(name: 'evm_swap') EvmSwap evmSwap,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         evmSwap,
-    TResult Function(OPInitTransfer opInitTransfer, int txIndex,
-            String amountIn, String amountOut)?
+    TResult Function(
+            @JsonKey(name: 'op_init_transfer') OPInitTransfer opInitTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         opInitTransfer,
     required TResult orElse(),
   }) {
@@ -3321,20 +3678,25 @@ class _$TransferImpl implements _Transfer {
 
 abstract class _Transfer implements Operation {
   const factory _Transfer(
-      {required final Transfer transfer,
-      required final int txIndex,
-      required final String amountIn,
-      required final String amountOut}) = _$TransferImpl;
+          {@JsonKey(name: 'transfer') required final Transfer transfer,
+          @JsonKey(name: 'tx_index') required final int txIndex,
+          @JsonKey(name: 'amount_in') required final String amountIn,
+          @JsonKey(name: 'amount_out') required final String amountOut}) =
+      _$TransferImpl;
 
   factory _Transfer.fromJson(Map<String, dynamic> json) =
       _$TransferImpl.fromJson;
 
+  @JsonKey(name: 'transfer')
   Transfer get transfer;
   @override
+  @JsonKey(name: 'tx_index')
   int get txIndex;
   @override
+  @JsonKey(name: 'amount_in')
   String get amountIn;
   @override
+  @JsonKey(name: 'amount_out')
   String get amountOut;
 
   /// Create a copy of Operation
@@ -3354,7 +3716,10 @@ abstract class _$$BankSendImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {BankSend bankSend, int txIndex, String amountIn, String amountOut});
+      {@JsonKey(name: 'bank_send') BankSend bankSend,
+      @JsonKey(name: 'tx_index') int txIndex,
+      @JsonKey(name: 'amount_in') String amountIn,
+      @JsonKey(name: 'amount_out') String amountOut});
 
   $BankSendCopyWith<$Res> get bankSend;
 }
@@ -3412,10 +3777,10 @@ class __$$BankSendImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$BankSendImpl implements _BankSend {
   const _$BankSendImpl(
-      {required this.bankSend,
-      required this.txIndex,
-      required this.amountIn,
-      required this.amountOut,
+      {@JsonKey(name: 'bank_send') required this.bankSend,
+      @JsonKey(name: 'tx_index') required this.txIndex,
+      @JsonKey(name: 'amount_in') required this.amountIn,
+      @JsonKey(name: 'amount_out') required this.amountOut,
       final String? $type})
       : $type = $type ?? 'bankSend';
 
@@ -3423,12 +3788,16 @@ class _$BankSendImpl implements _BankSend {
       _$$BankSendImplFromJson(json);
 
   @override
+  @JsonKey(name: 'bank_send')
   final BankSend bankSend;
   @override
+  @JsonKey(name: 'tx_index')
   final int txIndex;
   @override
+  @JsonKey(name: 'amount_in')
   final String amountIn;
   @override
+  @JsonKey(name: 'amount_out')
   final String amountOut;
 
   @JsonKey(name: 'runtimeType')
@@ -3470,28 +3839,53 @@ class _$BankSendImpl implements _BankSend {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(
-            Transfer transfer, int txIndex, String amountIn, String amountOut)
+            @JsonKey(name: 'transfer') Transfer transfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)
         transfer,
     required TResult Function(
-            BankSend bankSend, int txIndex, String amountIn, String amountOut)
+            @JsonKey(name: 'bank_send') BankSend bankSend,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)
         bankSend,
     required TResult Function(
-            Swap swap, int txIndex, String amountIn, String amountOut)
+            @JsonKey(name: 'swap') Swap swap,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)
         swap,
-    required TResult Function(AxelarTransfer axelarTransfer, int txIndex,
-            String amountIn, String amountOut)
+    required TResult Function(
+            @JsonKey(name: 'axelar_transfer') AxelarTransfer axelarTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)
         axelarTransfer,
-    required TResult Function(CCTPTransfer cctpTransfer, int txIndex,
-            String amountIn, String amountOut)
+    required TResult Function(
+            @JsonKey(name: 'cctp_transfer') CCTPTransfer cctpTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)
         cctpTransfer,
-    required TResult Function(HyperlaneTransfer hyperlaneTransfer, int txIndex,
-            String amountIn, String amountOut)
+    required TResult Function(
+            @JsonKey(name: 'hyperlane_transfer')
+            HyperlaneTransfer hyperlaneTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)
         hyperlaneTransfer,
     required TResult Function(
-            EvmSwap evmSwap, int txIndex, String amountIn, String amountOut)
+            @JsonKey(name: 'evm_swap') EvmSwap evmSwap,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)
         evmSwap,
-    required TResult Function(OPInitTransfer opInitTransfer, int txIndex,
-            String amountIn, String amountOut)
+    required TResult Function(
+            @JsonKey(name: 'op_init_transfer') OPInitTransfer opInitTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)
         opInitTransfer,
   }) {
     return bankSend(this.bankSend, txIndex, amountIn, amountOut);
@@ -3501,28 +3895,53 @@ class _$BankSendImpl implements _BankSend {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(
-            Transfer transfer, int txIndex, String amountIn, String amountOut)?
+            @JsonKey(name: 'transfer') Transfer transfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         transfer,
     TResult? Function(
-            BankSend bankSend, int txIndex, String amountIn, String amountOut)?
+            @JsonKey(name: 'bank_send') BankSend bankSend,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         bankSend,
     TResult? Function(
-            Swap swap, int txIndex, String amountIn, String amountOut)?
+            @JsonKey(name: 'swap') Swap swap,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         swap,
-    TResult? Function(AxelarTransfer axelarTransfer, int txIndex,
-            String amountIn, String amountOut)?
+    TResult? Function(
+            @JsonKey(name: 'axelar_transfer') AxelarTransfer axelarTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         axelarTransfer,
-    TResult? Function(CCTPTransfer cctpTransfer, int txIndex, String amountIn,
-            String amountOut)?
+    TResult? Function(
+            @JsonKey(name: 'cctp_transfer') CCTPTransfer cctpTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         cctpTransfer,
-    TResult? Function(HyperlaneTransfer hyperlaneTransfer, int txIndex,
-            String amountIn, String amountOut)?
+    TResult? Function(
+            @JsonKey(name: 'hyperlane_transfer')
+            HyperlaneTransfer hyperlaneTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         hyperlaneTransfer,
     TResult? Function(
-            EvmSwap evmSwap, int txIndex, String amountIn, String amountOut)?
+            @JsonKey(name: 'evm_swap') EvmSwap evmSwap,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         evmSwap,
-    TResult? Function(OPInitTransfer opInitTransfer, int txIndex,
-            String amountIn, String amountOut)?
+    TResult? Function(
+            @JsonKey(name: 'op_init_transfer') OPInitTransfer opInitTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         opInitTransfer,
   }) {
     return bankSend?.call(this.bankSend, txIndex, amountIn, amountOut);
@@ -3532,27 +3951,53 @@ class _$BankSendImpl implements _BankSend {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(
-            Transfer transfer, int txIndex, String amountIn, String amountOut)?
+            @JsonKey(name: 'transfer') Transfer transfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         transfer,
     TResult Function(
-            BankSend bankSend, int txIndex, String amountIn, String amountOut)?
+            @JsonKey(name: 'bank_send') BankSend bankSend,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         bankSend,
-    TResult Function(Swap swap, int txIndex, String amountIn, String amountOut)?
+    TResult Function(
+            @JsonKey(name: 'swap') Swap swap,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         swap,
-    TResult Function(AxelarTransfer axelarTransfer, int txIndex,
-            String amountIn, String amountOut)?
+    TResult Function(
+            @JsonKey(name: 'axelar_transfer') AxelarTransfer axelarTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         axelarTransfer,
-    TResult Function(CCTPTransfer cctpTransfer, int txIndex, String amountIn,
-            String amountOut)?
+    TResult Function(
+            @JsonKey(name: 'cctp_transfer') CCTPTransfer cctpTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         cctpTransfer,
-    TResult Function(HyperlaneTransfer hyperlaneTransfer, int txIndex,
-            String amountIn, String amountOut)?
+    TResult Function(
+            @JsonKey(name: 'hyperlane_transfer')
+            HyperlaneTransfer hyperlaneTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         hyperlaneTransfer,
     TResult Function(
-            EvmSwap evmSwap, int txIndex, String amountIn, String amountOut)?
+            @JsonKey(name: 'evm_swap') EvmSwap evmSwap,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         evmSwap,
-    TResult Function(OPInitTransfer opInitTransfer, int txIndex,
-            String amountIn, String amountOut)?
+    TResult Function(
+            @JsonKey(name: 'op_init_transfer') OPInitTransfer opInitTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         opInitTransfer,
     required TResult orElse(),
   }) {
@@ -3621,20 +4066,25 @@ class _$BankSendImpl implements _BankSend {
 
 abstract class _BankSend implements Operation {
   const factory _BankSend(
-      {required final BankSend bankSend,
-      required final int txIndex,
-      required final String amountIn,
-      required final String amountOut}) = _$BankSendImpl;
+          {@JsonKey(name: 'bank_send') required final BankSend bankSend,
+          @JsonKey(name: 'tx_index') required final int txIndex,
+          @JsonKey(name: 'amount_in') required final String amountIn,
+          @JsonKey(name: 'amount_out') required final String amountOut}) =
+      _$BankSendImpl;
 
   factory _BankSend.fromJson(Map<String, dynamic> json) =
       _$BankSendImpl.fromJson;
 
+  @JsonKey(name: 'bank_send')
   BankSend get bankSend;
   @override
+  @JsonKey(name: 'tx_index')
   int get txIndex;
   @override
+  @JsonKey(name: 'amount_in')
   String get amountIn;
   @override
+  @JsonKey(name: 'amount_out')
   String get amountOut;
 
   /// Create a copy of Operation
@@ -3652,7 +4102,11 @@ abstract class _$$SwapImplCopyWith<$Res> implements $OperationCopyWith<$Res> {
       __$$SwapImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({Swap swap, int txIndex, String amountIn, String amountOut});
+  $Res call(
+      {@JsonKey(name: 'swap') Swap swap,
+      @JsonKey(name: 'tx_index') int txIndex,
+      @JsonKey(name: 'amount_in') String amountIn,
+      @JsonKey(name: 'amount_out') String amountOut});
 
   $SwapCopyWith<$Res> get swap;
 }
@@ -3709,10 +4163,10 @@ class __$$SwapImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$SwapImpl implements _Swap {
   const _$SwapImpl(
-      {required this.swap,
-      required this.txIndex,
-      required this.amountIn,
-      required this.amountOut,
+      {@JsonKey(name: 'swap') required this.swap,
+      @JsonKey(name: 'tx_index') required this.txIndex,
+      @JsonKey(name: 'amount_in') required this.amountIn,
+      @JsonKey(name: 'amount_out') required this.amountOut,
       final String? $type})
       : $type = $type ?? 'swap';
 
@@ -3720,12 +4174,16 @@ class _$SwapImpl implements _Swap {
       _$$SwapImplFromJson(json);
 
   @override
+  @JsonKey(name: 'swap')
   final Swap swap;
   @override
+  @JsonKey(name: 'tx_index')
   final int txIndex;
   @override
+  @JsonKey(name: 'amount_in')
   final String amountIn;
   @override
+  @JsonKey(name: 'amount_out')
   final String amountOut;
 
   @JsonKey(name: 'runtimeType')
@@ -3766,28 +4224,53 @@ class _$SwapImpl implements _Swap {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(
-            Transfer transfer, int txIndex, String amountIn, String amountOut)
+            @JsonKey(name: 'transfer') Transfer transfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)
         transfer,
     required TResult Function(
-            BankSend bankSend, int txIndex, String amountIn, String amountOut)
+            @JsonKey(name: 'bank_send') BankSend bankSend,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)
         bankSend,
     required TResult Function(
-            Swap swap, int txIndex, String amountIn, String amountOut)
+            @JsonKey(name: 'swap') Swap swap,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)
         swap,
-    required TResult Function(AxelarTransfer axelarTransfer, int txIndex,
-            String amountIn, String amountOut)
+    required TResult Function(
+            @JsonKey(name: 'axelar_transfer') AxelarTransfer axelarTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)
         axelarTransfer,
-    required TResult Function(CCTPTransfer cctpTransfer, int txIndex,
-            String amountIn, String amountOut)
+    required TResult Function(
+            @JsonKey(name: 'cctp_transfer') CCTPTransfer cctpTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)
         cctpTransfer,
-    required TResult Function(HyperlaneTransfer hyperlaneTransfer, int txIndex,
-            String amountIn, String amountOut)
+    required TResult Function(
+            @JsonKey(name: 'hyperlane_transfer')
+            HyperlaneTransfer hyperlaneTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)
         hyperlaneTransfer,
     required TResult Function(
-            EvmSwap evmSwap, int txIndex, String amountIn, String amountOut)
+            @JsonKey(name: 'evm_swap') EvmSwap evmSwap,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)
         evmSwap,
-    required TResult Function(OPInitTransfer opInitTransfer, int txIndex,
-            String amountIn, String amountOut)
+    required TResult Function(
+            @JsonKey(name: 'op_init_transfer') OPInitTransfer opInitTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)
         opInitTransfer,
   }) {
     return swap(this.swap, txIndex, amountIn, amountOut);
@@ -3797,28 +4280,53 @@ class _$SwapImpl implements _Swap {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(
-            Transfer transfer, int txIndex, String amountIn, String amountOut)?
+            @JsonKey(name: 'transfer') Transfer transfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         transfer,
     TResult? Function(
-            BankSend bankSend, int txIndex, String amountIn, String amountOut)?
+            @JsonKey(name: 'bank_send') BankSend bankSend,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         bankSend,
     TResult? Function(
-            Swap swap, int txIndex, String amountIn, String amountOut)?
+            @JsonKey(name: 'swap') Swap swap,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         swap,
-    TResult? Function(AxelarTransfer axelarTransfer, int txIndex,
-            String amountIn, String amountOut)?
+    TResult? Function(
+            @JsonKey(name: 'axelar_transfer') AxelarTransfer axelarTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         axelarTransfer,
-    TResult? Function(CCTPTransfer cctpTransfer, int txIndex, String amountIn,
-            String amountOut)?
+    TResult? Function(
+            @JsonKey(name: 'cctp_transfer') CCTPTransfer cctpTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         cctpTransfer,
-    TResult? Function(HyperlaneTransfer hyperlaneTransfer, int txIndex,
-            String amountIn, String amountOut)?
+    TResult? Function(
+            @JsonKey(name: 'hyperlane_transfer')
+            HyperlaneTransfer hyperlaneTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         hyperlaneTransfer,
     TResult? Function(
-            EvmSwap evmSwap, int txIndex, String amountIn, String amountOut)?
+            @JsonKey(name: 'evm_swap') EvmSwap evmSwap,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         evmSwap,
-    TResult? Function(OPInitTransfer opInitTransfer, int txIndex,
-            String amountIn, String amountOut)?
+    TResult? Function(
+            @JsonKey(name: 'op_init_transfer') OPInitTransfer opInitTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         opInitTransfer,
   }) {
     return swap?.call(this.swap, txIndex, amountIn, amountOut);
@@ -3828,27 +4336,53 @@ class _$SwapImpl implements _Swap {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(
-            Transfer transfer, int txIndex, String amountIn, String amountOut)?
+            @JsonKey(name: 'transfer') Transfer transfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         transfer,
     TResult Function(
-            BankSend bankSend, int txIndex, String amountIn, String amountOut)?
+            @JsonKey(name: 'bank_send') BankSend bankSend,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         bankSend,
-    TResult Function(Swap swap, int txIndex, String amountIn, String amountOut)?
+    TResult Function(
+            @JsonKey(name: 'swap') Swap swap,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         swap,
-    TResult Function(AxelarTransfer axelarTransfer, int txIndex,
-            String amountIn, String amountOut)?
+    TResult Function(
+            @JsonKey(name: 'axelar_transfer') AxelarTransfer axelarTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         axelarTransfer,
-    TResult Function(CCTPTransfer cctpTransfer, int txIndex, String amountIn,
-            String amountOut)?
+    TResult Function(
+            @JsonKey(name: 'cctp_transfer') CCTPTransfer cctpTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         cctpTransfer,
-    TResult Function(HyperlaneTransfer hyperlaneTransfer, int txIndex,
-            String amountIn, String amountOut)?
+    TResult Function(
+            @JsonKey(name: 'hyperlane_transfer')
+            HyperlaneTransfer hyperlaneTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         hyperlaneTransfer,
     TResult Function(
-            EvmSwap evmSwap, int txIndex, String amountIn, String amountOut)?
+            @JsonKey(name: 'evm_swap') EvmSwap evmSwap,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         evmSwap,
-    TResult Function(OPInitTransfer opInitTransfer, int txIndex,
-            String amountIn, String amountOut)?
+    TResult Function(
+            @JsonKey(name: 'op_init_transfer') OPInitTransfer opInitTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         opInitTransfer,
     required TResult orElse(),
   }) {
@@ -3917,19 +4451,24 @@ class _$SwapImpl implements _Swap {
 
 abstract class _Swap implements Operation {
   const factory _Swap(
-      {required final Swap swap,
-      required final int txIndex,
-      required final String amountIn,
-      required final String amountOut}) = _$SwapImpl;
+          {@JsonKey(name: 'swap') required final Swap swap,
+          @JsonKey(name: 'tx_index') required final int txIndex,
+          @JsonKey(name: 'amount_in') required final String amountIn,
+          @JsonKey(name: 'amount_out') required final String amountOut}) =
+      _$SwapImpl;
 
   factory _Swap.fromJson(Map<String, dynamic> json) = _$SwapImpl.fromJson;
 
+  @JsonKey(name: 'swap')
   Swap get swap;
   @override
+  @JsonKey(name: 'tx_index')
   int get txIndex;
   @override
+  @JsonKey(name: 'amount_in')
   String get amountIn;
   @override
+  @JsonKey(name: 'amount_out')
   String get amountOut;
 
   /// Create a copy of Operation
@@ -3949,10 +4488,10 @@ abstract class _$$AxelarTransferImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {AxelarTransfer axelarTransfer,
-      int txIndex,
-      String amountIn,
-      String amountOut});
+      {@JsonKey(name: 'axelar_transfer') AxelarTransfer axelarTransfer,
+      @JsonKey(name: 'tx_index') int txIndex,
+      @JsonKey(name: 'amount_in') String amountIn,
+      @JsonKey(name: 'amount_out') String amountOut});
 
   $AxelarTransferCopyWith<$Res> get axelarTransfer;
 }
@@ -4010,10 +4549,10 @@ class __$$AxelarTransferImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$AxelarTransferImpl implements _AxelarTransfer {
   const _$AxelarTransferImpl(
-      {required this.axelarTransfer,
-      required this.txIndex,
-      required this.amountIn,
-      required this.amountOut,
+      {@JsonKey(name: 'axelar_transfer') required this.axelarTransfer,
+      @JsonKey(name: 'tx_index') required this.txIndex,
+      @JsonKey(name: 'amount_in') required this.amountIn,
+      @JsonKey(name: 'amount_out') required this.amountOut,
       final String? $type})
       : $type = $type ?? 'axelarTransfer';
 
@@ -4021,12 +4560,16 @@ class _$AxelarTransferImpl implements _AxelarTransfer {
       _$$AxelarTransferImplFromJson(json);
 
   @override
+  @JsonKey(name: 'axelar_transfer')
   final AxelarTransfer axelarTransfer;
   @override
+  @JsonKey(name: 'tx_index')
   final int txIndex;
   @override
+  @JsonKey(name: 'amount_in')
   final String amountIn;
   @override
+  @JsonKey(name: 'amount_out')
   final String amountOut;
 
   @JsonKey(name: 'runtimeType')
@@ -4069,28 +4612,53 @@ class _$AxelarTransferImpl implements _AxelarTransfer {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(
-            Transfer transfer, int txIndex, String amountIn, String amountOut)
+            @JsonKey(name: 'transfer') Transfer transfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)
         transfer,
     required TResult Function(
-            BankSend bankSend, int txIndex, String amountIn, String amountOut)
+            @JsonKey(name: 'bank_send') BankSend bankSend,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)
         bankSend,
     required TResult Function(
-            Swap swap, int txIndex, String amountIn, String amountOut)
+            @JsonKey(name: 'swap') Swap swap,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)
         swap,
-    required TResult Function(AxelarTransfer axelarTransfer, int txIndex,
-            String amountIn, String amountOut)
+    required TResult Function(
+            @JsonKey(name: 'axelar_transfer') AxelarTransfer axelarTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)
         axelarTransfer,
-    required TResult Function(CCTPTransfer cctpTransfer, int txIndex,
-            String amountIn, String amountOut)
+    required TResult Function(
+            @JsonKey(name: 'cctp_transfer') CCTPTransfer cctpTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)
         cctpTransfer,
-    required TResult Function(HyperlaneTransfer hyperlaneTransfer, int txIndex,
-            String amountIn, String amountOut)
+    required TResult Function(
+            @JsonKey(name: 'hyperlane_transfer')
+            HyperlaneTransfer hyperlaneTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)
         hyperlaneTransfer,
     required TResult Function(
-            EvmSwap evmSwap, int txIndex, String amountIn, String amountOut)
+            @JsonKey(name: 'evm_swap') EvmSwap evmSwap,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)
         evmSwap,
-    required TResult Function(OPInitTransfer opInitTransfer, int txIndex,
-            String amountIn, String amountOut)
+    required TResult Function(
+            @JsonKey(name: 'op_init_transfer') OPInitTransfer opInitTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)
         opInitTransfer,
   }) {
     return axelarTransfer(this.axelarTransfer, txIndex, amountIn, amountOut);
@@ -4100,28 +4668,53 @@ class _$AxelarTransferImpl implements _AxelarTransfer {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(
-            Transfer transfer, int txIndex, String amountIn, String amountOut)?
+            @JsonKey(name: 'transfer') Transfer transfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         transfer,
     TResult? Function(
-            BankSend bankSend, int txIndex, String amountIn, String amountOut)?
+            @JsonKey(name: 'bank_send') BankSend bankSend,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         bankSend,
     TResult? Function(
-            Swap swap, int txIndex, String amountIn, String amountOut)?
+            @JsonKey(name: 'swap') Swap swap,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         swap,
-    TResult? Function(AxelarTransfer axelarTransfer, int txIndex,
-            String amountIn, String amountOut)?
+    TResult? Function(
+            @JsonKey(name: 'axelar_transfer') AxelarTransfer axelarTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         axelarTransfer,
-    TResult? Function(CCTPTransfer cctpTransfer, int txIndex, String amountIn,
-            String amountOut)?
+    TResult? Function(
+            @JsonKey(name: 'cctp_transfer') CCTPTransfer cctpTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         cctpTransfer,
-    TResult? Function(HyperlaneTransfer hyperlaneTransfer, int txIndex,
-            String amountIn, String amountOut)?
+    TResult? Function(
+            @JsonKey(name: 'hyperlane_transfer')
+            HyperlaneTransfer hyperlaneTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         hyperlaneTransfer,
     TResult? Function(
-            EvmSwap evmSwap, int txIndex, String amountIn, String amountOut)?
+            @JsonKey(name: 'evm_swap') EvmSwap evmSwap,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         evmSwap,
-    TResult? Function(OPInitTransfer opInitTransfer, int txIndex,
-            String amountIn, String amountOut)?
+    TResult? Function(
+            @JsonKey(name: 'op_init_transfer') OPInitTransfer opInitTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         opInitTransfer,
   }) {
     return axelarTransfer?.call(
@@ -4132,27 +4725,53 @@ class _$AxelarTransferImpl implements _AxelarTransfer {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(
-            Transfer transfer, int txIndex, String amountIn, String amountOut)?
+            @JsonKey(name: 'transfer') Transfer transfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         transfer,
     TResult Function(
-            BankSend bankSend, int txIndex, String amountIn, String amountOut)?
+            @JsonKey(name: 'bank_send') BankSend bankSend,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         bankSend,
-    TResult Function(Swap swap, int txIndex, String amountIn, String amountOut)?
+    TResult Function(
+            @JsonKey(name: 'swap') Swap swap,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         swap,
-    TResult Function(AxelarTransfer axelarTransfer, int txIndex,
-            String amountIn, String amountOut)?
+    TResult Function(
+            @JsonKey(name: 'axelar_transfer') AxelarTransfer axelarTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         axelarTransfer,
-    TResult Function(CCTPTransfer cctpTransfer, int txIndex, String amountIn,
-            String amountOut)?
+    TResult Function(
+            @JsonKey(name: 'cctp_transfer') CCTPTransfer cctpTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         cctpTransfer,
-    TResult Function(HyperlaneTransfer hyperlaneTransfer, int txIndex,
-            String amountIn, String amountOut)?
+    TResult Function(
+            @JsonKey(name: 'hyperlane_transfer')
+            HyperlaneTransfer hyperlaneTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         hyperlaneTransfer,
     TResult Function(
-            EvmSwap evmSwap, int txIndex, String amountIn, String amountOut)?
+            @JsonKey(name: 'evm_swap') EvmSwap evmSwap,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         evmSwap,
-    TResult Function(OPInitTransfer opInitTransfer, int txIndex,
-            String amountIn, String amountOut)?
+    TResult Function(
+            @JsonKey(name: 'op_init_transfer') OPInitTransfer opInitTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         opInitTransfer,
     required TResult orElse(),
   }) {
@@ -4221,20 +4840,26 @@ class _$AxelarTransferImpl implements _AxelarTransfer {
 
 abstract class _AxelarTransfer implements Operation {
   const factory _AxelarTransfer(
-      {required final AxelarTransfer axelarTransfer,
-      required final int txIndex,
-      required final String amountIn,
-      required final String amountOut}) = _$AxelarTransferImpl;
+          {@JsonKey(name: 'axelar_transfer')
+          required final AxelarTransfer axelarTransfer,
+          @JsonKey(name: 'tx_index') required final int txIndex,
+          @JsonKey(name: 'amount_in') required final String amountIn,
+          @JsonKey(name: 'amount_out') required final String amountOut}) =
+      _$AxelarTransferImpl;
 
   factory _AxelarTransfer.fromJson(Map<String, dynamic> json) =
       _$AxelarTransferImpl.fromJson;
 
+  @JsonKey(name: 'axelar_transfer')
   AxelarTransfer get axelarTransfer;
   @override
+  @JsonKey(name: 'tx_index')
   int get txIndex;
   @override
+  @JsonKey(name: 'amount_in')
   String get amountIn;
   @override
+  @JsonKey(name: 'amount_out')
   String get amountOut;
 
   /// Create a copy of Operation
@@ -4254,10 +4879,10 @@ abstract class _$$CCTPTransferImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {CCTPTransfer cctpTransfer,
-      int txIndex,
-      String amountIn,
-      String amountOut});
+      {@JsonKey(name: 'cctp_transfer') CCTPTransfer cctpTransfer,
+      @JsonKey(name: 'tx_index') int txIndex,
+      @JsonKey(name: 'amount_in') String amountIn,
+      @JsonKey(name: 'amount_out') String amountOut});
 
   $CCTPTransferCopyWith<$Res> get cctpTransfer;
 }
@@ -4315,10 +4940,10 @@ class __$$CCTPTransferImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$CCTPTransferImpl implements _CCTPTransfer {
   const _$CCTPTransferImpl(
-      {required this.cctpTransfer,
-      required this.txIndex,
-      required this.amountIn,
-      required this.amountOut,
+      {@JsonKey(name: 'cctp_transfer') required this.cctpTransfer,
+      @JsonKey(name: 'tx_index') required this.txIndex,
+      @JsonKey(name: 'amount_in') required this.amountIn,
+      @JsonKey(name: 'amount_out') required this.amountOut,
       final String? $type})
       : $type = $type ?? 'cctpTransfer';
 
@@ -4326,12 +4951,16 @@ class _$CCTPTransferImpl implements _CCTPTransfer {
       _$$CCTPTransferImplFromJson(json);
 
   @override
+  @JsonKey(name: 'cctp_transfer')
   final CCTPTransfer cctpTransfer;
   @override
+  @JsonKey(name: 'tx_index')
   final int txIndex;
   @override
+  @JsonKey(name: 'amount_in')
   final String amountIn;
   @override
+  @JsonKey(name: 'amount_out')
   final String amountOut;
 
   @JsonKey(name: 'runtimeType')
@@ -4373,28 +5002,53 @@ class _$CCTPTransferImpl implements _CCTPTransfer {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(
-            Transfer transfer, int txIndex, String amountIn, String amountOut)
+            @JsonKey(name: 'transfer') Transfer transfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)
         transfer,
     required TResult Function(
-            BankSend bankSend, int txIndex, String amountIn, String amountOut)
+            @JsonKey(name: 'bank_send') BankSend bankSend,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)
         bankSend,
     required TResult Function(
-            Swap swap, int txIndex, String amountIn, String amountOut)
+            @JsonKey(name: 'swap') Swap swap,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)
         swap,
-    required TResult Function(AxelarTransfer axelarTransfer, int txIndex,
-            String amountIn, String amountOut)
+    required TResult Function(
+            @JsonKey(name: 'axelar_transfer') AxelarTransfer axelarTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)
         axelarTransfer,
-    required TResult Function(CCTPTransfer cctpTransfer, int txIndex,
-            String amountIn, String amountOut)
+    required TResult Function(
+            @JsonKey(name: 'cctp_transfer') CCTPTransfer cctpTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)
         cctpTransfer,
-    required TResult Function(HyperlaneTransfer hyperlaneTransfer, int txIndex,
-            String amountIn, String amountOut)
+    required TResult Function(
+            @JsonKey(name: 'hyperlane_transfer')
+            HyperlaneTransfer hyperlaneTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)
         hyperlaneTransfer,
     required TResult Function(
-            EvmSwap evmSwap, int txIndex, String amountIn, String amountOut)
+            @JsonKey(name: 'evm_swap') EvmSwap evmSwap,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)
         evmSwap,
-    required TResult Function(OPInitTransfer opInitTransfer, int txIndex,
-            String amountIn, String amountOut)
+    required TResult Function(
+            @JsonKey(name: 'op_init_transfer') OPInitTransfer opInitTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)
         opInitTransfer,
   }) {
     return cctpTransfer(this.cctpTransfer, txIndex, amountIn, amountOut);
@@ -4404,28 +5058,53 @@ class _$CCTPTransferImpl implements _CCTPTransfer {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(
-            Transfer transfer, int txIndex, String amountIn, String amountOut)?
+            @JsonKey(name: 'transfer') Transfer transfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         transfer,
     TResult? Function(
-            BankSend bankSend, int txIndex, String amountIn, String amountOut)?
+            @JsonKey(name: 'bank_send') BankSend bankSend,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         bankSend,
     TResult? Function(
-            Swap swap, int txIndex, String amountIn, String amountOut)?
+            @JsonKey(name: 'swap') Swap swap,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         swap,
-    TResult? Function(AxelarTransfer axelarTransfer, int txIndex,
-            String amountIn, String amountOut)?
+    TResult? Function(
+            @JsonKey(name: 'axelar_transfer') AxelarTransfer axelarTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         axelarTransfer,
-    TResult? Function(CCTPTransfer cctpTransfer, int txIndex, String amountIn,
-            String amountOut)?
+    TResult? Function(
+            @JsonKey(name: 'cctp_transfer') CCTPTransfer cctpTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         cctpTransfer,
-    TResult? Function(HyperlaneTransfer hyperlaneTransfer, int txIndex,
-            String amountIn, String amountOut)?
+    TResult? Function(
+            @JsonKey(name: 'hyperlane_transfer')
+            HyperlaneTransfer hyperlaneTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         hyperlaneTransfer,
     TResult? Function(
-            EvmSwap evmSwap, int txIndex, String amountIn, String amountOut)?
+            @JsonKey(name: 'evm_swap') EvmSwap evmSwap,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         evmSwap,
-    TResult? Function(OPInitTransfer opInitTransfer, int txIndex,
-            String amountIn, String amountOut)?
+    TResult? Function(
+            @JsonKey(name: 'op_init_transfer') OPInitTransfer opInitTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         opInitTransfer,
   }) {
     return cctpTransfer?.call(this.cctpTransfer, txIndex, amountIn, amountOut);
@@ -4435,27 +5114,53 @@ class _$CCTPTransferImpl implements _CCTPTransfer {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(
-            Transfer transfer, int txIndex, String amountIn, String amountOut)?
+            @JsonKey(name: 'transfer') Transfer transfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         transfer,
     TResult Function(
-            BankSend bankSend, int txIndex, String amountIn, String amountOut)?
+            @JsonKey(name: 'bank_send') BankSend bankSend,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         bankSend,
-    TResult Function(Swap swap, int txIndex, String amountIn, String amountOut)?
+    TResult Function(
+            @JsonKey(name: 'swap') Swap swap,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         swap,
-    TResult Function(AxelarTransfer axelarTransfer, int txIndex,
-            String amountIn, String amountOut)?
+    TResult Function(
+            @JsonKey(name: 'axelar_transfer') AxelarTransfer axelarTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         axelarTransfer,
-    TResult Function(CCTPTransfer cctpTransfer, int txIndex, String amountIn,
-            String amountOut)?
+    TResult Function(
+            @JsonKey(name: 'cctp_transfer') CCTPTransfer cctpTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         cctpTransfer,
-    TResult Function(HyperlaneTransfer hyperlaneTransfer, int txIndex,
-            String amountIn, String amountOut)?
+    TResult Function(
+            @JsonKey(name: 'hyperlane_transfer')
+            HyperlaneTransfer hyperlaneTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         hyperlaneTransfer,
     TResult Function(
-            EvmSwap evmSwap, int txIndex, String amountIn, String amountOut)?
+            @JsonKey(name: 'evm_swap') EvmSwap evmSwap,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         evmSwap,
-    TResult Function(OPInitTransfer opInitTransfer, int txIndex,
-            String amountIn, String amountOut)?
+    TResult Function(
+            @JsonKey(name: 'op_init_transfer') OPInitTransfer opInitTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         opInitTransfer,
     required TResult orElse(),
   }) {
@@ -4524,20 +5229,25 @@ class _$CCTPTransferImpl implements _CCTPTransfer {
 
 abstract class _CCTPTransfer implements Operation {
   const factory _CCTPTransfer(
-      {required final CCTPTransfer cctpTransfer,
-      required final int txIndex,
-      required final String amountIn,
+      {@JsonKey(name: 'cctp_transfer') required final CCTPTransfer cctpTransfer,
+      @JsonKey(name: 'tx_index') required final int txIndex,
+      @JsonKey(name: 'amount_in') required final String amountIn,
+      @JsonKey(name: 'amount_out')
       required final String amountOut}) = _$CCTPTransferImpl;
 
   factory _CCTPTransfer.fromJson(Map<String, dynamic> json) =
       _$CCTPTransferImpl.fromJson;
 
+  @JsonKey(name: 'cctp_transfer')
   CCTPTransfer get cctpTransfer;
   @override
+  @JsonKey(name: 'tx_index')
   int get txIndex;
   @override
+  @JsonKey(name: 'amount_in')
   String get amountIn;
   @override
+  @JsonKey(name: 'amount_out')
   String get amountOut;
 
   /// Create a copy of Operation
@@ -4557,10 +5267,10 @@ abstract class _$$HyperlaneTransferImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {HyperlaneTransfer hyperlaneTransfer,
-      int txIndex,
-      String amountIn,
-      String amountOut});
+      {@JsonKey(name: 'hyperlane_transfer') HyperlaneTransfer hyperlaneTransfer,
+      @JsonKey(name: 'tx_index') int txIndex,
+      @JsonKey(name: 'amount_in') String amountIn,
+      @JsonKey(name: 'amount_out') String amountOut});
 
   $HyperlaneTransferCopyWith<$Res> get hyperlaneTransfer;
 }
@@ -4618,10 +5328,10 @@ class __$$HyperlaneTransferImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$HyperlaneTransferImpl implements _HyperlaneTransfer {
   const _$HyperlaneTransferImpl(
-      {required this.hyperlaneTransfer,
-      required this.txIndex,
-      required this.amountIn,
-      required this.amountOut,
+      {@JsonKey(name: 'hyperlane_transfer') required this.hyperlaneTransfer,
+      @JsonKey(name: 'tx_index') required this.txIndex,
+      @JsonKey(name: 'amount_in') required this.amountIn,
+      @JsonKey(name: 'amount_out') required this.amountOut,
       final String? $type})
       : $type = $type ?? 'hyperlaneTransfer';
 
@@ -4629,12 +5339,16 @@ class _$HyperlaneTransferImpl implements _HyperlaneTransfer {
       _$$HyperlaneTransferImplFromJson(json);
 
   @override
+  @JsonKey(name: 'hyperlane_transfer')
   final HyperlaneTransfer hyperlaneTransfer;
   @override
+  @JsonKey(name: 'tx_index')
   final int txIndex;
   @override
+  @JsonKey(name: 'amount_in')
   final String amountIn;
   @override
+  @JsonKey(name: 'amount_out')
   final String amountOut;
 
   @JsonKey(name: 'runtimeType')
@@ -4677,28 +5391,53 @@ class _$HyperlaneTransferImpl implements _HyperlaneTransfer {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(
-            Transfer transfer, int txIndex, String amountIn, String amountOut)
+            @JsonKey(name: 'transfer') Transfer transfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)
         transfer,
     required TResult Function(
-            BankSend bankSend, int txIndex, String amountIn, String amountOut)
+            @JsonKey(name: 'bank_send') BankSend bankSend,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)
         bankSend,
     required TResult Function(
-            Swap swap, int txIndex, String amountIn, String amountOut)
+            @JsonKey(name: 'swap') Swap swap,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)
         swap,
-    required TResult Function(AxelarTransfer axelarTransfer, int txIndex,
-            String amountIn, String amountOut)
+    required TResult Function(
+            @JsonKey(name: 'axelar_transfer') AxelarTransfer axelarTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)
         axelarTransfer,
-    required TResult Function(CCTPTransfer cctpTransfer, int txIndex,
-            String amountIn, String amountOut)
+    required TResult Function(
+            @JsonKey(name: 'cctp_transfer') CCTPTransfer cctpTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)
         cctpTransfer,
-    required TResult Function(HyperlaneTransfer hyperlaneTransfer, int txIndex,
-            String amountIn, String amountOut)
+    required TResult Function(
+            @JsonKey(name: 'hyperlane_transfer')
+            HyperlaneTransfer hyperlaneTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)
         hyperlaneTransfer,
     required TResult Function(
-            EvmSwap evmSwap, int txIndex, String amountIn, String amountOut)
+            @JsonKey(name: 'evm_swap') EvmSwap evmSwap,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)
         evmSwap,
-    required TResult Function(OPInitTransfer opInitTransfer, int txIndex,
-            String amountIn, String amountOut)
+    required TResult Function(
+            @JsonKey(name: 'op_init_transfer') OPInitTransfer opInitTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)
         opInitTransfer,
   }) {
     return hyperlaneTransfer(
@@ -4709,28 +5448,53 @@ class _$HyperlaneTransferImpl implements _HyperlaneTransfer {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(
-            Transfer transfer, int txIndex, String amountIn, String amountOut)?
+            @JsonKey(name: 'transfer') Transfer transfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         transfer,
     TResult? Function(
-            BankSend bankSend, int txIndex, String amountIn, String amountOut)?
+            @JsonKey(name: 'bank_send') BankSend bankSend,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         bankSend,
     TResult? Function(
-            Swap swap, int txIndex, String amountIn, String amountOut)?
+            @JsonKey(name: 'swap') Swap swap,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         swap,
-    TResult? Function(AxelarTransfer axelarTransfer, int txIndex,
-            String amountIn, String amountOut)?
+    TResult? Function(
+            @JsonKey(name: 'axelar_transfer') AxelarTransfer axelarTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         axelarTransfer,
-    TResult? Function(CCTPTransfer cctpTransfer, int txIndex, String amountIn,
-            String amountOut)?
+    TResult? Function(
+            @JsonKey(name: 'cctp_transfer') CCTPTransfer cctpTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         cctpTransfer,
-    TResult? Function(HyperlaneTransfer hyperlaneTransfer, int txIndex,
-            String amountIn, String amountOut)?
+    TResult? Function(
+            @JsonKey(name: 'hyperlane_transfer')
+            HyperlaneTransfer hyperlaneTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         hyperlaneTransfer,
     TResult? Function(
-            EvmSwap evmSwap, int txIndex, String amountIn, String amountOut)?
+            @JsonKey(name: 'evm_swap') EvmSwap evmSwap,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         evmSwap,
-    TResult? Function(OPInitTransfer opInitTransfer, int txIndex,
-            String amountIn, String amountOut)?
+    TResult? Function(
+            @JsonKey(name: 'op_init_transfer') OPInitTransfer opInitTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         opInitTransfer,
   }) {
     return hyperlaneTransfer?.call(
@@ -4741,27 +5505,53 @@ class _$HyperlaneTransferImpl implements _HyperlaneTransfer {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(
-            Transfer transfer, int txIndex, String amountIn, String amountOut)?
+            @JsonKey(name: 'transfer') Transfer transfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         transfer,
     TResult Function(
-            BankSend bankSend, int txIndex, String amountIn, String amountOut)?
+            @JsonKey(name: 'bank_send') BankSend bankSend,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         bankSend,
-    TResult Function(Swap swap, int txIndex, String amountIn, String amountOut)?
+    TResult Function(
+            @JsonKey(name: 'swap') Swap swap,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         swap,
-    TResult Function(AxelarTransfer axelarTransfer, int txIndex,
-            String amountIn, String amountOut)?
+    TResult Function(
+            @JsonKey(name: 'axelar_transfer') AxelarTransfer axelarTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         axelarTransfer,
-    TResult Function(CCTPTransfer cctpTransfer, int txIndex, String amountIn,
-            String amountOut)?
+    TResult Function(
+            @JsonKey(name: 'cctp_transfer') CCTPTransfer cctpTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         cctpTransfer,
-    TResult Function(HyperlaneTransfer hyperlaneTransfer, int txIndex,
-            String amountIn, String amountOut)?
+    TResult Function(
+            @JsonKey(name: 'hyperlane_transfer')
+            HyperlaneTransfer hyperlaneTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         hyperlaneTransfer,
     TResult Function(
-            EvmSwap evmSwap, int txIndex, String amountIn, String amountOut)?
+            @JsonKey(name: 'evm_swap') EvmSwap evmSwap,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         evmSwap,
-    TResult Function(OPInitTransfer opInitTransfer, int txIndex,
-            String amountIn, String amountOut)?
+    TResult Function(
+            @JsonKey(name: 'op_init_transfer') OPInitTransfer opInitTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         opInitTransfer,
     required TResult orElse(),
   }) {
@@ -4831,20 +5621,26 @@ class _$HyperlaneTransferImpl implements _HyperlaneTransfer {
 
 abstract class _HyperlaneTransfer implements Operation {
   const factory _HyperlaneTransfer(
-      {required final HyperlaneTransfer hyperlaneTransfer,
-      required final int txIndex,
-      required final String amountIn,
-      required final String amountOut}) = _$HyperlaneTransferImpl;
+          {@JsonKey(name: 'hyperlane_transfer')
+          required final HyperlaneTransfer hyperlaneTransfer,
+          @JsonKey(name: 'tx_index') required final int txIndex,
+          @JsonKey(name: 'amount_in') required final String amountIn,
+          @JsonKey(name: 'amount_out') required final String amountOut}) =
+      _$HyperlaneTransferImpl;
 
   factory _HyperlaneTransfer.fromJson(Map<String, dynamic> json) =
       _$HyperlaneTransferImpl.fromJson;
 
+  @JsonKey(name: 'hyperlane_transfer')
   HyperlaneTransfer get hyperlaneTransfer;
   @override
+  @JsonKey(name: 'tx_index')
   int get txIndex;
   @override
+  @JsonKey(name: 'amount_in')
   String get amountIn;
   @override
+  @JsonKey(name: 'amount_out')
   String get amountOut;
 
   /// Create a copy of Operation
@@ -4863,7 +5659,11 @@ abstract class _$$EvmSwapImplCopyWith<$Res>
       __$$EvmSwapImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({EvmSwap evmSwap, int txIndex, String amountIn, String amountOut});
+  $Res call(
+      {@JsonKey(name: 'evm_swap') EvmSwap evmSwap,
+      @JsonKey(name: 'tx_index') int txIndex,
+      @JsonKey(name: 'amount_in') String amountIn,
+      @JsonKey(name: 'amount_out') String amountOut});
 
   $EvmSwapCopyWith<$Res> get evmSwap;
 }
@@ -4921,10 +5721,10 @@ class __$$EvmSwapImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$EvmSwapImpl implements _EvmSwap {
   const _$EvmSwapImpl(
-      {required this.evmSwap,
-      required this.txIndex,
-      required this.amountIn,
-      required this.amountOut,
+      {@JsonKey(name: 'evm_swap') required this.evmSwap,
+      @JsonKey(name: 'tx_index') required this.txIndex,
+      @JsonKey(name: 'amount_in') required this.amountIn,
+      @JsonKey(name: 'amount_out') required this.amountOut,
       final String? $type})
       : $type = $type ?? 'evmSwap';
 
@@ -4932,12 +5732,16 @@ class _$EvmSwapImpl implements _EvmSwap {
       _$$EvmSwapImplFromJson(json);
 
   @override
+  @JsonKey(name: 'evm_swap')
   final EvmSwap evmSwap;
   @override
+  @JsonKey(name: 'tx_index')
   final int txIndex;
   @override
+  @JsonKey(name: 'amount_in')
   final String amountIn;
   @override
+  @JsonKey(name: 'amount_out')
   final String amountOut;
 
   @JsonKey(name: 'runtimeType')
@@ -4978,28 +5782,53 @@ class _$EvmSwapImpl implements _EvmSwap {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(
-            Transfer transfer, int txIndex, String amountIn, String amountOut)
+            @JsonKey(name: 'transfer') Transfer transfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)
         transfer,
     required TResult Function(
-            BankSend bankSend, int txIndex, String amountIn, String amountOut)
+            @JsonKey(name: 'bank_send') BankSend bankSend,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)
         bankSend,
     required TResult Function(
-            Swap swap, int txIndex, String amountIn, String amountOut)
+            @JsonKey(name: 'swap') Swap swap,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)
         swap,
-    required TResult Function(AxelarTransfer axelarTransfer, int txIndex,
-            String amountIn, String amountOut)
+    required TResult Function(
+            @JsonKey(name: 'axelar_transfer') AxelarTransfer axelarTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)
         axelarTransfer,
-    required TResult Function(CCTPTransfer cctpTransfer, int txIndex,
-            String amountIn, String amountOut)
+    required TResult Function(
+            @JsonKey(name: 'cctp_transfer') CCTPTransfer cctpTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)
         cctpTransfer,
-    required TResult Function(HyperlaneTransfer hyperlaneTransfer, int txIndex,
-            String amountIn, String amountOut)
+    required TResult Function(
+            @JsonKey(name: 'hyperlane_transfer')
+            HyperlaneTransfer hyperlaneTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)
         hyperlaneTransfer,
     required TResult Function(
-            EvmSwap evmSwap, int txIndex, String amountIn, String amountOut)
+            @JsonKey(name: 'evm_swap') EvmSwap evmSwap,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)
         evmSwap,
-    required TResult Function(OPInitTransfer opInitTransfer, int txIndex,
-            String amountIn, String amountOut)
+    required TResult Function(
+            @JsonKey(name: 'op_init_transfer') OPInitTransfer opInitTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)
         opInitTransfer,
   }) {
     return evmSwap(this.evmSwap, txIndex, amountIn, amountOut);
@@ -5009,28 +5838,53 @@ class _$EvmSwapImpl implements _EvmSwap {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(
-            Transfer transfer, int txIndex, String amountIn, String amountOut)?
+            @JsonKey(name: 'transfer') Transfer transfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         transfer,
     TResult? Function(
-            BankSend bankSend, int txIndex, String amountIn, String amountOut)?
+            @JsonKey(name: 'bank_send') BankSend bankSend,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         bankSend,
     TResult? Function(
-            Swap swap, int txIndex, String amountIn, String amountOut)?
+            @JsonKey(name: 'swap') Swap swap,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         swap,
-    TResult? Function(AxelarTransfer axelarTransfer, int txIndex,
-            String amountIn, String amountOut)?
+    TResult? Function(
+            @JsonKey(name: 'axelar_transfer') AxelarTransfer axelarTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         axelarTransfer,
-    TResult? Function(CCTPTransfer cctpTransfer, int txIndex, String amountIn,
-            String amountOut)?
+    TResult? Function(
+            @JsonKey(name: 'cctp_transfer') CCTPTransfer cctpTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         cctpTransfer,
-    TResult? Function(HyperlaneTransfer hyperlaneTransfer, int txIndex,
-            String amountIn, String amountOut)?
+    TResult? Function(
+            @JsonKey(name: 'hyperlane_transfer')
+            HyperlaneTransfer hyperlaneTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         hyperlaneTransfer,
     TResult? Function(
-            EvmSwap evmSwap, int txIndex, String amountIn, String amountOut)?
+            @JsonKey(name: 'evm_swap') EvmSwap evmSwap,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         evmSwap,
-    TResult? Function(OPInitTransfer opInitTransfer, int txIndex,
-            String amountIn, String amountOut)?
+    TResult? Function(
+            @JsonKey(name: 'op_init_transfer') OPInitTransfer opInitTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         opInitTransfer,
   }) {
     return evmSwap?.call(this.evmSwap, txIndex, amountIn, amountOut);
@@ -5040,27 +5894,53 @@ class _$EvmSwapImpl implements _EvmSwap {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(
-            Transfer transfer, int txIndex, String amountIn, String amountOut)?
+            @JsonKey(name: 'transfer') Transfer transfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         transfer,
     TResult Function(
-            BankSend bankSend, int txIndex, String amountIn, String amountOut)?
+            @JsonKey(name: 'bank_send') BankSend bankSend,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         bankSend,
-    TResult Function(Swap swap, int txIndex, String amountIn, String amountOut)?
+    TResult Function(
+            @JsonKey(name: 'swap') Swap swap,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         swap,
-    TResult Function(AxelarTransfer axelarTransfer, int txIndex,
-            String amountIn, String amountOut)?
+    TResult Function(
+            @JsonKey(name: 'axelar_transfer') AxelarTransfer axelarTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         axelarTransfer,
-    TResult Function(CCTPTransfer cctpTransfer, int txIndex, String amountIn,
-            String amountOut)?
+    TResult Function(
+            @JsonKey(name: 'cctp_transfer') CCTPTransfer cctpTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         cctpTransfer,
-    TResult Function(HyperlaneTransfer hyperlaneTransfer, int txIndex,
-            String amountIn, String amountOut)?
+    TResult Function(
+            @JsonKey(name: 'hyperlane_transfer')
+            HyperlaneTransfer hyperlaneTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         hyperlaneTransfer,
     TResult Function(
-            EvmSwap evmSwap, int txIndex, String amountIn, String amountOut)?
+            @JsonKey(name: 'evm_swap') EvmSwap evmSwap,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         evmSwap,
-    TResult Function(OPInitTransfer opInitTransfer, int txIndex,
-            String amountIn, String amountOut)?
+    TResult Function(
+            @JsonKey(name: 'op_init_transfer') OPInitTransfer opInitTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         opInitTransfer,
     required TResult orElse(),
   }) {
@@ -5129,19 +6009,24 @@ class _$EvmSwapImpl implements _EvmSwap {
 
 abstract class _EvmSwap implements Operation {
   const factory _EvmSwap(
-      {required final EvmSwap evmSwap,
-      required final int txIndex,
-      required final String amountIn,
-      required final String amountOut}) = _$EvmSwapImpl;
+          {@JsonKey(name: 'evm_swap') required final EvmSwap evmSwap,
+          @JsonKey(name: 'tx_index') required final int txIndex,
+          @JsonKey(name: 'amount_in') required final String amountIn,
+          @JsonKey(name: 'amount_out') required final String amountOut}) =
+      _$EvmSwapImpl;
 
   factory _EvmSwap.fromJson(Map<String, dynamic> json) = _$EvmSwapImpl.fromJson;
 
+  @JsonKey(name: 'evm_swap')
   EvmSwap get evmSwap;
   @override
+  @JsonKey(name: 'tx_index')
   int get txIndex;
   @override
+  @JsonKey(name: 'amount_in')
   String get amountIn;
   @override
+  @JsonKey(name: 'amount_out')
   String get amountOut;
 
   /// Create a copy of Operation
@@ -5161,10 +6046,10 @@ abstract class _$$OPInitTransferImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {OPInitTransfer opInitTransfer,
-      int txIndex,
-      String amountIn,
-      String amountOut});
+      {@JsonKey(name: 'op_init_transfer') OPInitTransfer opInitTransfer,
+      @JsonKey(name: 'tx_index') int txIndex,
+      @JsonKey(name: 'amount_in') String amountIn,
+      @JsonKey(name: 'amount_out') String amountOut});
 
   $OPInitTransferCopyWith<$Res> get opInitTransfer;
 }
@@ -5222,10 +6107,10 @@ class __$$OPInitTransferImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$OPInitTransferImpl implements _OPInitTransfer {
   const _$OPInitTransferImpl(
-      {required this.opInitTransfer,
-      required this.txIndex,
-      required this.amountIn,
-      required this.amountOut,
+      {@JsonKey(name: 'op_init_transfer') required this.opInitTransfer,
+      @JsonKey(name: 'tx_index') required this.txIndex,
+      @JsonKey(name: 'amount_in') required this.amountIn,
+      @JsonKey(name: 'amount_out') required this.amountOut,
       final String? $type})
       : $type = $type ?? 'opInitTransfer';
 
@@ -5233,12 +6118,16 @@ class _$OPInitTransferImpl implements _OPInitTransfer {
       _$$OPInitTransferImplFromJson(json);
 
   @override
+  @JsonKey(name: 'op_init_transfer')
   final OPInitTransfer opInitTransfer;
   @override
+  @JsonKey(name: 'tx_index')
   final int txIndex;
   @override
+  @JsonKey(name: 'amount_in')
   final String amountIn;
   @override
+  @JsonKey(name: 'amount_out')
   final String amountOut;
 
   @JsonKey(name: 'runtimeType')
@@ -5281,28 +6170,53 @@ class _$OPInitTransferImpl implements _OPInitTransfer {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(
-            Transfer transfer, int txIndex, String amountIn, String amountOut)
+            @JsonKey(name: 'transfer') Transfer transfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)
         transfer,
     required TResult Function(
-            BankSend bankSend, int txIndex, String amountIn, String amountOut)
+            @JsonKey(name: 'bank_send') BankSend bankSend,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)
         bankSend,
     required TResult Function(
-            Swap swap, int txIndex, String amountIn, String amountOut)
+            @JsonKey(name: 'swap') Swap swap,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)
         swap,
-    required TResult Function(AxelarTransfer axelarTransfer, int txIndex,
-            String amountIn, String amountOut)
+    required TResult Function(
+            @JsonKey(name: 'axelar_transfer') AxelarTransfer axelarTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)
         axelarTransfer,
-    required TResult Function(CCTPTransfer cctpTransfer, int txIndex,
-            String amountIn, String amountOut)
+    required TResult Function(
+            @JsonKey(name: 'cctp_transfer') CCTPTransfer cctpTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)
         cctpTransfer,
-    required TResult Function(HyperlaneTransfer hyperlaneTransfer, int txIndex,
-            String amountIn, String amountOut)
+    required TResult Function(
+            @JsonKey(name: 'hyperlane_transfer')
+            HyperlaneTransfer hyperlaneTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)
         hyperlaneTransfer,
     required TResult Function(
-            EvmSwap evmSwap, int txIndex, String amountIn, String amountOut)
+            @JsonKey(name: 'evm_swap') EvmSwap evmSwap,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)
         evmSwap,
-    required TResult Function(OPInitTransfer opInitTransfer, int txIndex,
-            String amountIn, String amountOut)
+    required TResult Function(
+            @JsonKey(name: 'op_init_transfer') OPInitTransfer opInitTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)
         opInitTransfer,
   }) {
     return opInitTransfer(this.opInitTransfer, txIndex, amountIn, amountOut);
@@ -5312,28 +6226,53 @@ class _$OPInitTransferImpl implements _OPInitTransfer {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(
-            Transfer transfer, int txIndex, String amountIn, String amountOut)?
+            @JsonKey(name: 'transfer') Transfer transfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         transfer,
     TResult? Function(
-            BankSend bankSend, int txIndex, String amountIn, String amountOut)?
+            @JsonKey(name: 'bank_send') BankSend bankSend,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         bankSend,
     TResult? Function(
-            Swap swap, int txIndex, String amountIn, String amountOut)?
+            @JsonKey(name: 'swap') Swap swap,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         swap,
-    TResult? Function(AxelarTransfer axelarTransfer, int txIndex,
-            String amountIn, String amountOut)?
+    TResult? Function(
+            @JsonKey(name: 'axelar_transfer') AxelarTransfer axelarTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         axelarTransfer,
-    TResult? Function(CCTPTransfer cctpTransfer, int txIndex, String amountIn,
-            String amountOut)?
+    TResult? Function(
+            @JsonKey(name: 'cctp_transfer') CCTPTransfer cctpTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         cctpTransfer,
-    TResult? Function(HyperlaneTransfer hyperlaneTransfer, int txIndex,
-            String amountIn, String amountOut)?
+    TResult? Function(
+            @JsonKey(name: 'hyperlane_transfer')
+            HyperlaneTransfer hyperlaneTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         hyperlaneTransfer,
     TResult? Function(
-            EvmSwap evmSwap, int txIndex, String amountIn, String amountOut)?
+            @JsonKey(name: 'evm_swap') EvmSwap evmSwap,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         evmSwap,
-    TResult? Function(OPInitTransfer opInitTransfer, int txIndex,
-            String amountIn, String amountOut)?
+    TResult? Function(
+            @JsonKey(name: 'op_init_transfer') OPInitTransfer opInitTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         opInitTransfer,
   }) {
     return opInitTransfer?.call(
@@ -5344,27 +6283,53 @@ class _$OPInitTransferImpl implements _OPInitTransfer {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(
-            Transfer transfer, int txIndex, String amountIn, String amountOut)?
+            @JsonKey(name: 'transfer') Transfer transfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         transfer,
     TResult Function(
-            BankSend bankSend, int txIndex, String amountIn, String amountOut)?
+            @JsonKey(name: 'bank_send') BankSend bankSend,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         bankSend,
-    TResult Function(Swap swap, int txIndex, String amountIn, String amountOut)?
+    TResult Function(
+            @JsonKey(name: 'swap') Swap swap,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         swap,
-    TResult Function(AxelarTransfer axelarTransfer, int txIndex,
-            String amountIn, String amountOut)?
+    TResult Function(
+            @JsonKey(name: 'axelar_transfer') AxelarTransfer axelarTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         axelarTransfer,
-    TResult Function(CCTPTransfer cctpTransfer, int txIndex, String amountIn,
-            String amountOut)?
+    TResult Function(
+            @JsonKey(name: 'cctp_transfer') CCTPTransfer cctpTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         cctpTransfer,
-    TResult Function(HyperlaneTransfer hyperlaneTransfer, int txIndex,
-            String amountIn, String amountOut)?
+    TResult Function(
+            @JsonKey(name: 'hyperlane_transfer')
+            HyperlaneTransfer hyperlaneTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         hyperlaneTransfer,
     TResult Function(
-            EvmSwap evmSwap, int txIndex, String amountIn, String amountOut)?
+            @JsonKey(name: 'evm_swap') EvmSwap evmSwap,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         evmSwap,
-    TResult Function(OPInitTransfer opInitTransfer, int txIndex,
-            String amountIn, String amountOut)?
+    TResult Function(
+            @JsonKey(name: 'op_init_transfer') OPInitTransfer opInitTransfer,
+            @JsonKey(name: 'tx_index') int txIndex,
+            @JsonKey(name: 'amount_in') String amountIn,
+            @JsonKey(name: 'amount_out') String amountOut)?
         opInitTransfer,
     required TResult orElse(),
   }) {
@@ -5433,20 +6398,26 @@ class _$OPInitTransferImpl implements _OPInitTransfer {
 
 abstract class _OPInitTransfer implements Operation {
   const factory _OPInitTransfer(
-      {required final OPInitTransfer opInitTransfer,
-      required final int txIndex,
-      required final String amountIn,
-      required final String amountOut}) = _$OPInitTransferImpl;
+          {@JsonKey(name: 'op_init_transfer')
+          required final OPInitTransfer opInitTransfer,
+          @JsonKey(name: 'tx_index') required final int txIndex,
+          @JsonKey(name: 'amount_in') required final String amountIn,
+          @JsonKey(name: 'amount_out') required final String amountOut}) =
+      _$OPInitTransferImpl;
 
   factory _OPInitTransfer.fromJson(Map<String, dynamic> json) =
       _$OPInitTransferImpl.fromJson;
 
+  @JsonKey(name: 'op_init_transfer')
   OPInitTransfer get opInitTransfer;
   @override
+  @JsonKey(name: 'tx_index')
   int get txIndex;
   @override
+  @JsonKey(name: 'amount_in')
   String get amountIn;
   @override
+  @JsonKey(name: 'amount_out')
   String get amountOut;
 
   /// Create a copy of Operation
@@ -5797,13 +6768,21 @@ EstimatedFee _$EstimatedFeeFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$EstimatedFee {
+  @JsonKey(name: 'fee_type')
   FeeType get feeType => throw _privateConstructorUsedError;
+  @JsonKey(name: 'bridge_id')
   BridgeType get bridgeID => throw _privateConstructorUsedError;
+  @JsonKey(name: 'amount')
   String get amount => throw _privateConstructorUsedError;
+  @JsonKey(name: 'usd_amount')
   String get usdAmount => throw _privateConstructorUsedError;
+  @JsonKey(name: 'origin_asset')
   Asset get originAsset => throw _privateConstructorUsedError;
+  @JsonKey(name: 'chain_id')
   String get chainID => throw _privateConstructorUsedError;
+  @JsonKey(name: 'tx_index')
   int get txIndex => throw _privateConstructorUsedError;
+  @JsonKey(name: 'operation_index')
   int? get operationIndex => throw _privateConstructorUsedError;
 
   /// Serializes this EstimatedFee to a JSON map.
@@ -5823,14 +6802,14 @@ abstract class $EstimatedFeeCopyWith<$Res> {
       _$EstimatedFeeCopyWithImpl<$Res, EstimatedFee>;
   @useResult
   $Res call(
-      {FeeType feeType,
-      BridgeType bridgeID,
-      String amount,
-      String usdAmount,
-      Asset originAsset,
-      String chainID,
-      int txIndex,
-      int? operationIndex});
+      {@JsonKey(name: 'fee_type') FeeType feeType,
+      @JsonKey(name: 'bridge_id') BridgeType bridgeID,
+      @JsonKey(name: 'amount') String amount,
+      @JsonKey(name: 'usd_amount') String usdAmount,
+      @JsonKey(name: 'origin_asset') Asset originAsset,
+      @JsonKey(name: 'chain_id') String chainID,
+      @JsonKey(name: 'tx_index') int txIndex,
+      @JsonKey(name: 'operation_index') int? operationIndex});
 
   $AssetCopyWith<$Res> get originAsset;
 }
@@ -5915,14 +6894,14 @@ abstract class _$$EstimatedFeeImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {FeeType feeType,
-      BridgeType bridgeID,
-      String amount,
-      String usdAmount,
-      Asset originAsset,
-      String chainID,
-      int txIndex,
-      int? operationIndex});
+      {@JsonKey(name: 'fee_type') FeeType feeType,
+      @JsonKey(name: 'bridge_id') BridgeType bridgeID,
+      @JsonKey(name: 'amount') String amount,
+      @JsonKey(name: 'usd_amount') String usdAmount,
+      @JsonKey(name: 'origin_asset') Asset originAsset,
+      @JsonKey(name: 'chain_id') String chainID,
+      @JsonKey(name: 'tx_index') int txIndex,
+      @JsonKey(name: 'operation_index') int? operationIndex});
 
   @override
   $AssetCopyWith<$Res> get originAsset;
@@ -5991,33 +6970,41 @@ class __$$EstimatedFeeImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$EstimatedFeeImpl implements _EstimatedFee {
   const _$EstimatedFeeImpl(
-      {required this.feeType,
-      required this.bridgeID,
-      required this.amount,
-      required this.usdAmount,
-      required this.originAsset,
-      required this.chainID,
-      required this.txIndex,
-      this.operationIndex});
+      {@JsonKey(name: 'fee_type') required this.feeType,
+      @JsonKey(name: 'bridge_id') required this.bridgeID,
+      @JsonKey(name: 'amount') required this.amount,
+      @JsonKey(name: 'usd_amount') required this.usdAmount,
+      @JsonKey(name: 'origin_asset') required this.originAsset,
+      @JsonKey(name: 'chain_id') required this.chainID,
+      @JsonKey(name: 'tx_index') required this.txIndex,
+      @JsonKey(name: 'operation_index') this.operationIndex});
 
   factory _$EstimatedFeeImpl.fromJson(Map<String, dynamic> json) =>
       _$$EstimatedFeeImplFromJson(json);
 
   @override
+  @JsonKey(name: 'fee_type')
   final FeeType feeType;
   @override
+  @JsonKey(name: 'bridge_id')
   final BridgeType bridgeID;
   @override
+  @JsonKey(name: 'amount')
   final String amount;
   @override
+  @JsonKey(name: 'usd_amount')
   final String usdAmount;
   @override
+  @JsonKey(name: 'origin_asset')
   final Asset originAsset;
   @override
+  @JsonKey(name: 'chain_id')
   final String chainID;
   @override
+  @JsonKey(name: 'tx_index')
   final int txIndex;
   @override
+  @JsonKey(name: 'operation_index')
   final int? operationIndex;
 
   @override
@@ -6067,33 +7054,42 @@ class _$EstimatedFeeImpl implements _EstimatedFee {
 
 abstract class _EstimatedFee implements EstimatedFee {
   const factory _EstimatedFee(
-      {required final FeeType feeType,
-      required final BridgeType bridgeID,
-      required final String amount,
-      required final String usdAmount,
-      required final Asset originAsset,
-      required final String chainID,
-      required final int txIndex,
-      final int? operationIndex}) = _$EstimatedFeeImpl;
+          {@JsonKey(name: 'fee_type') required final FeeType feeType,
+          @JsonKey(name: 'bridge_id') required final BridgeType bridgeID,
+          @JsonKey(name: 'amount') required final String amount,
+          @JsonKey(name: 'usd_amount') required final String usdAmount,
+          @JsonKey(name: 'origin_asset') required final Asset originAsset,
+          @JsonKey(name: 'chain_id') required final String chainID,
+          @JsonKey(name: 'tx_index') required final int txIndex,
+          @JsonKey(name: 'operation_index') final int? operationIndex}) =
+      _$EstimatedFeeImpl;
 
   factory _EstimatedFee.fromJson(Map<String, dynamic> json) =
       _$EstimatedFeeImpl.fromJson;
 
   @override
+  @JsonKey(name: 'fee_type')
   FeeType get feeType;
   @override
+  @JsonKey(name: 'bridge_id')
   BridgeType get bridgeID;
   @override
+  @JsonKey(name: 'amount')
   String get amount;
   @override
+  @JsonKey(name: 'usd_amount')
   String get usdAmount;
   @override
+  @JsonKey(name: 'origin_asset')
   Asset get originAsset;
   @override
+  @JsonKey(name: 'chain_id')
   String get chainID;
   @override
+  @JsonKey(name: 'tx_index')
   int get txIndex;
   @override
+  @JsonKey(name: 'operation_index')
   int? get operationIndex;
 
   /// Create a copy of EstimatedFee
@@ -6110,24 +7106,43 @@ RouteResponse _$RouteResponseFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$RouteResponse {
+  @JsonKey(name: 'source_asset_denom')
   String get sourceAssetDenom => throw _privateConstructorUsedError;
+  @JsonKey(name: 'source_asset_chain_id')
   String get sourceAssetChainID => throw _privateConstructorUsedError;
+  @JsonKey(name: 'dest_asset_denom')
   String get destAssetDenom => throw _privateConstructorUsedError;
+  @JsonKey(name: 'dest_asset_chain_id')
   String get destAssetChainID => throw _privateConstructorUsedError;
+  @JsonKey(name: 'amount_in')
   String get amountIn => throw _privateConstructorUsedError;
+  @JsonKey(name: 'amount_out')
   String get amountOut => throw _privateConstructorUsedError;
+  @JsonKey(name: 'operations')
   List<Operation> get operations => throw _privateConstructorUsedError;
+  @JsonKey(name: 'chain_ids')
   List<String> get chainIDs => throw _privateConstructorUsedError;
+  @JsonKey(name: 'required_chain_addresses')
   List<String> get requiredChainAddresses => throw _privateConstructorUsedError;
+  @JsonKey(name: 'does_swap')
   bool get doesSwap => throw _privateConstructorUsedError;
+  @JsonKey(name: 'estimated_amount_out')
   String? get estimatedAmountOut => throw _privateConstructorUsedError;
+  @JsonKey(name: 'swap_venues')
   List<SwapVenue>? get swapVenues => throw _privateConstructorUsedError;
+  @JsonKey(name: 'txs_required')
   int get txsRequired => throw _privateConstructorUsedError;
+  @JsonKey(name: 'usd_amount_in')
   String? get usdAmountIn => throw _privateConstructorUsedError;
+  @JsonKey(name: 'usd_amount_out')
   String? get usdAmountOut => throw _privateConstructorUsedError;
+  @JsonKey(name: 'swap_price_impact_percent')
   String? get swapPriceImpactPercent => throw _privateConstructorUsedError;
+  @JsonKey(name: 'warning')
   RouteWarning? get warning => throw _privateConstructorUsedError;
+  @JsonKey(name: 'estimated_fees')
   List<EstimatedFee> get estimatedFees => throw _privateConstructorUsedError;
+  @JsonKey(name: 'estimated_route_duration_seconds')
   int get estimatedRouteDurationSeconds => throw _privateConstructorUsedError;
 
   /// Serializes this RouteResponse to a JSON map.
@@ -6147,24 +7162,27 @@ abstract class $RouteResponseCopyWith<$Res> {
       _$RouteResponseCopyWithImpl<$Res, RouteResponse>;
   @useResult
   $Res call(
-      {String sourceAssetDenom,
-      String sourceAssetChainID,
-      String destAssetDenom,
-      String destAssetChainID,
-      String amountIn,
-      String amountOut,
-      List<Operation> operations,
-      List<String> chainIDs,
+      {@JsonKey(name: 'source_asset_denom') String sourceAssetDenom,
+      @JsonKey(name: 'source_asset_chain_id') String sourceAssetChainID,
+      @JsonKey(name: 'dest_asset_denom') String destAssetDenom,
+      @JsonKey(name: 'dest_asset_chain_id') String destAssetChainID,
+      @JsonKey(name: 'amount_in') String amountIn,
+      @JsonKey(name: 'amount_out') String amountOut,
+      @JsonKey(name: 'operations') List<Operation> operations,
+      @JsonKey(name: 'chain_ids') List<String> chainIDs,
+      @JsonKey(name: 'required_chain_addresses')
       List<String> requiredChainAddresses,
-      bool doesSwap,
-      String? estimatedAmountOut,
-      List<SwapVenue>? swapVenues,
-      int txsRequired,
-      String? usdAmountIn,
-      String? usdAmountOut,
+      @JsonKey(name: 'does_swap') bool doesSwap,
+      @JsonKey(name: 'estimated_amount_out') String? estimatedAmountOut,
+      @JsonKey(name: 'swap_venues') List<SwapVenue>? swapVenues,
+      @JsonKey(name: 'txs_required') int txsRequired,
+      @JsonKey(name: 'usd_amount_in') String? usdAmountIn,
+      @JsonKey(name: 'usd_amount_out') String? usdAmountOut,
+      @JsonKey(name: 'swap_price_impact_percent')
       String? swapPriceImpactPercent,
-      RouteWarning? warning,
-      List<EstimatedFee> estimatedFees,
+      @JsonKey(name: 'warning') RouteWarning? warning,
+      @JsonKey(name: 'estimated_fees') List<EstimatedFee> estimatedFees,
+      @JsonKey(name: 'estimated_route_duration_seconds')
       int estimatedRouteDurationSeconds});
 
   $RouteWarningCopyWith<$Res>? get warning;
@@ -6309,24 +7327,27 @@ abstract class _$$RouteResponseImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {String sourceAssetDenom,
-      String sourceAssetChainID,
-      String destAssetDenom,
-      String destAssetChainID,
-      String amountIn,
-      String amountOut,
-      List<Operation> operations,
-      List<String> chainIDs,
+      {@JsonKey(name: 'source_asset_denom') String sourceAssetDenom,
+      @JsonKey(name: 'source_asset_chain_id') String sourceAssetChainID,
+      @JsonKey(name: 'dest_asset_denom') String destAssetDenom,
+      @JsonKey(name: 'dest_asset_chain_id') String destAssetChainID,
+      @JsonKey(name: 'amount_in') String amountIn,
+      @JsonKey(name: 'amount_out') String amountOut,
+      @JsonKey(name: 'operations') List<Operation> operations,
+      @JsonKey(name: 'chain_ids') List<String> chainIDs,
+      @JsonKey(name: 'required_chain_addresses')
       List<String> requiredChainAddresses,
-      bool doesSwap,
-      String? estimatedAmountOut,
-      List<SwapVenue>? swapVenues,
-      int txsRequired,
-      String? usdAmountIn,
-      String? usdAmountOut,
+      @JsonKey(name: 'does_swap') bool doesSwap,
+      @JsonKey(name: 'estimated_amount_out') String? estimatedAmountOut,
+      @JsonKey(name: 'swap_venues') List<SwapVenue>? swapVenues,
+      @JsonKey(name: 'txs_required') int txsRequired,
+      @JsonKey(name: 'usd_amount_in') String? usdAmountIn,
+      @JsonKey(name: 'usd_amount_out') String? usdAmountOut,
+      @JsonKey(name: 'swap_price_impact_percent')
       String? swapPriceImpactPercent,
-      RouteWarning? warning,
-      List<EstimatedFee> estimatedFees,
+      @JsonKey(name: 'warning') RouteWarning? warning,
+      @JsonKey(name: 'estimated_fees') List<EstimatedFee> estimatedFees,
+      @JsonKey(name: 'estimated_route_duration_seconds')
       int estimatedRouteDurationSeconds});
 
   @override
@@ -6451,24 +7472,27 @@ class __$$RouteResponseImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$RouteResponseImpl implements _RouteResponse {
   const _$RouteResponseImpl(
-      {required this.sourceAssetDenom,
-      required this.sourceAssetChainID,
-      required this.destAssetDenom,
-      required this.destAssetChainID,
-      required this.amountIn,
-      required this.amountOut,
-      required final List<Operation> operations,
-      required final List<String> chainIDs,
+      {@JsonKey(name: 'source_asset_denom') required this.sourceAssetDenom,
+      @JsonKey(name: 'source_asset_chain_id') required this.sourceAssetChainID,
+      @JsonKey(name: 'dest_asset_denom') required this.destAssetDenom,
+      @JsonKey(name: 'dest_asset_chain_id') required this.destAssetChainID,
+      @JsonKey(name: 'amount_in') required this.amountIn,
+      @JsonKey(name: 'amount_out') required this.amountOut,
+      @JsonKey(name: 'operations') required final List<Operation> operations,
+      @JsonKey(name: 'chain_ids') required final List<String> chainIDs,
+      @JsonKey(name: 'required_chain_addresses')
       required final List<String> requiredChainAddresses,
-      required this.doesSwap,
-      this.estimatedAmountOut,
-      final List<SwapVenue>? swapVenues,
-      required this.txsRequired,
-      this.usdAmountIn,
-      this.usdAmountOut,
-      this.swapPriceImpactPercent,
-      this.warning,
+      @JsonKey(name: 'does_swap') required this.doesSwap,
+      @JsonKey(name: 'estimated_amount_out') this.estimatedAmountOut,
+      @JsonKey(name: 'swap_venues') final List<SwapVenue>? swapVenues,
+      @JsonKey(name: 'txs_required') required this.txsRequired,
+      @JsonKey(name: 'usd_amount_in') this.usdAmountIn,
+      @JsonKey(name: 'usd_amount_out') this.usdAmountOut,
+      @JsonKey(name: 'swap_price_impact_percent') this.swapPriceImpactPercent,
+      @JsonKey(name: 'warning') this.warning,
+      @JsonKey(name: 'estimated_fees')
       required final List<EstimatedFee> estimatedFees,
+      @JsonKey(name: 'estimated_route_duration_seconds')
       required this.estimatedRouteDurationSeconds})
       : _operations = operations,
         _chainIDs = chainIDs,
@@ -6480,19 +7504,26 @@ class _$RouteResponseImpl implements _RouteResponse {
       _$$RouteResponseImplFromJson(json);
 
   @override
+  @JsonKey(name: 'source_asset_denom')
   final String sourceAssetDenom;
   @override
+  @JsonKey(name: 'source_asset_chain_id')
   final String sourceAssetChainID;
   @override
+  @JsonKey(name: 'dest_asset_denom')
   final String destAssetDenom;
   @override
+  @JsonKey(name: 'dest_asset_chain_id')
   final String destAssetChainID;
   @override
+  @JsonKey(name: 'amount_in')
   final String amountIn;
   @override
+  @JsonKey(name: 'amount_out')
   final String amountOut;
   final List<Operation> _operations;
   @override
+  @JsonKey(name: 'operations')
   List<Operation> get operations {
     if (_operations is EqualUnmodifiableListView) return _operations;
     // ignore: implicit_dynamic_type
@@ -6501,6 +7532,7 @@ class _$RouteResponseImpl implements _RouteResponse {
 
   final List<String> _chainIDs;
   @override
+  @JsonKey(name: 'chain_ids')
   List<String> get chainIDs {
     if (_chainIDs is EqualUnmodifiableListView) return _chainIDs;
     // ignore: implicit_dynamic_type
@@ -6509,6 +7541,7 @@ class _$RouteResponseImpl implements _RouteResponse {
 
   final List<String> _requiredChainAddresses;
   @override
+  @JsonKey(name: 'required_chain_addresses')
   List<String> get requiredChainAddresses {
     if (_requiredChainAddresses is EqualUnmodifiableListView)
       return _requiredChainAddresses;
@@ -6517,11 +7550,14 @@ class _$RouteResponseImpl implements _RouteResponse {
   }
 
   @override
+  @JsonKey(name: 'does_swap')
   final bool doesSwap;
   @override
+  @JsonKey(name: 'estimated_amount_out')
   final String? estimatedAmountOut;
   final List<SwapVenue>? _swapVenues;
   @override
+  @JsonKey(name: 'swap_venues')
   List<SwapVenue>? get swapVenues {
     final value = _swapVenues;
     if (value == null) return null;
@@ -6531,17 +7567,23 @@ class _$RouteResponseImpl implements _RouteResponse {
   }
 
   @override
+  @JsonKey(name: 'txs_required')
   final int txsRequired;
   @override
+  @JsonKey(name: 'usd_amount_in')
   final String? usdAmountIn;
   @override
+  @JsonKey(name: 'usd_amount_out')
   final String? usdAmountOut;
   @override
+  @JsonKey(name: 'swap_price_impact_percent')
   final String? swapPriceImpactPercent;
   @override
+  @JsonKey(name: 'warning')
   final RouteWarning? warning;
   final List<EstimatedFee> _estimatedFees;
   @override
+  @JsonKey(name: 'estimated_fees')
   List<EstimatedFee> get estimatedFees {
     if (_estimatedFees is EqualUnmodifiableListView) return _estimatedFees;
     // ignore: implicit_dynamic_type
@@ -6549,6 +7591,7 @@ class _$RouteResponseImpl implements _RouteResponse {
   }
 
   @override
+  @JsonKey(name: 'estimated_route_duration_seconds')
   final int estimatedRouteDurationSeconds;
 
   @override
@@ -6644,66 +7687,92 @@ class _$RouteResponseImpl implements _RouteResponse {
 
 abstract class _RouteResponse implements RouteResponse {
   const factory _RouteResponse(
-      {required final String sourceAssetDenom,
+      {@JsonKey(name: 'source_asset_denom')
+      required final String sourceAssetDenom,
+      @JsonKey(name: 'source_asset_chain_id')
       required final String sourceAssetChainID,
-      required final String destAssetDenom,
+      @JsonKey(name: 'dest_asset_denom') required final String destAssetDenom,
+      @JsonKey(name: 'dest_asset_chain_id')
       required final String destAssetChainID,
-      required final String amountIn,
-      required final String amountOut,
-      required final List<Operation> operations,
-      required final List<String> chainIDs,
+      @JsonKey(name: 'amount_in') required final String amountIn,
+      @JsonKey(name: 'amount_out') required final String amountOut,
+      @JsonKey(name: 'operations') required final List<Operation> operations,
+      @JsonKey(name: 'chain_ids') required final List<String> chainIDs,
+      @JsonKey(name: 'required_chain_addresses')
       required final List<String> requiredChainAddresses,
-      required final bool doesSwap,
-      final String? estimatedAmountOut,
-      final List<SwapVenue>? swapVenues,
-      required final int txsRequired,
-      final String? usdAmountIn,
-      final String? usdAmountOut,
+      @JsonKey(name: 'does_swap') required final bool doesSwap,
+      @JsonKey(name: 'estimated_amount_out') final String? estimatedAmountOut,
+      @JsonKey(name: 'swap_venues') final List<SwapVenue>? swapVenues,
+      @JsonKey(name: 'txs_required') required final int txsRequired,
+      @JsonKey(name: 'usd_amount_in') final String? usdAmountIn,
+      @JsonKey(name: 'usd_amount_out') final String? usdAmountOut,
+      @JsonKey(name: 'swap_price_impact_percent')
       final String? swapPriceImpactPercent,
-      final RouteWarning? warning,
+      @JsonKey(name: 'warning') final RouteWarning? warning,
+      @JsonKey(name: 'estimated_fees')
       required final List<EstimatedFee> estimatedFees,
+      @JsonKey(name: 'estimated_route_duration_seconds')
       required final int estimatedRouteDurationSeconds}) = _$RouteResponseImpl;
 
   factory _RouteResponse.fromJson(Map<String, dynamic> json) =
       _$RouteResponseImpl.fromJson;
 
   @override
+  @JsonKey(name: 'source_asset_denom')
   String get sourceAssetDenom;
   @override
+  @JsonKey(name: 'source_asset_chain_id')
   String get sourceAssetChainID;
   @override
+  @JsonKey(name: 'dest_asset_denom')
   String get destAssetDenom;
   @override
+  @JsonKey(name: 'dest_asset_chain_id')
   String get destAssetChainID;
   @override
+  @JsonKey(name: 'amount_in')
   String get amountIn;
   @override
+  @JsonKey(name: 'amount_out')
   String get amountOut;
   @override
+  @JsonKey(name: 'operations')
   List<Operation> get operations;
   @override
+  @JsonKey(name: 'chain_ids')
   List<String> get chainIDs;
   @override
+  @JsonKey(name: 'required_chain_addresses')
   List<String> get requiredChainAddresses;
   @override
+  @JsonKey(name: 'does_swap')
   bool get doesSwap;
   @override
+  @JsonKey(name: 'estimated_amount_out')
   String? get estimatedAmountOut;
   @override
+  @JsonKey(name: 'swap_venues')
   List<SwapVenue>? get swapVenues;
   @override
+  @JsonKey(name: 'txs_required')
   int get txsRequired;
   @override
+  @JsonKey(name: 'usd_amount_in')
   String? get usdAmountIn;
   @override
+  @JsonKey(name: 'usd_amount_out')
   String? get usdAmountOut;
   @override
+  @JsonKey(name: 'swap_price_impact_percent')
   String? get swapPriceImpactPercent;
   @override
+  @JsonKey(name: 'warning')
   RouteWarning? get warning;
   @override
+  @JsonKey(name: 'estimated_fees')
   List<EstimatedFee> get estimatedFees;
   @override
+  @JsonKey(name: 'estimated_route_duration_seconds')
   int get estimatedRouteDurationSeconds;
 
   /// Create a copy of RouteResponse
@@ -6979,535 +8048,42 @@ abstract class _MsgsDirectResponse implements MsgsDirectResponse {
       throw _privateConstructorUsedError;
 }
 
-RouteRequestBase _$RouteRequestBaseFromJson(Map<String, dynamic> json) {
-  return _RouteRequestBase.fromJson(json);
-}
-
-/// @nodoc
-mixin _$RouteRequestBase {
-  String get sourceAssetDenom => throw _privateConstructorUsedError;
-  String get sourceAssetChainID => throw _privateConstructorUsedError;
-  String get destAssetDenom => throw _privateConstructorUsedError;
-  String get destAssetChainID => throw _privateConstructorUsedError;
-  String? get cumulativeAffiliateFeeBPS => throw _privateConstructorUsedError;
-  SwapVenueRequest? get swapVenue => throw _privateConstructorUsedError;
-  List<SwapVenueRequest>? get swapVenues => throw _privateConstructorUsedError;
-  bool? get allowUnsafe => throw _privateConstructorUsedError;
-  List<ExperimentalFeature>? get experimentalFeatures =>
-      throw _privateConstructorUsedError;
-  List<BridgeType>? get bridges => throw _privateConstructorUsedError;
-  bool? get allowMultiTx => throw _privateConstructorUsedError;
-  bool? get smartRelay => throw _privateConstructorUsedError;
-  SmartSwapOptions? get smartSwapOptions => throw _privateConstructorUsedError;
-  bool? get allowSwaps => throw _privateConstructorUsedError;
-
-  /// Serializes this RouteRequestBase to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of RouteRequestBase
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $RouteRequestBaseCopyWith<RouteRequestBase> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $RouteRequestBaseCopyWith<$Res> {
-  factory $RouteRequestBaseCopyWith(
-          RouteRequestBase value, $Res Function(RouteRequestBase) then) =
-      _$RouteRequestBaseCopyWithImpl<$Res, RouteRequestBase>;
-  @useResult
-  $Res call(
-      {String sourceAssetDenom,
-      String sourceAssetChainID,
-      String destAssetDenom,
-      String destAssetChainID,
-      String? cumulativeAffiliateFeeBPS,
-      SwapVenueRequest? swapVenue,
-      List<SwapVenueRequest>? swapVenues,
-      bool? allowUnsafe,
-      List<ExperimentalFeature>? experimentalFeatures,
-      List<BridgeType>? bridges,
-      bool? allowMultiTx,
-      bool? smartRelay,
-      SmartSwapOptions? smartSwapOptions,
-      bool? allowSwaps});
-
-  $SwapVenueRequestCopyWith<$Res>? get swapVenue;
-  $SmartSwapOptionsCopyWith<$Res>? get smartSwapOptions;
-}
-
-/// @nodoc
-class _$RouteRequestBaseCopyWithImpl<$Res, $Val extends RouteRequestBase>
-    implements $RouteRequestBaseCopyWith<$Res> {
-  _$RouteRequestBaseCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
-  /// Create a copy of RouteRequestBase
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? sourceAssetDenom = null,
-    Object? sourceAssetChainID = null,
-    Object? destAssetDenom = null,
-    Object? destAssetChainID = null,
-    Object? cumulativeAffiliateFeeBPS = freezed,
-    Object? swapVenue = freezed,
-    Object? swapVenues = freezed,
-    Object? allowUnsafe = freezed,
-    Object? experimentalFeatures = freezed,
-    Object? bridges = freezed,
-    Object? allowMultiTx = freezed,
-    Object? smartRelay = freezed,
-    Object? smartSwapOptions = freezed,
-    Object? allowSwaps = freezed,
-  }) {
-    return _then(_value.copyWith(
-      sourceAssetDenom: null == sourceAssetDenom
-          ? _value.sourceAssetDenom
-          : sourceAssetDenom // ignore: cast_nullable_to_non_nullable
-              as String,
-      sourceAssetChainID: null == sourceAssetChainID
-          ? _value.sourceAssetChainID
-          : sourceAssetChainID // ignore: cast_nullable_to_non_nullable
-              as String,
-      destAssetDenom: null == destAssetDenom
-          ? _value.destAssetDenom
-          : destAssetDenom // ignore: cast_nullable_to_non_nullable
-              as String,
-      destAssetChainID: null == destAssetChainID
-          ? _value.destAssetChainID
-          : destAssetChainID // ignore: cast_nullable_to_non_nullable
-              as String,
-      cumulativeAffiliateFeeBPS: freezed == cumulativeAffiliateFeeBPS
-          ? _value.cumulativeAffiliateFeeBPS
-          : cumulativeAffiliateFeeBPS // ignore: cast_nullable_to_non_nullable
-              as String?,
-      swapVenue: freezed == swapVenue
-          ? _value.swapVenue
-          : swapVenue // ignore: cast_nullable_to_non_nullable
-              as SwapVenueRequest?,
-      swapVenues: freezed == swapVenues
-          ? _value.swapVenues
-          : swapVenues // ignore: cast_nullable_to_non_nullable
-              as List<SwapVenueRequest>?,
-      allowUnsafe: freezed == allowUnsafe
-          ? _value.allowUnsafe
-          : allowUnsafe // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      experimentalFeatures: freezed == experimentalFeatures
-          ? _value.experimentalFeatures
-          : experimentalFeatures // ignore: cast_nullable_to_non_nullable
-              as List<ExperimentalFeature>?,
-      bridges: freezed == bridges
-          ? _value.bridges
-          : bridges // ignore: cast_nullable_to_non_nullable
-              as List<BridgeType>?,
-      allowMultiTx: freezed == allowMultiTx
-          ? _value.allowMultiTx
-          : allowMultiTx // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      smartRelay: freezed == smartRelay
-          ? _value.smartRelay
-          : smartRelay // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      smartSwapOptions: freezed == smartSwapOptions
-          ? _value.smartSwapOptions
-          : smartSwapOptions // ignore: cast_nullable_to_non_nullable
-              as SmartSwapOptions?,
-      allowSwaps: freezed == allowSwaps
-          ? _value.allowSwaps
-          : allowSwaps // ignore: cast_nullable_to_non_nullable
-              as bool?,
-    ) as $Val);
-  }
-
-  /// Create a copy of RouteRequestBase
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @pragma('vm:prefer-inline')
-  $SwapVenueRequestCopyWith<$Res>? get swapVenue {
-    if (_value.swapVenue == null) {
-      return null;
-    }
-
-    return $SwapVenueRequestCopyWith<$Res>(_value.swapVenue!, (value) {
-      return _then(_value.copyWith(swapVenue: value) as $Val);
-    });
-  }
-
-  /// Create a copy of RouteRequestBase
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @pragma('vm:prefer-inline')
-  $SmartSwapOptionsCopyWith<$Res>? get smartSwapOptions {
-    if (_value.smartSwapOptions == null) {
-      return null;
-    }
-
-    return $SmartSwapOptionsCopyWith<$Res>(_value.smartSwapOptions!, (value) {
-      return _then(_value.copyWith(smartSwapOptions: value) as $Val);
-    });
-  }
-}
-
-/// @nodoc
-abstract class _$$RouteRequestBaseImplCopyWith<$Res>
-    implements $RouteRequestBaseCopyWith<$Res> {
-  factory _$$RouteRequestBaseImplCopyWith(_$RouteRequestBaseImpl value,
-          $Res Function(_$RouteRequestBaseImpl) then) =
-      __$$RouteRequestBaseImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call(
-      {String sourceAssetDenom,
-      String sourceAssetChainID,
-      String destAssetDenom,
-      String destAssetChainID,
-      String? cumulativeAffiliateFeeBPS,
-      SwapVenueRequest? swapVenue,
-      List<SwapVenueRequest>? swapVenues,
-      bool? allowUnsafe,
-      List<ExperimentalFeature>? experimentalFeatures,
-      List<BridgeType>? bridges,
-      bool? allowMultiTx,
-      bool? smartRelay,
-      SmartSwapOptions? smartSwapOptions,
-      bool? allowSwaps});
-
-  @override
-  $SwapVenueRequestCopyWith<$Res>? get swapVenue;
-  @override
-  $SmartSwapOptionsCopyWith<$Res>? get smartSwapOptions;
-}
-
-/// @nodoc
-class __$$RouteRequestBaseImplCopyWithImpl<$Res>
-    extends _$RouteRequestBaseCopyWithImpl<$Res, _$RouteRequestBaseImpl>
-    implements _$$RouteRequestBaseImplCopyWith<$Res> {
-  __$$RouteRequestBaseImplCopyWithImpl(_$RouteRequestBaseImpl _value,
-      $Res Function(_$RouteRequestBaseImpl) _then)
-      : super(_value, _then);
-
-  /// Create a copy of RouteRequestBase
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? sourceAssetDenom = null,
-    Object? sourceAssetChainID = null,
-    Object? destAssetDenom = null,
-    Object? destAssetChainID = null,
-    Object? cumulativeAffiliateFeeBPS = freezed,
-    Object? swapVenue = freezed,
-    Object? swapVenues = freezed,
-    Object? allowUnsafe = freezed,
-    Object? experimentalFeatures = freezed,
-    Object? bridges = freezed,
-    Object? allowMultiTx = freezed,
-    Object? smartRelay = freezed,
-    Object? smartSwapOptions = freezed,
-    Object? allowSwaps = freezed,
-  }) {
-    return _then(_$RouteRequestBaseImpl(
-      sourceAssetDenom: null == sourceAssetDenom
-          ? _value.sourceAssetDenom
-          : sourceAssetDenom // ignore: cast_nullable_to_non_nullable
-              as String,
-      sourceAssetChainID: null == sourceAssetChainID
-          ? _value.sourceAssetChainID
-          : sourceAssetChainID // ignore: cast_nullable_to_non_nullable
-              as String,
-      destAssetDenom: null == destAssetDenom
-          ? _value.destAssetDenom
-          : destAssetDenom // ignore: cast_nullable_to_non_nullable
-              as String,
-      destAssetChainID: null == destAssetChainID
-          ? _value.destAssetChainID
-          : destAssetChainID // ignore: cast_nullable_to_non_nullable
-              as String,
-      cumulativeAffiliateFeeBPS: freezed == cumulativeAffiliateFeeBPS
-          ? _value.cumulativeAffiliateFeeBPS
-          : cumulativeAffiliateFeeBPS // ignore: cast_nullable_to_non_nullable
-              as String?,
-      swapVenue: freezed == swapVenue
-          ? _value.swapVenue
-          : swapVenue // ignore: cast_nullable_to_non_nullable
-              as SwapVenueRequest?,
-      swapVenues: freezed == swapVenues
-          ? _value._swapVenues
-          : swapVenues // ignore: cast_nullable_to_non_nullable
-              as List<SwapVenueRequest>?,
-      allowUnsafe: freezed == allowUnsafe
-          ? _value.allowUnsafe
-          : allowUnsafe // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      experimentalFeatures: freezed == experimentalFeatures
-          ? _value._experimentalFeatures
-          : experimentalFeatures // ignore: cast_nullable_to_non_nullable
-              as List<ExperimentalFeature>?,
-      bridges: freezed == bridges
-          ? _value._bridges
-          : bridges // ignore: cast_nullable_to_non_nullable
-              as List<BridgeType>?,
-      allowMultiTx: freezed == allowMultiTx
-          ? _value.allowMultiTx
-          : allowMultiTx // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      smartRelay: freezed == smartRelay
-          ? _value.smartRelay
-          : smartRelay // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      smartSwapOptions: freezed == smartSwapOptions
-          ? _value.smartSwapOptions
-          : smartSwapOptions // ignore: cast_nullable_to_non_nullable
-              as SmartSwapOptions?,
-      allowSwaps: freezed == allowSwaps
-          ? _value.allowSwaps
-          : allowSwaps // ignore: cast_nullable_to_non_nullable
-              as bool?,
-    ));
-  }
-}
-
-/// @nodoc
-@JsonSerializable()
-class _$RouteRequestBaseImpl implements _RouteRequestBase {
-  const _$RouteRequestBaseImpl(
-      {required this.sourceAssetDenom,
-      required this.sourceAssetChainID,
-      required this.destAssetDenom,
-      required this.destAssetChainID,
-      this.cumulativeAffiliateFeeBPS,
-      this.swapVenue,
-      final List<SwapVenueRequest>? swapVenues,
-      this.allowUnsafe,
-      final List<ExperimentalFeature>? experimentalFeatures,
-      final List<BridgeType>? bridges,
-      this.allowMultiTx,
-      this.smartRelay,
-      this.smartSwapOptions,
-      this.allowSwaps})
-      : _swapVenues = swapVenues,
-        _experimentalFeatures = experimentalFeatures,
-        _bridges = bridges;
-
-  factory _$RouteRequestBaseImpl.fromJson(Map<String, dynamic> json) =>
-      _$$RouteRequestBaseImplFromJson(json);
-
-  @override
-  final String sourceAssetDenom;
-  @override
-  final String sourceAssetChainID;
-  @override
-  final String destAssetDenom;
-  @override
-  final String destAssetChainID;
-  @override
-  final String? cumulativeAffiliateFeeBPS;
-  @override
-  final SwapVenueRequest? swapVenue;
-  final List<SwapVenueRequest>? _swapVenues;
-  @override
-  List<SwapVenueRequest>? get swapVenues {
-    final value = _swapVenues;
-    if (value == null) return null;
-    if (_swapVenues is EqualUnmodifiableListView) return _swapVenues;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  @override
-  final bool? allowUnsafe;
-  final List<ExperimentalFeature>? _experimentalFeatures;
-  @override
-  List<ExperimentalFeature>? get experimentalFeatures {
-    final value = _experimentalFeatures;
-    if (value == null) return null;
-    if (_experimentalFeatures is EqualUnmodifiableListView)
-      return _experimentalFeatures;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<BridgeType>? _bridges;
-  @override
-  List<BridgeType>? get bridges {
-    final value = _bridges;
-    if (value == null) return null;
-    if (_bridges is EqualUnmodifiableListView) return _bridges;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  @override
-  final bool? allowMultiTx;
-  @override
-  final bool? smartRelay;
-  @override
-  final SmartSwapOptions? smartSwapOptions;
-  @override
-  final bool? allowSwaps;
-
-  @override
-  String toString() {
-    return 'RouteRequestBase(sourceAssetDenom: $sourceAssetDenom, sourceAssetChainID: $sourceAssetChainID, destAssetDenom: $destAssetDenom, destAssetChainID: $destAssetChainID, cumulativeAffiliateFeeBPS: $cumulativeAffiliateFeeBPS, swapVenue: $swapVenue, swapVenues: $swapVenues, allowUnsafe: $allowUnsafe, experimentalFeatures: $experimentalFeatures, bridges: $bridges, allowMultiTx: $allowMultiTx, smartRelay: $smartRelay, smartSwapOptions: $smartSwapOptions, allowSwaps: $allowSwaps)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$RouteRequestBaseImpl &&
-            (identical(other.sourceAssetDenom, sourceAssetDenom) ||
-                other.sourceAssetDenom == sourceAssetDenom) &&
-            (identical(other.sourceAssetChainID, sourceAssetChainID) ||
-                other.sourceAssetChainID == sourceAssetChainID) &&
-            (identical(other.destAssetDenom, destAssetDenom) ||
-                other.destAssetDenom == destAssetDenom) &&
-            (identical(other.destAssetChainID, destAssetChainID) ||
-                other.destAssetChainID == destAssetChainID) &&
-            (identical(other.cumulativeAffiliateFeeBPS,
-                    cumulativeAffiliateFeeBPS) ||
-                other.cumulativeAffiliateFeeBPS == cumulativeAffiliateFeeBPS) &&
-            (identical(other.swapVenue, swapVenue) ||
-                other.swapVenue == swapVenue) &&
-            const DeepCollectionEquality()
-                .equals(other._swapVenues, _swapVenues) &&
-            (identical(other.allowUnsafe, allowUnsafe) ||
-                other.allowUnsafe == allowUnsafe) &&
-            const DeepCollectionEquality()
-                .equals(other._experimentalFeatures, _experimentalFeatures) &&
-            const DeepCollectionEquality().equals(other._bridges, _bridges) &&
-            (identical(other.allowMultiTx, allowMultiTx) ||
-                other.allowMultiTx == allowMultiTx) &&
-            (identical(other.smartRelay, smartRelay) ||
-                other.smartRelay == smartRelay) &&
-            (identical(other.smartSwapOptions, smartSwapOptions) ||
-                other.smartSwapOptions == smartSwapOptions) &&
-            (identical(other.allowSwaps, allowSwaps) ||
-                other.allowSwaps == allowSwaps));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      sourceAssetDenom,
-      sourceAssetChainID,
-      destAssetDenom,
-      destAssetChainID,
-      cumulativeAffiliateFeeBPS,
-      swapVenue,
-      const DeepCollectionEquality().hash(_swapVenues),
-      allowUnsafe,
-      const DeepCollectionEquality().hash(_experimentalFeatures),
-      const DeepCollectionEquality().hash(_bridges),
-      allowMultiTx,
-      smartRelay,
-      smartSwapOptions,
-      allowSwaps);
-
-  /// Create a copy of RouteRequestBase
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$RouteRequestBaseImplCopyWith<_$RouteRequestBaseImpl> get copyWith =>
-      __$$RouteRequestBaseImplCopyWithImpl<_$RouteRequestBaseImpl>(
-          this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$RouteRequestBaseImplToJson(
-      this,
-    );
-  }
-}
-
-abstract class _RouteRequestBase implements RouteRequestBase {
-  const factory _RouteRequestBase(
-      {required final String sourceAssetDenom,
-      required final String sourceAssetChainID,
-      required final String destAssetDenom,
-      required final String destAssetChainID,
-      final String? cumulativeAffiliateFeeBPS,
-      final SwapVenueRequest? swapVenue,
-      final List<SwapVenueRequest>? swapVenues,
-      final bool? allowUnsafe,
-      final List<ExperimentalFeature>? experimentalFeatures,
-      final List<BridgeType>? bridges,
-      final bool? allowMultiTx,
-      final bool? smartRelay,
-      final SmartSwapOptions? smartSwapOptions,
-      final bool? allowSwaps}) = _$RouteRequestBaseImpl;
-
-  factory _RouteRequestBase.fromJson(Map<String, dynamic> json) =
-      _$RouteRequestBaseImpl.fromJson;
-
-  @override
-  String get sourceAssetDenom;
-  @override
-  String get sourceAssetChainID;
-  @override
-  String get destAssetDenom;
-  @override
-  String get destAssetChainID;
-  @override
-  String? get cumulativeAffiliateFeeBPS;
-  @override
-  SwapVenueRequest? get swapVenue;
-  @override
-  List<SwapVenueRequest>? get swapVenues;
-  @override
-  bool? get allowUnsafe;
-  @override
-  List<ExperimentalFeature>? get experimentalFeatures;
-  @override
-  List<BridgeType>? get bridges;
-  @override
-  bool? get allowMultiTx;
-  @override
-  bool? get smartRelay;
-  @override
-  SmartSwapOptions? get smartSwapOptions;
-  @override
-  bool? get allowSwaps;
-
-  /// Create a copy of RouteRequestBase
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$RouteRequestBaseImplCopyWith<_$RouteRequestBaseImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
 RouteRequestGivenIn _$RouteRequestGivenInFromJson(Map<String, dynamic> json) {
   return _RouteRequestGivenIn.fromJson(json);
 }
 
 /// @nodoc
 mixin _$RouteRequestGivenIn {
+  @JsonKey(name: 'source_asset_denom')
   String get sourceAssetDenom => throw _privateConstructorUsedError;
+  @JsonKey(name: 'source_asset_chain_id')
   String get sourceAssetChainID => throw _privateConstructorUsedError;
+  @JsonKey(name: 'dest_asset_denom')
   String get destAssetDenom => throw _privateConstructorUsedError;
+  @JsonKey(name: 'dest_asset_chain_id')
   String get destAssetChainID => throw _privateConstructorUsedError;
+  @JsonKey(name: 'amount_in')
   String get amountIn => throw _privateConstructorUsedError;
+  @JsonKey(name: 'cumulative_affiliate_fee_bps')
   String? get cumulativeAffiliateFeeBPS => throw _privateConstructorUsedError;
+  @JsonKey(name: 'swap_venue')
   SwapVenueRequest? get swapVenue => throw _privateConstructorUsedError;
+  @JsonKey(name: 'swap_venues')
   List<SwapVenueRequest>? get swapVenues => throw _privateConstructorUsedError;
+  @JsonKey(name: 'allow_unsafe')
   bool? get allowUnsafe => throw _privateConstructorUsedError;
+  @JsonKey(name: 'experimental_features')
   List<ExperimentalFeature>? get experimentalFeatures =>
       throw _privateConstructorUsedError;
+  @JsonKey(name: 'bridges')
   List<BridgeType>? get bridges => throw _privateConstructorUsedError;
+  @JsonKey(name: 'allow_multi_tx')
   bool? get allowMultiTx => throw _privateConstructorUsedError;
+  @JsonKey(name: 'smart_relay')
   bool? get smartRelay => throw _privateConstructorUsedError;
+  @JsonKey(name: 'smart_swap_options')
   SmartSwapOptions? get smartSwapOptions => throw _privateConstructorUsedError;
+  @JsonKey(name: 'allow_swaps')
   bool? get allowSwaps => throw _privateConstructorUsedError;
 
   /// Serializes this RouteRequestGivenIn to a JSON map.
@@ -7527,21 +8103,23 @@ abstract class $RouteRequestGivenInCopyWith<$Res> {
       _$RouteRequestGivenInCopyWithImpl<$Res, RouteRequestGivenIn>;
   @useResult
   $Res call(
-      {String sourceAssetDenom,
-      String sourceAssetChainID,
-      String destAssetDenom,
-      String destAssetChainID,
-      String amountIn,
+      {@JsonKey(name: 'source_asset_denom') String sourceAssetDenom,
+      @JsonKey(name: 'source_asset_chain_id') String sourceAssetChainID,
+      @JsonKey(name: 'dest_asset_denom') String destAssetDenom,
+      @JsonKey(name: 'dest_asset_chain_id') String destAssetChainID,
+      @JsonKey(name: 'amount_in') String amountIn,
+      @JsonKey(name: 'cumulative_affiliate_fee_bps')
       String? cumulativeAffiliateFeeBPS,
-      SwapVenueRequest? swapVenue,
-      List<SwapVenueRequest>? swapVenues,
-      bool? allowUnsafe,
+      @JsonKey(name: 'swap_venue') SwapVenueRequest? swapVenue,
+      @JsonKey(name: 'swap_venues') List<SwapVenueRequest>? swapVenues,
+      @JsonKey(name: 'allow_unsafe') bool? allowUnsafe,
+      @JsonKey(name: 'experimental_features')
       List<ExperimentalFeature>? experimentalFeatures,
-      List<BridgeType>? bridges,
-      bool? allowMultiTx,
-      bool? smartRelay,
-      SmartSwapOptions? smartSwapOptions,
-      bool? allowSwaps});
+      @JsonKey(name: 'bridges') List<BridgeType>? bridges,
+      @JsonKey(name: 'allow_multi_tx') bool? allowMultiTx,
+      @JsonKey(name: 'smart_relay') bool? smartRelay,
+      @JsonKey(name: 'smart_swap_options') SmartSwapOptions? smartSwapOptions,
+      @JsonKey(name: 'allow_swaps') bool? allowSwaps});
 
   $SwapVenueRequestCopyWith<$Res>? get swapVenue;
   $SmartSwapOptionsCopyWith<$Res>? get smartSwapOptions;
@@ -7680,21 +8258,23 @@ abstract class _$$RouteRequestGivenInImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {String sourceAssetDenom,
-      String sourceAssetChainID,
-      String destAssetDenom,
-      String destAssetChainID,
-      String amountIn,
+      {@JsonKey(name: 'source_asset_denom') String sourceAssetDenom,
+      @JsonKey(name: 'source_asset_chain_id') String sourceAssetChainID,
+      @JsonKey(name: 'dest_asset_denom') String destAssetDenom,
+      @JsonKey(name: 'dest_asset_chain_id') String destAssetChainID,
+      @JsonKey(name: 'amount_in') String amountIn,
+      @JsonKey(name: 'cumulative_affiliate_fee_bps')
       String? cumulativeAffiliateFeeBPS,
-      SwapVenueRequest? swapVenue,
-      List<SwapVenueRequest>? swapVenues,
-      bool? allowUnsafe,
+      @JsonKey(name: 'swap_venue') SwapVenueRequest? swapVenue,
+      @JsonKey(name: 'swap_venues') List<SwapVenueRequest>? swapVenues,
+      @JsonKey(name: 'allow_unsafe') bool? allowUnsafe,
+      @JsonKey(name: 'experimental_features')
       List<ExperimentalFeature>? experimentalFeatures,
-      List<BridgeType>? bridges,
-      bool? allowMultiTx,
-      bool? smartRelay,
-      SmartSwapOptions? smartSwapOptions,
-      bool? allowSwaps});
+      @JsonKey(name: 'bridges') List<BridgeType>? bridges,
+      @JsonKey(name: 'allow_multi_tx') bool? allowMultiTx,
+      @JsonKey(name: 'smart_relay') bool? smartRelay,
+      @JsonKey(name: 'smart_swap_options') SmartSwapOptions? smartSwapOptions,
+      @JsonKey(name: 'allow_swaps') bool? allowSwaps});
 
   @override
   $SwapVenueRequestCopyWith<$Res>? get swapVenue;
@@ -7800,21 +8380,23 @@ class __$$RouteRequestGivenInImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$RouteRequestGivenInImpl implements _RouteRequestGivenIn {
   const _$RouteRequestGivenInImpl(
-      {required this.sourceAssetDenom,
-      required this.sourceAssetChainID,
-      required this.destAssetDenom,
-      required this.destAssetChainID,
-      required this.amountIn,
+      {@JsonKey(name: 'source_asset_denom') required this.sourceAssetDenom,
+      @JsonKey(name: 'source_asset_chain_id') required this.sourceAssetChainID,
+      @JsonKey(name: 'dest_asset_denom') required this.destAssetDenom,
+      @JsonKey(name: 'dest_asset_chain_id') required this.destAssetChainID,
+      @JsonKey(name: 'amount_in') required this.amountIn,
+      @JsonKey(name: 'cumulative_affiliate_fee_bps')
       this.cumulativeAffiliateFeeBPS,
-      this.swapVenue,
-      final List<SwapVenueRequest>? swapVenues,
-      this.allowUnsafe,
+      @JsonKey(name: 'swap_venue') this.swapVenue,
+      @JsonKey(name: 'swap_venues') final List<SwapVenueRequest>? swapVenues,
+      @JsonKey(name: 'allow_unsafe') this.allowUnsafe,
+      @JsonKey(name: 'experimental_features')
       final List<ExperimentalFeature>? experimentalFeatures,
-      final List<BridgeType>? bridges,
-      this.allowMultiTx,
-      this.smartRelay,
-      this.smartSwapOptions,
-      this.allowSwaps})
+      @JsonKey(name: 'bridges') final List<BridgeType>? bridges,
+      @JsonKey(name: 'allow_multi_tx') this.allowMultiTx,
+      @JsonKey(name: 'smart_relay') this.smartRelay,
+      @JsonKey(name: 'smart_swap_options') this.smartSwapOptions,
+      @JsonKey(name: 'allow_swaps') this.allowSwaps})
       : _swapVenues = swapVenues,
         _experimentalFeatures = experimentalFeatures,
         _bridges = bridges;
@@ -7823,21 +8405,29 @@ class _$RouteRequestGivenInImpl implements _RouteRequestGivenIn {
       _$$RouteRequestGivenInImplFromJson(json);
 
   @override
+  @JsonKey(name: 'source_asset_denom')
   final String sourceAssetDenom;
   @override
+  @JsonKey(name: 'source_asset_chain_id')
   final String sourceAssetChainID;
   @override
+  @JsonKey(name: 'dest_asset_denom')
   final String destAssetDenom;
   @override
+  @JsonKey(name: 'dest_asset_chain_id')
   final String destAssetChainID;
   @override
+  @JsonKey(name: 'amount_in')
   final String amountIn;
   @override
+  @JsonKey(name: 'cumulative_affiliate_fee_bps')
   final String? cumulativeAffiliateFeeBPS;
   @override
+  @JsonKey(name: 'swap_venue')
   final SwapVenueRequest? swapVenue;
   final List<SwapVenueRequest>? _swapVenues;
   @override
+  @JsonKey(name: 'swap_venues')
   List<SwapVenueRequest>? get swapVenues {
     final value = _swapVenues;
     if (value == null) return null;
@@ -7847,9 +8437,11 @@ class _$RouteRequestGivenInImpl implements _RouteRequestGivenIn {
   }
 
   @override
+  @JsonKey(name: 'allow_unsafe')
   final bool? allowUnsafe;
   final List<ExperimentalFeature>? _experimentalFeatures;
   @override
+  @JsonKey(name: 'experimental_features')
   List<ExperimentalFeature>? get experimentalFeatures {
     final value = _experimentalFeatures;
     if (value == null) return null;
@@ -7861,6 +8453,7 @@ class _$RouteRequestGivenInImpl implements _RouteRequestGivenIn {
 
   final List<BridgeType>? _bridges;
   @override
+  @JsonKey(name: 'bridges')
   List<BridgeType>? get bridges {
     final value = _bridges;
     if (value == null) return null;
@@ -7870,12 +8463,16 @@ class _$RouteRequestGivenInImpl implements _RouteRequestGivenIn {
   }
 
   @override
+  @JsonKey(name: 'allow_multi_tx')
   final bool? allowMultiTx;
   @override
+  @JsonKey(name: 'smart_relay')
   final bool? smartRelay;
   @override
+  @JsonKey(name: 'smart_swap_options')
   final SmartSwapOptions? smartSwapOptions;
   @override
+  @JsonKey(name: 'allow_swaps')
   final bool? allowSwaps;
 
   @override
@@ -7959,54 +8556,76 @@ class _$RouteRequestGivenInImpl implements _RouteRequestGivenIn {
 
 abstract class _RouteRequestGivenIn implements RouteRequestGivenIn {
   const factory _RouteRequestGivenIn(
-      {required final String sourceAssetDenom,
+      {@JsonKey(name: 'source_asset_denom')
+      required final String sourceAssetDenom,
+      @JsonKey(name: 'source_asset_chain_id')
       required final String sourceAssetChainID,
-      required final String destAssetDenom,
+      @JsonKey(name: 'dest_asset_denom') required final String destAssetDenom,
+      @JsonKey(name: 'dest_asset_chain_id')
       required final String destAssetChainID,
-      required final String amountIn,
+      @JsonKey(name: 'amount_in') required final String amountIn,
+      @JsonKey(name: 'cumulative_affiliate_fee_bps')
       final String? cumulativeAffiliateFeeBPS,
-      final SwapVenueRequest? swapVenue,
-      final List<SwapVenueRequest>? swapVenues,
-      final bool? allowUnsafe,
+      @JsonKey(name: 'swap_venue') final SwapVenueRequest? swapVenue,
+      @JsonKey(name: 'swap_venues') final List<SwapVenueRequest>? swapVenues,
+      @JsonKey(name: 'allow_unsafe') final bool? allowUnsafe,
+      @JsonKey(name: 'experimental_features')
       final List<ExperimentalFeature>? experimentalFeatures,
-      final List<BridgeType>? bridges,
-      final bool? allowMultiTx,
-      final bool? smartRelay,
+      @JsonKey(name: 'bridges') final List<BridgeType>? bridges,
+      @JsonKey(name: 'allow_multi_tx') final bool? allowMultiTx,
+      @JsonKey(name: 'smart_relay') final bool? smartRelay,
+      @JsonKey(name: 'smart_swap_options')
       final SmartSwapOptions? smartSwapOptions,
+      @JsonKey(name: 'allow_swaps')
       final bool? allowSwaps}) = _$RouteRequestGivenInImpl;
 
   factory _RouteRequestGivenIn.fromJson(Map<String, dynamic> json) =
       _$RouteRequestGivenInImpl.fromJson;
 
   @override
+  @JsonKey(name: 'source_asset_denom')
   String get sourceAssetDenom;
   @override
+  @JsonKey(name: 'source_asset_chain_id')
   String get sourceAssetChainID;
   @override
+  @JsonKey(name: 'dest_asset_denom')
   String get destAssetDenom;
   @override
+  @JsonKey(name: 'dest_asset_chain_id')
   String get destAssetChainID;
   @override
+  @JsonKey(name: 'amount_in')
   String get amountIn;
   @override
+  @JsonKey(name: 'cumulative_affiliate_fee_bps')
   String? get cumulativeAffiliateFeeBPS;
   @override
+  @JsonKey(name: 'swap_venue')
   SwapVenueRequest? get swapVenue;
   @override
+  @JsonKey(name: 'swap_venues')
   List<SwapVenueRequest>? get swapVenues;
   @override
+  @JsonKey(name: 'allow_unsafe')
   bool? get allowUnsafe;
   @override
+  @JsonKey(name: 'experimental_features')
   List<ExperimentalFeature>? get experimentalFeatures;
   @override
+  @JsonKey(name: 'bridges')
   List<BridgeType>? get bridges;
   @override
+  @JsonKey(name: 'allow_multi_tx')
   bool? get allowMultiTx;
   @override
+  @JsonKey(name: 'smart_relay')
   bool? get smartRelay;
   @override
+  @JsonKey(name: 'smart_swap_options')
   SmartSwapOptions? get smartSwapOptions;
   @override
+  @JsonKey(name: 'allow_swaps')
   bool? get allowSwaps;
 
   /// Create a copy of RouteRequestGivenIn
@@ -8023,21 +8642,36 @@ RouteRequestGivenOut _$RouteRequestGivenOutFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$RouteRequestGivenOut {
+  @JsonKey(name: 'source_asset_denom')
   String get sourceAssetDenom => throw _privateConstructorUsedError;
+  @JsonKey(name: 'source_asset_chain_id')
   String get sourceAssetChainID => throw _privateConstructorUsedError;
+  @JsonKey(name: 'dest_asset_denom')
   String get destAssetDenom => throw _privateConstructorUsedError;
+  @JsonKey(name: 'dest_asset_chain_id')
   String get destAssetChainID => throw _privateConstructorUsedError;
+  @JsonKey(name: 'amount_out')
   String get amountOut => throw _privateConstructorUsedError;
+  @JsonKey(name: 'cumulative_affiliate_fee_bps')
   String? get cumulativeAffiliateFeeBPS => throw _privateConstructorUsedError;
+  @JsonKey(name: 'swap_venue')
   SwapVenueRequest? get swapVenue => throw _privateConstructorUsedError;
+  @JsonKey(name: 'swap_venues')
   List<SwapVenueRequest>? get swapVenues => throw _privateConstructorUsedError;
+  @JsonKey(name: 'allow_unsafe')
   bool? get allowUnsafe => throw _privateConstructorUsedError;
+  @JsonKey(name: 'experimental_features')
   List<ExperimentalFeature>? get experimentalFeatures =>
       throw _privateConstructorUsedError;
+  @JsonKey(name: 'bridges')
   List<BridgeType>? get bridges => throw _privateConstructorUsedError;
+  @JsonKey(name: 'allow_multi_tx')
   bool? get allowMultiTx => throw _privateConstructorUsedError;
+  @JsonKey(name: 'smart_relay')
   bool? get smartRelay => throw _privateConstructorUsedError;
+  @JsonKey(name: 'smart_swap_options')
   SmartSwapOptions? get smartSwapOptions => throw _privateConstructorUsedError;
+  @JsonKey(name: 'allow_swaps')
   bool? get allowSwaps => throw _privateConstructorUsedError;
 
   /// Serializes this RouteRequestGivenOut to a JSON map.
@@ -8057,21 +8691,23 @@ abstract class $RouteRequestGivenOutCopyWith<$Res> {
       _$RouteRequestGivenOutCopyWithImpl<$Res, RouteRequestGivenOut>;
   @useResult
   $Res call(
-      {String sourceAssetDenom,
-      String sourceAssetChainID,
-      String destAssetDenom,
-      String destAssetChainID,
-      String amountOut,
+      {@JsonKey(name: 'source_asset_denom') String sourceAssetDenom,
+      @JsonKey(name: 'source_asset_chain_id') String sourceAssetChainID,
+      @JsonKey(name: 'dest_asset_denom') String destAssetDenom,
+      @JsonKey(name: 'dest_asset_chain_id') String destAssetChainID,
+      @JsonKey(name: 'amount_out') String amountOut,
+      @JsonKey(name: 'cumulative_affiliate_fee_bps')
       String? cumulativeAffiliateFeeBPS,
-      SwapVenueRequest? swapVenue,
-      List<SwapVenueRequest>? swapVenues,
-      bool? allowUnsafe,
+      @JsonKey(name: 'swap_venue') SwapVenueRequest? swapVenue,
+      @JsonKey(name: 'swap_venues') List<SwapVenueRequest>? swapVenues,
+      @JsonKey(name: 'allow_unsafe') bool? allowUnsafe,
+      @JsonKey(name: 'experimental_features')
       List<ExperimentalFeature>? experimentalFeatures,
-      List<BridgeType>? bridges,
-      bool? allowMultiTx,
-      bool? smartRelay,
-      SmartSwapOptions? smartSwapOptions,
-      bool? allowSwaps});
+      @JsonKey(name: 'bridges') List<BridgeType>? bridges,
+      @JsonKey(name: 'allow_multi_tx') bool? allowMultiTx,
+      @JsonKey(name: 'smart_relay') bool? smartRelay,
+      @JsonKey(name: 'smart_swap_options') SmartSwapOptions? smartSwapOptions,
+      @JsonKey(name: 'allow_swaps') bool? allowSwaps});
 
   $SwapVenueRequestCopyWith<$Res>? get swapVenue;
   $SmartSwapOptionsCopyWith<$Res>? get smartSwapOptions;
@@ -8211,21 +8847,23 @@ abstract class _$$RouteRequestGivenOutImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {String sourceAssetDenom,
-      String sourceAssetChainID,
-      String destAssetDenom,
-      String destAssetChainID,
-      String amountOut,
+      {@JsonKey(name: 'source_asset_denom') String sourceAssetDenom,
+      @JsonKey(name: 'source_asset_chain_id') String sourceAssetChainID,
+      @JsonKey(name: 'dest_asset_denom') String destAssetDenom,
+      @JsonKey(name: 'dest_asset_chain_id') String destAssetChainID,
+      @JsonKey(name: 'amount_out') String amountOut,
+      @JsonKey(name: 'cumulative_affiliate_fee_bps')
       String? cumulativeAffiliateFeeBPS,
-      SwapVenueRequest? swapVenue,
-      List<SwapVenueRequest>? swapVenues,
-      bool? allowUnsafe,
+      @JsonKey(name: 'swap_venue') SwapVenueRequest? swapVenue,
+      @JsonKey(name: 'swap_venues') List<SwapVenueRequest>? swapVenues,
+      @JsonKey(name: 'allow_unsafe') bool? allowUnsafe,
+      @JsonKey(name: 'experimental_features')
       List<ExperimentalFeature>? experimentalFeatures,
-      List<BridgeType>? bridges,
-      bool? allowMultiTx,
-      bool? smartRelay,
-      SmartSwapOptions? smartSwapOptions,
-      bool? allowSwaps});
+      @JsonKey(name: 'bridges') List<BridgeType>? bridges,
+      @JsonKey(name: 'allow_multi_tx') bool? allowMultiTx,
+      @JsonKey(name: 'smart_relay') bool? smartRelay,
+      @JsonKey(name: 'smart_swap_options') SmartSwapOptions? smartSwapOptions,
+      @JsonKey(name: 'allow_swaps') bool? allowSwaps});
 
   @override
   $SwapVenueRequestCopyWith<$Res>? get swapVenue;
@@ -8331,21 +8969,23 @@ class __$$RouteRequestGivenOutImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$RouteRequestGivenOutImpl implements _RouteRequestGivenOut {
   const _$RouteRequestGivenOutImpl(
-      {required this.sourceAssetDenom,
-      required this.sourceAssetChainID,
-      required this.destAssetDenom,
-      required this.destAssetChainID,
-      required this.amountOut,
+      {@JsonKey(name: 'source_asset_denom') required this.sourceAssetDenom,
+      @JsonKey(name: 'source_asset_chain_id') required this.sourceAssetChainID,
+      @JsonKey(name: 'dest_asset_denom') required this.destAssetDenom,
+      @JsonKey(name: 'dest_asset_chain_id') required this.destAssetChainID,
+      @JsonKey(name: 'amount_out') required this.amountOut,
+      @JsonKey(name: 'cumulative_affiliate_fee_bps')
       this.cumulativeAffiliateFeeBPS,
-      this.swapVenue,
-      final List<SwapVenueRequest>? swapVenues,
-      this.allowUnsafe,
+      @JsonKey(name: 'swap_venue') this.swapVenue,
+      @JsonKey(name: 'swap_venues') final List<SwapVenueRequest>? swapVenues,
+      @JsonKey(name: 'allow_unsafe') this.allowUnsafe,
+      @JsonKey(name: 'experimental_features')
       final List<ExperimentalFeature>? experimentalFeatures,
-      final List<BridgeType>? bridges,
-      this.allowMultiTx,
-      this.smartRelay,
-      this.smartSwapOptions,
-      this.allowSwaps})
+      @JsonKey(name: 'bridges') final List<BridgeType>? bridges,
+      @JsonKey(name: 'allow_multi_tx') this.allowMultiTx,
+      @JsonKey(name: 'smart_relay') this.smartRelay,
+      @JsonKey(name: 'smart_swap_options') this.smartSwapOptions,
+      @JsonKey(name: 'allow_swaps') this.allowSwaps})
       : _swapVenues = swapVenues,
         _experimentalFeatures = experimentalFeatures,
         _bridges = bridges;
@@ -8354,21 +8994,29 @@ class _$RouteRequestGivenOutImpl implements _RouteRequestGivenOut {
       _$$RouteRequestGivenOutImplFromJson(json);
 
   @override
+  @JsonKey(name: 'source_asset_denom')
   final String sourceAssetDenom;
   @override
+  @JsonKey(name: 'source_asset_chain_id')
   final String sourceAssetChainID;
   @override
+  @JsonKey(name: 'dest_asset_denom')
   final String destAssetDenom;
   @override
+  @JsonKey(name: 'dest_asset_chain_id')
   final String destAssetChainID;
   @override
+  @JsonKey(name: 'amount_out')
   final String amountOut;
   @override
+  @JsonKey(name: 'cumulative_affiliate_fee_bps')
   final String? cumulativeAffiliateFeeBPS;
   @override
+  @JsonKey(name: 'swap_venue')
   final SwapVenueRequest? swapVenue;
   final List<SwapVenueRequest>? _swapVenues;
   @override
+  @JsonKey(name: 'swap_venues')
   List<SwapVenueRequest>? get swapVenues {
     final value = _swapVenues;
     if (value == null) return null;
@@ -8378,9 +9026,11 @@ class _$RouteRequestGivenOutImpl implements _RouteRequestGivenOut {
   }
 
   @override
+  @JsonKey(name: 'allow_unsafe')
   final bool? allowUnsafe;
   final List<ExperimentalFeature>? _experimentalFeatures;
   @override
+  @JsonKey(name: 'experimental_features')
   List<ExperimentalFeature>? get experimentalFeatures {
     final value = _experimentalFeatures;
     if (value == null) return null;
@@ -8392,6 +9042,7 @@ class _$RouteRequestGivenOutImpl implements _RouteRequestGivenOut {
 
   final List<BridgeType>? _bridges;
   @override
+  @JsonKey(name: 'bridges')
   List<BridgeType>? get bridges {
     final value = _bridges;
     if (value == null) return null;
@@ -8401,12 +9052,16 @@ class _$RouteRequestGivenOutImpl implements _RouteRequestGivenOut {
   }
 
   @override
+  @JsonKey(name: 'allow_multi_tx')
   final bool? allowMultiTx;
   @override
+  @JsonKey(name: 'smart_relay')
   final bool? smartRelay;
   @override
+  @JsonKey(name: 'smart_swap_options')
   final SmartSwapOptions? smartSwapOptions;
   @override
+  @JsonKey(name: 'allow_swaps')
   final bool? allowSwaps;
 
   @override
@@ -8491,54 +9146,76 @@ class _$RouteRequestGivenOutImpl implements _RouteRequestGivenOut {
 
 abstract class _RouteRequestGivenOut implements RouteRequestGivenOut {
   const factory _RouteRequestGivenOut(
-      {required final String sourceAssetDenom,
+      {@JsonKey(name: 'source_asset_denom')
+      required final String sourceAssetDenom,
+      @JsonKey(name: 'source_asset_chain_id')
       required final String sourceAssetChainID,
-      required final String destAssetDenom,
+      @JsonKey(name: 'dest_asset_denom') required final String destAssetDenom,
+      @JsonKey(name: 'dest_asset_chain_id')
       required final String destAssetChainID,
-      required final String amountOut,
+      @JsonKey(name: 'amount_out') required final String amountOut,
+      @JsonKey(name: 'cumulative_affiliate_fee_bps')
       final String? cumulativeAffiliateFeeBPS,
-      final SwapVenueRequest? swapVenue,
-      final List<SwapVenueRequest>? swapVenues,
-      final bool? allowUnsafe,
+      @JsonKey(name: 'swap_venue') final SwapVenueRequest? swapVenue,
+      @JsonKey(name: 'swap_venues') final List<SwapVenueRequest>? swapVenues,
+      @JsonKey(name: 'allow_unsafe') final bool? allowUnsafe,
+      @JsonKey(name: 'experimental_features')
       final List<ExperimentalFeature>? experimentalFeatures,
-      final List<BridgeType>? bridges,
-      final bool? allowMultiTx,
-      final bool? smartRelay,
+      @JsonKey(name: 'bridges') final List<BridgeType>? bridges,
+      @JsonKey(name: 'allow_multi_tx') final bool? allowMultiTx,
+      @JsonKey(name: 'smart_relay') final bool? smartRelay,
+      @JsonKey(name: 'smart_swap_options')
       final SmartSwapOptions? smartSwapOptions,
+      @JsonKey(name: 'allow_swaps')
       final bool? allowSwaps}) = _$RouteRequestGivenOutImpl;
 
   factory _RouteRequestGivenOut.fromJson(Map<String, dynamic> json) =
       _$RouteRequestGivenOutImpl.fromJson;
 
   @override
+  @JsonKey(name: 'source_asset_denom')
   String get sourceAssetDenom;
   @override
+  @JsonKey(name: 'source_asset_chain_id')
   String get sourceAssetChainID;
   @override
+  @JsonKey(name: 'dest_asset_denom')
   String get destAssetDenom;
   @override
+  @JsonKey(name: 'dest_asset_chain_id')
   String get destAssetChainID;
   @override
+  @JsonKey(name: 'amount_out')
   String get amountOut;
   @override
+  @JsonKey(name: 'cumulative_affiliate_fee_bps')
   String? get cumulativeAffiliateFeeBPS;
   @override
+  @JsonKey(name: 'swap_venue')
   SwapVenueRequest? get swapVenue;
   @override
+  @JsonKey(name: 'swap_venues')
   List<SwapVenueRequest>? get swapVenues;
   @override
+  @JsonKey(name: 'allow_unsafe')
   bool? get allowUnsafe;
   @override
+  @JsonKey(name: 'experimental_features')
   List<ExperimentalFeature>? get experimentalFeatures;
   @override
+  @JsonKey(name: 'bridges')
   List<BridgeType>? get bridges;
   @override
+  @JsonKey(name: 'allow_multi_tx')
   bool? get allowMultiTx;
   @override
+  @JsonKey(name: 'smart_relay')
   bool? get smartRelay;
   @override
+  @JsonKey(name: 'smart_swap_options')
   SmartSwapOptions? get smartSwapOptions;
   @override
+  @JsonKey(name: 'allow_swaps')
   bool? get allowSwaps;
 
   /// Create a copy of RouteRequestGivenOut
@@ -8974,20 +9651,34 @@ MsgsRequest _$MsgsRequestFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$MsgsRequest {
+  @JsonKey(name: 'source_asset_denom')
   String get sourceAssetDenom => throw _privateConstructorUsedError;
+  @JsonKey(name: 'source_asset_chain_id')
   String get sourceAssetChainID => throw _privateConstructorUsedError;
+  @JsonKey(name: 'dest_asset_denom')
   String get destAssetDenom => throw _privateConstructorUsedError;
+  @JsonKey(name: 'dest_asset_chain_id')
   String get destAssetChainID => throw _privateConstructorUsedError;
+  @JsonKey(name: 'amount_in')
   String get amountIn => throw _privateConstructorUsedError;
+  @JsonKey(name: 'amount_out')
   String get amountOut => throw _privateConstructorUsedError;
+  @JsonKey(name: 'address_list')
   List<String> get addressList => throw _privateConstructorUsedError;
+  @JsonKey(name: 'operations')
   List<Operation> get operations => throw _privateConstructorUsedError;
+  @JsonKey(name: 'estimated_amount_out')
   String? get estimatedAmountOut => throw _privateConstructorUsedError;
+  @JsonKey(name: 'slippage_tolerance_percent')
   String? get slippageTolerancePercent => throw _privateConstructorUsedError;
+  @JsonKey(name: 'affiliates')
   List<Affiliate>? get affiliates => throw _privateConstructorUsedError;
+  @JsonKey(name: 'chain_ids_to_affiliates')
   Map<String, ChainAffiliates>? get chainIDsToAffiliates =>
       throw _privateConstructorUsedError;
+  @JsonKey(name: 'post_route_handler')
   PostHandler? get postRouteHandler => throw _privateConstructorUsedError;
+  @JsonKey(name: 'enable_gas_warnings')
   bool? get enableGasWarnings => throw _privateConstructorUsedError;
 
   /// Serializes this MsgsRequest to a JSON map.
@@ -9007,20 +9698,22 @@ abstract class $MsgsRequestCopyWith<$Res> {
       _$MsgsRequestCopyWithImpl<$Res, MsgsRequest>;
   @useResult
   $Res call(
-      {String sourceAssetDenom,
-      String sourceAssetChainID,
-      String destAssetDenom,
-      String destAssetChainID,
-      String amountIn,
-      String amountOut,
-      List<String> addressList,
-      List<Operation> operations,
-      String? estimatedAmountOut,
+      {@JsonKey(name: 'source_asset_denom') String sourceAssetDenom,
+      @JsonKey(name: 'source_asset_chain_id') String sourceAssetChainID,
+      @JsonKey(name: 'dest_asset_denom') String destAssetDenom,
+      @JsonKey(name: 'dest_asset_chain_id') String destAssetChainID,
+      @JsonKey(name: 'amount_in') String amountIn,
+      @JsonKey(name: 'amount_out') String amountOut,
+      @JsonKey(name: 'address_list') List<String> addressList,
+      @JsonKey(name: 'operations') List<Operation> operations,
+      @JsonKey(name: 'estimated_amount_out') String? estimatedAmountOut,
+      @JsonKey(name: 'slippage_tolerance_percent')
       String? slippageTolerancePercent,
-      List<Affiliate>? affiliates,
+      @JsonKey(name: 'affiliates') List<Affiliate>? affiliates,
+      @JsonKey(name: 'chain_ids_to_affiliates')
       Map<String, ChainAffiliates>? chainIDsToAffiliates,
-      PostHandler? postRouteHandler,
-      bool? enableGasWarnings});
+      @JsonKey(name: 'post_route_handler') PostHandler? postRouteHandler,
+      @JsonKey(name: 'enable_gas_warnings') bool? enableGasWarnings});
 
   $PostHandlerCopyWith<$Res>? get postRouteHandler;
 }
@@ -9139,20 +9832,22 @@ abstract class _$$MsgsRequestImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {String sourceAssetDenom,
-      String sourceAssetChainID,
-      String destAssetDenom,
-      String destAssetChainID,
-      String amountIn,
-      String amountOut,
-      List<String> addressList,
-      List<Operation> operations,
-      String? estimatedAmountOut,
+      {@JsonKey(name: 'source_asset_denom') String sourceAssetDenom,
+      @JsonKey(name: 'source_asset_chain_id') String sourceAssetChainID,
+      @JsonKey(name: 'dest_asset_denom') String destAssetDenom,
+      @JsonKey(name: 'dest_asset_chain_id') String destAssetChainID,
+      @JsonKey(name: 'amount_in') String amountIn,
+      @JsonKey(name: 'amount_out') String amountOut,
+      @JsonKey(name: 'address_list') List<String> addressList,
+      @JsonKey(name: 'operations') List<Operation> operations,
+      @JsonKey(name: 'estimated_amount_out') String? estimatedAmountOut,
+      @JsonKey(name: 'slippage_tolerance_percent')
       String? slippageTolerancePercent,
-      List<Affiliate>? affiliates,
+      @JsonKey(name: 'affiliates') List<Affiliate>? affiliates,
+      @JsonKey(name: 'chain_ids_to_affiliates')
       Map<String, ChainAffiliates>? chainIDsToAffiliates,
-      PostHandler? postRouteHandler,
-      bool? enableGasWarnings});
+      @JsonKey(name: 'post_route_handler') PostHandler? postRouteHandler,
+      @JsonKey(name: 'enable_gas_warnings') bool? enableGasWarnings});
 
   @override
   $PostHandlerCopyWith<$Res>? get postRouteHandler;
@@ -9251,20 +9946,22 @@ class __$$MsgsRequestImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$MsgsRequestImpl implements _MsgsRequest {
   const _$MsgsRequestImpl(
-      {required this.sourceAssetDenom,
-      required this.sourceAssetChainID,
-      required this.destAssetDenom,
-      required this.destAssetChainID,
-      required this.amountIn,
-      required this.amountOut,
-      required final List<String> addressList,
-      required final List<Operation> operations,
-      this.estimatedAmountOut,
+      {@JsonKey(name: 'source_asset_denom') required this.sourceAssetDenom,
+      @JsonKey(name: 'source_asset_chain_id') required this.sourceAssetChainID,
+      @JsonKey(name: 'dest_asset_denom') required this.destAssetDenom,
+      @JsonKey(name: 'dest_asset_chain_id') required this.destAssetChainID,
+      @JsonKey(name: 'amount_in') required this.amountIn,
+      @JsonKey(name: 'amount_out') required this.amountOut,
+      @JsonKey(name: 'address_list') required final List<String> addressList,
+      @JsonKey(name: 'operations') required final List<Operation> operations,
+      @JsonKey(name: 'estimated_amount_out') this.estimatedAmountOut,
+      @JsonKey(name: 'slippage_tolerance_percent')
       this.slippageTolerancePercent,
-      final List<Affiliate>? affiliates,
+      @JsonKey(name: 'affiliates') final List<Affiliate>? affiliates,
+      @JsonKey(name: 'chain_ids_to_affiliates')
       final Map<String, ChainAffiliates>? chainIDsToAffiliates,
-      this.postRouteHandler,
-      this.enableGasWarnings})
+      @JsonKey(name: 'post_route_handler') this.postRouteHandler,
+      @JsonKey(name: 'enable_gas_warnings') this.enableGasWarnings})
       : _addressList = addressList,
         _operations = operations,
         _affiliates = affiliates,
@@ -9274,19 +9971,26 @@ class _$MsgsRequestImpl implements _MsgsRequest {
       _$$MsgsRequestImplFromJson(json);
 
   @override
+  @JsonKey(name: 'source_asset_denom')
   final String sourceAssetDenom;
   @override
+  @JsonKey(name: 'source_asset_chain_id')
   final String sourceAssetChainID;
   @override
+  @JsonKey(name: 'dest_asset_denom')
   final String destAssetDenom;
   @override
+  @JsonKey(name: 'dest_asset_chain_id')
   final String destAssetChainID;
   @override
+  @JsonKey(name: 'amount_in')
   final String amountIn;
   @override
+  @JsonKey(name: 'amount_out')
   final String amountOut;
   final List<String> _addressList;
   @override
+  @JsonKey(name: 'address_list')
   List<String> get addressList {
     if (_addressList is EqualUnmodifiableListView) return _addressList;
     // ignore: implicit_dynamic_type
@@ -9295,6 +9999,7 @@ class _$MsgsRequestImpl implements _MsgsRequest {
 
   final List<Operation> _operations;
   @override
+  @JsonKey(name: 'operations')
   List<Operation> get operations {
     if (_operations is EqualUnmodifiableListView) return _operations;
     // ignore: implicit_dynamic_type
@@ -9302,11 +10007,14 @@ class _$MsgsRequestImpl implements _MsgsRequest {
   }
 
   @override
+  @JsonKey(name: 'estimated_amount_out')
   final String? estimatedAmountOut;
   @override
+  @JsonKey(name: 'slippage_tolerance_percent')
   final String? slippageTolerancePercent;
   final List<Affiliate>? _affiliates;
   @override
+  @JsonKey(name: 'affiliates')
   List<Affiliate>? get affiliates {
     final value = _affiliates;
     if (value == null) return null;
@@ -9317,6 +10025,7 @@ class _$MsgsRequestImpl implements _MsgsRequest {
 
   final Map<String, ChainAffiliates>? _chainIDsToAffiliates;
   @override
+  @JsonKey(name: 'chain_ids_to_affiliates')
   Map<String, ChainAffiliates>? get chainIDsToAffiliates {
     final value = _chainIDsToAffiliates;
     if (value == null) return null;
@@ -9327,8 +10036,10 @@ class _$MsgsRequestImpl implements _MsgsRequest {
   }
 
   @override
+  @JsonKey(name: 'post_route_handler')
   final PostHandler? postRouteHandler;
   @override
+  @JsonKey(name: 'enable_gas_warnings')
   final bool? enableGasWarnings;
 
   @override
@@ -9409,51 +10120,71 @@ class _$MsgsRequestImpl implements _MsgsRequest {
 
 abstract class _MsgsRequest implements MsgsRequest {
   const factory _MsgsRequest(
-      {required final String sourceAssetDenom,
+      {@JsonKey(name: 'source_asset_denom')
+      required final String sourceAssetDenom,
+      @JsonKey(name: 'source_asset_chain_id')
       required final String sourceAssetChainID,
-      required final String destAssetDenom,
+      @JsonKey(name: 'dest_asset_denom') required final String destAssetDenom,
+      @JsonKey(name: 'dest_asset_chain_id')
       required final String destAssetChainID,
-      required final String amountIn,
-      required final String amountOut,
-      required final List<String> addressList,
-      required final List<Operation> operations,
-      final String? estimatedAmountOut,
+      @JsonKey(name: 'amount_in') required final String amountIn,
+      @JsonKey(name: 'amount_out') required final String amountOut,
+      @JsonKey(name: 'address_list') required final List<String> addressList,
+      @JsonKey(name: 'operations') required final List<Operation> operations,
+      @JsonKey(name: 'estimated_amount_out') final String? estimatedAmountOut,
+      @JsonKey(name: 'slippage_tolerance_percent')
       final String? slippageTolerancePercent,
-      final List<Affiliate>? affiliates,
+      @JsonKey(name: 'affiliates') final List<Affiliate>? affiliates,
+      @JsonKey(name: 'chain_ids_to_affiliates')
       final Map<String, ChainAffiliates>? chainIDsToAffiliates,
-      final PostHandler? postRouteHandler,
+      @JsonKey(name: 'post_route_handler') final PostHandler? postRouteHandler,
+      @JsonKey(name: 'enable_gas_warnings')
       final bool? enableGasWarnings}) = _$MsgsRequestImpl;
 
   factory _MsgsRequest.fromJson(Map<String, dynamic> json) =
       _$MsgsRequestImpl.fromJson;
 
   @override
+  @JsonKey(name: 'source_asset_denom')
   String get sourceAssetDenom;
   @override
+  @JsonKey(name: 'source_asset_chain_id')
   String get sourceAssetChainID;
   @override
+  @JsonKey(name: 'dest_asset_denom')
   String get destAssetDenom;
   @override
+  @JsonKey(name: 'dest_asset_chain_id')
   String get destAssetChainID;
   @override
+  @JsonKey(name: 'amount_in')
   String get amountIn;
   @override
+  @JsonKey(name: 'amount_out')
   String get amountOut;
   @override
+  @JsonKey(name: 'address_list')
   List<String> get addressList;
   @override
+  @JsonKey(name: 'operations')
   List<Operation> get operations;
   @override
+  @JsonKey(name: 'estimated_amount_out')
   String? get estimatedAmountOut;
   @override
+  @JsonKey(name: 'slippage_tolerance_percent')
   String? get slippageTolerancePercent;
   @override
+  @JsonKey(name: 'affiliates')
   List<Affiliate>? get affiliates;
   @override
+  @JsonKey(name: 'chain_ids_to_affiliates')
   Map<String, ChainAffiliates>? get chainIDsToAffiliates;
   @override
+  @JsonKey(name: 'post_route_handler')
   PostHandler? get postRouteHandler;
   @override
+  @JsonKey(name: 'enable_gas_warnings')
   bool? get enableGasWarnings;
 
   /// Create a copy of MsgsRequest
@@ -9470,30 +10201,52 @@ MsgsDirectRequest _$MsgsDirectRequestFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$MsgsDirectRequest {
+  @JsonKey(name: 'source_asset_denom')
   String get sourceAssetDenom => throw _privateConstructorUsedError;
+  @JsonKey(name: 'source_asset_chain_id')
   String get sourceAssetChainID => throw _privateConstructorUsedError;
+  @JsonKey(name: 'dest_asset_denom')
   String get destAssetDenom => throw _privateConstructorUsedError;
+  @JsonKey(name: 'dest_asset_chain_id')
   String get destAssetChainID => throw _privateConstructorUsedError;
+  @JsonKey(name: 'amount_in')
   String get amountIn => throw _privateConstructorUsedError;
+  @JsonKey(name: 'amount_out')
   String get amountOut => throw _privateConstructorUsedError;
+  @JsonKey(name: 'chain_ids_to_addresses')
   Map<String, String> get chainIdsToAddresses =>
       throw _privateConstructorUsedError;
+  @JsonKey(name: 'swap_venue')
   SwapVenue? get swapVenue => throw _privateConstructorUsedError;
+  @JsonKey(name: 'swap_venues')
   List<SwapVenue>? get swapVenues => throw _privateConstructorUsedError;
+  @JsonKey(name: 'slippage_tolerance_percent')
   String? get slippageTolerancePercent => throw _privateConstructorUsedError;
+  @JsonKey(name: 'timeout_seconds')
   String? get timeoutSeconds => throw _privateConstructorUsedError;
+  @JsonKey(name: 'affiliates')
   List<Affiliate>? get affiliates => throw _privateConstructorUsedError;
+  @JsonKey(name: 'chain_ids_to_affiliates')
   Map<String, ChainAffiliates>? get chainIDsToAffiliates =>
       throw _privateConstructorUsedError;
+  @JsonKey(name: 'post_route_handler')
   PostHandler? get postRouteHandler => throw _privateConstructorUsedError;
+  @JsonKey(name: 'allow_unsafe')
   bool? get allowUnsafe => throw _privateConstructorUsedError;
+  @JsonKey(name: 'experimental_features')
   List<ExperimentalFeature>? get experimentalFeatures =>
       throw _privateConstructorUsedError;
+  @JsonKey(name: 'bridges')
   List<BridgeType>? get bridges => throw _privateConstructorUsedError;
+  @JsonKey(name: 'allow_multi_tx')
   bool? get allowMultiTx => throw _privateConstructorUsedError;
+  @JsonKey(name: 'smart_relay')
   bool? get smartRelay => throw _privateConstructorUsedError;
+  @JsonKey(name: 'smart_swap_options')
   SmartSwapOptions? get smartSwapOptions => throw _privateConstructorUsedError;
+  @JsonKey(name: 'allow_swaps')
   bool? get allowSwaps => throw _privateConstructorUsedError;
+  @JsonKey(name: 'enable_gas_warnings')
   bool? get enableGasWarnings => throw _privateConstructorUsedError;
 
   /// Serializes this MsgsDirectRequest to a JSON map.
@@ -9513,28 +10266,32 @@ abstract class $MsgsDirectRequestCopyWith<$Res> {
       _$MsgsDirectRequestCopyWithImpl<$Res, MsgsDirectRequest>;
   @useResult
   $Res call(
-      {String sourceAssetDenom,
-      String sourceAssetChainID,
-      String destAssetDenom,
-      String destAssetChainID,
-      String amountIn,
-      String amountOut,
+      {@JsonKey(name: 'source_asset_denom') String sourceAssetDenom,
+      @JsonKey(name: 'source_asset_chain_id') String sourceAssetChainID,
+      @JsonKey(name: 'dest_asset_denom') String destAssetDenom,
+      @JsonKey(name: 'dest_asset_chain_id') String destAssetChainID,
+      @JsonKey(name: 'amount_in') String amountIn,
+      @JsonKey(name: 'amount_out') String amountOut,
+      @JsonKey(name: 'chain_ids_to_addresses')
       Map<String, String> chainIdsToAddresses,
-      SwapVenue? swapVenue,
-      List<SwapVenue>? swapVenues,
+      @JsonKey(name: 'swap_venue') SwapVenue? swapVenue,
+      @JsonKey(name: 'swap_venues') List<SwapVenue>? swapVenues,
+      @JsonKey(name: 'slippage_tolerance_percent')
       String? slippageTolerancePercent,
-      String? timeoutSeconds,
-      List<Affiliate>? affiliates,
+      @JsonKey(name: 'timeout_seconds') String? timeoutSeconds,
+      @JsonKey(name: 'affiliates') List<Affiliate>? affiliates,
+      @JsonKey(name: 'chain_ids_to_affiliates')
       Map<String, ChainAffiliates>? chainIDsToAffiliates,
-      PostHandler? postRouteHandler,
-      bool? allowUnsafe,
+      @JsonKey(name: 'post_route_handler') PostHandler? postRouteHandler,
+      @JsonKey(name: 'allow_unsafe') bool? allowUnsafe,
+      @JsonKey(name: 'experimental_features')
       List<ExperimentalFeature>? experimentalFeatures,
-      List<BridgeType>? bridges,
-      bool? allowMultiTx,
-      bool? smartRelay,
-      SmartSwapOptions? smartSwapOptions,
-      bool? allowSwaps,
-      bool? enableGasWarnings});
+      @JsonKey(name: 'bridges') List<BridgeType>? bridges,
+      @JsonKey(name: 'allow_multi_tx') bool? allowMultiTx,
+      @JsonKey(name: 'smart_relay') bool? smartRelay,
+      @JsonKey(name: 'smart_swap_options') SmartSwapOptions? smartSwapOptions,
+      @JsonKey(name: 'allow_swaps') bool? allowSwaps,
+      @JsonKey(name: 'enable_gas_warnings') bool? enableGasWarnings});
 
   $SwapVenueCopyWith<$Res>? get swapVenue;
   $PostHandlerCopyWith<$Res>? get postRouteHandler;
@@ -9723,28 +10480,32 @@ abstract class _$$MsgsDirectRequestImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {String sourceAssetDenom,
-      String sourceAssetChainID,
-      String destAssetDenom,
-      String destAssetChainID,
-      String amountIn,
-      String amountOut,
+      {@JsonKey(name: 'source_asset_denom') String sourceAssetDenom,
+      @JsonKey(name: 'source_asset_chain_id') String sourceAssetChainID,
+      @JsonKey(name: 'dest_asset_denom') String destAssetDenom,
+      @JsonKey(name: 'dest_asset_chain_id') String destAssetChainID,
+      @JsonKey(name: 'amount_in') String amountIn,
+      @JsonKey(name: 'amount_out') String amountOut,
+      @JsonKey(name: 'chain_ids_to_addresses')
       Map<String, String> chainIdsToAddresses,
-      SwapVenue? swapVenue,
-      List<SwapVenue>? swapVenues,
+      @JsonKey(name: 'swap_venue') SwapVenue? swapVenue,
+      @JsonKey(name: 'swap_venues') List<SwapVenue>? swapVenues,
+      @JsonKey(name: 'slippage_tolerance_percent')
       String? slippageTolerancePercent,
-      String? timeoutSeconds,
-      List<Affiliate>? affiliates,
+      @JsonKey(name: 'timeout_seconds') String? timeoutSeconds,
+      @JsonKey(name: 'affiliates') List<Affiliate>? affiliates,
+      @JsonKey(name: 'chain_ids_to_affiliates')
       Map<String, ChainAffiliates>? chainIDsToAffiliates,
-      PostHandler? postRouteHandler,
-      bool? allowUnsafe,
+      @JsonKey(name: 'post_route_handler') PostHandler? postRouteHandler,
+      @JsonKey(name: 'allow_unsafe') bool? allowUnsafe,
+      @JsonKey(name: 'experimental_features')
       List<ExperimentalFeature>? experimentalFeatures,
-      List<BridgeType>? bridges,
-      bool? allowMultiTx,
-      bool? smartRelay,
-      SmartSwapOptions? smartSwapOptions,
-      bool? allowSwaps,
-      bool? enableGasWarnings});
+      @JsonKey(name: 'bridges') List<BridgeType>? bridges,
+      @JsonKey(name: 'allow_multi_tx') bool? allowMultiTx,
+      @JsonKey(name: 'smart_relay') bool? smartRelay,
+      @JsonKey(name: 'smart_swap_options') SmartSwapOptions? smartSwapOptions,
+      @JsonKey(name: 'allow_swaps') bool? allowSwaps,
+      @JsonKey(name: 'enable_gas_warnings') bool? enableGasWarnings});
 
   @override
   $SwapVenueCopyWith<$Res>? get swapVenue;
@@ -9887,28 +10648,32 @@ class __$$MsgsDirectRequestImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$MsgsDirectRequestImpl implements _MsgsDirectRequest {
   const _$MsgsDirectRequestImpl(
-      {required this.sourceAssetDenom,
-      required this.sourceAssetChainID,
-      required this.destAssetDenom,
-      required this.destAssetChainID,
-      required this.amountIn,
-      required this.amountOut,
+      {@JsonKey(name: 'source_asset_denom') required this.sourceAssetDenom,
+      @JsonKey(name: 'source_asset_chain_id') required this.sourceAssetChainID,
+      @JsonKey(name: 'dest_asset_denom') required this.destAssetDenom,
+      @JsonKey(name: 'dest_asset_chain_id') required this.destAssetChainID,
+      @JsonKey(name: 'amount_in') required this.amountIn,
+      @JsonKey(name: 'amount_out') required this.amountOut,
+      @JsonKey(name: 'chain_ids_to_addresses')
       required final Map<String, String> chainIdsToAddresses,
-      this.swapVenue,
-      final List<SwapVenue>? swapVenues,
+      @JsonKey(name: 'swap_venue') this.swapVenue,
+      @JsonKey(name: 'swap_venues') final List<SwapVenue>? swapVenues,
+      @JsonKey(name: 'slippage_tolerance_percent')
       this.slippageTolerancePercent,
-      this.timeoutSeconds,
-      final List<Affiliate>? affiliates,
+      @JsonKey(name: 'timeout_seconds') this.timeoutSeconds,
+      @JsonKey(name: 'affiliates') final List<Affiliate>? affiliates,
+      @JsonKey(name: 'chain_ids_to_affiliates')
       final Map<String, ChainAffiliates>? chainIDsToAffiliates,
-      this.postRouteHandler,
-      this.allowUnsafe,
+      @JsonKey(name: 'post_route_handler') this.postRouteHandler,
+      @JsonKey(name: 'allow_unsafe') this.allowUnsafe,
+      @JsonKey(name: 'experimental_features')
       final List<ExperimentalFeature>? experimentalFeatures,
-      final List<BridgeType>? bridges,
-      this.allowMultiTx,
-      this.smartRelay,
-      this.smartSwapOptions,
-      this.allowSwaps,
-      this.enableGasWarnings})
+      @JsonKey(name: 'bridges') final List<BridgeType>? bridges,
+      @JsonKey(name: 'allow_multi_tx') this.allowMultiTx,
+      @JsonKey(name: 'smart_relay') this.smartRelay,
+      @JsonKey(name: 'smart_swap_options') this.smartSwapOptions,
+      @JsonKey(name: 'allow_swaps') this.allowSwaps,
+      @JsonKey(name: 'enable_gas_warnings') this.enableGasWarnings})
       : _chainIdsToAddresses = chainIdsToAddresses,
         _swapVenues = swapVenues,
         _affiliates = affiliates,
@@ -9920,19 +10685,26 @@ class _$MsgsDirectRequestImpl implements _MsgsDirectRequest {
       _$$MsgsDirectRequestImplFromJson(json);
 
   @override
+  @JsonKey(name: 'source_asset_denom')
   final String sourceAssetDenom;
   @override
+  @JsonKey(name: 'source_asset_chain_id')
   final String sourceAssetChainID;
   @override
+  @JsonKey(name: 'dest_asset_denom')
   final String destAssetDenom;
   @override
+  @JsonKey(name: 'dest_asset_chain_id')
   final String destAssetChainID;
   @override
+  @JsonKey(name: 'amount_in')
   final String amountIn;
   @override
+  @JsonKey(name: 'amount_out')
   final String amountOut;
   final Map<String, String> _chainIdsToAddresses;
   @override
+  @JsonKey(name: 'chain_ids_to_addresses')
   Map<String, String> get chainIdsToAddresses {
     if (_chainIdsToAddresses is EqualUnmodifiableMapView)
       return _chainIdsToAddresses;
@@ -9941,9 +10713,11 @@ class _$MsgsDirectRequestImpl implements _MsgsDirectRequest {
   }
 
   @override
+  @JsonKey(name: 'swap_venue')
   final SwapVenue? swapVenue;
   final List<SwapVenue>? _swapVenues;
   @override
+  @JsonKey(name: 'swap_venues')
   List<SwapVenue>? get swapVenues {
     final value = _swapVenues;
     if (value == null) return null;
@@ -9953,11 +10727,14 @@ class _$MsgsDirectRequestImpl implements _MsgsDirectRequest {
   }
 
   @override
+  @JsonKey(name: 'slippage_tolerance_percent')
   final String? slippageTolerancePercent;
   @override
+  @JsonKey(name: 'timeout_seconds')
   final String? timeoutSeconds;
   final List<Affiliate>? _affiliates;
   @override
+  @JsonKey(name: 'affiliates')
   List<Affiliate>? get affiliates {
     final value = _affiliates;
     if (value == null) return null;
@@ -9968,6 +10745,7 @@ class _$MsgsDirectRequestImpl implements _MsgsDirectRequest {
 
   final Map<String, ChainAffiliates>? _chainIDsToAffiliates;
   @override
+  @JsonKey(name: 'chain_ids_to_affiliates')
   Map<String, ChainAffiliates>? get chainIDsToAffiliates {
     final value = _chainIDsToAffiliates;
     if (value == null) return null;
@@ -9978,11 +10756,14 @@ class _$MsgsDirectRequestImpl implements _MsgsDirectRequest {
   }
 
   @override
+  @JsonKey(name: 'post_route_handler')
   final PostHandler? postRouteHandler;
   @override
+  @JsonKey(name: 'allow_unsafe')
   final bool? allowUnsafe;
   final List<ExperimentalFeature>? _experimentalFeatures;
   @override
+  @JsonKey(name: 'experimental_features')
   List<ExperimentalFeature>? get experimentalFeatures {
     final value = _experimentalFeatures;
     if (value == null) return null;
@@ -9994,6 +10775,7 @@ class _$MsgsDirectRequestImpl implements _MsgsDirectRequest {
 
   final List<BridgeType>? _bridges;
   @override
+  @JsonKey(name: 'bridges')
   List<BridgeType>? get bridges {
     final value = _bridges;
     if (value == null) return null;
@@ -10003,14 +10785,19 @@ class _$MsgsDirectRequestImpl implements _MsgsDirectRequest {
   }
 
   @override
+  @JsonKey(name: 'allow_multi_tx')
   final bool? allowMultiTx;
   @override
+  @JsonKey(name: 'smart_relay')
   final bool? smartRelay;
   @override
+  @JsonKey(name: 'smart_swap_options')
   final SmartSwapOptions? smartSwapOptions;
   @override
+  @JsonKey(name: 'allow_swaps')
   final bool? allowSwaps;
   @override
+  @JsonKey(name: 'enable_gas_warnings')
   final bool? enableGasWarnings;
 
   @override
@@ -10116,75 +10903,106 @@ class _$MsgsDirectRequestImpl implements _MsgsDirectRequest {
 
 abstract class _MsgsDirectRequest implements MsgsDirectRequest {
   const factory _MsgsDirectRequest(
-      {required final String sourceAssetDenom,
+      {@JsonKey(name: 'source_asset_denom')
+      required final String sourceAssetDenom,
+      @JsonKey(name: 'source_asset_chain_id')
       required final String sourceAssetChainID,
-      required final String destAssetDenom,
+      @JsonKey(name: 'dest_asset_denom') required final String destAssetDenom,
+      @JsonKey(name: 'dest_asset_chain_id')
       required final String destAssetChainID,
-      required final String amountIn,
-      required final String amountOut,
+      @JsonKey(name: 'amount_in') required final String amountIn,
+      @JsonKey(name: 'amount_out') required final String amountOut,
+      @JsonKey(name: 'chain_ids_to_addresses')
       required final Map<String, String> chainIdsToAddresses,
-      final SwapVenue? swapVenue,
-      final List<SwapVenue>? swapVenues,
+      @JsonKey(name: 'swap_venue') final SwapVenue? swapVenue,
+      @JsonKey(name: 'swap_venues') final List<SwapVenue>? swapVenues,
+      @JsonKey(name: 'slippage_tolerance_percent')
       final String? slippageTolerancePercent,
-      final String? timeoutSeconds,
-      final List<Affiliate>? affiliates,
+      @JsonKey(name: 'timeout_seconds') final String? timeoutSeconds,
+      @JsonKey(name: 'affiliates') final List<Affiliate>? affiliates,
+      @JsonKey(name: 'chain_ids_to_affiliates')
       final Map<String, ChainAffiliates>? chainIDsToAffiliates,
-      final PostHandler? postRouteHandler,
-      final bool? allowUnsafe,
+      @JsonKey(name: 'post_route_handler') final PostHandler? postRouteHandler,
+      @JsonKey(name: 'allow_unsafe') final bool? allowUnsafe,
+      @JsonKey(name: 'experimental_features')
       final List<ExperimentalFeature>? experimentalFeatures,
-      final List<BridgeType>? bridges,
-      final bool? allowMultiTx,
-      final bool? smartRelay,
+      @JsonKey(name: 'bridges') final List<BridgeType>? bridges,
+      @JsonKey(name: 'allow_multi_tx') final bool? allowMultiTx,
+      @JsonKey(name: 'smart_relay') final bool? smartRelay,
+      @JsonKey(name: 'smart_swap_options')
       final SmartSwapOptions? smartSwapOptions,
-      final bool? allowSwaps,
+      @JsonKey(name: 'allow_swaps') final bool? allowSwaps,
+      @JsonKey(name: 'enable_gas_warnings')
       final bool? enableGasWarnings}) = _$MsgsDirectRequestImpl;
 
   factory _MsgsDirectRequest.fromJson(Map<String, dynamic> json) =
       _$MsgsDirectRequestImpl.fromJson;
 
   @override
+  @JsonKey(name: 'source_asset_denom')
   String get sourceAssetDenom;
   @override
+  @JsonKey(name: 'source_asset_chain_id')
   String get sourceAssetChainID;
   @override
+  @JsonKey(name: 'dest_asset_denom')
   String get destAssetDenom;
   @override
+  @JsonKey(name: 'dest_asset_chain_id')
   String get destAssetChainID;
   @override
+  @JsonKey(name: 'amount_in')
   String get amountIn;
   @override
+  @JsonKey(name: 'amount_out')
   String get amountOut;
   @override
+  @JsonKey(name: 'chain_ids_to_addresses')
   Map<String, String> get chainIdsToAddresses;
   @override
+  @JsonKey(name: 'swap_venue')
   SwapVenue? get swapVenue;
   @override
+  @JsonKey(name: 'swap_venues')
   List<SwapVenue>? get swapVenues;
   @override
+  @JsonKey(name: 'slippage_tolerance_percent')
   String? get slippageTolerancePercent;
   @override
+  @JsonKey(name: 'timeout_seconds')
   String? get timeoutSeconds;
   @override
+  @JsonKey(name: 'affiliates')
   List<Affiliate>? get affiliates;
   @override
+  @JsonKey(name: 'chain_ids_to_affiliates')
   Map<String, ChainAffiliates>? get chainIDsToAffiliates;
   @override
+  @JsonKey(name: 'post_route_handler')
   PostHandler? get postRouteHandler;
   @override
+  @JsonKey(name: 'allow_unsafe')
   bool? get allowUnsafe;
   @override
+  @JsonKey(name: 'experimental_features')
   List<ExperimentalFeature>? get experimentalFeatures;
   @override
+  @JsonKey(name: 'bridges')
   List<BridgeType>? get bridges;
   @override
+  @JsonKey(name: 'allow_multi_tx')
   bool? get allowMultiTx;
   @override
+  @JsonKey(name: 'smart_relay')
   bool? get smartRelay;
   @override
+  @JsonKey(name: 'smart_swap_options')
   SmartSwapOptions? get smartSwapOptions;
   @override
+  @JsonKey(name: 'allow_swaps')
   bool? get allowSwaps;
   @override
+  @JsonKey(name: 'enable_gas_warnings')
   bool? get enableGasWarnings;
 
   /// Create a copy of MsgsDirectRequest
@@ -10201,6 +11019,7 @@ MsgsResponse _$MsgsResponseFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$MsgsResponse {
+  @JsonKey(name: 'estimated_fees')
   List<EstimatedFee> get estimatedFees => throw _privateConstructorUsedError;
   List<Tx> get txs => throw _privateConstructorUsedError;
   MsgsWarning? get warning => throw _privateConstructorUsedError;
@@ -10222,7 +11041,9 @@ abstract class $MsgsResponseCopyWith<$Res> {
       _$MsgsResponseCopyWithImpl<$Res, MsgsResponse>;
   @useResult
   $Res call(
-      {List<EstimatedFee> estimatedFees, List<Tx> txs, MsgsWarning? warning});
+      {@JsonKey(name: 'estimated_fees') List<EstimatedFee> estimatedFees,
+      List<Tx> txs,
+      MsgsWarning? warning});
 
   $MsgsWarningCopyWith<$Res>? get warning;
 }
@@ -10286,7 +11107,9 @@ abstract class _$$MsgsResponseImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {List<EstimatedFee> estimatedFees, List<Tx> txs, MsgsWarning? warning});
+      {@JsonKey(name: 'estimated_fees') List<EstimatedFee> estimatedFees,
+      List<Tx> txs,
+      MsgsWarning? warning});
 
   @override
   $MsgsWarningCopyWith<$Res>? get warning;
@@ -10330,7 +11153,8 @@ class __$$MsgsResponseImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$MsgsResponseImpl implements _MsgsResponse {
   const _$MsgsResponseImpl(
-      {required final List<EstimatedFee> estimatedFees,
+      {@JsonKey(name: 'estimated_fees')
+      required final List<EstimatedFee> estimatedFees,
       required final List<Tx> txs,
       this.warning})
       : _estimatedFees = estimatedFees,
@@ -10341,6 +11165,7 @@ class _$MsgsResponseImpl implements _MsgsResponse {
 
   final List<EstimatedFee> _estimatedFees;
   @override
+  @JsonKey(name: 'estimated_fees')
   List<EstimatedFee> get estimatedFees {
     if (_estimatedFees is EqualUnmodifiableListView) return _estimatedFees;
     // ignore: implicit_dynamic_type
@@ -10400,7 +11225,8 @@ class _$MsgsResponseImpl implements _MsgsResponse {
 
 abstract class _MsgsResponse implements MsgsResponse {
   const factory _MsgsResponse(
-      {required final List<EstimatedFee> estimatedFees,
+      {@JsonKey(name: 'estimated_fees')
+      required final List<EstimatedFee> estimatedFees,
       required final List<Tx> txs,
       final MsgsWarning? warning}) = _$MsgsResponseImpl;
 
@@ -10408,6 +11234,7 @@ abstract class _MsgsResponse implements MsgsResponse {
       _$MsgsResponseImpl.fromJson;
 
   @override
+  @JsonKey(name: 'estimated_fees')
   List<EstimatedFee> get estimatedFees;
   @override
   List<Tx> get txs;
@@ -10428,9 +11255,13 @@ AssetBetweenChains _$AssetBetweenChainsFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$AssetBetweenChains {
+  @JsonKey(name: 'asset_on_source')
   Asset get assetOnSource => throw _privateConstructorUsedError;
+  @JsonKey(name: 'asset_on_dest')
   Asset get assetOnDest => throw _privateConstructorUsedError;
+  @JsonKey(name: 'txs_required')
   int get txsRequired => throw _privateConstructorUsedError;
+  @JsonKey(name: 'bridges')
   List<BridgeType> get bridges => throw _privateConstructorUsedError;
 
   /// Serializes this AssetBetweenChains to a JSON map.
@@ -10450,10 +11281,10 @@ abstract class $AssetBetweenChainsCopyWith<$Res> {
       _$AssetBetweenChainsCopyWithImpl<$Res, AssetBetweenChains>;
   @useResult
   $Res call(
-      {Asset assetOnSource,
-      Asset assetOnDest,
-      int txsRequired,
-      List<BridgeType> bridges});
+      {@JsonKey(name: 'asset_on_source') Asset assetOnSource,
+      @JsonKey(name: 'asset_on_dest') Asset assetOnDest,
+      @JsonKey(name: 'txs_required') int txsRequired,
+      @JsonKey(name: 'bridges') List<BridgeType> bridges});
 
   $AssetCopyWith<$Res> get assetOnSource;
   $AssetCopyWith<$Res> get assetOnDest;
@@ -10529,10 +11360,10 @@ abstract class _$$AssetBetweenChainsImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Asset assetOnSource,
-      Asset assetOnDest,
-      int txsRequired,
-      List<BridgeType> bridges});
+      {@JsonKey(name: 'asset_on_source') Asset assetOnSource,
+      @JsonKey(name: 'asset_on_dest') Asset assetOnDest,
+      @JsonKey(name: 'txs_required') int txsRequired,
+      @JsonKey(name: 'bridges') List<BridgeType> bridges});
 
   @override
   $AssetCopyWith<$Res> get assetOnSource;
@@ -10583,23 +11414,27 @@ class __$$AssetBetweenChainsImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$AssetBetweenChainsImpl implements _AssetBetweenChains {
   const _$AssetBetweenChainsImpl(
-      {required this.assetOnSource,
-      required this.assetOnDest,
-      required this.txsRequired,
-      required final List<BridgeType> bridges})
+      {@JsonKey(name: 'asset_on_source') required this.assetOnSource,
+      @JsonKey(name: 'asset_on_dest') required this.assetOnDest,
+      @JsonKey(name: 'txs_required') required this.txsRequired,
+      @JsonKey(name: 'bridges') required final List<BridgeType> bridges})
       : _bridges = bridges;
 
   factory _$AssetBetweenChainsImpl.fromJson(Map<String, dynamic> json) =>
       _$$AssetBetweenChainsImplFromJson(json);
 
   @override
+  @JsonKey(name: 'asset_on_source')
   final Asset assetOnSource;
   @override
+  @JsonKey(name: 'asset_on_dest')
   final Asset assetOnDest;
   @override
+  @JsonKey(name: 'txs_required')
   final int txsRequired;
   final List<BridgeType> _bridges;
   @override
+  @JsonKey(name: 'bridges')
   List<BridgeType> get bridges {
     if (_bridges is EqualUnmodifiableListView) return _bridges;
     // ignore: implicit_dynamic_type
@@ -10649,21 +11484,26 @@ class _$AssetBetweenChainsImpl implements _AssetBetweenChains {
 
 abstract class _AssetBetweenChains implements AssetBetweenChains {
   const factory _AssetBetweenChains(
-      {required final Asset assetOnSource,
-      required final Asset assetOnDest,
-      required final int txsRequired,
-      required final List<BridgeType> bridges}) = _$AssetBetweenChainsImpl;
+          {@JsonKey(name: 'asset_on_source') required final Asset assetOnSource,
+          @JsonKey(name: 'asset_on_dest') required final Asset assetOnDest,
+          @JsonKey(name: 'txs_required') required final int txsRequired,
+          @JsonKey(name: 'bridges') required final List<BridgeType> bridges}) =
+      _$AssetBetweenChainsImpl;
 
   factory _AssetBetweenChains.fromJson(Map<String, dynamic> json) =
       _$AssetBetweenChainsImpl.fromJson;
 
   @override
+  @JsonKey(name: 'asset_on_source')
   Asset get assetOnSource;
   @override
+  @JsonKey(name: 'asset_on_dest')
   Asset get assetOnDest;
   @override
+  @JsonKey(name: 'txs_required')
   int get txsRequired;
   @override
+  @JsonKey(name: 'bridges')
   List<BridgeType> get bridges;
 
   /// Create a copy of AssetBetweenChains
@@ -10681,11 +11521,17 @@ AssetsBetweenChainsRequest _$AssetsBetweenChainsRequestFromJson(
 
 /// @nodoc
 mixin _$AssetsBetweenChainsRequest {
+  @JsonKey(name: 'source_chain_id')
   String get sourceChainID => throw _privateConstructorUsedError;
+  @JsonKey(name: 'dest_chain_id')
   String get destChainID => throw _privateConstructorUsedError;
+  @JsonKey(name: 'include_no_metadata_assets')
   bool? get includeNoMetadataAssets => throw _privateConstructorUsedError;
+  @JsonKey(name: 'include_cw20_assets')
   bool? get includeCW20Assets => throw _privateConstructorUsedError;
+  @JsonKey(name: 'include_evm_assets')
   bool? get includeEvmAssets => throw _privateConstructorUsedError;
+  @JsonKey(name: 'allow_multi_tx')
   bool? get allowMultiTx => throw _privateConstructorUsedError;
 
   /// Serializes this AssetsBetweenChainsRequest to a JSON map.
@@ -10706,12 +11552,13 @@ abstract class $AssetsBetweenChainsRequestCopyWith<$Res> {
           AssetsBetweenChainsRequest>;
   @useResult
   $Res call(
-      {String sourceChainID,
-      String destChainID,
+      {@JsonKey(name: 'source_chain_id') String sourceChainID,
+      @JsonKey(name: 'dest_chain_id') String destChainID,
+      @JsonKey(name: 'include_no_metadata_assets')
       bool? includeNoMetadataAssets,
-      bool? includeCW20Assets,
-      bool? includeEvmAssets,
-      bool? allowMultiTx});
+      @JsonKey(name: 'include_cw20_assets') bool? includeCW20Assets,
+      @JsonKey(name: 'include_evm_assets') bool? includeEvmAssets,
+      @JsonKey(name: 'allow_multi_tx') bool? allowMultiTx});
 }
 
 /// @nodoc
@@ -10776,12 +11623,13 @@ abstract class _$$AssetsBetweenChainsRequestImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {String sourceChainID,
-      String destChainID,
+      {@JsonKey(name: 'source_chain_id') String sourceChainID,
+      @JsonKey(name: 'dest_chain_id') String destChainID,
+      @JsonKey(name: 'include_no_metadata_assets')
       bool? includeNoMetadataAssets,
-      bool? includeCW20Assets,
-      bool? includeEvmAssets,
-      bool? allowMultiTx});
+      @JsonKey(name: 'include_cw20_assets') bool? includeCW20Assets,
+      @JsonKey(name: 'include_evm_assets') bool? includeEvmAssets,
+      @JsonKey(name: 'allow_multi_tx') bool? allowMultiTx});
 }
 
 /// @nodoc
@@ -10839,28 +11687,34 @@ class __$$AssetsBetweenChainsRequestImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$AssetsBetweenChainsRequestImpl implements _AssetsBetweenChainsRequest {
   const _$AssetsBetweenChainsRequestImpl(
-      {required this.sourceChainID,
-      required this.destChainID,
-      this.includeNoMetadataAssets,
-      this.includeCW20Assets,
-      this.includeEvmAssets,
-      this.allowMultiTx});
+      {@JsonKey(name: 'source_chain_id') required this.sourceChainID,
+      @JsonKey(name: 'dest_chain_id') required this.destChainID,
+      @JsonKey(name: 'include_no_metadata_assets') this.includeNoMetadataAssets,
+      @JsonKey(name: 'include_cw20_assets') this.includeCW20Assets,
+      @JsonKey(name: 'include_evm_assets') this.includeEvmAssets,
+      @JsonKey(name: 'allow_multi_tx') this.allowMultiTx});
 
   factory _$AssetsBetweenChainsRequestImpl.fromJson(
           Map<String, dynamic> json) =>
       _$$AssetsBetweenChainsRequestImplFromJson(json);
 
   @override
+  @JsonKey(name: 'source_chain_id')
   final String sourceChainID;
   @override
+  @JsonKey(name: 'dest_chain_id')
   final String destChainID;
   @override
+  @JsonKey(name: 'include_no_metadata_assets')
   final bool? includeNoMetadataAssets;
   @override
+  @JsonKey(name: 'include_cw20_assets')
   final bool? includeCW20Assets;
   @override
+  @JsonKey(name: 'include_evm_assets')
   final bool? includeEvmAssets;
   @override
+  @JsonKey(name: 'allow_multi_tx')
   final bool? allowMultiTx;
 
   @override
@@ -10919,27 +11773,35 @@ class _$AssetsBetweenChainsRequestImpl implements _AssetsBetweenChainsRequest {
 abstract class _AssetsBetweenChainsRequest
     implements AssetsBetweenChainsRequest {
   const factory _AssetsBetweenChainsRequest(
-      {required final String sourceChainID,
-      required final String destChainID,
+      {@JsonKey(name: 'source_chain_id') required final String sourceChainID,
+      @JsonKey(name: 'dest_chain_id') required final String destChainID,
+      @JsonKey(name: 'include_no_metadata_assets')
       final bool? includeNoMetadataAssets,
-      final bool? includeCW20Assets,
-      final bool? includeEvmAssets,
+      @JsonKey(name: 'include_cw20_assets') final bool? includeCW20Assets,
+      @JsonKey(name: 'include_evm_assets') final bool? includeEvmAssets,
+      @JsonKey(name: 'allow_multi_tx')
       final bool? allowMultiTx}) = _$AssetsBetweenChainsRequestImpl;
 
   factory _AssetsBetweenChainsRequest.fromJson(Map<String, dynamic> json) =
       _$AssetsBetweenChainsRequestImpl.fromJson;
 
   @override
+  @JsonKey(name: 'source_chain_id')
   String get sourceChainID;
   @override
+  @JsonKey(name: 'dest_chain_id')
   String get destChainID;
   @override
+  @JsonKey(name: 'include_no_metadata_assets')
   bool? get includeNoMetadataAssets;
   @override
+  @JsonKey(name: 'include_cw20_assets')
   bool? get includeCW20Assets;
   @override
+  @JsonKey(name: 'include_evm_assets')
   bool? get includeEvmAssets;
   @override
+  @JsonKey(name: 'allow_multi_tx')
   bool? get allowMultiTx;
 
   /// Create a copy of AssetsBetweenChainsRequest
@@ -10957,6 +11819,7 @@ AssetsBetweenChainsResponse _$AssetsBetweenChainsResponseFromJson(
 
 /// @nodoc
 mixin _$AssetsBetweenChainsResponse {
+  @JsonKey(name: 'assets_between_chains')
   List<AssetBetweenChains> get assetsBetweenChains =>
       throw _privateConstructorUsedError;
 
@@ -10978,7 +11841,9 @@ abstract class $AssetsBetweenChainsResponseCopyWith<$Res> {
       _$AssetsBetweenChainsResponseCopyWithImpl<$Res,
           AssetsBetweenChainsResponse>;
   @useResult
-  $Res call({List<AssetBetweenChains> assetsBetweenChains});
+  $Res call(
+      {@JsonKey(name: 'assets_between_chains')
+      List<AssetBetweenChains> assetsBetweenChains});
 }
 
 /// @nodoc
@@ -11017,7 +11882,9 @@ abstract class _$$AssetsBetweenChainsResponseImplCopyWith<$Res>
       __$$AssetsBetweenChainsResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({List<AssetBetweenChains> assetsBetweenChains});
+  $Res call(
+      {@JsonKey(name: 'assets_between_chains')
+      List<AssetBetweenChains> assetsBetweenChains});
 }
 
 /// @nodoc
@@ -11051,7 +11918,8 @@ class __$$AssetsBetweenChainsResponseImplCopyWithImpl<$Res>
 class _$AssetsBetweenChainsResponseImpl
     implements _AssetsBetweenChainsResponse {
   const _$AssetsBetweenChainsResponseImpl(
-      {required final List<AssetBetweenChains> assetsBetweenChains})
+      {@JsonKey(name: 'assets_between_chains')
+      required final List<AssetBetweenChains> assetsBetweenChains})
       : _assetsBetweenChains = assetsBetweenChains;
 
   factory _$AssetsBetweenChainsResponseImpl.fromJson(
@@ -11060,6 +11928,7 @@ class _$AssetsBetweenChainsResponseImpl
 
   final List<AssetBetweenChains> _assetsBetweenChains;
   @override
+  @JsonKey(name: 'assets_between_chains')
   List<AssetBetweenChains> get assetsBetweenChains {
     if (_assetsBetweenChains is EqualUnmodifiableListView)
       return _assetsBetweenChains;
@@ -11106,13 +11975,15 @@ class _$AssetsBetweenChainsResponseImpl
 abstract class _AssetsBetweenChainsResponse
     implements AssetsBetweenChainsResponse {
   const factory _AssetsBetweenChainsResponse(
-          {required final List<AssetBetweenChains> assetsBetweenChains}) =
+          {@JsonKey(name: 'assets_between_chains')
+          required final List<AssetBetweenChains> assetsBetweenChains}) =
       _$AssetsBetweenChainsResponseImpl;
 
   factory _AssetsBetweenChainsResponse.fromJson(Map<String, dynamic> json) =
       _$AssetsBetweenChainsResponseImpl.fromJson;
 
   @override
+  @JsonKey(name: 'assets_between_chains')
   List<AssetBetweenChains> get assetsBetweenChains;
 
   /// Create a copy of AssetsBetweenChainsResponse
@@ -11131,6 +12002,7 @@ Bridge _$BridgeFromJson(Map<String, dynamic> json) {
 mixin _$Bridge {
   BridgeType get id => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
+  @JsonKey(name: 'logo_uri')
   String get logoURI => throw _privateConstructorUsedError;
 
   /// Serializes this Bridge to a JSON map.
@@ -11147,7 +12019,8 @@ abstract class $BridgeCopyWith<$Res> {
   factory $BridgeCopyWith(Bridge value, $Res Function(Bridge) then) =
       _$BridgeCopyWithImpl<$Res, Bridge>;
   @useResult
-  $Res call({BridgeType id, String name, String logoURI});
+  $Res call(
+      {BridgeType id, String name, @JsonKey(name: 'logo_uri') String logoURI});
 }
 
 /// @nodoc
@@ -11193,7 +12066,8 @@ abstract class _$$BridgeImplCopyWith<$Res> implements $BridgeCopyWith<$Res> {
       __$$BridgeImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({BridgeType id, String name, String logoURI});
+  $Res call(
+      {BridgeType id, String name, @JsonKey(name: 'logo_uri') String logoURI});
 }
 
 /// @nodoc
@@ -11234,7 +12108,9 @@ class __$$BridgeImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$BridgeImpl implements _Bridge {
   const _$BridgeImpl(
-      {required this.id, required this.name, required this.logoURI});
+      {required this.id,
+      required this.name,
+      @JsonKey(name: 'logo_uri') required this.logoURI});
 
   factory _$BridgeImpl.fromJson(Map<String, dynamic> json) =>
       _$$BridgeImplFromJson(json);
@@ -11244,6 +12120,7 @@ class _$BridgeImpl implements _Bridge {
   @override
   final String name;
   @override
+  @JsonKey(name: 'logo_uri')
   final String logoURI;
 
   @override
@@ -11285,7 +12162,7 @@ abstract class _Bridge implements Bridge {
   const factory _Bridge(
       {required final BridgeType id,
       required final String name,
-      required final String logoURI}) = _$BridgeImpl;
+      @JsonKey(name: 'logo_uri') required final String logoURI}) = _$BridgeImpl;
 
   factory _Bridge.fromJson(Map<String, dynamic> json) = _$BridgeImpl.fromJson;
 
@@ -11294,6 +12171,7 @@ abstract class _Bridge implements Bridge {
   @override
   String get name;
   @override
+  @JsonKey(name: 'logo_uri')
   String get logoURI;
 
   /// Create a copy of Bridge

@@ -21,6 +21,7 @@ IBCAddress _$IBCAddressFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$IBCAddress {
   String get address => throw _privateConstructorUsedError;
+  @JsonKey(name: 'chain_id')
   String get chainID => throw _privateConstructorUsedError;
 
   /// Serializes this IBCAddress to a JSON map.
@@ -39,7 +40,7 @@ abstract class $IBCAddressCopyWith<$Res> {
           IBCAddress value, $Res Function(IBCAddress) then) =
       _$IBCAddressCopyWithImpl<$Res, IBCAddress>;
   @useResult
-  $Res call({String address, String chainID});
+  $Res call({String address, @JsonKey(name: 'chain_id') String chainID});
 }
 
 /// @nodoc
@@ -81,7 +82,7 @@ abstract class _$$IBCAddressImplCopyWith<$Res>
       __$$IBCAddressImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String address, String chainID});
+  $Res call({String address, @JsonKey(name: 'chain_id') String chainID});
 }
 
 /// @nodoc
@@ -116,7 +117,9 @@ class __$$IBCAddressImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$IBCAddressImpl implements _IBCAddress {
-  const _$IBCAddressImpl({required this.address, required this.chainID});
+  const _$IBCAddressImpl(
+      {required this.address,
+      @JsonKey(name: 'chain_id') required this.chainID});
 
   factory _$IBCAddressImpl.fromJson(Map<String, dynamic> json) =>
       _$$IBCAddressImplFromJson(json);
@@ -124,6 +127,7 @@ class _$IBCAddressImpl implements _IBCAddress {
   @override
   final String address;
   @override
+  @JsonKey(name: 'chain_id')
   final String chainID;
 
   @override
@@ -162,8 +166,9 @@ class _$IBCAddressImpl implements _IBCAddress {
 
 abstract class _IBCAddress implements IBCAddress {
   const factory _IBCAddress(
-      {required final String address,
-      required final String chainID}) = _$IBCAddressImpl;
+          {required final String address,
+          @JsonKey(name: 'chain_id') required final String chainID}) =
+      _$IBCAddressImpl;
 
   factory _IBCAddress.fromJson(Map<String, dynamic> json) =
       _$IBCAddressImpl.fromJson;
@@ -171,6 +176,7 @@ abstract class _IBCAddress implements IBCAddress {
   @override
   String get address;
   @override
+  @JsonKey(name: 'chain_id')
   String get chainID;
 
   /// Create a copy of IBCAddress
@@ -188,20 +194,35 @@ Asset _$AssetFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$Asset {
   String get denom => throw _privateConstructorUsedError;
+  @JsonKey(name: 'chain_id')
   String get chainID => throw _privateConstructorUsedError;
+  @JsonKey(name: 'origin_denom')
   String get originDenom => throw _privateConstructorUsedError;
+  @JsonKey(name: 'origin_chain_id')
   String get originChainID => throw _privateConstructorUsedError;
+  @JsonKey(name: 'trace')
   String get trace => throw _privateConstructorUsedError;
+  @JsonKey(name: 'is_cw20')
   bool get isCW20 => throw _privateConstructorUsedError;
+  @JsonKey(name: 'is_evm')
   bool get isEVM => throw _privateConstructorUsedError;
+  @JsonKey(name: 'is_svm')
   bool get isSVM => throw _privateConstructorUsedError;
+  @JsonKey(name: 'symbol')
   String? get symbol => throw _privateConstructorUsedError;
+  @JsonKey(name: 'name')
   String? get name => throw _privateConstructorUsedError;
+  @JsonKey(name: 'logo_uri')
   String? get logoURI => throw _privateConstructorUsedError;
+  @JsonKey(name: 'decimals')
   int? get decimals => throw _privateConstructorUsedError;
+  @JsonKey(name: 'token_contract')
   String? get tokenContract => throw _privateConstructorUsedError;
+  @JsonKey(name: 'description')
   String? get description => throw _privateConstructorUsedError;
+  @JsonKey(name: 'coingecko_id')
   String? get coingeckoID => throw _privateConstructorUsedError;
+  @JsonKey(name: 'recommended_symbol')
   String? get recommendedSymbol => throw _privateConstructorUsedError;
 
   /// Serializes this Asset to a JSON map.
@@ -220,21 +241,21 @@ abstract class $AssetCopyWith<$Res> {
   @useResult
   $Res call(
       {String denom,
-      String chainID,
-      String originDenom,
-      String originChainID,
-      String trace,
-      bool isCW20,
-      bool isEVM,
-      bool isSVM,
-      String? symbol,
-      String? name,
-      String? logoURI,
-      int? decimals,
-      String? tokenContract,
-      String? description,
-      String? coingeckoID,
-      String? recommendedSymbol});
+      @JsonKey(name: 'chain_id') String chainID,
+      @JsonKey(name: 'origin_denom') String originDenom,
+      @JsonKey(name: 'origin_chain_id') String originChainID,
+      @JsonKey(name: 'trace') String trace,
+      @JsonKey(name: 'is_cw20') bool isCW20,
+      @JsonKey(name: 'is_evm') bool isEVM,
+      @JsonKey(name: 'is_svm') bool isSVM,
+      @JsonKey(name: 'symbol') String? symbol,
+      @JsonKey(name: 'name') String? name,
+      @JsonKey(name: 'logo_uri') String? logoURI,
+      @JsonKey(name: 'decimals') int? decimals,
+      @JsonKey(name: 'token_contract') String? tokenContract,
+      @JsonKey(name: 'description') String? description,
+      @JsonKey(name: 'coingecko_id') String? coingeckoID,
+      @JsonKey(name: 'recommended_symbol') String? recommendedSymbol});
 }
 
 /// @nodoc
@@ -347,21 +368,21 @@ abstract class _$$AssetImplCopyWith<$Res> implements $AssetCopyWith<$Res> {
   @useResult
   $Res call(
       {String denom,
-      String chainID,
-      String originDenom,
-      String originChainID,
-      String trace,
-      bool isCW20,
-      bool isEVM,
-      bool isSVM,
-      String? symbol,
-      String? name,
-      String? logoURI,
-      int? decimals,
-      String? tokenContract,
-      String? description,
-      String? coingeckoID,
-      String? recommendedSymbol});
+      @JsonKey(name: 'chain_id') String chainID,
+      @JsonKey(name: 'origin_denom') String originDenom,
+      @JsonKey(name: 'origin_chain_id') String originChainID,
+      @JsonKey(name: 'trace') String trace,
+      @JsonKey(name: 'is_cw20') bool isCW20,
+      @JsonKey(name: 'is_evm') bool isEVM,
+      @JsonKey(name: 'is_svm') bool isSVM,
+      @JsonKey(name: 'symbol') String? symbol,
+      @JsonKey(name: 'name') String? name,
+      @JsonKey(name: 'logo_uri') String? logoURI,
+      @JsonKey(name: 'decimals') int? decimals,
+      @JsonKey(name: 'token_contract') String? tokenContract,
+      @JsonKey(name: 'description') String? description,
+      @JsonKey(name: 'coingecko_id') String? coingeckoID,
+      @JsonKey(name: 'recommended_symbol') String? recommendedSymbol});
 }
 
 /// @nodoc
@@ -468,21 +489,21 @@ class __$$AssetImplCopyWithImpl<$Res>
 class _$AssetImpl implements _Asset {
   const _$AssetImpl(
       {required this.denom,
-      required this.chainID,
-      required this.originDenom,
-      required this.originChainID,
-      required this.trace,
-      required this.isCW20,
-      required this.isEVM,
-      required this.isSVM,
-      this.symbol,
-      this.name,
-      this.logoURI,
-      this.decimals,
-      this.tokenContract,
-      this.description,
-      this.coingeckoID,
-      this.recommendedSymbol});
+      @JsonKey(name: 'chain_id') required this.chainID,
+      @JsonKey(name: 'origin_denom') required this.originDenom,
+      @JsonKey(name: 'origin_chain_id') required this.originChainID,
+      @JsonKey(name: 'trace') required this.trace,
+      @JsonKey(name: 'is_cw20') required this.isCW20,
+      @JsonKey(name: 'is_evm') required this.isEVM,
+      @JsonKey(name: 'is_svm') required this.isSVM,
+      @JsonKey(name: 'symbol') this.symbol,
+      @JsonKey(name: 'name') this.name,
+      @JsonKey(name: 'logo_uri') this.logoURI,
+      @JsonKey(name: 'decimals') this.decimals,
+      @JsonKey(name: 'token_contract') this.tokenContract,
+      @JsonKey(name: 'description') this.description,
+      @JsonKey(name: 'coingecko_id') this.coingeckoID,
+      @JsonKey(name: 'recommended_symbol') this.recommendedSymbol});
 
   factory _$AssetImpl.fromJson(Map<String, dynamic> json) =>
       _$$AssetImplFromJson(json);
@@ -490,34 +511,49 @@ class _$AssetImpl implements _Asset {
   @override
   final String denom;
   @override
+  @JsonKey(name: 'chain_id')
   final String chainID;
   @override
+  @JsonKey(name: 'origin_denom')
   final String originDenom;
   @override
+  @JsonKey(name: 'origin_chain_id')
   final String originChainID;
   @override
+  @JsonKey(name: 'trace')
   final String trace;
   @override
+  @JsonKey(name: 'is_cw20')
   final bool isCW20;
   @override
+  @JsonKey(name: 'is_evm')
   final bool isEVM;
   @override
+  @JsonKey(name: 'is_svm')
   final bool isSVM;
   @override
+  @JsonKey(name: 'symbol')
   final String? symbol;
   @override
+  @JsonKey(name: 'name')
   final String? name;
   @override
+  @JsonKey(name: 'logo_uri')
   final String? logoURI;
   @override
+  @JsonKey(name: 'decimals')
   final int? decimals;
   @override
+  @JsonKey(name: 'token_contract')
   final String? tokenContract;
   @override
+  @JsonKey(name: 'description')
   final String? description;
   @override
+  @JsonKey(name: 'coingecko_id')
   final String? coingeckoID;
   @override
+  @JsonKey(name: 'recommended_symbol')
   final String? recommendedSymbol;
 
   @override
@@ -595,20 +631,21 @@ class _$AssetImpl implements _Asset {
 abstract class _Asset implements Asset {
   const factory _Asset(
       {required final String denom,
-      required final String chainID,
-      required final String originDenom,
-      required final String originChainID,
-      required final String trace,
-      required final bool isCW20,
-      required final bool isEVM,
-      required final bool isSVM,
-      final String? symbol,
-      final String? name,
-      final String? logoURI,
-      final int? decimals,
-      final String? tokenContract,
-      final String? description,
-      final String? coingeckoID,
+      @JsonKey(name: 'chain_id') required final String chainID,
+      @JsonKey(name: 'origin_denom') required final String originDenom,
+      @JsonKey(name: 'origin_chain_id') required final String originChainID,
+      @JsonKey(name: 'trace') required final String trace,
+      @JsonKey(name: 'is_cw20') required final bool isCW20,
+      @JsonKey(name: 'is_evm') required final bool isEVM,
+      @JsonKey(name: 'is_svm') required final bool isSVM,
+      @JsonKey(name: 'symbol') final String? symbol,
+      @JsonKey(name: 'name') final String? name,
+      @JsonKey(name: 'logo_uri') final String? logoURI,
+      @JsonKey(name: 'decimals') final int? decimals,
+      @JsonKey(name: 'token_contract') final String? tokenContract,
+      @JsonKey(name: 'description') final String? description,
+      @JsonKey(name: 'coingecko_id') final String? coingeckoID,
+      @JsonKey(name: 'recommended_symbol')
       final String? recommendedSymbol}) = _$AssetImpl;
 
   factory _Asset.fromJson(Map<String, dynamic> json) = _$AssetImpl.fromJson;
@@ -616,34 +653,49 @@ abstract class _Asset implements Asset {
   @override
   String get denom;
   @override
+  @JsonKey(name: 'chain_id')
   String get chainID;
   @override
+  @JsonKey(name: 'origin_denom')
   String get originDenom;
   @override
+  @JsonKey(name: 'origin_chain_id')
   String get originChainID;
   @override
+  @JsonKey(name: 'trace')
   String get trace;
   @override
+  @JsonKey(name: 'is_cw20')
   bool get isCW20;
   @override
+  @JsonKey(name: 'is_evm')
   bool get isEVM;
   @override
+  @JsonKey(name: 'is_svm')
   bool get isSVM;
   @override
+  @JsonKey(name: 'symbol')
   String? get symbol;
   @override
+  @JsonKey(name: 'name')
   String? get name;
   @override
+  @JsonKey(name: 'logo_uri')
   String? get logoURI;
   @override
+  @JsonKey(name: 'decimals')
   int? get decimals;
   @override
+  @JsonKey(name: 'token_contract')
   String? get tokenContract;
   @override
+  @JsonKey(name: 'description')
   String? get description;
   @override
+  @JsonKey(name: 'coingecko_id')
   String? get coingeckoID;
   @override
+  @JsonKey(name: 'recommended_symbol')
   String? get recommendedSymbol;
 
   /// Create a copy of Asset
@@ -660,18 +712,31 @@ Transfer _$TransferFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Transfer {
+  @JsonKey(name: 'port')
   String get port => throw _privateConstructorUsedError;
+  @JsonKey(name: 'channel')
   String get channel => throw _privateConstructorUsedError;
+  @JsonKey(name: 'from_chain_id')
   String get fromChainID => throw _privateConstructorUsedError;
+  @JsonKey(name: 'to_chain_id')
   String get toChainID => throw _privateConstructorUsedError;
+  @JsonKey(name: 'pfm_enabled')
   bool get pfmEnabled => throw _privateConstructorUsedError;
+  @JsonKey(name: 'supports_memo')
   bool get supportsMemo => throw _privateConstructorUsedError;
+  @JsonKey(name: 'denom_in')
   String get denomIn => throw _privateConstructorUsedError;
+  @JsonKey(name: 'denom_out')
   String get denomOut => throw _privateConstructorUsedError;
+  @JsonKey(name: 'fee_amount')
   String? get feeAmount => throw _privateConstructorUsedError;
+  @JsonKey(name: 'usd_fee_amount')
   String? get usdFeeAmount => throw _privateConstructorUsedError;
+  @JsonKey(name: 'fee_asset')
   Asset? get feeAsset => throw _privateConstructorUsedError;
+  @JsonKey(name: 'bridge_id')
   BridgeType get bridgeID => throw _privateConstructorUsedError;
+  @JsonKey(name: 'smart_relay')
   bool get smartRelay => throw _privateConstructorUsedError;
 
   /// Serializes this Transfer to a JSON map.
@@ -690,19 +755,19 @@ abstract class $TransferCopyWith<$Res> {
       _$TransferCopyWithImpl<$Res, Transfer>;
   @useResult
   $Res call(
-      {String port,
-      String channel,
-      String fromChainID,
-      String toChainID,
-      bool pfmEnabled,
-      bool supportsMemo,
-      String denomIn,
-      String denomOut,
-      String? feeAmount,
-      String? usdFeeAmount,
-      Asset? feeAsset,
-      BridgeType bridgeID,
-      bool smartRelay});
+      {@JsonKey(name: 'port') String port,
+      @JsonKey(name: 'channel') String channel,
+      @JsonKey(name: 'from_chain_id') String fromChainID,
+      @JsonKey(name: 'to_chain_id') String toChainID,
+      @JsonKey(name: 'pfm_enabled') bool pfmEnabled,
+      @JsonKey(name: 'supports_memo') bool supportsMemo,
+      @JsonKey(name: 'denom_in') String denomIn,
+      @JsonKey(name: 'denom_out') String denomOut,
+      @JsonKey(name: 'fee_amount') String? feeAmount,
+      @JsonKey(name: 'usd_fee_amount') String? usdFeeAmount,
+      @JsonKey(name: 'fee_asset') Asset? feeAsset,
+      @JsonKey(name: 'bridge_id') BridgeType bridgeID,
+      @JsonKey(name: 'smart_relay') bool smartRelay});
 
   $AssetCopyWith<$Res>? get feeAsset;
 }
@@ -816,19 +881,19 @@ abstract class _$$TransferImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {String port,
-      String channel,
-      String fromChainID,
-      String toChainID,
-      bool pfmEnabled,
-      bool supportsMemo,
-      String denomIn,
-      String denomOut,
-      String? feeAmount,
-      String? usdFeeAmount,
-      Asset? feeAsset,
-      BridgeType bridgeID,
-      bool smartRelay});
+      {@JsonKey(name: 'port') String port,
+      @JsonKey(name: 'channel') String channel,
+      @JsonKey(name: 'from_chain_id') String fromChainID,
+      @JsonKey(name: 'to_chain_id') String toChainID,
+      @JsonKey(name: 'pfm_enabled') bool pfmEnabled,
+      @JsonKey(name: 'supports_memo') bool supportsMemo,
+      @JsonKey(name: 'denom_in') String denomIn,
+      @JsonKey(name: 'denom_out') String denomOut,
+      @JsonKey(name: 'fee_amount') String? feeAmount,
+      @JsonKey(name: 'usd_fee_amount') String? usdFeeAmount,
+      @JsonKey(name: 'fee_asset') Asset? feeAsset,
+      @JsonKey(name: 'bridge_id') BridgeType bridgeID,
+      @JsonKey(name: 'smart_relay') bool smartRelay});
 
   @override
   $AssetCopyWith<$Res>? get feeAsset;
@@ -923,48 +988,61 @@ class __$$TransferImplCopyWithImpl<$Res>
 @JsonSerializable(explicitToJson: true)
 class _$TransferImpl implements _Transfer {
   const _$TransferImpl(
-      {required this.port,
-      required this.channel,
-      required this.fromChainID,
-      required this.toChainID,
-      required this.pfmEnabled,
-      required this.supportsMemo,
-      required this.denomIn,
-      required this.denomOut,
-      this.feeAmount,
-      this.usdFeeAmount,
-      this.feeAsset,
-      required this.bridgeID,
-      required this.smartRelay});
+      {@JsonKey(name: 'port') required this.port,
+      @JsonKey(name: 'channel') required this.channel,
+      @JsonKey(name: 'from_chain_id') required this.fromChainID,
+      @JsonKey(name: 'to_chain_id') required this.toChainID,
+      @JsonKey(name: 'pfm_enabled') required this.pfmEnabled,
+      @JsonKey(name: 'supports_memo') required this.supportsMemo,
+      @JsonKey(name: 'denom_in') required this.denomIn,
+      @JsonKey(name: 'denom_out') required this.denomOut,
+      @JsonKey(name: 'fee_amount') this.feeAmount,
+      @JsonKey(name: 'usd_fee_amount') this.usdFeeAmount,
+      @JsonKey(name: 'fee_asset') this.feeAsset,
+      @JsonKey(name: 'bridge_id') required this.bridgeID,
+      @JsonKey(name: 'smart_relay') required this.smartRelay});
 
   factory _$TransferImpl.fromJson(Map<String, dynamic> json) =>
       _$$TransferImplFromJson(json);
 
   @override
+  @JsonKey(name: 'port')
   final String port;
   @override
+  @JsonKey(name: 'channel')
   final String channel;
   @override
+  @JsonKey(name: 'from_chain_id')
   final String fromChainID;
   @override
+  @JsonKey(name: 'to_chain_id')
   final String toChainID;
   @override
+  @JsonKey(name: 'pfm_enabled')
   final bool pfmEnabled;
   @override
+  @JsonKey(name: 'supports_memo')
   final bool supportsMemo;
   @override
+  @JsonKey(name: 'denom_in')
   final String denomIn;
   @override
+  @JsonKey(name: 'denom_out')
   final String denomOut;
   @override
+  @JsonKey(name: 'fee_amount')
   final String? feeAmount;
   @override
+  @JsonKey(name: 'usd_fee_amount')
   final String? usdFeeAmount;
   @override
+  @JsonKey(name: 'fee_asset')
   final Asset? feeAsset;
   @override
+  @JsonKey(name: 'bridge_id')
   final BridgeType bridgeID;
   @override
+  @JsonKey(name: 'smart_relay')
   final bool smartRelay;
 
   @override
@@ -1038,48 +1116,62 @@ class _$TransferImpl implements _Transfer {
 
 abstract class _Transfer implements Transfer {
   const factory _Transfer(
-      {required final String port,
-      required final String channel,
-      required final String fromChainID,
-      required final String toChainID,
-      required final bool pfmEnabled,
-      required final bool supportsMemo,
-      required final String denomIn,
-      required final String denomOut,
-      final String? feeAmount,
-      final String? usdFeeAmount,
-      final Asset? feeAsset,
-      required final BridgeType bridgeID,
-      required final bool smartRelay}) = _$TransferImpl;
+          {@JsonKey(name: 'port') required final String port,
+          @JsonKey(name: 'channel') required final String channel,
+          @JsonKey(name: 'from_chain_id') required final String fromChainID,
+          @JsonKey(name: 'to_chain_id') required final String toChainID,
+          @JsonKey(name: 'pfm_enabled') required final bool pfmEnabled,
+          @JsonKey(name: 'supports_memo') required final bool supportsMemo,
+          @JsonKey(name: 'denom_in') required final String denomIn,
+          @JsonKey(name: 'denom_out') required final String denomOut,
+          @JsonKey(name: 'fee_amount') final String? feeAmount,
+          @JsonKey(name: 'usd_fee_amount') final String? usdFeeAmount,
+          @JsonKey(name: 'fee_asset') final Asset? feeAsset,
+          @JsonKey(name: 'bridge_id') required final BridgeType bridgeID,
+          @JsonKey(name: 'smart_relay') required final bool smartRelay}) =
+      _$TransferImpl;
 
   factory _Transfer.fromJson(Map<String, dynamic> json) =
       _$TransferImpl.fromJson;
 
   @override
+  @JsonKey(name: 'port')
   String get port;
   @override
+  @JsonKey(name: 'channel')
   String get channel;
   @override
+  @JsonKey(name: 'from_chain_id')
   String get fromChainID;
   @override
+  @JsonKey(name: 'to_chain_id')
   String get toChainID;
   @override
+  @JsonKey(name: 'pfm_enabled')
   bool get pfmEnabled;
   @override
+  @JsonKey(name: 'supports_memo')
   bool get supportsMemo;
   @override
+  @JsonKey(name: 'denom_in')
   String get denomIn;
   @override
+  @JsonKey(name: 'denom_out')
   String get denomOut;
   @override
+  @JsonKey(name: 'fee_amount')
   String? get feeAmount;
   @override
+  @JsonKey(name: 'usd_fee_amount')
   String? get usdFeeAmount;
   @override
+  @JsonKey(name: 'fee_asset')
   Asset? get feeAsset;
   @override
+  @JsonKey(name: 'bridge_id')
   BridgeType get bridgeID;
   @override
+  @JsonKey(name: 'smart_relay')
   bool get smartRelay;
 
   /// Create a copy of Transfer
@@ -1096,20 +1188,35 @@ AxelarTransfer _$AxelarTransferFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$AxelarTransfer {
+  @JsonKey(name: 'from_chain')
   String get fromChain => throw _privateConstructorUsedError;
+  @JsonKey(name: 'from_chain_id')
   String get fromChainID => throw _privateConstructorUsedError;
+  @JsonKey(name: 'to_chain')
   String get toChain => throw _privateConstructorUsedError;
+  @JsonKey(name: 'to_chain_id')
   String get toChainID => throw _privateConstructorUsedError;
+  @JsonKey(name: 'asset')
   String get asset => throw _privateConstructorUsedError;
+  @JsonKey(name: 'should_unwrap')
   bool get shouldUnwrap => throw _privateConstructorUsedError;
+  @JsonKey(name: 'denom_in')
   String get denomIn => throw _privateConstructorUsedError;
+  @JsonKey(name: 'denom_out')
   String get denomOut => throw _privateConstructorUsedError;
+  @JsonKey(name: 'fee_amount')
   String get feeAmount => throw _privateConstructorUsedError;
+  @JsonKey(name: 'usd_fee_amount')
   String get usdFeeAmount => throw _privateConstructorUsedError;
+  @JsonKey(name: 'fee_asset')
   Asset get feeAsset => throw _privateConstructorUsedError;
+  @JsonKey(name: 'is_testnet')
   bool get isTestnet => throw _privateConstructorUsedError;
+  @JsonKey(name: 'ibc_transfer_to_axelar')
   Transfer? get ibcTransferToAxelar => throw _privateConstructorUsedError;
+  @JsonKey(name: 'bridge_id')
   BridgeType get bridgeID => throw _privateConstructorUsedError;
+  @JsonKey(name: 'smart_relay')
   bool get smartRelay => throw _privateConstructorUsedError;
 
   /// Serializes this AxelarTransfer to a JSON map.
@@ -1129,21 +1236,21 @@ abstract class $AxelarTransferCopyWith<$Res> {
       _$AxelarTransferCopyWithImpl<$Res, AxelarTransfer>;
   @useResult
   $Res call(
-      {String fromChain,
-      String fromChainID,
-      String toChain,
-      String toChainID,
-      String asset,
-      bool shouldUnwrap,
-      String denomIn,
-      String denomOut,
-      String feeAmount,
-      String usdFeeAmount,
-      Asset feeAsset,
-      bool isTestnet,
-      Transfer? ibcTransferToAxelar,
-      BridgeType bridgeID,
-      bool smartRelay});
+      {@JsonKey(name: 'from_chain') String fromChain,
+      @JsonKey(name: 'from_chain_id') String fromChainID,
+      @JsonKey(name: 'to_chain') String toChain,
+      @JsonKey(name: 'to_chain_id') String toChainID,
+      @JsonKey(name: 'asset') String asset,
+      @JsonKey(name: 'should_unwrap') bool shouldUnwrap,
+      @JsonKey(name: 'denom_in') String denomIn,
+      @JsonKey(name: 'denom_out') String denomOut,
+      @JsonKey(name: 'fee_amount') String feeAmount,
+      @JsonKey(name: 'usd_fee_amount') String usdFeeAmount,
+      @JsonKey(name: 'fee_asset') Asset feeAsset,
+      @JsonKey(name: 'is_testnet') bool isTestnet,
+      @JsonKey(name: 'ibc_transfer_to_axelar') Transfer? ibcTransferToAxelar,
+      @JsonKey(name: 'bridge_id') BridgeType bridgeID,
+      @JsonKey(name: 'smart_relay') bool smartRelay});
 
   $AssetCopyWith<$Res> get feeAsset;
   $TransferCopyWith<$Res>? get ibcTransferToAxelar;
@@ -1278,21 +1385,21 @@ abstract class _$$AxelarTransferImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {String fromChain,
-      String fromChainID,
-      String toChain,
-      String toChainID,
-      String asset,
-      bool shouldUnwrap,
-      String denomIn,
-      String denomOut,
-      String feeAmount,
-      String usdFeeAmount,
-      Asset feeAsset,
-      bool isTestnet,
-      Transfer? ibcTransferToAxelar,
-      BridgeType bridgeID,
-      bool smartRelay});
+      {@JsonKey(name: 'from_chain') String fromChain,
+      @JsonKey(name: 'from_chain_id') String fromChainID,
+      @JsonKey(name: 'to_chain') String toChain,
+      @JsonKey(name: 'to_chain_id') String toChainID,
+      @JsonKey(name: 'asset') String asset,
+      @JsonKey(name: 'should_unwrap') bool shouldUnwrap,
+      @JsonKey(name: 'denom_in') String denomIn,
+      @JsonKey(name: 'denom_out') String denomOut,
+      @JsonKey(name: 'fee_amount') String feeAmount,
+      @JsonKey(name: 'usd_fee_amount') String usdFeeAmount,
+      @JsonKey(name: 'fee_asset') Asset feeAsset,
+      @JsonKey(name: 'is_testnet') bool isTestnet,
+      @JsonKey(name: 'ibc_transfer_to_axelar') Transfer? ibcTransferToAxelar,
+      @JsonKey(name: 'bridge_id') BridgeType bridgeID,
+      @JsonKey(name: 'smart_relay') bool smartRelay});
 
   @override
   $AssetCopyWith<$Res> get feeAsset;
@@ -1399,54 +1506,69 @@ class __$$AxelarTransferImplCopyWithImpl<$Res>
 @JsonSerializable(explicitToJson: true)
 class _$AxelarTransferImpl implements _AxelarTransfer {
   const _$AxelarTransferImpl(
-      {required this.fromChain,
-      required this.fromChainID,
-      required this.toChain,
-      required this.toChainID,
-      required this.asset,
-      required this.shouldUnwrap,
-      required this.denomIn,
-      required this.denomOut,
-      required this.feeAmount,
-      required this.usdFeeAmount,
-      required this.feeAsset,
-      required this.isTestnet,
-      this.ibcTransferToAxelar,
-      required this.bridgeID,
-      required this.smartRelay});
+      {@JsonKey(name: 'from_chain') required this.fromChain,
+      @JsonKey(name: 'from_chain_id') required this.fromChainID,
+      @JsonKey(name: 'to_chain') required this.toChain,
+      @JsonKey(name: 'to_chain_id') required this.toChainID,
+      @JsonKey(name: 'asset') required this.asset,
+      @JsonKey(name: 'should_unwrap') required this.shouldUnwrap,
+      @JsonKey(name: 'denom_in') required this.denomIn,
+      @JsonKey(name: 'denom_out') required this.denomOut,
+      @JsonKey(name: 'fee_amount') required this.feeAmount,
+      @JsonKey(name: 'usd_fee_amount') required this.usdFeeAmount,
+      @JsonKey(name: 'fee_asset') required this.feeAsset,
+      @JsonKey(name: 'is_testnet') required this.isTestnet,
+      @JsonKey(name: 'ibc_transfer_to_axelar') this.ibcTransferToAxelar,
+      @JsonKey(name: 'bridge_id') required this.bridgeID,
+      @JsonKey(name: 'smart_relay') required this.smartRelay});
 
   factory _$AxelarTransferImpl.fromJson(Map<String, dynamic> json) =>
       _$$AxelarTransferImplFromJson(json);
 
   @override
+  @JsonKey(name: 'from_chain')
   final String fromChain;
   @override
+  @JsonKey(name: 'from_chain_id')
   final String fromChainID;
   @override
+  @JsonKey(name: 'to_chain')
   final String toChain;
   @override
+  @JsonKey(name: 'to_chain_id')
   final String toChainID;
   @override
+  @JsonKey(name: 'asset')
   final String asset;
   @override
+  @JsonKey(name: 'should_unwrap')
   final bool shouldUnwrap;
   @override
+  @JsonKey(name: 'denom_in')
   final String denomIn;
   @override
+  @JsonKey(name: 'denom_out')
   final String denomOut;
   @override
+  @JsonKey(name: 'fee_amount')
   final String feeAmount;
   @override
+  @JsonKey(name: 'usd_fee_amount')
   final String usdFeeAmount;
   @override
+  @JsonKey(name: 'fee_asset')
   final Asset feeAsset;
   @override
+  @JsonKey(name: 'is_testnet')
   final bool isTestnet;
   @override
+  @JsonKey(name: 'ibc_transfer_to_axelar')
   final Transfer? ibcTransferToAxelar;
   @override
+  @JsonKey(name: 'bridge_id')
   final BridgeType bridgeID;
   @override
+  @JsonKey(name: 'smart_relay')
   final bool smartRelay;
 
   @override
@@ -1527,54 +1649,71 @@ class _$AxelarTransferImpl implements _AxelarTransfer {
 
 abstract class _AxelarTransfer implements AxelarTransfer {
   const factory _AxelarTransfer(
-      {required final String fromChain,
-      required final String fromChainID,
-      required final String toChain,
-      required final String toChainID,
-      required final String asset,
-      required final bool shouldUnwrap,
-      required final String denomIn,
-      required final String denomOut,
-      required final String feeAmount,
-      required final String usdFeeAmount,
-      required final Asset feeAsset,
-      required final bool isTestnet,
-      final Transfer? ibcTransferToAxelar,
-      required final BridgeType bridgeID,
-      required final bool smartRelay}) = _$AxelarTransferImpl;
+          {@JsonKey(name: 'from_chain') required final String fromChain,
+          @JsonKey(name: 'from_chain_id') required final String fromChainID,
+          @JsonKey(name: 'to_chain') required final String toChain,
+          @JsonKey(name: 'to_chain_id') required final String toChainID,
+          @JsonKey(name: 'asset') required final String asset,
+          @JsonKey(name: 'should_unwrap') required final bool shouldUnwrap,
+          @JsonKey(name: 'denom_in') required final String denomIn,
+          @JsonKey(name: 'denom_out') required final String denomOut,
+          @JsonKey(name: 'fee_amount') required final String feeAmount,
+          @JsonKey(name: 'usd_fee_amount') required final String usdFeeAmount,
+          @JsonKey(name: 'fee_asset') required final Asset feeAsset,
+          @JsonKey(name: 'is_testnet') required final bool isTestnet,
+          @JsonKey(name: 'ibc_transfer_to_axelar')
+          final Transfer? ibcTransferToAxelar,
+          @JsonKey(name: 'bridge_id') required final BridgeType bridgeID,
+          @JsonKey(name: 'smart_relay') required final bool smartRelay}) =
+      _$AxelarTransferImpl;
 
   factory _AxelarTransfer.fromJson(Map<String, dynamic> json) =
       _$AxelarTransferImpl.fromJson;
 
   @override
+  @JsonKey(name: 'from_chain')
   String get fromChain;
   @override
+  @JsonKey(name: 'from_chain_id')
   String get fromChainID;
   @override
+  @JsonKey(name: 'to_chain')
   String get toChain;
   @override
+  @JsonKey(name: 'to_chain_id')
   String get toChainID;
   @override
+  @JsonKey(name: 'asset')
   String get asset;
   @override
+  @JsonKey(name: 'should_unwrap')
   bool get shouldUnwrap;
   @override
+  @JsonKey(name: 'denom_in')
   String get denomIn;
   @override
+  @JsonKey(name: 'denom_out')
   String get denomOut;
   @override
+  @JsonKey(name: 'fee_amount')
   String get feeAmount;
   @override
+  @JsonKey(name: 'usd_fee_amount')
   String get usdFeeAmount;
   @override
+  @JsonKey(name: 'fee_asset')
   Asset get feeAsset;
   @override
+  @JsonKey(name: 'is_testnet')
   bool get isTestnet;
   @override
+  @JsonKey(name: 'ibc_transfer_to_axelar')
   Transfer? get ibcTransferToAxelar;
   @override
+  @JsonKey(name: 'bridge_id')
   BridgeType get bridgeID;
   @override
+  @JsonKey(name: 'smart_relay')
   bool get smartRelay;
 
   /// Create a copy of AxelarTransfer
@@ -1591,6 +1730,7 @@ BankSend _$BankSendFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$BankSend {
+  @JsonKey(name: 'chain_id')
   String get chainID => throw _privateConstructorUsedError;
   String get denom => throw _privateConstructorUsedError;
 
@@ -1609,7 +1749,7 @@ abstract class $BankSendCopyWith<$Res> {
   factory $BankSendCopyWith(BankSend value, $Res Function(BankSend) then) =
       _$BankSendCopyWithImpl<$Res, BankSend>;
   @useResult
-  $Res call({String chainID, String denom});
+  $Res call({@JsonKey(name: 'chain_id') String chainID, String denom});
 }
 
 /// @nodoc
@@ -1651,7 +1791,7 @@ abstract class _$$BankSendImplCopyWith<$Res>
       __$$BankSendImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String chainID, String denom});
+  $Res call({@JsonKey(name: 'chain_id') String chainID, String denom});
 }
 
 /// @nodoc
@@ -1686,12 +1826,14 @@ class __$$BankSendImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$BankSendImpl implements _BankSend {
-  const _$BankSendImpl({required this.chainID, required this.denom});
+  const _$BankSendImpl(
+      {@JsonKey(name: 'chain_id') required this.chainID, required this.denom});
 
   factory _$BankSendImpl.fromJson(Map<String, dynamic> json) =>
       _$$BankSendImplFromJson(json);
 
   @override
+  @JsonKey(name: 'chain_id')
   final String chainID;
   @override
   final String denom;
@@ -1732,13 +1874,14 @@ class _$BankSendImpl implements _BankSend {
 
 abstract class _BankSend implements BankSend {
   const factory _BankSend(
-      {required final String chainID,
+      {@JsonKey(name: 'chain_id') required final String chainID,
       required final String denom}) = _$BankSendImpl;
 
   factory _BankSend.fromJson(Map<String, dynamic> json) =
       _$BankSendImpl.fromJson;
 
   @override
+  @JsonKey(name: 'chain_id')
   String get chainID;
   @override
   String get denom;
@@ -1757,9 +1900,11 @@ MultiChainMsg _$MultiChainMsgFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$MultiChainMsg {
+  @JsonKey(name: 'chain_id')
   String get chainID => throw _privateConstructorUsedError;
   List<String> get path => throw _privateConstructorUsedError;
   String get msg => throw _privateConstructorUsedError;
+  @JsonKey(name: 'msg_type_url')
   String get msgTypeURL => throw _privateConstructorUsedError;
 
   /// Serializes this MultiChainMsg to a JSON map.
@@ -1778,7 +1923,11 @@ abstract class $MultiChainMsgCopyWith<$Res> {
           MultiChainMsg value, $Res Function(MultiChainMsg) then) =
       _$MultiChainMsgCopyWithImpl<$Res, MultiChainMsg>;
   @useResult
-  $Res call({String chainID, List<String> path, String msg, String msgTypeURL});
+  $Res call(
+      {@JsonKey(name: 'chain_id') String chainID,
+      List<String> path,
+      String msg,
+      @JsonKey(name: 'msg_type_url') String msgTypeURL});
 }
 
 /// @nodoc
@@ -1830,7 +1979,11 @@ abstract class _$$MultiChainMsgImplCopyWith<$Res>
       __$$MultiChainMsgImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String chainID, List<String> path, String msg, String msgTypeURL});
+  $Res call(
+      {@JsonKey(name: 'chain_id') String chainID,
+      List<String> path,
+      String msg,
+      @JsonKey(name: 'msg_type_url') String msgTypeURL});
 }
 
 /// @nodoc
@@ -1876,16 +2029,17 @@ class __$$MultiChainMsgImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$MultiChainMsgImpl implements _MultiChainMsg {
   const _$MultiChainMsgImpl(
-      {required this.chainID,
+      {@JsonKey(name: 'chain_id') required this.chainID,
       required final List<String> path,
       required this.msg,
-      required this.msgTypeURL})
+      @JsonKey(name: 'msg_type_url') required this.msgTypeURL})
       : _path = path;
 
   factory _$MultiChainMsgImpl.fromJson(Map<String, dynamic> json) =>
       _$$MultiChainMsgImplFromJson(json);
 
   @override
+  @JsonKey(name: 'chain_id')
   final String chainID;
   final List<String> _path;
   @override
@@ -1898,6 +2052,7 @@ class _$MultiChainMsgImpl implements _MultiChainMsg {
   @override
   final String msg;
   @override
+  @JsonKey(name: 'msg_type_url')
   final String msgTypeURL;
 
   @override
@@ -1940,21 +2095,24 @@ class _$MultiChainMsgImpl implements _MultiChainMsg {
 
 abstract class _MultiChainMsg implements MultiChainMsg {
   const factory _MultiChainMsg(
-      {required final String chainID,
-      required final List<String> path,
-      required final String msg,
-      required final String msgTypeURL}) = _$MultiChainMsgImpl;
+          {@JsonKey(name: 'chain_id') required final String chainID,
+          required final List<String> path,
+          required final String msg,
+          @JsonKey(name: 'msg_type_url') required final String msgTypeURL}) =
+      _$MultiChainMsgImpl;
 
   factory _MultiChainMsg.fromJson(Map<String, dynamic> json) =
       _$MultiChainMsgImpl.fromJson;
 
   @override
+  @JsonKey(name: 'chain_id')
   String get chainID;
   @override
   List<String> get path;
   @override
   String get msg;
   @override
+  @JsonKey(name: 'msg_type_url')
   String get msgTypeURL;
 
   /// Create a copy of MultiChainMsg
@@ -1972,6 +2130,7 @@ CosmosMsg _$CosmosMsgFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$CosmosMsg {
   String get msg => throw _privateConstructorUsedError;
+  @JsonKey(name: 'msg_type_url')
   String get msgTypeURL => throw _privateConstructorUsedError;
 
   /// Serializes this CosmosMsg to a JSON map.
@@ -1989,7 +2148,7 @@ abstract class $CosmosMsgCopyWith<$Res> {
   factory $CosmosMsgCopyWith(CosmosMsg value, $Res Function(CosmosMsg) then) =
       _$CosmosMsgCopyWithImpl<$Res, CosmosMsg>;
   @useResult
-  $Res call({String msg, String msgTypeURL});
+  $Res call({String msg, @JsonKey(name: 'msg_type_url') String msgTypeURL});
 }
 
 /// @nodoc
@@ -2031,7 +2190,7 @@ abstract class _$$CosmosMsgImplCopyWith<$Res>
       __$$CosmosMsgImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String msg, String msgTypeURL});
+  $Res call({String msg, @JsonKey(name: 'msg_type_url') String msgTypeURL});
 }
 
 /// @nodoc
@@ -2066,7 +2225,9 @@ class __$$CosmosMsgImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$CosmosMsgImpl implements _CosmosMsg {
-  const _$CosmosMsgImpl({required this.msg, required this.msgTypeURL});
+  const _$CosmosMsgImpl(
+      {required this.msg,
+      @JsonKey(name: 'msg_type_url') required this.msgTypeURL});
 
   factory _$CosmosMsgImpl.fromJson(Map<String, dynamic> json) =>
       _$$CosmosMsgImplFromJson(json);
@@ -2074,6 +2235,7 @@ class _$CosmosMsgImpl implements _CosmosMsg {
   @override
   final String msg;
   @override
+  @JsonKey(name: 'msg_type_url')
   final String msgTypeURL;
 
   @override
@@ -2113,8 +2275,9 @@ class _$CosmosMsgImpl implements _CosmosMsg {
 
 abstract class _CosmosMsg implements CosmosMsg {
   const factory _CosmosMsg(
-      {required final String msg,
-      required final String msgTypeURL}) = _$CosmosMsgImpl;
+          {required final String msg,
+          @JsonKey(name: 'msg_type_url') required final String msgTypeURL}) =
+      _$CosmosMsgImpl;
 
   factory _CosmosMsg.fromJson(Map<String, dynamic> json) =
       _$CosmosMsgImpl.fromJson;
@@ -2122,6 +2285,7 @@ abstract class _CosmosMsg implements CosmosMsg {
   @override
   String get msg;
   @override
+  @JsonKey(name: 'msg_type_url')
   String get msgTypeURL;
 
   /// Create a copy of CosmosMsg
@@ -2138,9 +2302,11 @@ CosmosTx _$CosmosTxFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$CosmosTx {
+  @JsonKey(name: 'chain_id')
   String get chainID => throw _privateConstructorUsedError;
   List<String> get path => throw _privateConstructorUsedError;
   List<CosmosMsg> get msgs => throw _privateConstructorUsedError;
+  @JsonKey(name: 'signer_address')
   String get signerAddress => throw _privateConstructorUsedError;
 
   /// Serializes this CosmosTx to a JSON map.
@@ -2159,10 +2325,10 @@ abstract class $CosmosTxCopyWith<$Res> {
       _$CosmosTxCopyWithImpl<$Res, CosmosTx>;
   @useResult
   $Res call(
-      {String chainID,
+      {@JsonKey(name: 'chain_id') String chainID,
       List<String> path,
       List<CosmosMsg> msgs,
-      String signerAddress});
+      @JsonKey(name: 'signer_address') String signerAddress});
 }
 
 /// @nodoc
@@ -2215,10 +2381,10 @@ abstract class _$$CosmosTxImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {String chainID,
+      {@JsonKey(name: 'chain_id') String chainID,
       List<String> path,
       List<CosmosMsg> msgs,
-      String signerAddress});
+      @JsonKey(name: 'signer_address') String signerAddress});
 }
 
 /// @nodoc
@@ -2264,10 +2430,10 @@ class __$$CosmosTxImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$CosmosTxImpl implements _CosmosTx {
   const _$CosmosTxImpl(
-      {required this.chainID,
+      {@JsonKey(name: 'chain_id') required this.chainID,
       required final List<String> path,
       required final List<CosmosMsg> msgs,
-      required this.signerAddress})
+      @JsonKey(name: 'signer_address') required this.signerAddress})
       : _path = path,
         _msgs = msgs;
 
@@ -2275,6 +2441,7 @@ class _$CosmosTxImpl implements _CosmosTx {
       _$$CosmosTxImplFromJson(json);
 
   @override
+  @JsonKey(name: 'chain_id')
   final String chainID;
   final List<String> _path;
   @override
@@ -2293,6 +2460,7 @@ class _$CosmosTxImpl implements _CosmosTx {
   }
 
   @override
+  @JsonKey(name: 'signer_address')
   final String signerAddress;
 
   @override
@@ -2339,21 +2507,24 @@ class _$CosmosTxImpl implements _CosmosTx {
 
 abstract class _CosmosTx implements CosmosTx {
   const factory _CosmosTx(
-      {required final String chainID,
+      {@JsonKey(name: 'chain_id') required final String chainID,
       required final List<String> path,
       required final List<CosmosMsg> msgs,
+      @JsonKey(name: 'signer_address')
       required final String signerAddress}) = _$CosmosTxImpl;
 
   factory _CosmosTx.fromJson(Map<String, dynamic> json) =
       _$CosmosTxImpl.fromJson;
 
   @override
+  @JsonKey(name: 'chain_id')
   String get chainID;
   @override
   List<String> get path;
   @override
   List<CosmosMsg> get msgs;
   @override
+  @JsonKey(name: 'signer_address')
   String get signerAddress;
 
   /// Create a copy of CosmosTx
@@ -2370,12 +2541,19 @@ CCTPTransfer _$CCTPTransferFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$CCTPTransfer {
+  @JsonKey(name: 'from_chain_id')
   String get fromChainID => throw _privateConstructorUsedError;
+  @JsonKey(name: 'to_chain_id')
   String get toChainID => throw _privateConstructorUsedError;
+  @JsonKey(name: 'burn_token')
   String get burnToken => throw _privateConstructorUsedError;
+  @JsonKey(name: 'bridge_id')
   BridgeType get bridgeID => throw _privateConstructorUsedError;
+  @JsonKey(name: 'denom_in')
   String get denomIn => throw _privateConstructorUsedError;
+  @JsonKey(name: 'denom_out')
   String get denomOut => throw _privateConstructorUsedError;
+  @JsonKey(name: 'smart_relay')
   bool get smartRelay => throw _privateConstructorUsedError;
 
   /// Serializes this CCTPTransfer to a JSON map.
@@ -2395,13 +2573,13 @@ abstract class $CCTPTransferCopyWith<$Res> {
       _$CCTPTransferCopyWithImpl<$Res, CCTPTransfer>;
   @useResult
   $Res call(
-      {String fromChainID,
-      String toChainID,
-      String burnToken,
-      BridgeType bridgeID,
-      String denomIn,
-      String denomOut,
-      bool smartRelay});
+      {@JsonKey(name: 'from_chain_id') String fromChainID,
+      @JsonKey(name: 'to_chain_id') String toChainID,
+      @JsonKey(name: 'burn_token') String burnToken,
+      @JsonKey(name: 'bridge_id') BridgeType bridgeID,
+      @JsonKey(name: 'denom_in') String denomIn,
+      @JsonKey(name: 'denom_out') String denomOut,
+      @JsonKey(name: 'smart_relay') bool smartRelay});
 }
 
 /// @nodoc
@@ -2469,13 +2647,13 @@ abstract class _$$CCTPTransferImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {String fromChainID,
-      String toChainID,
-      String burnToken,
-      BridgeType bridgeID,
-      String denomIn,
-      String denomOut,
-      bool smartRelay});
+      {@JsonKey(name: 'from_chain_id') String fromChainID,
+      @JsonKey(name: 'to_chain_id') String toChainID,
+      @JsonKey(name: 'burn_token') String burnToken,
+      @JsonKey(name: 'bridge_id') BridgeType bridgeID,
+      @JsonKey(name: 'denom_in') String denomIn,
+      @JsonKey(name: 'denom_out') String denomOut,
+      @JsonKey(name: 'smart_relay') bool smartRelay});
 }
 
 /// @nodoc
@@ -2536,30 +2714,37 @@ class __$$CCTPTransferImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$CCTPTransferImpl implements _CCTPTransfer {
   const _$CCTPTransferImpl(
-      {required this.fromChainID,
-      required this.toChainID,
-      required this.burnToken,
-      required this.bridgeID,
-      required this.denomIn,
-      required this.denomOut,
-      required this.smartRelay});
+      {@JsonKey(name: 'from_chain_id') required this.fromChainID,
+      @JsonKey(name: 'to_chain_id') required this.toChainID,
+      @JsonKey(name: 'burn_token') required this.burnToken,
+      @JsonKey(name: 'bridge_id') required this.bridgeID,
+      @JsonKey(name: 'denom_in') required this.denomIn,
+      @JsonKey(name: 'denom_out') required this.denomOut,
+      @JsonKey(name: 'smart_relay') required this.smartRelay});
 
   factory _$CCTPTransferImpl.fromJson(Map<String, dynamic> json) =>
       _$$CCTPTransferImplFromJson(json);
 
   @override
+  @JsonKey(name: 'from_chain_id')
   final String fromChainID;
   @override
+  @JsonKey(name: 'to_chain_id')
   final String toChainID;
   @override
+  @JsonKey(name: 'burn_token')
   final String burnToken;
   @override
+  @JsonKey(name: 'bridge_id')
   final BridgeType bridgeID;
   @override
+  @JsonKey(name: 'denom_in')
   final String denomIn;
   @override
+  @JsonKey(name: 'denom_out')
   final String denomOut;
   @override
+  @JsonKey(name: 'smart_relay')
   final bool smartRelay;
 
   @override
@@ -2610,30 +2795,38 @@ class _$CCTPTransferImpl implements _CCTPTransfer {
 
 abstract class _CCTPTransfer implements CCTPTransfer {
   const factory _CCTPTransfer(
-      {required final String fromChainID,
-      required final String toChainID,
-      required final String burnToken,
-      required final BridgeType bridgeID,
-      required final String denomIn,
-      required final String denomOut,
-      required final bool smartRelay}) = _$CCTPTransferImpl;
+          {@JsonKey(name: 'from_chain_id') required final String fromChainID,
+          @JsonKey(name: 'to_chain_id') required final String toChainID,
+          @JsonKey(name: 'burn_token') required final String burnToken,
+          @JsonKey(name: 'bridge_id') required final BridgeType bridgeID,
+          @JsonKey(name: 'denom_in') required final String denomIn,
+          @JsonKey(name: 'denom_out') required final String denomOut,
+          @JsonKey(name: 'smart_relay') required final bool smartRelay}) =
+      _$CCTPTransferImpl;
 
   factory _CCTPTransfer.fromJson(Map<String, dynamic> json) =
       _$CCTPTransferImpl.fromJson;
 
   @override
+  @JsonKey(name: 'from_chain_id')
   String get fromChainID;
   @override
+  @JsonKey(name: 'to_chain_id')
   String get toChainID;
   @override
+  @JsonKey(name: 'burn_token')
   String get burnToken;
   @override
+  @JsonKey(name: 'bridge_id')
   BridgeType get bridgeID;
   @override
+  @JsonKey(name: 'denom_in')
   String get denomIn;
   @override
+  @JsonKey(name: 'denom_out')
   String get denomOut;
   @override
+  @JsonKey(name: 'smart_relay')
   bool get smartRelay;
 
   /// Create a copy of CCTPTransfer
@@ -2650,15 +2843,25 @@ HyperlaneTransfer _$HyperlaneTransferFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$HyperlaneTransfer {
+  @JsonKey(name: 'from_chain_id')
   String get fromChainID => throw _privateConstructorUsedError;
+  @JsonKey(name: 'to_chain_id')
   String get toChainID => throw _privateConstructorUsedError;
+  @JsonKey(name: 'denom_in')
   String get denomIn => throw _privateConstructorUsedError;
+  @JsonKey(name: 'denom_out')
   String get denomOut => throw _privateConstructorUsedError;
+  @JsonKey(name: 'hyperlane_contract_address')
   String get hyperlaneContractAddress => throw _privateConstructorUsedError;
+  @JsonKey(name: 'fee_amount')
   String get feeAmount => throw _privateConstructorUsedError;
+  @JsonKey(name: 'usd_fee_amount')
   String? get usdFeeAmount => throw _privateConstructorUsedError;
+  @JsonKey(name: 'fee_asset')
   Asset get feeAsset => throw _privateConstructorUsedError;
+  @JsonKey(name: 'bridge_id')
   BridgeType get bridgeID => throw _privateConstructorUsedError;
+  @JsonKey(name: 'smart_relay')
   bool get smartRelay => throw _privateConstructorUsedError;
 
   /// Serializes this HyperlaneTransfer to a JSON map.
@@ -2678,16 +2881,17 @@ abstract class $HyperlaneTransferCopyWith<$Res> {
       _$HyperlaneTransferCopyWithImpl<$Res, HyperlaneTransfer>;
   @useResult
   $Res call(
-      {String fromChainID,
-      String toChainID,
-      String denomIn,
-      String denomOut,
+      {@JsonKey(name: 'from_chain_id') String fromChainID,
+      @JsonKey(name: 'to_chain_id') String toChainID,
+      @JsonKey(name: 'denom_in') String denomIn,
+      @JsonKey(name: 'denom_out') String denomOut,
+      @JsonKey(name: 'hyperlane_contract_address')
       String hyperlaneContractAddress,
-      String feeAmount,
-      String? usdFeeAmount,
-      Asset feeAsset,
-      BridgeType bridgeID,
-      bool smartRelay});
+      @JsonKey(name: 'fee_amount') String feeAmount,
+      @JsonKey(name: 'usd_fee_amount') String? usdFeeAmount,
+      @JsonKey(name: 'fee_asset') Asset feeAsset,
+      @JsonKey(name: 'bridge_id') BridgeType bridgeID,
+      @JsonKey(name: 'smart_relay') bool smartRelay});
 
   $AssetCopyWith<$Res> get feeAsset;
 }
@@ -2782,16 +2986,17 @@ abstract class _$$HyperlaneTransferImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {String fromChainID,
-      String toChainID,
-      String denomIn,
-      String denomOut,
+      {@JsonKey(name: 'from_chain_id') String fromChainID,
+      @JsonKey(name: 'to_chain_id') String toChainID,
+      @JsonKey(name: 'denom_in') String denomIn,
+      @JsonKey(name: 'denom_out') String denomOut,
+      @JsonKey(name: 'hyperlane_contract_address')
       String hyperlaneContractAddress,
-      String feeAmount,
-      String? usdFeeAmount,
-      Asset feeAsset,
-      BridgeType bridgeID,
-      bool smartRelay});
+      @JsonKey(name: 'fee_amount') String feeAmount,
+      @JsonKey(name: 'usd_fee_amount') String? usdFeeAmount,
+      @JsonKey(name: 'fee_asset') Asset feeAsset,
+      @JsonKey(name: 'bridge_id') BridgeType bridgeID,
+      @JsonKey(name: 'smart_relay') bool smartRelay});
 
   @override
   $AssetCopyWith<$Res> get feeAsset;
@@ -2870,39 +3075,50 @@ class __$$HyperlaneTransferImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$HyperlaneTransferImpl implements _HyperlaneTransfer {
   const _$HyperlaneTransferImpl(
-      {required this.fromChainID,
-      required this.toChainID,
-      required this.denomIn,
-      required this.denomOut,
+      {@JsonKey(name: 'from_chain_id') required this.fromChainID,
+      @JsonKey(name: 'to_chain_id') required this.toChainID,
+      @JsonKey(name: 'denom_in') required this.denomIn,
+      @JsonKey(name: 'denom_out') required this.denomOut,
+      @JsonKey(name: 'hyperlane_contract_address')
       required this.hyperlaneContractAddress,
-      required this.feeAmount,
-      this.usdFeeAmount,
-      required this.feeAsset,
-      required this.bridgeID,
-      required this.smartRelay});
+      @JsonKey(name: 'fee_amount') required this.feeAmount,
+      @JsonKey(name: 'usd_fee_amount') this.usdFeeAmount,
+      @JsonKey(name: 'fee_asset') required this.feeAsset,
+      @JsonKey(name: 'bridge_id') required this.bridgeID,
+      @JsonKey(name: 'smart_relay') required this.smartRelay});
 
   factory _$HyperlaneTransferImpl.fromJson(Map<String, dynamic> json) =>
       _$$HyperlaneTransferImplFromJson(json);
 
   @override
+  @JsonKey(name: 'from_chain_id')
   final String fromChainID;
   @override
+  @JsonKey(name: 'to_chain_id')
   final String toChainID;
   @override
+  @JsonKey(name: 'denom_in')
   final String denomIn;
   @override
+  @JsonKey(name: 'denom_out')
   final String denomOut;
   @override
+  @JsonKey(name: 'hyperlane_contract_address')
   final String hyperlaneContractAddress;
   @override
+  @JsonKey(name: 'fee_amount')
   final String feeAmount;
   @override
+  @JsonKey(name: 'usd_fee_amount')
   final String? usdFeeAmount;
   @override
+  @JsonKey(name: 'fee_asset')
   final Asset feeAsset;
   @override
+  @JsonKey(name: 'bridge_id')
   final BridgeType bridgeID;
   @override
+  @JsonKey(name: 'smart_relay')
   final bool smartRelay;
 
   @override
@@ -2971,39 +3187,51 @@ class _$HyperlaneTransferImpl implements _HyperlaneTransfer {
 
 abstract class _HyperlaneTransfer implements HyperlaneTransfer {
   const factory _HyperlaneTransfer(
-      {required final String fromChainID,
-      required final String toChainID,
-      required final String denomIn,
-      required final String denomOut,
-      required final String hyperlaneContractAddress,
-      required final String feeAmount,
-      final String? usdFeeAmount,
-      required final Asset feeAsset,
-      required final BridgeType bridgeID,
-      required final bool smartRelay}) = _$HyperlaneTransferImpl;
+          {@JsonKey(name: 'from_chain_id') required final String fromChainID,
+          @JsonKey(name: 'to_chain_id') required final String toChainID,
+          @JsonKey(name: 'denom_in') required final String denomIn,
+          @JsonKey(name: 'denom_out') required final String denomOut,
+          @JsonKey(name: 'hyperlane_contract_address')
+          required final String hyperlaneContractAddress,
+          @JsonKey(name: 'fee_amount') required final String feeAmount,
+          @JsonKey(name: 'usd_fee_amount') final String? usdFeeAmount,
+          @JsonKey(name: 'fee_asset') required final Asset feeAsset,
+          @JsonKey(name: 'bridge_id') required final BridgeType bridgeID,
+          @JsonKey(name: 'smart_relay') required final bool smartRelay}) =
+      _$HyperlaneTransferImpl;
 
   factory _HyperlaneTransfer.fromJson(Map<String, dynamic> json) =
       _$HyperlaneTransferImpl.fromJson;
 
   @override
+  @JsonKey(name: 'from_chain_id')
   String get fromChainID;
   @override
+  @JsonKey(name: 'to_chain_id')
   String get toChainID;
   @override
+  @JsonKey(name: 'denom_in')
   String get denomIn;
   @override
+  @JsonKey(name: 'denom_out')
   String get denomOut;
   @override
+  @JsonKey(name: 'hyperlane_contract_address')
   String get hyperlaneContractAddress;
   @override
+  @JsonKey(name: 'fee_amount')
   String get feeAmount;
   @override
+  @JsonKey(name: 'usd_fee_amount')
   String? get usdFeeAmount;
   @override
+  @JsonKey(name: 'fee_asset')
   Asset get feeAsset;
   @override
+  @JsonKey(name: 'bridge_id')
   BridgeType get bridgeID;
   @override
+  @JsonKey(name: 'smart_relay')
   bool get smartRelay;
 
   /// Create a copy of HyperlaneTransfer
@@ -3020,12 +3248,19 @@ OPInitTransfer _$OPInitTransferFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$OPInitTransfer {
+  @JsonKey(name: 'from_chain_id')
   String get fromChainID => throw _privateConstructorUsedError;
+  @JsonKey(name: 'to_chain_id')
   String get toChainID => throw _privateConstructorUsedError;
+  @JsonKey(name: 'denom_in')
   String get denomIn => throw _privateConstructorUsedError;
+  @JsonKey(name: 'denom_out')
   String get denomOut => throw _privateConstructorUsedError;
+  @JsonKey(name: 'op_init_bridge_id')
   String get opInitBridgeID => throw _privateConstructorUsedError;
+  @JsonKey(name: 'bridge_id')
   BridgeType get bridgeID => throw _privateConstructorUsedError;
+  @JsonKey(name: 'smart_relay')
   bool get smartRelay => throw _privateConstructorUsedError;
 
   /// Serializes this OPInitTransfer to a JSON map.
@@ -3045,13 +3280,13 @@ abstract class $OPInitTransferCopyWith<$Res> {
       _$OPInitTransferCopyWithImpl<$Res, OPInitTransfer>;
   @useResult
   $Res call(
-      {String fromChainID,
-      String toChainID,
-      String denomIn,
-      String denomOut,
-      String opInitBridgeID,
-      BridgeType bridgeID,
-      bool smartRelay});
+      {@JsonKey(name: 'from_chain_id') String fromChainID,
+      @JsonKey(name: 'to_chain_id') String toChainID,
+      @JsonKey(name: 'denom_in') String denomIn,
+      @JsonKey(name: 'denom_out') String denomOut,
+      @JsonKey(name: 'op_init_bridge_id') String opInitBridgeID,
+      @JsonKey(name: 'bridge_id') BridgeType bridgeID,
+      @JsonKey(name: 'smart_relay') bool smartRelay});
 }
 
 /// @nodoc
@@ -3119,13 +3354,13 @@ abstract class _$$OPInitTransferImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {String fromChainID,
-      String toChainID,
-      String denomIn,
-      String denomOut,
-      String opInitBridgeID,
-      BridgeType bridgeID,
-      bool smartRelay});
+      {@JsonKey(name: 'from_chain_id') String fromChainID,
+      @JsonKey(name: 'to_chain_id') String toChainID,
+      @JsonKey(name: 'denom_in') String denomIn,
+      @JsonKey(name: 'denom_out') String denomOut,
+      @JsonKey(name: 'op_init_bridge_id') String opInitBridgeID,
+      @JsonKey(name: 'bridge_id') BridgeType bridgeID,
+      @JsonKey(name: 'smart_relay') bool smartRelay});
 }
 
 /// @nodoc
@@ -3186,30 +3421,37 @@ class __$$OPInitTransferImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$OPInitTransferImpl implements _OPInitTransfer {
   const _$OPInitTransferImpl(
-      {required this.fromChainID,
-      required this.toChainID,
-      required this.denomIn,
-      required this.denomOut,
-      required this.opInitBridgeID,
-      required this.bridgeID,
-      required this.smartRelay});
+      {@JsonKey(name: 'from_chain_id') required this.fromChainID,
+      @JsonKey(name: 'to_chain_id') required this.toChainID,
+      @JsonKey(name: 'denom_in') required this.denomIn,
+      @JsonKey(name: 'denom_out') required this.denomOut,
+      @JsonKey(name: 'op_init_bridge_id') required this.opInitBridgeID,
+      @JsonKey(name: 'bridge_id') required this.bridgeID,
+      @JsonKey(name: 'smart_relay') required this.smartRelay});
 
   factory _$OPInitTransferImpl.fromJson(Map<String, dynamic> json) =>
       _$$OPInitTransferImplFromJson(json);
 
   @override
+  @JsonKey(name: 'from_chain_id')
   final String fromChainID;
   @override
+  @JsonKey(name: 'to_chain_id')
   final String toChainID;
   @override
+  @JsonKey(name: 'denom_in')
   final String denomIn;
   @override
+  @JsonKey(name: 'denom_out')
   final String denomOut;
   @override
+  @JsonKey(name: 'op_init_bridge_id')
   final String opInitBridgeID;
   @override
+  @JsonKey(name: 'bridge_id')
   final BridgeType bridgeID;
   @override
+  @JsonKey(name: 'smart_relay')
   final bool smartRelay;
 
   @override
@@ -3261,30 +3503,38 @@ class _$OPInitTransferImpl implements _OPInitTransfer {
 
 abstract class _OPInitTransfer implements OPInitTransfer {
   const factory _OPInitTransfer(
-      {required final String fromChainID,
-      required final String toChainID,
-      required final String denomIn,
-      required final String denomOut,
-      required final String opInitBridgeID,
-      required final BridgeType bridgeID,
+      {@JsonKey(name: 'from_chain_id') required final String fromChainID,
+      @JsonKey(name: 'to_chain_id') required final String toChainID,
+      @JsonKey(name: 'denom_in') required final String denomIn,
+      @JsonKey(name: 'denom_out') required final String denomOut,
+      @JsonKey(name: 'op_init_bridge_id') required final String opInitBridgeID,
+      @JsonKey(name: 'bridge_id') required final BridgeType bridgeID,
+      @JsonKey(name: 'smart_relay')
       required final bool smartRelay}) = _$OPInitTransferImpl;
 
   factory _OPInitTransfer.fromJson(Map<String, dynamic> json) =
       _$OPInitTransferImpl.fromJson;
 
   @override
+  @JsonKey(name: 'from_chain_id')
   String get fromChainID;
   @override
+  @JsonKey(name: 'to_chain_id')
   String get toChainID;
   @override
+  @JsonKey(name: 'denom_in')
   String get denomIn;
   @override
+  @JsonKey(name: 'denom_out')
   String get denomOut;
   @override
+  @JsonKey(name: 'op_init_bridge_id')
   String get opInitBridgeID;
   @override
+  @JsonKey(name: 'bridge_id')
   BridgeType get bridgeID;
   @override
+  @JsonKey(name: 'smart_relay')
   bool get smartRelay;
 
   /// Create a copy of OPInitTransfer
@@ -3302,7 +3552,9 @@ SwapVenue _$SwapVenueFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$SwapVenue {
   String get name => throw _privateConstructorUsedError;
+  @JsonKey(name: 'chain_id')
   String get chainID => throw _privateConstructorUsedError;
+  @JsonKey(name: 'logo_uri')
   String get logoUri => throw _privateConstructorUsedError;
 
   /// Serializes this SwapVenue to a JSON map.
@@ -3320,7 +3572,10 @@ abstract class $SwapVenueCopyWith<$Res> {
   factory $SwapVenueCopyWith(SwapVenue value, $Res Function(SwapVenue) then) =
       _$SwapVenueCopyWithImpl<$Res, SwapVenue>;
   @useResult
-  $Res call({String name, String chainID, String logoUri});
+  $Res call(
+      {String name,
+      @JsonKey(name: 'chain_id') String chainID,
+      @JsonKey(name: 'logo_uri') String logoUri});
 }
 
 /// @nodoc
@@ -3367,7 +3622,10 @@ abstract class _$$SwapVenueImplCopyWith<$Res>
       __$$SwapVenueImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String name, String chainID, String logoUri});
+  $Res call(
+      {String name,
+      @JsonKey(name: 'chain_id') String chainID,
+      @JsonKey(name: 'logo_uri') String logoUri});
 }
 
 /// @nodoc
@@ -3408,7 +3666,9 @@ class __$$SwapVenueImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$SwapVenueImpl implements _SwapVenue {
   const _$SwapVenueImpl(
-      {required this.name, required this.chainID, required this.logoUri});
+      {required this.name,
+      @JsonKey(name: 'chain_id') required this.chainID,
+      @JsonKey(name: 'logo_uri') required this.logoUri});
 
   factory _$SwapVenueImpl.fromJson(Map<String, dynamic> json) =>
       _$$SwapVenueImplFromJson(json);
@@ -3416,8 +3676,10 @@ class _$SwapVenueImpl implements _SwapVenue {
   @override
   final String name;
   @override
+  @JsonKey(name: 'chain_id')
   final String chainID;
   @override
+  @JsonKey(name: 'logo_uri')
   final String logoUri;
 
   @override
@@ -3457,9 +3719,10 @@ class _$SwapVenueImpl implements _SwapVenue {
 
 abstract class _SwapVenue implements SwapVenue {
   const factory _SwapVenue(
-      {required final String name,
-      required final String chainID,
-      required final String logoUri}) = _$SwapVenueImpl;
+          {required final String name,
+          @JsonKey(name: 'chain_id') required final String chainID,
+          @JsonKey(name: 'logo_uri') required final String logoUri}) =
+      _$SwapVenueImpl;
 
   factory _SwapVenue.fromJson(Map<String, dynamic> json) =
       _$SwapVenueImpl.fromJson;
@@ -3467,8 +3730,10 @@ abstract class _SwapVenue implements SwapVenue {
   @override
   String get name;
   @override
+  @JsonKey(name: 'chain_id')
   String get chainID;
   @override
+  @JsonKey(name: 'logo_uri')
   String get logoUri;
 
   /// Create a copy of SwapVenue
@@ -3486,6 +3751,7 @@ SwapVenueRequest _$SwapVenueRequestFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$SwapVenueRequest {
   String get name => throw _privateConstructorUsedError;
+  @JsonKey(name: 'chain_id')
   String get chainID => throw _privateConstructorUsedError;
 
   /// Serializes this SwapVenueRequest to a JSON map.
@@ -3504,7 +3770,7 @@ abstract class $SwapVenueRequestCopyWith<$Res> {
           SwapVenueRequest value, $Res Function(SwapVenueRequest) then) =
       _$SwapVenueRequestCopyWithImpl<$Res, SwapVenueRequest>;
   @useResult
-  $Res call({String name, String chainID});
+  $Res call({String name, @JsonKey(name: 'chain_id') String chainID});
 }
 
 /// @nodoc
@@ -3546,7 +3812,7 @@ abstract class _$$SwapVenueRequestImplCopyWith<$Res>
       __$$SwapVenueRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String name, String chainID});
+  $Res call({String name, @JsonKey(name: 'chain_id') String chainID});
 }
 
 /// @nodoc
@@ -3581,7 +3847,8 @@ class __$$SwapVenueRequestImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$SwapVenueRequestImpl implements _SwapVenueRequest {
-  const _$SwapVenueRequestImpl({required this.name, required this.chainID});
+  const _$SwapVenueRequestImpl(
+      {required this.name, @JsonKey(name: 'chain_id') required this.chainID});
 
   factory _$SwapVenueRequestImpl.fromJson(Map<String, dynamic> json) =>
       _$$SwapVenueRequestImplFromJson(json);
@@ -3589,6 +3856,7 @@ class _$SwapVenueRequestImpl implements _SwapVenueRequest {
   @override
   final String name;
   @override
+  @JsonKey(name: 'chain_id')
   final String chainID;
 
   @override
@@ -3628,8 +3896,9 @@ class _$SwapVenueRequestImpl implements _SwapVenueRequest {
 
 abstract class _SwapVenueRequest implements SwapVenueRequest {
   const factory _SwapVenueRequest(
-      {required final String name,
-      required final String chainID}) = _$SwapVenueRequestImpl;
+          {required final String name,
+          @JsonKey(name: 'chain_id') required final String chainID}) =
+      _$SwapVenueRequestImpl;
 
   factory _SwapVenueRequest.fromJson(Map<String, dynamic> json) =
       _$SwapVenueRequestImpl.fromJson;
@@ -3637,6 +3906,7 @@ abstract class _SwapVenueRequest implements SwapVenueRequest {
   @override
   String get name;
   @override
+  @JsonKey(name: 'chain_id')
   String get chainID;
 
   /// Create a copy of SwapVenueRequest
@@ -3654,7 +3924,9 @@ SwapOperation _$SwapOperationFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$SwapOperation {
   String get pool => throw _privateConstructorUsedError;
+  @JsonKey(name: 'denom_in')
   String get denomIn => throw _privateConstructorUsedError;
+  @JsonKey(name: 'denom_out')
   String get denomOut => throw _privateConstructorUsedError;
   String? get interface => throw _privateConstructorUsedError;
 
@@ -3674,7 +3946,11 @@ abstract class $SwapOperationCopyWith<$Res> {
           SwapOperation value, $Res Function(SwapOperation) then) =
       _$SwapOperationCopyWithImpl<$Res, SwapOperation>;
   @useResult
-  $Res call({String pool, String denomIn, String denomOut, String? interface});
+  $Res call(
+      {String pool,
+      @JsonKey(name: 'denom_in') String denomIn,
+      @JsonKey(name: 'denom_out') String denomOut,
+      String? interface});
 }
 
 /// @nodoc
@@ -3726,7 +4002,11 @@ abstract class _$$SwapOperationImplCopyWith<$Res>
       __$$SwapOperationImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String pool, String denomIn, String denomOut, String? interface});
+  $Res call(
+      {String pool,
+      @JsonKey(name: 'denom_in') String denomIn,
+      @JsonKey(name: 'denom_out') String denomOut,
+      String? interface});
 }
 
 /// @nodoc
@@ -3773,8 +4053,8 @@ class __$$SwapOperationImplCopyWithImpl<$Res>
 class _$SwapOperationImpl implements _SwapOperation {
   const _$SwapOperationImpl(
       {required this.pool,
-      required this.denomIn,
-      required this.denomOut,
+      @JsonKey(name: 'denom_in') required this.denomIn,
+      @JsonKey(name: 'denom_out') required this.denomOut,
       this.interface});
 
   factory _$SwapOperationImpl.fromJson(Map<String, dynamic> json) =>
@@ -3783,8 +4063,10 @@ class _$SwapOperationImpl implements _SwapOperation {
   @override
   final String pool;
   @override
+  @JsonKey(name: 'denom_in')
   final String denomIn;
   @override
+  @JsonKey(name: 'denom_out')
   final String denomOut;
   @override
   final String? interface;
@@ -3831,8 +4113,8 @@ class _$SwapOperationImpl implements _SwapOperation {
 abstract class _SwapOperation implements SwapOperation {
   const factory _SwapOperation(
       {required final String pool,
-      required final String denomIn,
-      required final String denomOut,
+      @JsonKey(name: 'denom_in') required final String denomIn,
+      @JsonKey(name: 'denom_out') required final String denomOut,
       final String? interface}) = _$SwapOperationImpl;
 
   factory _SwapOperation.fromJson(Map<String, dynamic> json) =
@@ -3841,8 +4123,10 @@ abstract class _SwapOperation implements SwapOperation {
   @override
   String get pool;
   @override
+  @JsonKey(name: 'denom_in')
   String get denomIn;
   @override
+  @JsonKey(name: 'denom_out')
   String get denomOut;
   @override
   String? get interface;
@@ -3861,9 +4145,13 @@ SwapExactCoinOut _$SwapExactCoinOutFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$SwapExactCoinOut {
+  @JsonKey(name: 'swap_venue')
   SwapVenue get swapVenue => throw _privateConstructorUsedError;
+  @JsonKey(name: 'swap_operations')
   List<SwapOperation> get swapOperations => throw _privateConstructorUsedError;
+  @JsonKey(name: 'swap_amount_out')
   String get swapAmountOut => throw _privateConstructorUsedError;
+  @JsonKey(name: 'price_impact_percent')
   String? get priceImpactPercent => throw _privateConstructorUsedError;
 
   /// Serializes this SwapExactCoinOut to a JSON map.
@@ -3883,10 +4171,10 @@ abstract class $SwapExactCoinOutCopyWith<$Res> {
       _$SwapExactCoinOutCopyWithImpl<$Res, SwapExactCoinOut>;
   @useResult
   $Res call(
-      {SwapVenue swapVenue,
-      List<SwapOperation> swapOperations,
-      String swapAmountOut,
-      String? priceImpactPercent});
+      {@JsonKey(name: 'swap_venue') SwapVenue swapVenue,
+      @JsonKey(name: 'swap_operations') List<SwapOperation> swapOperations,
+      @JsonKey(name: 'swap_amount_out') String swapAmountOut,
+      @JsonKey(name: 'price_impact_percent') String? priceImpactPercent});
 
   $SwapVenueCopyWith<$Res> get swapVenue;
 }
@@ -3951,10 +4239,10 @@ abstract class _$$SwapExactCoinOutImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {SwapVenue swapVenue,
-      List<SwapOperation> swapOperations,
-      String swapAmountOut,
-      String? priceImpactPercent});
+      {@JsonKey(name: 'swap_venue') SwapVenue swapVenue,
+      @JsonKey(name: 'swap_operations') List<SwapOperation> swapOperations,
+      @JsonKey(name: 'swap_amount_out') String swapAmountOut,
+      @JsonKey(name: 'price_impact_percent') String? priceImpactPercent});
 
   @override
   $SwapVenueCopyWith<$Res> get swapVenue;
@@ -4003,19 +4291,22 @@ class __$$SwapExactCoinOutImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$SwapExactCoinOutImpl implements _SwapExactCoinOut {
   const _$SwapExactCoinOutImpl(
-      {required this.swapVenue,
+      {@JsonKey(name: 'swap_venue') required this.swapVenue,
+      @JsonKey(name: 'swap_operations')
       required final List<SwapOperation> swapOperations,
-      required this.swapAmountOut,
-      this.priceImpactPercent})
+      @JsonKey(name: 'swap_amount_out') required this.swapAmountOut,
+      @JsonKey(name: 'price_impact_percent') this.priceImpactPercent})
       : _swapOperations = swapOperations;
 
   factory _$SwapExactCoinOutImpl.fromJson(Map<String, dynamic> json) =>
       _$$SwapExactCoinOutImplFromJson(json);
 
   @override
+  @JsonKey(name: 'swap_venue')
   final SwapVenue swapVenue;
   final List<SwapOperation> _swapOperations;
   @override
+  @JsonKey(name: 'swap_operations')
   List<SwapOperation> get swapOperations {
     if (_swapOperations is EqualUnmodifiableListView) return _swapOperations;
     // ignore: implicit_dynamic_type
@@ -4023,8 +4314,10 @@ class _$SwapExactCoinOutImpl implements _SwapExactCoinOut {
   }
 
   @override
+  @JsonKey(name: 'swap_amount_out')
   final String swapAmountOut;
   @override
+  @JsonKey(name: 'price_impact_percent')
   final String? priceImpactPercent;
 
   @override
@@ -4075,21 +4368,27 @@ class _$SwapExactCoinOutImpl implements _SwapExactCoinOut {
 
 abstract class _SwapExactCoinOut implements SwapExactCoinOut {
   const factory _SwapExactCoinOut(
-      {required final SwapVenue swapVenue,
+      {@JsonKey(name: 'swap_venue') required final SwapVenue swapVenue,
+      @JsonKey(name: 'swap_operations')
       required final List<SwapOperation> swapOperations,
-      required final String swapAmountOut,
+      @JsonKey(name: 'swap_amount_out') required final String swapAmountOut,
+      @JsonKey(name: 'price_impact_percent')
       final String? priceImpactPercent}) = _$SwapExactCoinOutImpl;
 
   factory _SwapExactCoinOut.fromJson(Map<String, dynamic> json) =
       _$SwapExactCoinOutImpl.fromJson;
 
   @override
+  @JsonKey(name: 'swap_venue')
   SwapVenue get swapVenue;
   @override
+  @JsonKey(name: 'swap_operations')
   List<SwapOperation> get swapOperations;
   @override
+  @JsonKey(name: 'swap_amount_out')
   String get swapAmountOut;
   @override
+  @JsonKey(name: 'price_impact_percent')
   String? get priceImpactPercent;
 
   /// Create a copy of SwapExactCoinOut
@@ -4106,9 +4405,13 @@ SwapExactCoinIn _$SwapExactCoinInFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$SwapExactCoinIn {
+  @JsonKey(name: 'swap_venue')
   SwapVenue get swapVenue => throw _privateConstructorUsedError;
+  @JsonKey(name: 'swap_operations')
   List<SwapOperation> get swapOperations => throw _privateConstructorUsedError;
+  @JsonKey(name: 'swap_amount_in')
   String? get swapAmountIn => throw _privateConstructorUsedError;
+  @JsonKey(name: 'price_impact_percent')
   String? get priceImpactPercent => throw _privateConstructorUsedError;
 
   /// Serializes this SwapExactCoinIn to a JSON map.
@@ -4128,10 +4431,10 @@ abstract class $SwapExactCoinInCopyWith<$Res> {
       _$SwapExactCoinInCopyWithImpl<$Res, SwapExactCoinIn>;
   @useResult
   $Res call(
-      {SwapVenue swapVenue,
-      List<SwapOperation> swapOperations,
-      String? swapAmountIn,
-      String? priceImpactPercent});
+      {@JsonKey(name: 'swap_venue') SwapVenue swapVenue,
+      @JsonKey(name: 'swap_operations') List<SwapOperation> swapOperations,
+      @JsonKey(name: 'swap_amount_in') String? swapAmountIn,
+      @JsonKey(name: 'price_impact_percent') String? priceImpactPercent});
 
   $SwapVenueCopyWith<$Res> get swapVenue;
 }
@@ -4196,10 +4499,10 @@ abstract class _$$SwapExactCoinInImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {SwapVenue swapVenue,
-      List<SwapOperation> swapOperations,
-      String? swapAmountIn,
-      String? priceImpactPercent});
+      {@JsonKey(name: 'swap_venue') SwapVenue swapVenue,
+      @JsonKey(name: 'swap_operations') List<SwapOperation> swapOperations,
+      @JsonKey(name: 'swap_amount_in') String? swapAmountIn,
+      @JsonKey(name: 'price_impact_percent') String? priceImpactPercent});
 
   @override
   $SwapVenueCopyWith<$Res> get swapVenue;
@@ -4248,19 +4551,22 @@ class __$$SwapExactCoinInImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$SwapExactCoinInImpl implements _SwapExactCoinIn {
   const _$SwapExactCoinInImpl(
-      {required this.swapVenue,
+      {@JsonKey(name: 'swap_venue') required this.swapVenue,
+      @JsonKey(name: 'swap_operations')
       required final List<SwapOperation> swapOperations,
-      this.swapAmountIn,
-      this.priceImpactPercent})
+      @JsonKey(name: 'swap_amount_in') this.swapAmountIn,
+      @JsonKey(name: 'price_impact_percent') this.priceImpactPercent})
       : _swapOperations = swapOperations;
 
   factory _$SwapExactCoinInImpl.fromJson(Map<String, dynamic> json) =>
       _$$SwapExactCoinInImplFromJson(json);
 
   @override
+  @JsonKey(name: 'swap_venue')
   final SwapVenue swapVenue;
   final List<SwapOperation> _swapOperations;
   @override
+  @JsonKey(name: 'swap_operations')
   List<SwapOperation> get swapOperations {
     if (_swapOperations is EqualUnmodifiableListView) return _swapOperations;
     // ignore: implicit_dynamic_type
@@ -4268,8 +4574,10 @@ class _$SwapExactCoinInImpl implements _SwapExactCoinIn {
   }
 
   @override
+  @JsonKey(name: 'swap_amount_in')
   final String? swapAmountIn;
   @override
+  @JsonKey(name: 'price_impact_percent')
   final String? priceImpactPercent;
 
   @override
@@ -4320,21 +4628,27 @@ class _$SwapExactCoinInImpl implements _SwapExactCoinIn {
 
 abstract class _SwapExactCoinIn implements SwapExactCoinIn {
   const factory _SwapExactCoinIn(
-      {required final SwapVenue swapVenue,
+      {@JsonKey(name: 'swap_venue') required final SwapVenue swapVenue,
+      @JsonKey(name: 'swap_operations')
       required final List<SwapOperation> swapOperations,
-      final String? swapAmountIn,
+      @JsonKey(name: 'swap_amount_in') final String? swapAmountIn,
+      @JsonKey(name: 'price_impact_percent')
       final String? priceImpactPercent}) = _$SwapExactCoinInImpl;
 
   factory _SwapExactCoinIn.fromJson(Map<String, dynamic> json) =
       _$SwapExactCoinInImpl.fromJson;
 
   @override
+  @JsonKey(name: 'swap_venue')
   SwapVenue get swapVenue;
   @override
+  @JsonKey(name: 'swap_operations')
   List<SwapOperation> get swapOperations;
   @override
+  @JsonKey(name: 'swap_amount_in')
   String? get swapAmountIn;
   @override
+  @JsonKey(name: 'price_impact_percent')
   String? get priceImpactPercent;
 
   /// Create a copy of SwapExactCoinIn
@@ -4351,8 +4665,11 @@ SwapRoute _$SwapRouteFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$SwapRoute {
+  @JsonKey(name: 'swap_amount_in')
   String get swapAmountIn => throw _privateConstructorUsedError;
+  @JsonKey(name: 'denom_in')
   String get denomIn => throw _privateConstructorUsedError;
+  @JsonKey(name: 'swap_operations')
   List<SwapOperation> get swapOperations => throw _privateConstructorUsedError;
 
   /// Serializes this SwapRoute to a JSON map.
@@ -4371,9 +4688,9 @@ abstract class $SwapRouteCopyWith<$Res> {
       _$SwapRouteCopyWithImpl<$Res, SwapRoute>;
   @useResult
   $Res call(
-      {String swapAmountIn,
-      String denomIn,
-      List<SwapOperation> swapOperations});
+      {@JsonKey(name: 'swap_amount_in') String swapAmountIn,
+      @JsonKey(name: 'denom_in') String denomIn,
+      @JsonKey(name: 'swap_operations') List<SwapOperation> swapOperations});
 }
 
 /// @nodoc
@@ -4421,9 +4738,9 @@ abstract class _$$SwapRouteImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {String swapAmountIn,
-      String denomIn,
-      List<SwapOperation> swapOperations});
+      {@JsonKey(name: 'swap_amount_in') String swapAmountIn,
+      @JsonKey(name: 'denom_in') String denomIn,
+      @JsonKey(name: 'swap_operations') List<SwapOperation> swapOperations});
 }
 
 /// @nodoc
@@ -4464,8 +4781,9 @@ class __$$SwapRouteImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$SwapRouteImpl implements _SwapRoute {
   const _$SwapRouteImpl(
-      {required this.swapAmountIn,
-      required this.denomIn,
+      {@JsonKey(name: 'swap_amount_in') required this.swapAmountIn,
+      @JsonKey(name: 'denom_in') required this.denomIn,
+      @JsonKey(name: 'swap_operations')
       required final List<SwapOperation> swapOperations})
       : _swapOperations = swapOperations;
 
@@ -4473,11 +4791,14 @@ class _$SwapRouteImpl implements _SwapRoute {
       _$$SwapRouteImplFromJson(json);
 
   @override
+  @JsonKey(name: 'swap_amount_in')
   final String swapAmountIn;
   @override
+  @JsonKey(name: 'denom_in')
   final String denomIn;
   final List<SwapOperation> _swapOperations;
   @override
+  @JsonKey(name: 'swap_operations')
   List<SwapOperation> get swapOperations {
     if (_swapOperations is EqualUnmodifiableListView) return _swapOperations;
     // ignore: implicit_dynamic_type
@@ -4524,18 +4845,22 @@ class _$SwapRouteImpl implements _SwapRoute {
 
 abstract class _SwapRoute implements SwapRoute {
   const factory _SwapRoute(
-      {required final String swapAmountIn,
-      required final String denomIn,
+      {@JsonKey(name: 'swap_amount_in') required final String swapAmountIn,
+      @JsonKey(name: 'denom_in') required final String denomIn,
+      @JsonKey(name: 'swap_operations')
       required final List<SwapOperation> swapOperations}) = _$SwapRouteImpl;
 
   factory _SwapRoute.fromJson(Map<String, dynamic> json) =
       _$SwapRouteImpl.fromJson;
 
   @override
+  @JsonKey(name: 'swap_amount_in')
   String get swapAmountIn;
   @override
+  @JsonKey(name: 'denom_in')
   String get denomIn;
   @override
+  @JsonKey(name: 'swap_operations')
   List<SwapOperation> get swapOperations;
 
   /// Create a copy of SwapRoute
@@ -4552,7 +4877,9 @@ SmartSwapExactCoinIn _$SmartSwapExactCoinInFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$SmartSwapExactCoinIn {
+  @JsonKey(name: 'swap_venue')
   SwapVenue get swapVenue => throw _privateConstructorUsedError;
+  @JsonKey(name: 'swap_routes')
   List<SwapRoute> get swapRoutes => throw _privateConstructorUsedError;
 
   /// Serializes this SmartSwapExactCoinIn to a JSON map.
@@ -4571,7 +4898,9 @@ abstract class $SmartSwapExactCoinInCopyWith<$Res> {
           $Res Function(SmartSwapExactCoinIn) then) =
       _$SmartSwapExactCoinInCopyWithImpl<$Res, SmartSwapExactCoinIn>;
   @useResult
-  $Res call({SwapVenue swapVenue, List<SwapRoute> swapRoutes});
+  $Res call(
+      {@JsonKey(name: 'swap_venue') SwapVenue swapVenue,
+      @JsonKey(name: 'swap_routes') List<SwapRoute> swapRoutes});
 
   $SwapVenueCopyWith<$Res> get swapVenue;
 }
@@ -4626,7 +4955,9 @@ abstract class _$$SmartSwapExactCoinInImplCopyWith<$Res>
       __$$SmartSwapExactCoinInImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({SwapVenue swapVenue, List<SwapRoute> swapRoutes});
+  $Res call(
+      {@JsonKey(name: 'swap_venue') SwapVenue swapVenue,
+      @JsonKey(name: 'swap_routes') List<SwapRoute> swapRoutes});
 
   @override
   $SwapVenueCopyWith<$Res> get swapVenue;
@@ -4665,16 +4996,19 @@ class __$$SmartSwapExactCoinInImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$SmartSwapExactCoinInImpl implements _SmartSwapExactCoinIn {
   const _$SmartSwapExactCoinInImpl(
-      {required this.swapVenue, required final List<SwapRoute> swapRoutes})
+      {@JsonKey(name: 'swap_venue') required this.swapVenue,
+      @JsonKey(name: 'swap_routes') required final List<SwapRoute> swapRoutes})
       : _swapRoutes = swapRoutes;
 
   factory _$SmartSwapExactCoinInImpl.fromJson(Map<String, dynamic> json) =>
       _$$SmartSwapExactCoinInImplFromJson(json);
 
   @override
+  @JsonKey(name: 'swap_venue')
   final SwapVenue swapVenue;
   final List<SwapRoute> _swapRoutes;
   @override
+  @JsonKey(name: 'swap_routes')
   List<SwapRoute> get swapRoutes {
     if (_swapRoutes is EqualUnmodifiableListView) return _swapRoutes;
     // ignore: implicit_dynamic_type
@@ -4722,15 +5056,18 @@ class _$SmartSwapExactCoinInImpl implements _SmartSwapExactCoinIn {
 
 abstract class _SmartSwapExactCoinIn implements SmartSwapExactCoinIn {
   const factory _SmartSwapExactCoinIn(
-      {required final SwapVenue swapVenue,
+      {@JsonKey(name: 'swap_venue') required final SwapVenue swapVenue,
+      @JsonKey(name: 'swap_routes')
       required final List<SwapRoute> swapRoutes}) = _$SmartSwapExactCoinInImpl;
 
   factory _SmartSwapExactCoinIn.fromJson(Map<String, dynamic> json) =
       _$SmartSwapExactCoinInImpl.fromJson;
 
   @override
+  @JsonKey(name: 'swap_venue')
   SwapVenue get swapVenue;
   @override
+  @JsonKey(name: 'swap_routes')
   List<SwapRoute> get swapRoutes;
 
   /// Create a copy of SmartSwapExactCoinIn
@@ -4747,14 +5084,23 @@ Swap _$SwapFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Swap {
+  @JsonKey(name: 'swap_in')
   SwapExactCoinIn? get swapIn => throw _privateConstructorUsedError;
+  @JsonKey(name: 'swap_out')
   SwapExactCoinOut? get swapOut => throw _privateConstructorUsedError;
+  @JsonKey(name: 'smart_swap_in')
   SmartSwapExactCoinIn? get smartSwapIn => throw _privateConstructorUsedError;
+  @JsonKey(name: 'estimated_affiliate_fee')
   String? get estimatedAffiliateFee => throw _privateConstructorUsedError;
+  @JsonKey(name: 'from_chain_id')
   String get fromChainID => throw _privateConstructorUsedError;
+  @JsonKey(name: 'chain_id')
   String get chainID => throw _privateConstructorUsedError;
+  @JsonKey(name: 'denom_in')
   String get denomIn => throw _privateConstructorUsedError;
+  @JsonKey(name: 'denom_out')
   String get denomOut => throw _privateConstructorUsedError;
+  @JsonKey(name: 'swap_venues')
   List<SwapVenue> get swapVenues => throw _privateConstructorUsedError;
 
   /// Serializes this Swap to a JSON map.
@@ -4772,15 +5118,15 @@ abstract class $SwapCopyWith<$Res> {
       _$SwapCopyWithImpl<$Res, Swap>;
   @useResult
   $Res call(
-      {SwapExactCoinIn? swapIn,
-      SwapExactCoinOut? swapOut,
-      SmartSwapExactCoinIn? smartSwapIn,
-      String? estimatedAffiliateFee,
-      String fromChainID,
-      String chainID,
-      String denomIn,
-      String denomOut,
-      List<SwapVenue> swapVenues});
+      {@JsonKey(name: 'swap_in') SwapExactCoinIn? swapIn,
+      @JsonKey(name: 'swap_out') SwapExactCoinOut? swapOut,
+      @JsonKey(name: 'smart_swap_in') SmartSwapExactCoinIn? smartSwapIn,
+      @JsonKey(name: 'estimated_affiliate_fee') String? estimatedAffiliateFee,
+      @JsonKey(name: 'from_chain_id') String fromChainID,
+      @JsonKey(name: 'chain_id') String chainID,
+      @JsonKey(name: 'denom_in') String denomIn,
+      @JsonKey(name: 'denom_out') String denomOut,
+      @JsonKey(name: 'swap_venues') List<SwapVenue> swapVenues});
 
   $SwapExactCoinInCopyWith<$Res>? get swapIn;
   $SwapExactCoinOutCopyWith<$Res>? get swapOut;
@@ -4903,15 +5249,15 @@ abstract class _$$SwapImplCopyWith<$Res> implements $SwapCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {SwapExactCoinIn? swapIn,
-      SwapExactCoinOut? swapOut,
-      SmartSwapExactCoinIn? smartSwapIn,
-      String? estimatedAffiliateFee,
-      String fromChainID,
-      String chainID,
-      String denomIn,
-      String denomOut,
-      List<SwapVenue> swapVenues});
+      {@JsonKey(name: 'swap_in') SwapExactCoinIn? swapIn,
+      @JsonKey(name: 'swap_out') SwapExactCoinOut? swapOut,
+      @JsonKey(name: 'smart_swap_in') SmartSwapExactCoinIn? smartSwapIn,
+      @JsonKey(name: 'estimated_affiliate_fee') String? estimatedAffiliateFee,
+      @JsonKey(name: 'from_chain_id') String fromChainID,
+      @JsonKey(name: 'chain_id') String chainID,
+      @JsonKey(name: 'denom_in') String denomIn,
+      @JsonKey(name: 'denom_out') String denomOut,
+      @JsonKey(name: 'swap_venues') List<SwapVenue> swapVenues});
 
   @override
   $SwapExactCoinInCopyWith<$Res>? get swapIn;
@@ -4988,38 +5334,47 @@ class __$$SwapImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$SwapImpl implements _Swap {
   const _$SwapImpl(
-      {this.swapIn,
-      this.swapOut,
-      this.smartSwapIn,
-      this.estimatedAffiliateFee,
-      required this.fromChainID,
-      required this.chainID,
-      required this.denomIn,
-      required this.denomOut,
-      required final List<SwapVenue> swapVenues})
+      {@JsonKey(name: 'swap_in') this.swapIn,
+      @JsonKey(name: 'swap_out') this.swapOut,
+      @JsonKey(name: 'smart_swap_in') this.smartSwapIn,
+      @JsonKey(name: 'estimated_affiliate_fee') this.estimatedAffiliateFee,
+      @JsonKey(name: 'from_chain_id') required this.fromChainID,
+      @JsonKey(name: 'chain_id') required this.chainID,
+      @JsonKey(name: 'denom_in') required this.denomIn,
+      @JsonKey(name: 'denom_out') required this.denomOut,
+      @JsonKey(name: 'swap_venues') required final List<SwapVenue> swapVenues})
       : _swapVenues = swapVenues;
 
   factory _$SwapImpl.fromJson(Map<String, dynamic> json) =>
       _$$SwapImplFromJson(json);
 
   @override
+  @JsonKey(name: 'swap_in')
   final SwapExactCoinIn? swapIn;
   @override
+  @JsonKey(name: 'swap_out')
   final SwapExactCoinOut? swapOut;
   @override
+  @JsonKey(name: 'smart_swap_in')
   final SmartSwapExactCoinIn? smartSwapIn;
   @override
+  @JsonKey(name: 'estimated_affiliate_fee')
   final String? estimatedAffiliateFee;
   @override
+  @JsonKey(name: 'from_chain_id')
   final String fromChainID;
   @override
+  @JsonKey(name: 'chain_id')
   final String chainID;
   @override
+  @JsonKey(name: 'denom_in')
   final String denomIn;
   @override
+  @JsonKey(name: 'denom_out')
   final String denomOut;
   final List<SwapVenue> _swapVenues;
   @override
+  @JsonKey(name: 'swap_venues')
   List<SwapVenue> get swapVenues {
     if (_swapVenues is EqualUnmodifiableListView) return _swapVenues;
     // ignore: implicit_dynamic_type
@@ -5084,35 +5439,46 @@ class _$SwapImpl implements _Swap {
 
 abstract class _Swap implements Swap {
   const factory _Swap(
-      {final SwapExactCoinIn? swapIn,
-      final SwapExactCoinOut? swapOut,
-      final SmartSwapExactCoinIn? smartSwapIn,
+      {@JsonKey(name: 'swap_in') final SwapExactCoinIn? swapIn,
+      @JsonKey(name: 'swap_out') final SwapExactCoinOut? swapOut,
+      @JsonKey(name: 'smart_swap_in') final SmartSwapExactCoinIn? smartSwapIn,
+      @JsonKey(name: 'estimated_affiliate_fee')
       final String? estimatedAffiliateFee,
-      required final String fromChainID,
-      required final String chainID,
-      required final String denomIn,
-      required final String denomOut,
+      @JsonKey(name: 'from_chain_id') required final String fromChainID,
+      @JsonKey(name: 'chain_id') required final String chainID,
+      @JsonKey(name: 'denom_in') required final String denomIn,
+      @JsonKey(name: 'denom_out') required final String denomOut,
+      @JsonKey(name: 'swap_venues')
       required final List<SwapVenue> swapVenues}) = _$SwapImpl;
 
   factory _Swap.fromJson(Map<String, dynamic> json) = _$SwapImpl.fromJson;
 
   @override
+  @JsonKey(name: 'swap_in')
   SwapExactCoinIn? get swapIn;
   @override
+  @JsonKey(name: 'swap_out')
   SwapExactCoinOut? get swapOut;
   @override
+  @JsonKey(name: 'smart_swap_in')
   SmartSwapExactCoinIn? get smartSwapIn;
   @override
+  @JsonKey(name: 'estimated_affiliate_fee')
   String? get estimatedAffiliateFee;
   @override
+  @JsonKey(name: 'from_chain_id')
   String get fromChainID;
   @override
+  @JsonKey(name: 'chain_id')
   String get chainID;
   @override
+  @JsonKey(name: 'denom_in')
   String get denomIn;
   @override
+  @JsonKey(name: 'denom_out')
   String get denomOut;
   @override
+  @JsonKey(name: 'swap_venues')
   List<SwapVenue> get swapVenues;
 
   /// Create a copy of Swap
@@ -5129,13 +5495,21 @@ EvmSwap _$EvmSwapFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$EvmSwap {
+  @JsonKey(name: 'input_token')
   String get inputToken => throw _privateConstructorUsedError;
+  @JsonKey(name: 'amount_in')
   String get amountIn => throw _privateConstructorUsedError;
+  @JsonKey(name: 'swap_calldata')
   String get swapCalldata => throw _privateConstructorUsedError;
+  @JsonKey(name: 'amount_out')
   String get amountOut => throw _privateConstructorUsedError;
+  @JsonKey(name: 'from_chain_id')
   String get fromChainID => throw _privateConstructorUsedError;
+  @JsonKey(name: 'denom_in')
   String get denomIn => throw _privateConstructorUsedError;
+  @JsonKey(name: 'denom_out')
   String get denomOut => throw _privateConstructorUsedError;
+  @JsonKey(name: 'swap_venues')
   List<SwapVenue> get swapVenues => throw _privateConstructorUsedError;
 
   /// Serializes this EvmSwap to a JSON map.
@@ -5153,14 +5527,14 @@ abstract class $EvmSwapCopyWith<$Res> {
       _$EvmSwapCopyWithImpl<$Res, EvmSwap>;
   @useResult
   $Res call(
-      {String inputToken,
-      String amountIn,
-      String swapCalldata,
-      String amountOut,
-      String fromChainID,
-      String denomIn,
-      String denomOut,
-      List<SwapVenue> swapVenues});
+      {@JsonKey(name: 'input_token') String inputToken,
+      @JsonKey(name: 'amount_in') String amountIn,
+      @JsonKey(name: 'swap_calldata') String swapCalldata,
+      @JsonKey(name: 'amount_out') String amountOut,
+      @JsonKey(name: 'from_chain_id') String fromChainID,
+      @JsonKey(name: 'denom_in') String denomIn,
+      @JsonKey(name: 'denom_out') String denomOut,
+      @JsonKey(name: 'swap_venues') List<SwapVenue> swapVenues});
 }
 
 /// @nodoc
@@ -5232,14 +5606,14 @@ abstract class _$$EvmSwapImplCopyWith<$Res> implements $EvmSwapCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {String inputToken,
-      String amountIn,
-      String swapCalldata,
-      String amountOut,
-      String fromChainID,
-      String denomIn,
-      String denomOut,
-      List<SwapVenue> swapVenues});
+      {@JsonKey(name: 'input_token') String inputToken,
+      @JsonKey(name: 'amount_in') String amountIn,
+      @JsonKey(name: 'swap_calldata') String swapCalldata,
+      @JsonKey(name: 'amount_out') String amountOut,
+      @JsonKey(name: 'from_chain_id') String fromChainID,
+      @JsonKey(name: 'denom_in') String denomIn,
+      @JsonKey(name: 'denom_out') String denomOut,
+      @JsonKey(name: 'swap_venues') List<SwapVenue> swapVenues});
 }
 
 /// @nodoc
@@ -5305,35 +5679,43 @@ class __$$EvmSwapImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$EvmSwapImpl implements _EvmSwap {
   const _$EvmSwapImpl(
-      {required this.inputToken,
-      required this.amountIn,
-      required this.swapCalldata,
-      required this.amountOut,
-      required this.fromChainID,
-      required this.denomIn,
-      required this.denomOut,
-      required final List<SwapVenue> swapVenues})
+      {@JsonKey(name: 'input_token') required this.inputToken,
+      @JsonKey(name: 'amount_in') required this.amountIn,
+      @JsonKey(name: 'swap_calldata') required this.swapCalldata,
+      @JsonKey(name: 'amount_out') required this.amountOut,
+      @JsonKey(name: 'from_chain_id') required this.fromChainID,
+      @JsonKey(name: 'denom_in') required this.denomIn,
+      @JsonKey(name: 'denom_out') required this.denomOut,
+      @JsonKey(name: 'swap_venues') required final List<SwapVenue> swapVenues})
       : _swapVenues = swapVenues;
 
   factory _$EvmSwapImpl.fromJson(Map<String, dynamic> json) =>
       _$$EvmSwapImplFromJson(json);
 
   @override
+  @JsonKey(name: 'input_token')
   final String inputToken;
   @override
+  @JsonKey(name: 'amount_in')
   final String amountIn;
   @override
+  @JsonKey(name: 'swap_calldata')
   final String swapCalldata;
   @override
+  @JsonKey(name: 'amount_out')
   final String amountOut;
   @override
+  @JsonKey(name: 'from_chain_id')
   final String fromChainID;
   @override
+  @JsonKey(name: 'denom_in')
   final String denomIn;
   @override
+  @JsonKey(name: 'denom_out')
   final String denomOut;
   final List<SwapVenue> _swapVenues;
   @override
+  @JsonKey(name: 'swap_venues')
   List<SwapVenue> get swapVenues {
     if (_swapVenues is EqualUnmodifiableListView) return _swapVenues;
     // ignore: implicit_dynamic_type
@@ -5398,32 +5780,41 @@ class _$EvmSwapImpl implements _EvmSwap {
 
 abstract class _EvmSwap implements EvmSwap {
   const factory _EvmSwap(
-      {required final String inputToken,
-      required final String amountIn,
-      required final String swapCalldata,
-      required final String amountOut,
-      required final String fromChainID,
-      required final String denomIn,
-      required final String denomOut,
+      {@JsonKey(name: 'input_token') required final String inputToken,
+      @JsonKey(name: 'amount_in') required final String amountIn,
+      @JsonKey(name: 'swap_calldata') required final String swapCalldata,
+      @JsonKey(name: 'amount_out') required final String amountOut,
+      @JsonKey(name: 'from_chain_id') required final String fromChainID,
+      @JsonKey(name: 'denom_in') required final String denomIn,
+      @JsonKey(name: 'denom_out') required final String denomOut,
+      @JsonKey(name: 'swap_venues')
       required final List<SwapVenue> swapVenues}) = _$EvmSwapImpl;
 
   factory _EvmSwap.fromJson(Map<String, dynamic> json) = _$EvmSwapImpl.fromJson;
 
   @override
+  @JsonKey(name: 'input_token')
   String get inputToken;
   @override
+  @JsonKey(name: 'amount_in')
   String get amountIn;
   @override
+  @JsonKey(name: 'swap_calldata')
   String get swapCalldata;
   @override
+  @JsonKey(name: 'amount_out')
   String get amountOut;
   @override
+  @JsonKey(name: 'from_chain_id')
   String get fromChainID;
   @override
+  @JsonKey(name: 'denom_in')
   String get denomIn;
   @override
+  @JsonKey(name: 'denom_out')
   String get denomOut;
   @override
+  @JsonKey(name: 'swap_venues')
   List<SwapVenue> get swapVenues;
 
   /// Create a copy of EvmSwap
@@ -5440,7 +5831,9 @@ Affiliate _$AffiliateFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Affiliate {
+  @JsonKey(name: 'basis_points_fee')
   String get basisPointsFee => throw _privateConstructorUsedError;
+  @JsonKey(name: 'address')
   String get address => throw _privateConstructorUsedError;
 
   /// Serializes this Affiliate to a JSON map.
@@ -5458,7 +5851,9 @@ abstract class $AffiliateCopyWith<$Res> {
   factory $AffiliateCopyWith(Affiliate value, $Res Function(Affiliate) then) =
       _$AffiliateCopyWithImpl<$Res, Affiliate>;
   @useResult
-  $Res call({String basisPointsFee, String address});
+  $Res call(
+      {@JsonKey(name: 'basis_points_fee') String basisPointsFee,
+      @JsonKey(name: 'address') String address});
 }
 
 /// @nodoc
@@ -5500,7 +5895,9 @@ abstract class _$$AffiliateImplCopyWith<$Res>
       __$$AffiliateImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String basisPointsFee, String address});
+  $Res call(
+      {@JsonKey(name: 'basis_points_fee') String basisPointsFee,
+      @JsonKey(name: 'address') String address});
 }
 
 /// @nodoc
@@ -5535,14 +5932,18 @@ class __$$AffiliateImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$AffiliateImpl implements _Affiliate {
-  const _$AffiliateImpl({required this.basisPointsFee, required this.address});
+  const _$AffiliateImpl(
+      {@JsonKey(name: 'basis_points_fee') required this.basisPointsFee,
+      @JsonKey(name: 'address') required this.address});
 
   factory _$AffiliateImpl.fromJson(Map<String, dynamic> json) =>
       _$$AffiliateImplFromJson(json);
 
   @override
+  @JsonKey(name: 'basis_points_fee')
   final String basisPointsFee;
   @override
+  @JsonKey(name: 'address')
   final String address;
 
   @override
@@ -5582,15 +5983,18 @@ class _$AffiliateImpl implements _Affiliate {
 
 abstract class _Affiliate implements Affiliate {
   const factory _Affiliate(
-      {required final String basisPointsFee,
+      {@JsonKey(name: 'basis_points_fee') required final String basisPointsFee,
+      @JsonKey(name: 'address')
       required final String address}) = _$AffiliateImpl;
 
   factory _Affiliate.fromJson(Map<String, dynamic> json) =
       _$AffiliateImpl.fromJson;
 
   @override
+  @JsonKey(name: 'basis_points_fee')
   String get basisPointsFee;
   @override
+  @JsonKey(name: 'address')
   String get address;
 
   /// Create a copy of Affiliate
@@ -5607,6 +6011,7 @@ ChainAffiliates _$ChainAffiliatesFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ChainAffiliates {
+  @JsonKey(name: 'affiliates')
   List<Affiliate> get affiliates => throw _privateConstructorUsedError;
 
   /// Serializes this ChainAffiliates to a JSON map.
@@ -5625,7 +6030,7 @@ abstract class $ChainAffiliatesCopyWith<$Res> {
           ChainAffiliates value, $Res Function(ChainAffiliates) then) =
       _$ChainAffiliatesCopyWithImpl<$Res, ChainAffiliates>;
   @useResult
-  $Res call({List<Affiliate> affiliates});
+  $Res call({@JsonKey(name: 'affiliates') List<Affiliate> affiliates});
 }
 
 /// @nodoc
@@ -5662,7 +6067,7 @@ abstract class _$$ChainAffiliatesImplCopyWith<$Res>
       __$$ChainAffiliatesImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({List<Affiliate> affiliates});
+  $Res call({@JsonKey(name: 'affiliates') List<Affiliate> affiliates});
 }
 
 /// @nodoc
@@ -5692,7 +6097,8 @@ class __$$ChainAffiliatesImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$ChainAffiliatesImpl implements _ChainAffiliates {
-  const _$ChainAffiliatesImpl({required final List<Affiliate> affiliates})
+  const _$ChainAffiliatesImpl(
+      {@JsonKey(name: 'affiliates') required final List<Affiliate> affiliates})
       : _affiliates = affiliates;
 
   factory _$ChainAffiliatesImpl.fromJson(Map<String, dynamic> json) =>
@@ -5700,6 +6106,7 @@ class _$ChainAffiliatesImpl implements _ChainAffiliates {
 
   final List<Affiliate> _affiliates;
   @override
+  @JsonKey(name: 'affiliates')
   List<Affiliate> get affiliates {
     if (_affiliates is EqualUnmodifiableListView) return _affiliates;
     // ignore: implicit_dynamic_type
@@ -5743,13 +6150,15 @@ class _$ChainAffiliatesImpl implements _ChainAffiliates {
 }
 
 abstract class _ChainAffiliates implements ChainAffiliates {
-  const factory _ChainAffiliates({required final List<Affiliate> affiliates}) =
-      _$ChainAffiliatesImpl;
+  const factory _ChainAffiliates(
+      {@JsonKey(name: 'affiliates')
+      required final List<Affiliate> affiliates}) = _$ChainAffiliatesImpl;
 
   factory _ChainAffiliates.fromJson(Map<String, dynamic> json) =
       _$ChainAffiliatesImpl.fromJson;
 
   @override
+  @JsonKey(name: 'affiliates')
   List<Affiliate> get affiliates;
 
   /// Create a copy of ChainAffiliates
@@ -5766,6 +6175,7 @@ CosmWasmContractMsg _$CosmWasmContractMsgFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$CosmWasmContractMsg {
+  @JsonKey(name: 'contract_address')
   String get contractAddress => throw _privateConstructorUsedError;
   String get msg => throw _privateConstructorUsedError;
 
@@ -5785,7 +6195,8 @@ abstract class $CosmWasmContractMsgCopyWith<$Res> {
           CosmWasmContractMsg value, $Res Function(CosmWasmContractMsg) then) =
       _$CosmWasmContractMsgCopyWithImpl<$Res, CosmWasmContractMsg>;
   @useResult
-  $Res call({String contractAddress, String msg});
+  $Res call(
+      {@JsonKey(name: 'contract_address') String contractAddress, String msg});
 }
 
 /// @nodoc
@@ -5827,7 +6238,8 @@ abstract class _$$CosmWasmContractMsgImplCopyWith<$Res>
       __$$CosmWasmContractMsgImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String contractAddress, String msg});
+  $Res call(
+      {@JsonKey(name: 'contract_address') String contractAddress, String msg});
 }
 
 /// @nodoc
@@ -5863,12 +6275,14 @@ class __$$CosmWasmContractMsgImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$CosmWasmContractMsgImpl implements _CosmWasmContractMsg {
   const _$CosmWasmContractMsgImpl(
-      {required this.contractAddress, required this.msg});
+      {@JsonKey(name: 'contract_address') required this.contractAddress,
+      required this.msg});
 
   factory _$CosmWasmContractMsgImpl.fromJson(Map<String, dynamic> json) =>
       _$$CosmWasmContractMsgImplFromJson(json);
 
   @override
+  @JsonKey(name: 'contract_address')
   final String contractAddress;
   @override
   final String msg;
@@ -5911,13 +6325,14 @@ class _$CosmWasmContractMsgImpl implements _CosmWasmContractMsg {
 
 abstract class _CosmWasmContractMsg implements CosmWasmContractMsg {
   const factory _CosmWasmContractMsg(
-      {required final String contractAddress,
+      {@JsonKey(name: 'contract_address') required final String contractAddress,
       required final String msg}) = _$CosmWasmContractMsgImpl;
 
   factory _CosmWasmContractMsg.fromJson(Map<String, dynamic> json) =
       _$CosmWasmContractMsgImpl.fromJson;
 
   @override
+  @JsonKey(name: 'contract_address')
   String get contractAddress;
   @override
   String get msg;
@@ -6115,20 +6530,29 @@ PostHandler _$PostHandlerFromJson(Map<String, dynamic> json) {
 mixin _$PostHandler {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(CosmWasmContractMsg wasmMsg) wasmMsg,
-    required TResult Function(AutopilotMsg autopilotMsg) autopilotMsg,
+    required TResult Function(
+            @JsonKey(name: 'wasm_msg') CosmWasmContractMsg wasmMsg)
+        wasmMsg,
+    required TResult Function(
+            @JsonKey(name: 'autopilot_msg') AutopilotMsg autopilotMsg)
+        autopilotMsg,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(CosmWasmContractMsg wasmMsg)? wasmMsg,
-    TResult? Function(AutopilotMsg autopilotMsg)? autopilotMsg,
+    TResult? Function(@JsonKey(name: 'wasm_msg') CosmWasmContractMsg wasmMsg)?
+        wasmMsg,
+    TResult? Function(
+            @JsonKey(name: 'autopilot_msg') AutopilotMsg autopilotMsg)?
+        autopilotMsg,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(CosmWasmContractMsg wasmMsg)? wasmMsg,
-    TResult Function(AutopilotMsg autopilotMsg)? autopilotMsg,
+    TResult Function(@JsonKey(name: 'wasm_msg') CosmWasmContractMsg wasmMsg)?
+        wasmMsg,
+    TResult Function(@JsonKey(name: 'autopilot_msg') AutopilotMsg autopilotMsg)?
+        autopilotMsg,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -6183,7 +6607,7 @@ abstract class _$$WasmMsgImplCopyWith<$Res> {
           _$WasmMsgImpl value, $Res Function(_$WasmMsgImpl) then) =
       __$$WasmMsgImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({CosmWasmContractMsg wasmMsg});
+  $Res call({@JsonKey(name: 'wasm_msg') CosmWasmContractMsg wasmMsg});
 
   $CosmWasmContractMsgCopyWith<$Res> get wasmMsg;
 }
@@ -6225,13 +6649,15 @@ class __$$WasmMsgImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$WasmMsgImpl implements _WasmMsg {
-  const _$WasmMsgImpl(this.wasmMsg, {final String? $type})
+  const _$WasmMsgImpl(@JsonKey(name: 'wasm_msg') this.wasmMsg,
+      {final String? $type})
       : $type = $type ?? 'wasmMsg';
 
   factory _$WasmMsgImpl.fromJson(Map<String, dynamic> json) =>
       _$$WasmMsgImplFromJson(json);
 
   @override
+  @JsonKey(name: 'wasm_msg')
   final CosmWasmContractMsg wasmMsg;
 
   @JsonKey(name: 'runtimeType')
@@ -6265,8 +6691,12 @@ class _$WasmMsgImpl implements _WasmMsg {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(CosmWasmContractMsg wasmMsg) wasmMsg,
-    required TResult Function(AutopilotMsg autopilotMsg) autopilotMsg,
+    required TResult Function(
+            @JsonKey(name: 'wasm_msg') CosmWasmContractMsg wasmMsg)
+        wasmMsg,
+    required TResult Function(
+            @JsonKey(name: 'autopilot_msg') AutopilotMsg autopilotMsg)
+        autopilotMsg,
   }) {
     return wasmMsg(this.wasmMsg);
   }
@@ -6274,8 +6704,11 @@ class _$WasmMsgImpl implements _WasmMsg {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(CosmWasmContractMsg wasmMsg)? wasmMsg,
-    TResult? Function(AutopilotMsg autopilotMsg)? autopilotMsg,
+    TResult? Function(@JsonKey(name: 'wasm_msg') CosmWasmContractMsg wasmMsg)?
+        wasmMsg,
+    TResult? Function(
+            @JsonKey(name: 'autopilot_msg') AutopilotMsg autopilotMsg)?
+        autopilotMsg,
   }) {
     return wasmMsg?.call(this.wasmMsg);
   }
@@ -6283,8 +6716,10 @@ class _$WasmMsgImpl implements _WasmMsg {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(CosmWasmContractMsg wasmMsg)? wasmMsg,
-    TResult Function(AutopilotMsg autopilotMsg)? autopilotMsg,
+    TResult Function(@JsonKey(name: 'wasm_msg') CosmWasmContractMsg wasmMsg)?
+        wasmMsg,
+    TResult Function(@JsonKey(name: 'autopilot_msg') AutopilotMsg autopilotMsg)?
+        autopilotMsg,
     required TResult orElse(),
   }) {
     if (wasmMsg != null) {
@@ -6333,10 +6768,13 @@ class _$WasmMsgImpl implements _WasmMsg {
 }
 
 abstract class _WasmMsg implements PostHandler {
-  const factory _WasmMsg(final CosmWasmContractMsg wasmMsg) = _$WasmMsgImpl;
+  const factory _WasmMsg(
+          @JsonKey(name: 'wasm_msg') final CosmWasmContractMsg wasmMsg) =
+      _$WasmMsgImpl;
 
   factory _WasmMsg.fromJson(Map<String, dynamic> json) = _$WasmMsgImpl.fromJson;
 
+  @JsonKey(name: 'wasm_msg')
   CosmWasmContractMsg get wasmMsg;
 
   /// Create a copy of PostHandler
@@ -6352,7 +6790,7 @@ abstract class _$$AAutopilotMsgImplCopyWith<$Res> {
           _$AAutopilotMsgImpl value, $Res Function(_$AAutopilotMsgImpl) then) =
       __$$AAutopilotMsgImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({AutopilotMsg autopilotMsg});
+  $Res call({@JsonKey(name: 'autopilot_msg') AutopilotMsg autopilotMsg});
 
   $AutopilotMsgCopyWith<$Res> get autopilotMsg;
 }
@@ -6394,13 +6832,15 @@ class __$$AAutopilotMsgImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$AAutopilotMsgImpl implements _AAutopilotMsg {
-  const _$AAutopilotMsgImpl(this.autopilotMsg, {final String? $type})
+  const _$AAutopilotMsgImpl(@JsonKey(name: 'autopilot_msg') this.autopilotMsg,
+      {final String? $type})
       : $type = $type ?? 'autopilotMsg';
 
   factory _$AAutopilotMsgImpl.fromJson(Map<String, dynamic> json) =>
       _$$AAutopilotMsgImplFromJson(json);
 
   @override
+  @JsonKey(name: 'autopilot_msg')
   final AutopilotMsg autopilotMsg;
 
   @JsonKey(name: 'runtimeType')
@@ -6435,8 +6875,12 @@ class _$AAutopilotMsgImpl implements _AAutopilotMsg {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(CosmWasmContractMsg wasmMsg) wasmMsg,
-    required TResult Function(AutopilotMsg autopilotMsg) autopilotMsg,
+    required TResult Function(
+            @JsonKey(name: 'wasm_msg') CosmWasmContractMsg wasmMsg)
+        wasmMsg,
+    required TResult Function(
+            @JsonKey(name: 'autopilot_msg') AutopilotMsg autopilotMsg)
+        autopilotMsg,
   }) {
     return autopilotMsg(this.autopilotMsg);
   }
@@ -6444,8 +6888,11 @@ class _$AAutopilotMsgImpl implements _AAutopilotMsg {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(CosmWasmContractMsg wasmMsg)? wasmMsg,
-    TResult? Function(AutopilotMsg autopilotMsg)? autopilotMsg,
+    TResult? Function(@JsonKey(name: 'wasm_msg') CosmWasmContractMsg wasmMsg)?
+        wasmMsg,
+    TResult? Function(
+            @JsonKey(name: 'autopilot_msg') AutopilotMsg autopilotMsg)?
+        autopilotMsg,
   }) {
     return autopilotMsg?.call(this.autopilotMsg);
   }
@@ -6453,8 +6900,10 @@ class _$AAutopilotMsgImpl implements _AAutopilotMsg {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(CosmWasmContractMsg wasmMsg)? wasmMsg,
-    TResult Function(AutopilotMsg autopilotMsg)? autopilotMsg,
+    TResult Function(@JsonKey(name: 'wasm_msg') CosmWasmContractMsg wasmMsg)?
+        wasmMsg,
+    TResult Function(@JsonKey(name: 'autopilot_msg') AutopilotMsg autopilotMsg)?
+        autopilotMsg,
     required TResult orElse(),
   }) {
     if (autopilotMsg != null) {
@@ -6503,12 +6952,14 @@ class _$AAutopilotMsgImpl implements _AAutopilotMsg {
 }
 
 abstract class _AAutopilotMsg implements PostHandler {
-  const factory _AAutopilotMsg(final AutopilotMsg autopilotMsg) =
+  const factory _AAutopilotMsg(
+          @JsonKey(name: 'autopilot_msg') final AutopilotMsg autopilotMsg) =
       _$AAutopilotMsgImpl;
 
   factory _AAutopilotMsg.fromJson(Map<String, dynamic> json) =
       _$AAutopilotMsgImpl.fromJson;
 
+  @JsonKey(name: 'autopilot_msg')
   AutopilotMsg get autopilotMsg;
 
   /// Create a copy of PostHandler
@@ -6524,6 +6975,7 @@ ERC20Approval _$ERC20ApprovalFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ERC20Approval {
+  @JsonKey(name: 'token_contract')
   String get tokenContract => throw _privateConstructorUsedError;
   String get spender => throw _privateConstructorUsedError;
   String get amount => throw _privateConstructorUsedError;
@@ -6544,7 +6996,10 @@ abstract class $ERC20ApprovalCopyWith<$Res> {
           ERC20Approval value, $Res Function(ERC20Approval) then) =
       _$ERC20ApprovalCopyWithImpl<$Res, ERC20Approval>;
   @useResult
-  $Res call({String tokenContract, String spender, String amount});
+  $Res call(
+      {@JsonKey(name: 'token_contract') String tokenContract,
+      String spender,
+      String amount});
 }
 
 /// @nodoc
@@ -6591,7 +7046,10 @@ abstract class _$$ERC20ApprovalImplCopyWith<$Res>
       __$$ERC20ApprovalImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String tokenContract, String spender, String amount});
+  $Res call(
+      {@JsonKey(name: 'token_contract') String tokenContract,
+      String spender,
+      String amount});
 }
 
 /// @nodoc
@@ -6632,7 +7090,7 @@ class __$$ERC20ApprovalImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$ERC20ApprovalImpl implements _ERC20Approval {
   const _$ERC20ApprovalImpl(
-      {required this.tokenContract,
+      {@JsonKey(name: 'token_contract') required this.tokenContract,
       required this.spender,
       required this.amount});
 
@@ -6640,6 +7098,7 @@ class _$ERC20ApprovalImpl implements _ERC20Approval {
       _$$ERC20ApprovalImplFromJson(json);
 
   @override
+  @JsonKey(name: 'token_contract')
   final String tokenContract;
   @override
   final String spender;
@@ -6684,7 +7143,7 @@ class _$ERC20ApprovalImpl implements _ERC20Approval {
 
 abstract class _ERC20Approval implements ERC20Approval {
   const factory _ERC20Approval(
-      {required final String tokenContract,
+      {@JsonKey(name: 'token_contract') required final String tokenContract,
       required final String spender,
       required final String amount}) = _$ERC20ApprovalImpl;
 
@@ -6692,6 +7151,7 @@ abstract class _ERC20Approval implements ERC20Approval {
       _$ERC20ApprovalImpl.fromJson;
 
   @override
+  @JsonKey(name: 'token_contract')
   String get tokenContract;
   @override
   String get spender;
@@ -6712,8 +7172,11 @@ SvmTx _$SvmTxFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$SvmTx {
+  @JsonKey(name: 'chain_id')
   String get chainID => throw _privateConstructorUsedError;
+  @JsonKey(name: 'tx')
   String get tx => throw _privateConstructorUsedError;
+  @JsonKey(name: 'signer_address')
   String get signerAddress => throw _privateConstructorUsedError;
 
   /// Serializes this SvmTx to a JSON map.
@@ -6730,7 +7193,10 @@ abstract class $SvmTxCopyWith<$Res> {
   factory $SvmTxCopyWith(SvmTx value, $Res Function(SvmTx) then) =
       _$SvmTxCopyWithImpl<$Res, SvmTx>;
   @useResult
-  $Res call({String chainID, String tx, String signerAddress});
+  $Res call(
+      {@JsonKey(name: 'chain_id') String chainID,
+      @JsonKey(name: 'tx') String tx,
+      @JsonKey(name: 'signer_address') String signerAddress});
 }
 
 /// @nodoc
@@ -6776,7 +7242,10 @@ abstract class _$$SvmTxImplCopyWith<$Res> implements $SvmTxCopyWith<$Res> {
       __$$SvmTxImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String chainID, String tx, String signerAddress});
+  $Res call(
+      {@JsonKey(name: 'chain_id') String chainID,
+      @JsonKey(name: 'tx') String tx,
+      @JsonKey(name: 'signer_address') String signerAddress});
 }
 
 /// @nodoc
@@ -6817,16 +7286,21 @@ class __$$SvmTxImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$SvmTxImpl implements _SvmTx {
   const _$SvmTxImpl(
-      {required this.chainID, required this.tx, required this.signerAddress});
+      {@JsonKey(name: 'chain_id') required this.chainID,
+      @JsonKey(name: 'tx') required this.tx,
+      @JsonKey(name: 'signer_address') required this.signerAddress});
 
   factory _$SvmTxImpl.fromJson(Map<String, dynamic> json) =>
       _$$SvmTxImplFromJson(json);
 
   @override
+  @JsonKey(name: 'chain_id')
   final String chainID;
   @override
+  @JsonKey(name: 'tx')
   final String tx;
   @override
+  @JsonKey(name: 'signer_address')
   final String signerAddress;
 
   @override
@@ -6867,17 +7341,21 @@ class _$SvmTxImpl implements _SvmTx {
 
 abstract class _SvmTx implements SvmTx {
   const factory _SvmTx(
-      {required final String chainID,
-      required final String tx,
+      {@JsonKey(name: 'chain_id') required final String chainID,
+      @JsonKey(name: 'tx') required final String tx,
+      @JsonKey(name: 'signer_address')
       required final String signerAddress}) = _$SvmTxImpl;
 
   factory _SvmTx.fromJson(Map<String, dynamic> json) = _$SvmTxImpl.fromJson;
 
   @override
+  @JsonKey(name: 'chain_id')
   String get chainID;
   @override
+  @JsonKey(name: 'tx')
   String get tx;
   @override
+  @JsonKey(name: 'signer_address')
   String get signerAddress;
 
   /// Create a copy of SvmTx
@@ -6894,12 +7372,15 @@ EvmTx _$EvmTxFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$EvmTx {
+  @JsonKey(name: 'chain_id')
   String get chainID => throw _privateConstructorUsedError;
   String get to => throw _privateConstructorUsedError;
   String get value => throw _privateConstructorUsedError;
   String get data => throw _privateConstructorUsedError;
+  @JsonKey(name: 'required_erc20_approvals')
   List<ERC20Approval> get requiredERC20Approvals =>
       throw _privateConstructorUsedError;
+  @JsonKey(name: 'signer_address')
   String get signerAddress => throw _privateConstructorUsedError;
 
   /// Serializes this EvmTx to a JSON map.
@@ -6917,12 +7398,13 @@ abstract class $EvmTxCopyWith<$Res> {
       _$EvmTxCopyWithImpl<$Res, EvmTx>;
   @useResult
   $Res call(
-      {String chainID,
+      {@JsonKey(name: 'chain_id') String chainID,
       String to,
       String value,
       String data,
+      @JsonKey(name: 'required_erc20_approvals')
       List<ERC20Approval> requiredERC20Approvals,
-      String signerAddress});
+      @JsonKey(name: 'signer_address') String signerAddress});
 }
 
 /// @nodoc
@@ -6984,12 +7466,13 @@ abstract class _$$EvmTxImplCopyWith<$Res> implements $EvmTxCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {String chainID,
+      {@JsonKey(name: 'chain_id') String chainID,
       String to,
       String value,
       String data,
+      @JsonKey(name: 'required_erc20_approvals')
       List<ERC20Approval> requiredERC20Approvals,
-      String signerAddress});
+      @JsonKey(name: 'signer_address') String signerAddress});
 }
 
 /// @nodoc
@@ -7045,18 +7528,20 @@ class __$$EvmTxImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$EvmTxImpl implements _EvmTx {
   const _$EvmTxImpl(
-      {required this.chainID,
+      {@JsonKey(name: 'chain_id') required this.chainID,
       required this.to,
       required this.value,
       required this.data,
+      @JsonKey(name: 'required_erc20_approvals')
       required final List<ERC20Approval> requiredERC20Approvals,
-      required this.signerAddress})
+      @JsonKey(name: 'signer_address') required this.signerAddress})
       : _requiredERC20Approvals = requiredERC20Approvals;
 
   factory _$EvmTxImpl.fromJson(Map<String, dynamic> json) =>
       _$$EvmTxImplFromJson(json);
 
   @override
+  @JsonKey(name: 'chain_id')
   final String chainID;
   @override
   final String to;
@@ -7066,6 +7551,7 @@ class _$EvmTxImpl implements _EvmTx {
   final String data;
   final List<ERC20Approval> _requiredERC20Approvals;
   @override
+  @JsonKey(name: 'required_erc20_approvals')
   List<ERC20Approval> get requiredERC20Approvals {
     if (_requiredERC20Approvals is EqualUnmodifiableListView)
       return _requiredERC20Approvals;
@@ -7074,6 +7560,7 @@ class _$EvmTxImpl implements _EvmTx {
   }
 
   @override
+  @JsonKey(name: 'signer_address')
   final String signerAddress;
 
   @override
@@ -7125,16 +7612,19 @@ class _$EvmTxImpl implements _EvmTx {
 
 abstract class _EvmTx implements EvmTx {
   const factory _EvmTx(
-      {required final String chainID,
+      {@JsonKey(name: 'chain_id') required final String chainID,
       required final String to,
       required final String value,
       required final String data,
+      @JsonKey(name: 'required_erc20_approvals')
       required final List<ERC20Approval> requiredERC20Approvals,
+      @JsonKey(name: 'signer_address')
       required final String signerAddress}) = _$EvmTxImpl;
 
   factory _EvmTx.fromJson(Map<String, dynamic> json) = _$EvmTxImpl.fromJson;
 
   @override
+  @JsonKey(name: 'chain_id')
   String get chainID;
   @override
   String get to;
@@ -7143,8 +7633,10 @@ abstract class _EvmTx implements EvmTx {
   @override
   String get data;
   @override
+  @JsonKey(name: 'required_erc20_approvals')
   List<ERC20Approval> get requiredERC20Approvals;
   @override
+  @JsonKey(name: 'signer_address')
   String get signerAddress;
 
   /// Create a copy of EvmTx
@@ -7162,6 +7654,7 @@ DenomWithChainID _$DenomWithChainIDFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$DenomWithChainID {
   String get denom => throw _privateConstructorUsedError;
+  @JsonKey(name: 'chain_id')
   String get chainID => throw _privateConstructorUsedError;
 
   /// Serializes this DenomWithChainID to a JSON map.
@@ -7180,7 +7673,7 @@ abstract class $DenomWithChainIDCopyWith<$Res> {
           DenomWithChainID value, $Res Function(DenomWithChainID) then) =
       _$DenomWithChainIDCopyWithImpl<$Res, DenomWithChainID>;
   @useResult
-  $Res call({String denom, String chainID});
+  $Res call({String denom, @JsonKey(name: 'chain_id') String chainID});
 }
 
 /// @nodoc
@@ -7222,7 +7715,7 @@ abstract class _$$DenomWithChainIDImplCopyWith<$Res>
       __$$DenomWithChainIDImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String denom, String chainID});
+  $Res call({String denom, @JsonKey(name: 'chain_id') String chainID});
 }
 
 /// @nodoc
@@ -7257,7 +7750,8 @@ class __$$DenomWithChainIDImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$DenomWithChainIDImpl implements _DenomWithChainID {
-  const _$DenomWithChainIDImpl({required this.denom, required this.chainID});
+  const _$DenomWithChainIDImpl(
+      {required this.denom, @JsonKey(name: 'chain_id') required this.chainID});
 
   factory _$DenomWithChainIDImpl.fromJson(Map<String, dynamic> json) =>
       _$$DenomWithChainIDImplFromJson(json);
@@ -7265,6 +7759,7 @@ class _$DenomWithChainIDImpl implements _DenomWithChainID {
   @override
   final String denom;
   @override
+  @JsonKey(name: 'chain_id')
   final String chainID;
 
   @override
@@ -7304,8 +7799,9 @@ class _$DenomWithChainIDImpl implements _DenomWithChainID {
 
 abstract class _DenomWithChainID implements DenomWithChainID {
   const factory _DenomWithChainID(
-      {required final String denom,
-      required final String chainID}) = _$DenomWithChainIDImpl;
+          {required final String denom,
+          @JsonKey(name: 'chain_id') required final String chainID}) =
+      _$DenomWithChainIDImpl;
 
   factory _DenomWithChainID.fromJson(Map<String, dynamic> json) =
       _$DenomWithChainIDImpl.fromJson;
@@ -7313,6 +7809,7 @@ abstract class _DenomWithChainID implements DenomWithChainID {
   @override
   String get denom;
   @override
+  @JsonKey(name: 'chain_id')
   String get chainID;
 
   /// Create a copy of DenomWithChainID
@@ -8054,6 +8551,7 @@ OriginAssetsResponse _$OriginAssetsResponseFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$OriginAssetsResponse {
+  @JsonKey(name: 'origin_assets')
   List<AssetOrError> get originAssets => throw _privateConstructorUsedError;
 
   /// Serializes this OriginAssetsResponse to a JSON map.
@@ -8072,7 +8570,7 @@ abstract class $OriginAssetsResponseCopyWith<$Res> {
           $Res Function(OriginAssetsResponse) then) =
       _$OriginAssetsResponseCopyWithImpl<$Res, OriginAssetsResponse>;
   @useResult
-  $Res call({List<AssetOrError> originAssets});
+  $Res call({@JsonKey(name: 'origin_assets') List<AssetOrError> originAssets});
 }
 
 /// @nodoc
@@ -8110,7 +8608,7 @@ abstract class _$$OriginAssetsResponseImplCopyWith<$Res>
       __$$OriginAssetsResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({List<AssetOrError> originAssets});
+  $Res call({@JsonKey(name: 'origin_assets') List<AssetOrError> originAssets});
 }
 
 /// @nodoc
@@ -8141,7 +8639,8 @@ class __$$OriginAssetsResponseImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$OriginAssetsResponseImpl implements _OriginAssetsResponse {
   const _$OriginAssetsResponseImpl(
-      {required final List<AssetOrError> originAssets})
+      {@JsonKey(name: 'origin_assets')
+      required final List<AssetOrError> originAssets})
       : _originAssets = originAssets;
 
   factory _$OriginAssetsResponseImpl.fromJson(Map<String, dynamic> json) =>
@@ -8149,6 +8648,7 @@ class _$OriginAssetsResponseImpl implements _OriginAssetsResponse {
 
   final List<AssetOrError> _originAssets;
   @override
+  @JsonKey(name: 'origin_assets')
   List<AssetOrError> get originAssets {
     if (_originAssets is EqualUnmodifiableListView) return _originAssets;
     // ignore: implicit_dynamic_type
@@ -8194,13 +8694,15 @@ class _$OriginAssetsResponseImpl implements _OriginAssetsResponse {
 
 abstract class _OriginAssetsResponse implements OriginAssetsResponse {
   const factory _OriginAssetsResponse(
-          {required final List<AssetOrError> originAssets}) =
+          {@JsonKey(name: 'origin_assets')
+          required final List<AssetOrError> originAssets}) =
       _$OriginAssetsResponseImpl;
 
   factory _OriginAssetsResponse.fromJson(Map<String, dynamic> json) =
       _$OriginAssetsResponseImpl.fromJson;
 
   @override
+  @JsonKey(name: 'origin_assets')
   List<AssetOrError> get originAssets;
 
   /// Create a copy of OriginAssetsResponse
@@ -8217,7 +8719,9 @@ SmartSwapOptions _$SmartSwapOptionsFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$SmartSwapOptions {
+  @JsonKey(name: 'split_routes')
   bool? get splitRoutes => throw _privateConstructorUsedError;
+  @JsonKey(name: 'evm_swaps')
   bool? get evmSwaps => throw _privateConstructorUsedError;
 
   /// Serializes this SmartSwapOptions to a JSON map.
@@ -8236,7 +8740,9 @@ abstract class $SmartSwapOptionsCopyWith<$Res> {
           SmartSwapOptions value, $Res Function(SmartSwapOptions) then) =
       _$SmartSwapOptionsCopyWithImpl<$Res, SmartSwapOptions>;
   @useResult
-  $Res call({bool? splitRoutes, bool? evmSwaps});
+  $Res call(
+      {@JsonKey(name: 'split_routes') bool? splitRoutes,
+      @JsonKey(name: 'evm_swaps') bool? evmSwaps});
 }
 
 /// @nodoc
@@ -8278,7 +8784,9 @@ abstract class _$$SmartSwapOptionsImplCopyWith<$Res>
       __$$SmartSwapOptionsImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({bool? splitRoutes, bool? evmSwaps});
+  $Res call(
+      {@JsonKey(name: 'split_routes') bool? splitRoutes,
+      @JsonKey(name: 'evm_swaps') bool? evmSwaps});
 }
 
 /// @nodoc
@@ -8313,14 +8821,18 @@ class __$$SmartSwapOptionsImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$SmartSwapOptionsImpl implements _SmartSwapOptions {
-  const _$SmartSwapOptionsImpl({this.splitRoutes, this.evmSwaps});
+  const _$SmartSwapOptionsImpl(
+      {@JsonKey(name: 'split_routes') this.splitRoutes,
+      @JsonKey(name: 'evm_swaps') this.evmSwaps});
 
   factory _$SmartSwapOptionsImpl.fromJson(Map<String, dynamic> json) =>
       _$$SmartSwapOptionsImplFromJson(json);
 
   @override
+  @JsonKey(name: 'split_routes')
   final bool? splitRoutes;
   @override
+  @JsonKey(name: 'evm_swaps')
   final bool? evmSwaps;
 
   @override
@@ -8362,14 +8874,18 @@ class _$SmartSwapOptionsImpl implements _SmartSwapOptions {
 
 abstract class _SmartSwapOptions implements SmartSwapOptions {
   const factory _SmartSwapOptions(
-      {final bool? splitRoutes, final bool? evmSwaps}) = _$SmartSwapOptionsImpl;
+          {@JsonKey(name: 'split_routes') final bool? splitRoutes,
+          @JsonKey(name: 'evm_swaps') final bool? evmSwaps}) =
+      _$SmartSwapOptionsImpl;
 
   factory _SmartSwapOptions.fromJson(Map<String, dynamic> json) =
       _$SmartSwapOptionsImpl.fromJson;
 
   @override
+  @JsonKey(name: 'split_routes')
   bool? get splitRoutes;
   @override
+  @JsonKey(name: 'evm_swaps')
   bool? get evmSwaps;
 
   /// Create a copy of SmartSwapOptions

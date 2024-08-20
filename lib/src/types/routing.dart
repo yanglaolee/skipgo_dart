@@ -30,7 +30,7 @@ class GasPriceInfo with _$GasPriceInfo {
 class FeeAsset with _$FeeAsset {
   const factory FeeAsset({
     required String denom,
-    GasPriceInfo? gasPrice,
+    @JsonKey(name: 'gas_price') GasPriceInfo? gasPrice,
   }) = _FeeAsset;
 
   factory FeeAsset.fromJson(Map<String, dynamic> json) => _$FeeAssetFromJson(json);
@@ -39,10 +39,10 @@ class FeeAsset with _$FeeAsset {
 @freezed
 class IbcCapabilities with _$IbcCapabilities {
   const factory IbcCapabilities({
-    required bool cosmosPfm,
-    required bool cosmosIbcHooks,
-    required bool cosmosMemo,
-    required bool cosmosAutopilot,
+    @JsonKey(name: 'cosmos_pfm') required bool cosmosPfm,
+    @JsonKey(name: 'cosmos_ibc_hooks') required bool cosmosIbcHooks,
+    @JsonKey(name: 'cosmos_memo') required bool cosmosMemo,
+    @JsonKey(name: 'cosmos_autopilot') required bool cosmosAutopilot,
   }) = _IbcCapabilities;
 
   factory IbcCapabilities.fromJson(Map<String, dynamic> json) => _$IbcCapabilitiesFromJson(json);
@@ -62,20 +62,20 @@ class ModuleVersionInfo with _$ModuleVersionInfo {
 @freezed
 class Chain with _$Chain {
   const factory Chain({
-    required String chainName,
-    required String chainID,
-    required bool pfmEnabled,
-    String? cosmosSDKVersion,
+    @JsonKey(name: 'chain_name') required String chainName,
+    @JsonKey(name: 'chain_id') required String chainID,
+    @JsonKey(name: 'pfm_enabled') required bool pfmEnabled,
+    @JsonKey(name: 'cosmos_sdk_version') String? cosmosSDKVersion,
     Map<String, ModuleVersionInfo>? modules,
-    required ModuleSupport cosmosModuleSupport,
-    required bool supportsMemo,
-    String? logoURI,
-    required String bech32Prefix,
-    required List<FeeAsset> feeAssets,
-    required String chainType,
-    required IbcCapabilities ibcCapabilities,
-    required bool isTestnet,
-    required String prettyName,
+    @JsonKey(name: 'cosmos_module_support') required ModuleSupport cosmosModuleSupport,
+    @JsonKey(name: 'supports_memo') required bool supportsMemo,
+    @JsonKey(name: 'logo_uri') String? logoURI,
+    @JsonKey(name: 'bech32_prefix') required String bech32Prefix,
+    @JsonKey(name: 'fee_assets') required List<FeeAsset> feeAssets,
+    @JsonKey(name: 'chain_type') required String chainType,
+    @JsonKey(name: 'ibc_capabilities') required IbcCapabilities ibcCapabilities,
+    @JsonKey(name: 'is_testnet') required bool isTestnet,
+    @JsonKey(name: 'pretty_name') required String prettyName,
   }) = _Chain;
 
   factory Chain.fromJson(Map<String, dynamic> json) => _$ChainFromJson(json);

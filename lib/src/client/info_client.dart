@@ -5,7 +5,7 @@ import '../types/routing.dart';
 import '../types/unified.dart';
 
 class InfoClient extends BaseClient {
-  InfoClient({required super.baseUrl, required super.headers, required super.logger});
+  InfoClient({required super.baseUrl, required super.headers, super.logger});
 
   /// Get all supported chains along with additional data useful
   /// for building applications + frontends that interface with

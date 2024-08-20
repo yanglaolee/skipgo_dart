@@ -8,61 +8,61 @@ part of 'unified.dart';
 
 _$AssetsRequestImpl _$$AssetsRequestImplFromJson(Map<String, dynamic> json) =>
     _$AssetsRequestImpl(
-      chainIDs: (json['chainIDs'] as List<dynamic>?)
+      chainIDs: (json['chain_ids'] as List<dynamic>?)
           ?.map((e) => e as String)
           .toList(),
-      nativeOnly: json['nativeOnly'] as bool?,
-      includeNoMetadataAssets: json['includeNoMetadataAssets'] as bool?,
-      includeCW20Assets: json['includeCW20Assets'] as bool?,
-      includeEvmAssets: json['includeEvmAssets'] as bool?,
-      includeSvmAssets: json['includeSvmAssets'] as bool?,
-      onlyTestnets: json['onlyTestnets'] as bool?,
+      nativeOnly: json['native_only'] as bool?,
+      includeNoMetadataAssets: json['include_no_metadata_assets'] as bool?,
+      includeCW20Assets: json['include_cw20_assets'] as bool?,
+      includeEvmAssets: json['include_evm_assets'] as bool?,
+      includeSvmAssets: json['include_svm_assets'] as bool?,
+      onlyTestnets: json['only_testnets'] as bool?,
     );
 
 Map<String, dynamic> _$$AssetsRequestImplToJson(_$AssetsRequestImpl instance) =>
     <String, dynamic>{
-      'chainIDs': instance.chainIDs,
-      'nativeOnly': instance.nativeOnly,
-      'includeNoMetadataAssets': instance.includeNoMetadataAssets,
-      'includeCW20Assets': instance.includeCW20Assets,
-      'includeEvmAssets': instance.includeEvmAssets,
-      'includeSvmAssets': instance.includeSvmAssets,
-      'onlyTestnets': instance.onlyTestnets,
+      'chain_ids': instance.chainIDs,
+      'native_only': instance.nativeOnly,
+      'include_no_metadata_assets': instance.includeNoMetadataAssets,
+      'include_cw20_assets': instance.includeCW20Assets,
+      'include_evm_assets': instance.includeEvmAssets,
+      'include_svm_assets': instance.includeSvmAssets,
+      'only_testnets': instance.onlyTestnets,
     };
 
 _$AssetsFromSourceRequestImpl _$$AssetsFromSourceRequestImplFromJson(
         Map<String, dynamic> json) =>
     _$AssetsFromSourceRequestImpl(
-      sourceAssetDenom: json['sourceAssetDenom'] as String,
-      sourceAssetChainID: json['sourceAssetChainID'] as String,
-      allowMultiTx: json['allowMultiTx'] as bool?,
-      includeCW20Assets: json['includeCW20Assets'] as bool,
+      sourceAssetDenom: json['source_asset_denom'] as String,
+      sourceAssetChainID: json['source_asset_chain_id'] as String,
+      allowMultiTx: json['allow_multi_tx'] as bool?,
+      includeCW20Assets: json['include_cw20_assets'] as bool,
     );
 
 Map<String, dynamic> _$$AssetsFromSourceRequestImplToJson(
         _$AssetsFromSourceRequestImpl instance) =>
     <String, dynamic>{
-      'sourceAssetDenom': instance.sourceAssetDenom,
-      'sourceAssetChainID': instance.sourceAssetChainID,
-      'allowMultiTx': instance.allowMultiTx,
-      'includeCW20Assets': instance.includeCW20Assets,
+      'source_asset_denom': instance.sourceAssetDenom,
+      'source_asset_chain_id': instance.sourceAssetChainID,
+      'allow_multi_tx': instance.allowMultiTx,
+      'include_cw20_assets': instance.includeCW20Assets,
     };
 
 _$AssetRecommendationRequestImpl _$$AssetRecommendationRequestImplFromJson(
         Map<String, dynamic> json) =>
     _$AssetRecommendationRequestImpl(
-      sourceAssetDenom: json['sourceAssetDenom'] as String,
-      sourceAssetChainID: json['sourceAssetChainID'] as String,
-      destChainID: json['destChainID'] as String,
+      sourceAssetDenom: json['source_asset_denom'] as String,
+      sourceAssetChainID: json['source_asset_chain_id'] as String,
+      destChainID: json['dest_chain_id'] as String,
       reason: $enumDecodeNullable(_$ReasonEnumMap, json['reason']),
     );
 
 Map<String, dynamic> _$$AssetRecommendationRequestImplToJson(
         _$AssetRecommendationRequestImpl instance) =>
     <String, dynamic>{
-      'sourceAssetDenom': instance.sourceAssetDenom,
-      'sourceAssetChainID': instance.sourceAssetChainID,
-      'destChainID': instance.destChainID,
+      'source_asset_denom': instance.sourceAssetDenom,
+      'source_asset_chain_id': instance.sourceAssetChainID,
+      'dest_chain_id': instance.destChainID,
       'reason': _$ReasonEnumMap[instance.reason],
     };
 
@@ -126,7 +126,7 @@ _$RecommendAssetsResponseImpl _$$RecommendAssetsResponseImplFromJson(
       recommendations: (json['recommendations'] as List<dynamic>)
           .map((e) => AssetRecommendation.fromJson(e as Map<String, dynamic>))
           .toList(),
-      recommendationEntries: (json['recommendationEntries'] as List<dynamic>)
+      recommendationEntries: (json['recommendation_entries'] as List<dynamic>)
           .map((e) => RecommendationEntry.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
@@ -135,13 +135,13 @@ Map<String, dynamic> _$$RecommendAssetsResponseImplToJson(
         _$RecommendAssetsResponseImpl instance) =>
     <String, dynamic>{
       'recommendations': instance.recommendations,
-      'recommendationEntries': instance.recommendationEntries,
+      'recommendation_entries': instance.recommendationEntries,
     };
 
 _$CosmosTxImpl _$$CosmosTxImplFromJson(Map<String, dynamic> json) =>
     _$CosmosTxImpl(
-      cosmosTx: CosmosTx.fromJson(json['cosmosTx'] as Map<String, dynamic>),
-      operationsIndices: (json['operationsIndices'] as List<dynamic>)
+      cosmosTx: CosmosTx.fromJson(json['cosmos_tx'] as Map<String, dynamic>),
+      operationsIndices: (json['operations_indices'] as List<dynamic>)
           .map((e) => (e as num).toInt())
           .toList(),
       $type: json['runtimeType'] as String?,
@@ -149,14 +149,14 @@ _$CosmosTxImpl _$$CosmosTxImplFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$CosmosTxImplToJson(_$CosmosTxImpl instance) =>
     <String, dynamic>{
-      'cosmosTx': instance.cosmosTx,
-      'operationsIndices': instance.operationsIndices,
+      'cosmos_tx': instance.cosmosTx,
+      'operations_indices': instance.operationsIndices,
       'runtimeType': instance.$type,
     };
 
 _$EvmTxImpl _$$EvmTxImplFromJson(Map<String, dynamic> json) => _$EvmTxImpl(
-      evmTx: EvmTx.fromJson(json['evmTx'] as Map<String, dynamic>),
-      operationsIndices: (json['operationsIndices'] as List<dynamic>)
+      evmTx: EvmTx.fromJson(json['evm_tx'] as Map<String, dynamic>),
+      operationsIndices: (json['operations_indices'] as List<dynamic>)
           .map((e) => (e as num).toInt())
           .toList(),
       $type: json['runtimeType'] as String?,
@@ -164,14 +164,14 @@ _$EvmTxImpl _$$EvmTxImplFromJson(Map<String, dynamic> json) => _$EvmTxImpl(
 
 Map<String, dynamic> _$$EvmTxImplToJson(_$EvmTxImpl instance) =>
     <String, dynamic>{
-      'evmTx': instance.evmTx,
-      'operationsIndices': instance.operationsIndices,
+      'evm_tx': instance.evmTx,
+      'operations_indices': instance.operationsIndices,
       'runtimeType': instance.$type,
     };
 
 _$SvmTxImpl _$$SvmTxImplFromJson(Map<String, dynamic> json) => _$SvmTxImpl(
-      svmTx: SvmTx.fromJson(json['svmTx'] as Map<String, dynamic>),
-      operationsIndices: (json['operationsIndices'] as List<dynamic>)
+      svmTx: SvmTx.fromJson(json['svm_tx'] as Map<String, dynamic>),
+      operationsIndices: (json['operations_indices'] as List<dynamic>)
           .map((e) => (e as num).toInt())
           .toList(),
       $type: json['runtimeType'] as String?,
@@ -179,138 +179,138 @@ _$SvmTxImpl _$$SvmTxImplFromJson(Map<String, dynamic> json) => _$SvmTxImpl(
 
 Map<String, dynamic> _$$SvmTxImplToJson(_$SvmTxImpl instance) =>
     <String, dynamic>{
-      'svmTx': instance.svmTx,
-      'operationsIndices': instance.operationsIndices,
+      'svm_tx': instance.svmTx,
+      'operations_indices': instance.operationsIndices,
       'runtimeType': instance.$type,
     };
 
 _$MsgMultiChainMsgImpl _$$MsgMultiChainMsgImplFromJson(
         Map<String, dynamic> json) =>
     _$MsgMultiChainMsgImpl(
-      MultiChainMsg.fromJson(json['multiChainMsg'] as Map<String, dynamic>),
+      MultiChainMsg.fromJson(json['multi_chain_msg'] as Map<String, dynamic>),
       $type: json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$MsgMultiChainMsgImplToJson(
         _$MsgMultiChainMsgImpl instance) =>
     <String, dynamic>{
-      'multiChainMsg': instance.multiChainMsg,
+      'multi_chain_msg': instance.multiChainMsg,
       'runtimeType': instance.$type,
     };
 
 _$MsgEvmTxImpl _$$MsgEvmTxImplFromJson(Map<String, dynamic> json) =>
     _$MsgEvmTxImpl(
-      EvmTx.fromJson(json['evmTx'] as Map<String, dynamic>),
+      EvmTx.fromJson(json['evm_tx'] as Map<String, dynamic>),
       $type: json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$MsgEvmTxImplToJson(_$MsgEvmTxImpl instance) =>
     <String, dynamic>{
-      'evmTx': instance.evmTx,
+      'evm_tx': instance.evmTx,
       'runtimeType': instance.$type,
     };
 
 _$MsgSvmTxImpl _$$MsgSvmTxImplFromJson(Map<String, dynamic> json) =>
     _$MsgSvmTxImpl(
-      SvmTx.fromJson(json['svmTx'] as Map<String, dynamic>),
+      SvmTx.fromJson(json['svm_tx'] as Map<String, dynamic>),
       $type: json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$MsgSvmTxImplToJson(_$MsgSvmTxImpl instance) =>
     <String, dynamic>{
-      'svmTx': instance.svmTx,
+      'svm_tx': instance.svmTx,
       'runtimeType': instance.$type,
     };
 
 _$TransferImpl _$$TransferImplFromJson(Map<String, dynamic> json) =>
     _$TransferImpl(
       transfer: Transfer.fromJson(json['transfer'] as Map<String, dynamic>),
-      txIndex: (json['txIndex'] as num).toInt(),
-      amountIn: json['amountIn'] as String,
-      amountOut: json['amountOut'] as String,
+      txIndex: (json['tx_index'] as num).toInt(),
+      amountIn: json['amount_in'] as String,
+      amountOut: json['amount_out'] as String,
       $type: json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$TransferImplToJson(_$TransferImpl instance) =>
     <String, dynamic>{
       'transfer': instance.transfer,
-      'txIndex': instance.txIndex,
-      'amountIn': instance.amountIn,
-      'amountOut': instance.amountOut,
+      'tx_index': instance.txIndex,
+      'amount_in': instance.amountIn,
+      'amount_out': instance.amountOut,
       'runtimeType': instance.$type,
     };
 
 _$BankSendImpl _$$BankSendImplFromJson(Map<String, dynamic> json) =>
     _$BankSendImpl(
-      bankSend: BankSend.fromJson(json['bankSend'] as Map<String, dynamic>),
-      txIndex: (json['txIndex'] as num).toInt(),
-      amountIn: json['amountIn'] as String,
-      amountOut: json['amountOut'] as String,
+      bankSend: BankSend.fromJson(json['bank_send'] as Map<String, dynamic>),
+      txIndex: (json['tx_index'] as num).toInt(),
+      amountIn: json['amount_in'] as String,
+      amountOut: json['amount_out'] as String,
       $type: json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$BankSendImplToJson(_$BankSendImpl instance) =>
     <String, dynamic>{
-      'bankSend': instance.bankSend,
-      'txIndex': instance.txIndex,
-      'amountIn': instance.amountIn,
-      'amountOut': instance.amountOut,
+      'bank_send': instance.bankSend,
+      'tx_index': instance.txIndex,
+      'amount_in': instance.amountIn,
+      'amount_out': instance.amountOut,
       'runtimeType': instance.$type,
     };
 
 _$SwapImpl _$$SwapImplFromJson(Map<String, dynamic> json) => _$SwapImpl(
       swap: Swap.fromJson(json['swap'] as Map<String, dynamic>),
-      txIndex: (json['txIndex'] as num).toInt(),
-      amountIn: json['amountIn'] as String,
-      amountOut: json['amountOut'] as String,
+      txIndex: (json['tx_index'] as num).toInt(),
+      amountIn: json['amount_in'] as String,
+      amountOut: json['amount_out'] as String,
       $type: json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$SwapImplToJson(_$SwapImpl instance) =>
     <String, dynamic>{
       'swap': instance.swap,
-      'txIndex': instance.txIndex,
-      'amountIn': instance.amountIn,
-      'amountOut': instance.amountOut,
+      'tx_index': instance.txIndex,
+      'amount_in': instance.amountIn,
+      'amount_out': instance.amountOut,
       'runtimeType': instance.$type,
     };
 
 _$AxelarTransferImpl _$$AxelarTransferImplFromJson(Map<String, dynamic> json) =>
     _$AxelarTransferImpl(
       axelarTransfer: AxelarTransfer.fromJson(
-          json['axelarTransfer'] as Map<String, dynamic>),
-      txIndex: (json['txIndex'] as num).toInt(),
-      amountIn: json['amountIn'] as String,
-      amountOut: json['amountOut'] as String,
+          json['axelar_transfer'] as Map<String, dynamic>),
+      txIndex: (json['tx_index'] as num).toInt(),
+      amountIn: json['amount_in'] as String,
+      amountOut: json['amount_out'] as String,
       $type: json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$AxelarTransferImplToJson(
         _$AxelarTransferImpl instance) =>
     <String, dynamic>{
-      'axelarTransfer': instance.axelarTransfer,
-      'txIndex': instance.txIndex,
-      'amountIn': instance.amountIn,
-      'amountOut': instance.amountOut,
+      'axelar_transfer': instance.axelarTransfer,
+      'tx_index': instance.txIndex,
+      'amount_in': instance.amountIn,
+      'amount_out': instance.amountOut,
       'runtimeType': instance.$type,
     };
 
 _$CCTPTransferImpl _$$CCTPTransferImplFromJson(Map<String, dynamic> json) =>
     _$CCTPTransferImpl(
       cctpTransfer:
-          CCTPTransfer.fromJson(json['cctpTransfer'] as Map<String, dynamic>),
-      txIndex: (json['txIndex'] as num).toInt(),
-      amountIn: json['amountIn'] as String,
-      amountOut: json['amountOut'] as String,
+          CCTPTransfer.fromJson(json['cctp_transfer'] as Map<String, dynamic>),
+      txIndex: (json['tx_index'] as num).toInt(),
+      amountIn: json['amount_in'] as String,
+      amountOut: json['amount_out'] as String,
       $type: json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$CCTPTransferImplToJson(_$CCTPTransferImpl instance) =>
     <String, dynamic>{
-      'cctpTransfer': instance.cctpTransfer,
-      'txIndex': instance.txIndex,
-      'amountIn': instance.amountIn,
-      'amountOut': instance.amountOut,
+      'cctp_transfer': instance.cctpTransfer,
+      'tx_index': instance.txIndex,
+      'amount_in': instance.amountIn,
+      'amount_out': instance.amountOut,
       'runtimeType': instance.$type,
     };
 
@@ -318,58 +318,58 @@ _$HyperlaneTransferImpl _$$HyperlaneTransferImplFromJson(
         Map<String, dynamic> json) =>
     _$HyperlaneTransferImpl(
       hyperlaneTransfer: HyperlaneTransfer.fromJson(
-          json['hyperlaneTransfer'] as Map<String, dynamic>),
-      txIndex: (json['txIndex'] as num).toInt(),
-      amountIn: json['amountIn'] as String,
-      amountOut: json['amountOut'] as String,
+          json['hyperlane_transfer'] as Map<String, dynamic>),
+      txIndex: (json['tx_index'] as num).toInt(),
+      amountIn: json['amount_in'] as String,
+      amountOut: json['amount_out'] as String,
       $type: json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$HyperlaneTransferImplToJson(
         _$HyperlaneTransferImpl instance) =>
     <String, dynamic>{
-      'hyperlaneTransfer': instance.hyperlaneTransfer,
-      'txIndex': instance.txIndex,
-      'amountIn': instance.amountIn,
-      'amountOut': instance.amountOut,
+      'hyperlane_transfer': instance.hyperlaneTransfer,
+      'tx_index': instance.txIndex,
+      'amount_in': instance.amountIn,
+      'amount_out': instance.amountOut,
       'runtimeType': instance.$type,
     };
 
 _$EvmSwapImpl _$$EvmSwapImplFromJson(Map<String, dynamic> json) =>
     _$EvmSwapImpl(
-      evmSwap: EvmSwap.fromJson(json['evmSwap'] as Map<String, dynamic>),
-      txIndex: (json['txIndex'] as num).toInt(),
-      amountIn: json['amountIn'] as String,
-      amountOut: json['amountOut'] as String,
+      evmSwap: EvmSwap.fromJson(json['evm_swap'] as Map<String, dynamic>),
+      txIndex: (json['tx_index'] as num).toInt(),
+      amountIn: json['amount_in'] as String,
+      amountOut: json['amount_out'] as String,
       $type: json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$EvmSwapImplToJson(_$EvmSwapImpl instance) =>
     <String, dynamic>{
-      'evmSwap': instance.evmSwap,
-      'txIndex': instance.txIndex,
-      'amountIn': instance.amountIn,
-      'amountOut': instance.amountOut,
+      'evm_swap': instance.evmSwap,
+      'tx_index': instance.txIndex,
+      'amount_in': instance.amountIn,
+      'amount_out': instance.amountOut,
       'runtimeType': instance.$type,
     };
 
 _$OPInitTransferImpl _$$OPInitTransferImplFromJson(Map<String, dynamic> json) =>
     _$OPInitTransferImpl(
       opInitTransfer: OPInitTransfer.fromJson(
-          json['opInitTransfer'] as Map<String, dynamic>),
-      txIndex: (json['txIndex'] as num).toInt(),
-      amountIn: json['amountIn'] as String,
-      amountOut: json['amountOut'] as String,
+          json['op_init_transfer'] as Map<String, dynamic>),
+      txIndex: (json['tx_index'] as num).toInt(),
+      amountIn: json['amount_in'] as String,
+      amountOut: json['amount_out'] as String,
       $type: json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$OPInitTransferImplToJson(
         _$OPInitTransferImpl instance) =>
     <String, dynamic>{
-      'opInitTransfer': instance.opInitTransfer,
-      'txIndex': instance.txIndex,
-      'amountIn': instance.amountIn,
-      'amountOut': instance.amountOut,
+      'op_init_transfer': instance.opInitTransfer,
+      'tx_index': instance.txIndex,
+      'amount_in': instance.amountIn,
+      'amount_out': instance.amountOut,
       'runtimeType': instance.$type,
     };
 
@@ -410,26 +410,26 @@ const _$MsgsWarningTypeEnumMap = {
 
 _$EstimatedFeeImpl _$$EstimatedFeeImplFromJson(Map<String, dynamic> json) =>
     _$EstimatedFeeImpl(
-      feeType: $enumDecode(_$FeeTypeEnumMap, json['feeType']),
-      bridgeID: $enumDecode(_$BridgeTypeEnumMap, json['bridgeID']),
+      feeType: $enumDecode(_$FeeTypeEnumMap, json['fee_type']),
+      bridgeID: $enumDecode(_$BridgeTypeEnumMap, json['bridge_id']),
       amount: json['amount'] as String,
-      usdAmount: json['usdAmount'] as String,
-      originAsset: Asset.fromJson(json['originAsset'] as Map<String, dynamic>),
-      chainID: json['chainID'] as String,
-      txIndex: (json['txIndex'] as num).toInt(),
-      operationIndex: (json['operationIndex'] as num?)?.toInt(),
+      usdAmount: json['usd_amount'] as String,
+      originAsset: Asset.fromJson(json['origin_asset'] as Map<String, dynamic>),
+      chainID: json['chain_id'] as String,
+      txIndex: (json['tx_index'] as num).toInt(),
+      operationIndex: (json['operation_index'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$$EstimatedFeeImplToJson(_$EstimatedFeeImpl instance) =>
     <String, dynamic>{
-      'feeType': _$FeeTypeEnumMap[instance.feeType]!,
-      'bridgeID': _$BridgeTypeEnumMap[instance.bridgeID]!,
+      'fee_type': _$FeeTypeEnumMap[instance.feeType]!,
+      'bridge_id': _$BridgeTypeEnumMap[instance.bridgeID]!,
       'amount': instance.amount,
-      'usdAmount': instance.usdAmount,
-      'originAsset': instance.originAsset,
-      'chainID': instance.chainID,
-      'txIndex': instance.txIndex,
-      'operationIndex': instance.operationIndex,
+      'usd_amount': instance.usdAmount,
+      'origin_asset': instance.originAsset,
+      'chain_id': instance.chainID,
+      'tx_index': instance.txIndex,
+      'operation_index': instance.operationIndex,
     };
 
 const _$FeeTypeEnumMap = {
@@ -446,60 +446,62 @@ const _$BridgeTypeEnumMap = {
 
 _$RouteResponseImpl _$$RouteResponseImplFromJson(Map<String, dynamic> json) =>
     _$RouteResponseImpl(
-      sourceAssetDenom: json['sourceAssetDenom'] as String,
-      sourceAssetChainID: json['sourceAssetChainID'] as String,
-      destAssetDenom: json['destAssetDenom'] as String,
-      destAssetChainID: json['destAssetChainID'] as String,
-      amountIn: json['amountIn'] as String,
-      amountOut: json['amountOut'] as String,
+      sourceAssetDenom: json['source_asset_denom'] as String,
+      sourceAssetChainID: json['source_asset_chain_id'] as String,
+      destAssetDenom: json['dest_asset_denom'] as String,
+      destAssetChainID: json['dest_asset_chain_id'] as String,
+      amountIn: json['amount_in'] as String,
+      amountOut: json['amount_out'] as String,
       operations: (json['operations'] as List<dynamic>)
           .map((e) => Operation.fromJson(e as Map<String, dynamic>))
           .toList(),
       chainIDs:
-          (json['chainIDs'] as List<dynamic>).map((e) => e as String).toList(),
-      requiredChainAddresses: (json['requiredChainAddresses'] as List<dynamic>)
-          .map((e) => e as String)
-          .toList(),
-      doesSwap: json['doesSwap'] as bool,
-      estimatedAmountOut: json['estimatedAmountOut'] as String?,
-      swapVenues: (json['swapVenues'] as List<dynamic>?)
+          (json['chain_ids'] as List<dynamic>).map((e) => e as String).toList(),
+      requiredChainAddresses:
+          (json['required_chain_addresses'] as List<dynamic>)
+              .map((e) => e as String)
+              .toList(),
+      doesSwap: json['does_swap'] as bool,
+      estimatedAmountOut: json['estimated_amount_out'] as String?,
+      swapVenues: (json['swap_venues'] as List<dynamic>?)
           ?.map((e) => SwapVenue.fromJson(e as Map<String, dynamic>))
           .toList(),
-      txsRequired: (json['txsRequired'] as num).toInt(),
-      usdAmountIn: json['usdAmountIn'] as String?,
-      usdAmountOut: json['usdAmountOut'] as String?,
-      swapPriceImpactPercent: json['swapPriceImpactPercent'] as String?,
+      txsRequired: (json['txs_required'] as num).toInt(),
+      usdAmountIn: json['usd_amount_in'] as String?,
+      usdAmountOut: json['usd_amount_out'] as String?,
+      swapPriceImpactPercent: json['swap_price_impact_percent'] as String?,
       warning: json['warning'] == null
           ? null
           : RouteWarning.fromJson(json['warning'] as Map<String, dynamic>),
-      estimatedFees: (json['estimatedFees'] as List<dynamic>)
+      estimatedFees: (json['estimated_fees'] as List<dynamic>)
           .map((e) => EstimatedFee.fromJson(e as Map<String, dynamic>))
           .toList(),
       estimatedRouteDurationSeconds:
-          (json['estimatedRouteDurationSeconds'] as num).toInt(),
+          (json['estimated_route_duration_seconds'] as num).toInt(),
     );
 
 Map<String, dynamic> _$$RouteResponseImplToJson(_$RouteResponseImpl instance) =>
     <String, dynamic>{
-      'sourceAssetDenom': instance.sourceAssetDenom,
-      'sourceAssetChainID': instance.sourceAssetChainID,
-      'destAssetDenom': instance.destAssetDenom,
-      'destAssetChainID': instance.destAssetChainID,
-      'amountIn': instance.amountIn,
-      'amountOut': instance.amountOut,
+      'source_asset_denom': instance.sourceAssetDenom,
+      'source_asset_chain_id': instance.sourceAssetChainID,
+      'dest_asset_denom': instance.destAssetDenom,
+      'dest_asset_chain_id': instance.destAssetChainID,
+      'amount_in': instance.amountIn,
+      'amount_out': instance.amountOut,
       'operations': instance.operations,
-      'chainIDs': instance.chainIDs,
-      'requiredChainAddresses': instance.requiredChainAddresses,
-      'doesSwap': instance.doesSwap,
-      'estimatedAmountOut': instance.estimatedAmountOut,
-      'swapVenues': instance.swapVenues,
-      'txsRequired': instance.txsRequired,
-      'usdAmountIn': instance.usdAmountIn,
-      'usdAmountOut': instance.usdAmountOut,
-      'swapPriceImpactPercent': instance.swapPriceImpactPercent,
+      'chain_ids': instance.chainIDs,
+      'required_chain_addresses': instance.requiredChainAddresses,
+      'does_swap': instance.doesSwap,
+      'estimated_amount_out': instance.estimatedAmountOut,
+      'swap_venues': instance.swapVenues,
+      'txs_required': instance.txsRequired,
+      'usd_amount_in': instance.usdAmountIn,
+      'usd_amount_out': instance.usdAmountOut,
+      'swap_price_impact_percent': instance.swapPriceImpactPercent,
       'warning': instance.warning,
-      'estimatedFees': instance.estimatedFees,
-      'estimatedRouteDurationSeconds': instance.estimatedRouteDurationSeconds,
+      'estimated_fees': instance.estimatedFees,
+      'estimated_route_duration_seconds':
+          instance.estimatedRouteDurationSeconds,
     };
 
 _$MsgsDirectResponseImpl _$$MsgsDirectResponseImplFromJson(
@@ -526,56 +528,59 @@ Map<String, dynamic> _$$MsgsDirectResponseImplToJson(
       'warning': instance.warning,
     };
 
-_$RouteRequestBaseImpl _$$RouteRequestBaseImplFromJson(
+_$RouteRequestGivenInImpl _$$RouteRequestGivenInImplFromJson(
         Map<String, dynamic> json) =>
-    _$RouteRequestBaseImpl(
-      sourceAssetDenom: json['sourceAssetDenom'] as String,
-      sourceAssetChainID: json['sourceAssetChainID'] as String,
-      destAssetDenom: json['destAssetDenom'] as String,
-      destAssetChainID: json['destAssetChainID'] as String,
-      cumulativeAffiliateFeeBPS: json['cumulativeAffiliateFeeBPS'] as String?,
-      swapVenue: json['swapVenue'] == null
+    _$RouteRequestGivenInImpl(
+      sourceAssetDenom: json['source_asset_denom'] as String,
+      sourceAssetChainID: json['source_asset_chain_id'] as String,
+      destAssetDenom: json['dest_asset_denom'] as String,
+      destAssetChainID: json['dest_asset_chain_id'] as String,
+      amountIn: json['amount_in'] as String,
+      cumulativeAffiliateFeeBPS:
+          json['cumulative_affiliate_fee_bps'] as String?,
+      swapVenue: json['swap_venue'] == null
           ? null
           : SwapVenueRequest.fromJson(
-              json['swapVenue'] as Map<String, dynamic>),
-      swapVenues: (json['swapVenues'] as List<dynamic>?)
+              json['swap_venue'] as Map<String, dynamic>),
+      swapVenues: (json['swap_venues'] as List<dynamic>?)
           ?.map((e) => SwapVenueRequest.fromJson(e as Map<String, dynamic>))
           .toList(),
-      allowUnsafe: json['allowUnsafe'] as bool?,
-      experimentalFeatures: (json['experimentalFeatures'] as List<dynamic>?)
+      allowUnsafe: json['allow_unsafe'] as bool?,
+      experimentalFeatures: (json['experimental_features'] as List<dynamic>?)
           ?.map((e) => $enumDecode(_$ExperimentalFeatureEnumMap, e))
           .toList(),
       bridges: (json['bridges'] as List<dynamic>?)
           ?.map((e) => $enumDecode(_$BridgeTypeEnumMap, e))
           .toList(),
-      allowMultiTx: json['allowMultiTx'] as bool?,
-      smartRelay: json['smartRelay'] as bool?,
-      smartSwapOptions: json['smartSwapOptions'] == null
+      allowMultiTx: json['allow_multi_tx'] as bool?,
+      smartRelay: json['smart_relay'] as bool?,
+      smartSwapOptions: json['smart_swap_options'] == null
           ? null
           : SmartSwapOptions.fromJson(
-              json['smartSwapOptions'] as Map<String, dynamic>),
-      allowSwaps: json['allowSwaps'] as bool?,
+              json['smart_swap_options'] as Map<String, dynamic>),
+      allowSwaps: json['allow_swaps'] as bool?,
     );
 
-Map<String, dynamic> _$$RouteRequestBaseImplToJson(
-        _$RouteRequestBaseImpl instance) =>
+Map<String, dynamic> _$$RouteRequestGivenInImplToJson(
+        _$RouteRequestGivenInImpl instance) =>
     <String, dynamic>{
-      'sourceAssetDenom': instance.sourceAssetDenom,
-      'sourceAssetChainID': instance.sourceAssetChainID,
-      'destAssetDenom': instance.destAssetDenom,
-      'destAssetChainID': instance.destAssetChainID,
-      'cumulativeAffiliateFeeBPS': instance.cumulativeAffiliateFeeBPS,
-      'swapVenue': instance.swapVenue,
-      'swapVenues': instance.swapVenues,
-      'allowUnsafe': instance.allowUnsafe,
-      'experimentalFeatures': instance.experimentalFeatures
+      'source_asset_denom': instance.sourceAssetDenom,
+      'source_asset_chain_id': instance.sourceAssetChainID,
+      'dest_asset_denom': instance.destAssetDenom,
+      'dest_asset_chain_id': instance.destAssetChainID,
+      'amount_in': instance.amountIn,
+      'cumulative_affiliate_fee_bps': instance.cumulativeAffiliateFeeBPS,
+      'swap_venue': instance.swapVenue,
+      'swap_venues': instance.swapVenues,
+      'allow_unsafe': instance.allowUnsafe,
+      'experimental_features': instance.experimentalFeatures
           ?.map((e) => _$ExperimentalFeatureEnumMap[e]!)
           .toList(),
       'bridges': instance.bridges?.map((e) => _$BridgeTypeEnumMap[e]!).toList(),
-      'allowMultiTx': instance.allowMultiTx,
-      'smartRelay': instance.smartRelay,
-      'smartSwapOptions': instance.smartSwapOptions,
-      'allowSwaps': instance.allowSwaps,
+      'allow_multi_tx': instance.allowMultiTx,
+      'smart_relay': instance.smartRelay,
+      'smart_swap_options': instance.smartSwapOptions,
+      'allow_swaps': instance.allowSwaps,
     };
 
 const _$ExperimentalFeatureEnumMap = {
@@ -583,112 +588,59 @@ const _$ExperimentalFeatureEnumMap = {
   ExperimentalFeature.HYPERLANE: 'hyperlane',
 };
 
-_$RouteRequestGivenInImpl _$$RouteRequestGivenInImplFromJson(
-        Map<String, dynamic> json) =>
-    _$RouteRequestGivenInImpl(
-      sourceAssetDenom: json['sourceAssetDenom'] as String,
-      sourceAssetChainID: json['sourceAssetChainID'] as String,
-      destAssetDenom: json['destAssetDenom'] as String,
-      destAssetChainID: json['destAssetChainID'] as String,
-      amountIn: json['amountIn'] as String,
-      cumulativeAffiliateFeeBPS: json['cumulativeAffiliateFeeBPS'] as String?,
-      swapVenue: json['swapVenue'] == null
-          ? null
-          : SwapVenueRequest.fromJson(
-              json['swapVenue'] as Map<String, dynamic>),
-      swapVenues: (json['swapVenues'] as List<dynamic>?)
-          ?.map((e) => SwapVenueRequest.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      allowUnsafe: json['allowUnsafe'] as bool?,
-      experimentalFeatures: (json['experimentalFeatures'] as List<dynamic>?)
-          ?.map((e) => $enumDecode(_$ExperimentalFeatureEnumMap, e))
-          .toList(),
-      bridges: (json['bridges'] as List<dynamic>?)
-          ?.map((e) => $enumDecode(_$BridgeTypeEnumMap, e))
-          .toList(),
-      allowMultiTx: json['allowMultiTx'] as bool?,
-      smartRelay: json['smartRelay'] as bool?,
-      smartSwapOptions: json['smartSwapOptions'] == null
-          ? null
-          : SmartSwapOptions.fromJson(
-              json['smartSwapOptions'] as Map<String, dynamic>),
-      allowSwaps: json['allowSwaps'] as bool?,
-    );
-
-Map<String, dynamic> _$$RouteRequestGivenInImplToJson(
-        _$RouteRequestGivenInImpl instance) =>
-    <String, dynamic>{
-      'sourceAssetDenom': instance.sourceAssetDenom,
-      'sourceAssetChainID': instance.sourceAssetChainID,
-      'destAssetDenom': instance.destAssetDenom,
-      'destAssetChainID': instance.destAssetChainID,
-      'amountIn': instance.amountIn,
-      'cumulativeAffiliateFeeBPS': instance.cumulativeAffiliateFeeBPS,
-      'swapVenue': instance.swapVenue,
-      'swapVenues': instance.swapVenues,
-      'allowUnsafe': instance.allowUnsafe,
-      'experimentalFeatures': instance.experimentalFeatures
-          ?.map((e) => _$ExperimentalFeatureEnumMap[e]!)
-          .toList(),
-      'bridges': instance.bridges?.map((e) => _$BridgeTypeEnumMap[e]!).toList(),
-      'allowMultiTx': instance.allowMultiTx,
-      'smartRelay': instance.smartRelay,
-      'smartSwapOptions': instance.smartSwapOptions,
-      'allowSwaps': instance.allowSwaps,
-    };
-
 _$RouteRequestGivenOutImpl _$$RouteRequestGivenOutImplFromJson(
         Map<String, dynamic> json) =>
     _$RouteRequestGivenOutImpl(
-      sourceAssetDenom: json['sourceAssetDenom'] as String,
-      sourceAssetChainID: json['sourceAssetChainID'] as String,
-      destAssetDenom: json['destAssetDenom'] as String,
-      destAssetChainID: json['destAssetChainID'] as String,
-      amountOut: json['amountOut'] as String,
-      cumulativeAffiliateFeeBPS: json['cumulativeAffiliateFeeBPS'] as String?,
-      swapVenue: json['swapVenue'] == null
+      sourceAssetDenom: json['source_asset_denom'] as String,
+      sourceAssetChainID: json['source_asset_chain_id'] as String,
+      destAssetDenom: json['dest_asset_denom'] as String,
+      destAssetChainID: json['dest_asset_chain_id'] as String,
+      amountOut: json['amount_out'] as String,
+      cumulativeAffiliateFeeBPS:
+          json['cumulative_affiliate_fee_bps'] as String?,
+      swapVenue: json['swap_venue'] == null
           ? null
           : SwapVenueRequest.fromJson(
-              json['swapVenue'] as Map<String, dynamic>),
-      swapVenues: (json['swapVenues'] as List<dynamic>?)
+              json['swap_venue'] as Map<String, dynamic>),
+      swapVenues: (json['swap_venues'] as List<dynamic>?)
           ?.map((e) => SwapVenueRequest.fromJson(e as Map<String, dynamic>))
           .toList(),
-      allowUnsafe: json['allowUnsafe'] as bool?,
-      experimentalFeatures: (json['experimentalFeatures'] as List<dynamic>?)
+      allowUnsafe: json['allow_unsafe'] as bool?,
+      experimentalFeatures: (json['experimental_features'] as List<dynamic>?)
           ?.map((e) => $enumDecode(_$ExperimentalFeatureEnumMap, e))
           .toList(),
       bridges: (json['bridges'] as List<dynamic>?)
           ?.map((e) => $enumDecode(_$BridgeTypeEnumMap, e))
           .toList(),
-      allowMultiTx: json['allowMultiTx'] as bool?,
-      smartRelay: json['smartRelay'] as bool?,
-      smartSwapOptions: json['smartSwapOptions'] == null
+      allowMultiTx: json['allow_multi_tx'] as bool?,
+      smartRelay: json['smart_relay'] as bool?,
+      smartSwapOptions: json['smart_swap_options'] == null
           ? null
           : SmartSwapOptions.fromJson(
-              json['smartSwapOptions'] as Map<String, dynamic>),
-      allowSwaps: json['allowSwaps'] as bool?,
+              json['smart_swap_options'] as Map<String, dynamic>),
+      allowSwaps: json['allow_swaps'] as bool?,
     );
 
 Map<String, dynamic> _$$RouteRequestGivenOutImplToJson(
         _$RouteRequestGivenOutImpl instance) =>
     <String, dynamic>{
-      'sourceAssetDenom': instance.sourceAssetDenom,
-      'sourceAssetChainID': instance.sourceAssetChainID,
-      'destAssetDenom': instance.destAssetDenom,
-      'destAssetChainID': instance.destAssetChainID,
-      'amountOut': instance.amountOut,
-      'cumulativeAffiliateFeeBPS': instance.cumulativeAffiliateFeeBPS,
-      'swapVenue': instance.swapVenue,
-      'swapVenues': instance.swapVenues,
-      'allowUnsafe': instance.allowUnsafe,
-      'experimentalFeatures': instance.experimentalFeatures
+      'source_asset_denom': instance.sourceAssetDenom,
+      'source_asset_chain_id': instance.sourceAssetChainID,
+      'dest_asset_denom': instance.destAssetDenom,
+      'dest_asset_chain_id': instance.destAssetChainID,
+      'amount_out': instance.amountOut,
+      'cumulative_affiliate_fee_bps': instance.cumulativeAffiliateFeeBPS,
+      'swap_venue': instance.swapVenue,
+      'swap_venues': instance.swapVenues,
+      'allow_unsafe': instance.allowUnsafe,
+      'experimental_features': instance.experimentalFeatures
           ?.map((e) => _$ExperimentalFeatureEnumMap[e]!)
           .toList(),
       'bridges': instance.bridges?.map((e) => _$BridgeTypeEnumMap[e]!).toList(),
-      'allowMultiTx': instance.allowMultiTx,
-      'smartRelay': instance.smartRelay,
-      'smartSwapOptions': instance.smartSwapOptions,
-      'allowSwaps': instance.allowSwaps,
+      'allow_multi_tx': instance.allowMultiTx,
+      'smart_relay': instance.smartRelay,
+      'smart_swap_options': instance.smartSwapOptions,
+      'allow_swaps': instance.allowSwaps,
     };
 
 _$GivenInImpl _$$GivenInImplFromJson(Map<String, dynamic> json) =>
@@ -717,133 +669,133 @@ Map<String, dynamic> _$$GivenOutImplToJson(_$GivenOutImpl instance) =>
 
 _$MsgsRequestImpl _$$MsgsRequestImplFromJson(Map<String, dynamic> json) =>
     _$MsgsRequestImpl(
-      sourceAssetDenom: json['sourceAssetDenom'] as String,
-      sourceAssetChainID: json['sourceAssetChainID'] as String,
-      destAssetDenom: json['destAssetDenom'] as String,
-      destAssetChainID: json['destAssetChainID'] as String,
-      amountIn: json['amountIn'] as String,
-      amountOut: json['amountOut'] as String,
-      addressList: (json['addressList'] as List<dynamic>)
+      sourceAssetDenom: json['source_asset_denom'] as String,
+      sourceAssetChainID: json['source_asset_chain_id'] as String,
+      destAssetDenom: json['dest_asset_denom'] as String,
+      destAssetChainID: json['dest_asset_chain_id'] as String,
+      amountIn: json['amount_in'] as String,
+      amountOut: json['amount_out'] as String,
+      addressList: (json['address_list'] as List<dynamic>)
           .map((e) => e as String)
           .toList(),
       operations: (json['operations'] as List<dynamic>)
           .map((e) => Operation.fromJson(e as Map<String, dynamic>))
           .toList(),
-      estimatedAmountOut: json['estimatedAmountOut'] as String?,
-      slippageTolerancePercent: json['slippageTolerancePercent'] as String?,
+      estimatedAmountOut: json['estimated_amount_out'] as String?,
+      slippageTolerancePercent: json['slippage_tolerance_percent'] as String?,
       affiliates: (json['affiliates'] as List<dynamic>?)
           ?.map((e) => Affiliate.fromJson(e as Map<String, dynamic>))
           .toList(),
       chainIDsToAffiliates:
-          (json['chainIDsToAffiliates'] as Map<String, dynamic>?)?.map(
+          (json['chain_ids_to_affiliates'] as Map<String, dynamic>?)?.map(
         (k, e) =>
             MapEntry(k, ChainAffiliates.fromJson(e as Map<String, dynamic>)),
       ),
-      postRouteHandler: json['postRouteHandler'] == null
+      postRouteHandler: json['post_route_handler'] == null
           ? null
           : PostHandler.fromJson(
-              json['postRouteHandler'] as Map<String, dynamic>),
-      enableGasWarnings: json['enableGasWarnings'] as bool?,
+              json['post_route_handler'] as Map<String, dynamic>),
+      enableGasWarnings: json['enable_gas_warnings'] as bool?,
     );
 
 Map<String, dynamic> _$$MsgsRequestImplToJson(_$MsgsRequestImpl instance) =>
     <String, dynamic>{
-      'sourceAssetDenom': instance.sourceAssetDenom,
-      'sourceAssetChainID': instance.sourceAssetChainID,
-      'destAssetDenom': instance.destAssetDenom,
-      'destAssetChainID': instance.destAssetChainID,
-      'amountIn': instance.amountIn,
-      'amountOut': instance.amountOut,
-      'addressList': instance.addressList,
+      'source_asset_denom': instance.sourceAssetDenom,
+      'source_asset_chain_id': instance.sourceAssetChainID,
+      'dest_asset_denom': instance.destAssetDenom,
+      'dest_asset_chain_id': instance.destAssetChainID,
+      'amount_in': instance.amountIn,
+      'amount_out': instance.amountOut,
+      'address_list': instance.addressList,
       'operations': instance.operations,
-      'estimatedAmountOut': instance.estimatedAmountOut,
-      'slippageTolerancePercent': instance.slippageTolerancePercent,
+      'estimated_amount_out': instance.estimatedAmountOut,
+      'slippage_tolerance_percent': instance.slippageTolerancePercent,
       'affiliates': instance.affiliates,
-      'chainIDsToAffiliates': instance.chainIDsToAffiliates,
-      'postRouteHandler': instance.postRouteHandler,
-      'enableGasWarnings': instance.enableGasWarnings,
+      'chain_ids_to_affiliates': instance.chainIDsToAffiliates,
+      'post_route_handler': instance.postRouteHandler,
+      'enable_gas_warnings': instance.enableGasWarnings,
     };
 
 _$MsgsDirectRequestImpl _$$MsgsDirectRequestImplFromJson(
         Map<String, dynamic> json) =>
     _$MsgsDirectRequestImpl(
-      sourceAssetDenom: json['sourceAssetDenom'] as String,
-      sourceAssetChainID: json['sourceAssetChainID'] as String,
-      destAssetDenom: json['destAssetDenom'] as String,
-      destAssetChainID: json['destAssetChainID'] as String,
-      amountIn: json['amountIn'] as String,
-      amountOut: json['amountOut'] as String,
+      sourceAssetDenom: json['source_asset_denom'] as String,
+      sourceAssetChainID: json['source_asset_chain_id'] as String,
+      destAssetDenom: json['dest_asset_denom'] as String,
+      destAssetChainID: json['dest_asset_chain_id'] as String,
+      amountIn: json['amount_in'] as String,
+      amountOut: json['amount_out'] as String,
       chainIdsToAddresses:
-          Map<String, String>.from(json['chainIdsToAddresses'] as Map),
-      swapVenue: json['swapVenue'] == null
+          Map<String, String>.from(json['chain_ids_to_addresses'] as Map),
+      swapVenue: json['swap_venue'] == null
           ? null
-          : SwapVenue.fromJson(json['swapVenue'] as Map<String, dynamic>),
-      swapVenues: (json['swapVenues'] as List<dynamic>?)
+          : SwapVenue.fromJson(json['swap_venue'] as Map<String, dynamic>),
+      swapVenues: (json['swap_venues'] as List<dynamic>?)
           ?.map((e) => SwapVenue.fromJson(e as Map<String, dynamic>))
           .toList(),
-      slippageTolerancePercent: json['slippageTolerancePercent'] as String?,
-      timeoutSeconds: json['timeoutSeconds'] as String?,
+      slippageTolerancePercent: json['slippage_tolerance_percent'] as String?,
+      timeoutSeconds: json['timeout_seconds'] as String?,
       affiliates: (json['affiliates'] as List<dynamic>?)
           ?.map((e) => Affiliate.fromJson(e as Map<String, dynamic>))
           .toList(),
       chainIDsToAffiliates:
-          (json['chainIDsToAffiliates'] as Map<String, dynamic>?)?.map(
+          (json['chain_ids_to_affiliates'] as Map<String, dynamic>?)?.map(
         (k, e) =>
             MapEntry(k, ChainAffiliates.fromJson(e as Map<String, dynamic>)),
       ),
-      postRouteHandler: json['postRouteHandler'] == null
+      postRouteHandler: json['post_route_handler'] == null
           ? null
           : PostHandler.fromJson(
-              json['postRouteHandler'] as Map<String, dynamic>),
-      allowUnsafe: json['allowUnsafe'] as bool?,
-      experimentalFeatures: (json['experimentalFeatures'] as List<dynamic>?)
+              json['post_route_handler'] as Map<String, dynamic>),
+      allowUnsafe: json['allow_unsafe'] as bool?,
+      experimentalFeatures: (json['experimental_features'] as List<dynamic>?)
           ?.map((e) => $enumDecode(_$ExperimentalFeatureEnumMap, e))
           .toList(),
       bridges: (json['bridges'] as List<dynamic>?)
           ?.map((e) => $enumDecode(_$BridgeTypeEnumMap, e))
           .toList(),
-      allowMultiTx: json['allowMultiTx'] as bool?,
-      smartRelay: json['smartRelay'] as bool?,
-      smartSwapOptions: json['smartSwapOptions'] == null
+      allowMultiTx: json['allow_multi_tx'] as bool?,
+      smartRelay: json['smart_relay'] as bool?,
+      smartSwapOptions: json['smart_swap_options'] == null
           ? null
           : SmartSwapOptions.fromJson(
-              json['smartSwapOptions'] as Map<String, dynamic>),
-      allowSwaps: json['allowSwaps'] as bool?,
-      enableGasWarnings: json['enableGasWarnings'] as bool?,
+              json['smart_swap_options'] as Map<String, dynamic>),
+      allowSwaps: json['allow_swaps'] as bool?,
+      enableGasWarnings: json['enable_gas_warnings'] as bool?,
     );
 
 Map<String, dynamic> _$$MsgsDirectRequestImplToJson(
         _$MsgsDirectRequestImpl instance) =>
     <String, dynamic>{
-      'sourceAssetDenom': instance.sourceAssetDenom,
-      'sourceAssetChainID': instance.sourceAssetChainID,
-      'destAssetDenom': instance.destAssetDenom,
-      'destAssetChainID': instance.destAssetChainID,
-      'amountIn': instance.amountIn,
-      'amountOut': instance.amountOut,
-      'chainIdsToAddresses': instance.chainIdsToAddresses,
-      'swapVenue': instance.swapVenue,
-      'swapVenues': instance.swapVenues,
-      'slippageTolerancePercent': instance.slippageTolerancePercent,
-      'timeoutSeconds': instance.timeoutSeconds,
+      'source_asset_denom': instance.sourceAssetDenom,
+      'source_asset_chain_id': instance.sourceAssetChainID,
+      'dest_asset_denom': instance.destAssetDenom,
+      'dest_asset_chain_id': instance.destAssetChainID,
+      'amount_in': instance.amountIn,
+      'amount_out': instance.amountOut,
+      'chain_ids_to_addresses': instance.chainIdsToAddresses,
+      'swap_venue': instance.swapVenue,
+      'swap_venues': instance.swapVenues,
+      'slippage_tolerance_percent': instance.slippageTolerancePercent,
+      'timeout_seconds': instance.timeoutSeconds,
       'affiliates': instance.affiliates,
-      'chainIDsToAffiliates': instance.chainIDsToAffiliates,
-      'postRouteHandler': instance.postRouteHandler,
-      'allowUnsafe': instance.allowUnsafe,
-      'experimentalFeatures': instance.experimentalFeatures
+      'chain_ids_to_affiliates': instance.chainIDsToAffiliates,
+      'post_route_handler': instance.postRouteHandler,
+      'allow_unsafe': instance.allowUnsafe,
+      'experimental_features': instance.experimentalFeatures
           ?.map((e) => _$ExperimentalFeatureEnumMap[e]!)
           .toList(),
       'bridges': instance.bridges?.map((e) => _$BridgeTypeEnumMap[e]!).toList(),
-      'allowMultiTx': instance.allowMultiTx,
-      'smartRelay': instance.smartRelay,
-      'smartSwapOptions': instance.smartSwapOptions,
-      'allowSwaps': instance.allowSwaps,
-      'enableGasWarnings': instance.enableGasWarnings,
+      'allow_multi_tx': instance.allowMultiTx,
+      'smart_relay': instance.smartRelay,
+      'smart_swap_options': instance.smartSwapOptions,
+      'allow_swaps': instance.allowSwaps,
+      'enable_gas_warnings': instance.enableGasWarnings,
     };
 
 _$MsgsResponseImpl _$$MsgsResponseImplFromJson(Map<String, dynamic> json) =>
     _$MsgsResponseImpl(
-      estimatedFees: (json['estimatedFees'] as List<dynamic>)
+      estimatedFees: (json['estimated_fees'] as List<dynamic>)
           .map((e) => EstimatedFee.fromJson(e as Map<String, dynamic>))
           .toList(),
       txs: (json['txs'] as List<dynamic>)
@@ -856,7 +808,7 @@ _$MsgsResponseImpl _$$MsgsResponseImplFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$MsgsResponseImplToJson(_$MsgsResponseImpl instance) =>
     <String, dynamic>{
-      'estimatedFees': instance.estimatedFees,
+      'estimated_fees': instance.estimatedFees,
       'txs': instance.txs,
       'warning': instance.warning,
     };
@@ -865,9 +817,10 @@ _$AssetBetweenChainsImpl _$$AssetBetweenChainsImplFromJson(
         Map<String, dynamic> json) =>
     _$AssetBetweenChainsImpl(
       assetOnSource:
-          Asset.fromJson(json['assetOnSource'] as Map<String, dynamic>),
-      assetOnDest: Asset.fromJson(json['assetOnDest'] as Map<String, dynamic>),
-      txsRequired: (json['txsRequired'] as num).toInt(),
+          Asset.fromJson(json['asset_on_source'] as Map<String, dynamic>),
+      assetOnDest:
+          Asset.fromJson(json['asset_on_dest'] as Map<String, dynamic>),
+      txsRequired: (json['txs_required'] as num).toInt(),
       bridges: (json['bridges'] as List<dynamic>)
           .map((e) => $enumDecode(_$BridgeTypeEnumMap, e))
           .toList(),
@@ -876,38 +829,38 @@ _$AssetBetweenChainsImpl _$$AssetBetweenChainsImplFromJson(
 Map<String, dynamic> _$$AssetBetweenChainsImplToJson(
         _$AssetBetweenChainsImpl instance) =>
     <String, dynamic>{
-      'assetOnSource': instance.assetOnSource,
-      'assetOnDest': instance.assetOnDest,
-      'txsRequired': instance.txsRequired,
+      'asset_on_source': instance.assetOnSource,
+      'asset_on_dest': instance.assetOnDest,
+      'txs_required': instance.txsRequired,
       'bridges': instance.bridges.map((e) => _$BridgeTypeEnumMap[e]!).toList(),
     };
 
 _$AssetsBetweenChainsRequestImpl _$$AssetsBetweenChainsRequestImplFromJson(
         Map<String, dynamic> json) =>
     _$AssetsBetweenChainsRequestImpl(
-      sourceChainID: json['sourceChainID'] as String,
-      destChainID: json['destChainID'] as String,
-      includeNoMetadataAssets: json['includeNoMetadataAssets'] as bool?,
-      includeCW20Assets: json['includeCW20Assets'] as bool?,
-      includeEvmAssets: json['includeEvmAssets'] as bool?,
-      allowMultiTx: json['allowMultiTx'] as bool?,
+      sourceChainID: json['source_chain_id'] as String,
+      destChainID: json['dest_chain_id'] as String,
+      includeNoMetadataAssets: json['include_no_metadata_assets'] as bool?,
+      includeCW20Assets: json['include_cw20_assets'] as bool?,
+      includeEvmAssets: json['include_evm_assets'] as bool?,
+      allowMultiTx: json['allow_multi_tx'] as bool?,
     );
 
 Map<String, dynamic> _$$AssetsBetweenChainsRequestImplToJson(
         _$AssetsBetweenChainsRequestImpl instance) =>
     <String, dynamic>{
-      'sourceChainID': instance.sourceChainID,
-      'destChainID': instance.destChainID,
-      'includeNoMetadataAssets': instance.includeNoMetadataAssets,
-      'includeCW20Assets': instance.includeCW20Assets,
-      'includeEvmAssets': instance.includeEvmAssets,
-      'allowMultiTx': instance.allowMultiTx,
+      'source_chain_id': instance.sourceChainID,
+      'dest_chain_id': instance.destChainID,
+      'include_no_metadata_assets': instance.includeNoMetadataAssets,
+      'include_cw20_assets': instance.includeCW20Assets,
+      'include_evm_assets': instance.includeEvmAssets,
+      'allow_multi_tx': instance.allowMultiTx,
     };
 
 _$AssetsBetweenChainsResponseImpl _$$AssetsBetweenChainsResponseImplFromJson(
         Map<String, dynamic> json) =>
     _$AssetsBetweenChainsResponseImpl(
-      assetsBetweenChains: (json['assetsBetweenChains'] as List<dynamic>)
+      assetsBetweenChains: (json['assets_between_chains'] as List<dynamic>)
           .map((e) => AssetBetweenChains.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
@@ -915,20 +868,20 @@ _$AssetsBetweenChainsResponseImpl _$$AssetsBetweenChainsResponseImplFromJson(
 Map<String, dynamic> _$$AssetsBetweenChainsResponseImplToJson(
         _$AssetsBetweenChainsResponseImpl instance) =>
     <String, dynamic>{
-      'assetsBetweenChains': instance.assetsBetweenChains,
+      'assets_between_chains': instance.assetsBetweenChains,
     };
 
 _$BridgeImpl _$$BridgeImplFromJson(Map<String, dynamic> json) => _$BridgeImpl(
       id: $enumDecode(_$BridgeTypeEnumMap, json['id']),
       name: json['name'] as String,
-      logoURI: json['logoURI'] as String,
+      logoURI: json['logo_uri'] as String,
     );
 
 Map<String, dynamic> _$$BridgeImplToJson(_$BridgeImpl instance) =>
     <String, dynamic>{
       'id': _$BridgeTypeEnumMap[instance.id]!,
       'name': instance.name,
-      'logoURI': instance.logoURI,
+      'logo_uri': instance.logoURI,
     };
 
 _$BridgesResponseImpl _$$BridgesResponseImplFromJson(

@@ -10,66 +10,66 @@ _$SubmitTxRequestImpl _$$SubmitTxRequestImplFromJson(
         Map<String, dynamic> json) =>
     _$SubmitTxRequestImpl(
       tx: json['tx'] as String,
-      chainID: json['chainID'] as String,
+      chainID: json['chain_id'] as String,
     );
 
 Map<String, dynamic> _$$SubmitTxRequestImplToJson(
         _$SubmitTxRequestImpl instance) =>
     <String, dynamic>{
       'tx': instance.tx,
-      'chainID': instance.chainID,
+      'chain_id': instance.chainID,
     };
 
 _$SubmitTxResponseImpl _$$SubmitTxResponseImplFromJson(
         Map<String, dynamic> json) =>
     _$SubmitTxResponseImpl(
-      txHash: json['txHash'] as String,
+      txHash: json['tx_hash'] as String,
     );
 
 Map<String, dynamic> _$$SubmitTxResponseImplToJson(
         _$SubmitTxResponseImpl instance) =>
     <String, dynamic>{
-      'txHash': instance.txHash,
+      'tx_hash': instance.txHash,
     };
 
 _$NextBlockingTransferImpl _$$NextBlockingTransferImplFromJson(
         Map<String, dynamic> json) =>
     _$NextBlockingTransferImpl(
-      transferSequenceIndex: (json['transferSequenceIndex'] as num).toInt(),
+      transferSequenceIndex: (json['transfer_sequence_index'] as num).toInt(),
     );
 
 Map<String, dynamic> _$$NextBlockingTransferImplToJson(
         _$NextBlockingTransferImpl instance) =>
     <String, dynamic>{
-      'transferSequenceIndex': instance.transferSequenceIndex,
+      'transfer_sequence_index': instance.transferSequenceIndex,
     };
 
 _$StatusRequestImpl _$$StatusRequestImplFromJson(Map<String, dynamic> json) =>
     _$StatusRequestImpl(
-      txHash: json['txHash'] as String,
-      chainID: json['chainID'] as String,
+      txHash: json['tx_hash'] as String,
+      chainID: json['chain_id'] as String,
     );
 
 Map<String, dynamic> _$$StatusRequestImplToJson(_$StatusRequestImpl instance) =>
     <String, dynamic>{
-      'txHash': instance.txHash,
-      'chainID': instance.chainID,
+      'tx_hash': instance.txHash,
+      'chain_id': instance.chainID,
     };
 
 _$TransferInfoImpl _$$TransferInfoImplFromJson(Map<String, dynamic> json) =>
     _$TransferInfoImpl(
-      fromChainID: json['fromChainID'] as String,
-      toChainID: json['toChainID'] as String,
+      fromChainID: json['from_chain_id'] as String,
+      toChainID: json['to_chain_id'] as String,
       state: $enumDecode(_$TransferStateEnumMap, json['state']),
-      packetTXs: Packet.fromJson(json['packetTXs'] as Map<String, dynamic>),
+      packetTXs: Packet.fromJson(json['packet_txs'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$TransferInfoImplToJson(_$TransferInfoImpl instance) =>
     <String, dynamic>{
-      'fromChainID': instance.fromChainID,
-      'toChainID': instance.toChainID,
+      'from_chain_id': instance.fromChainID,
+      'to_chain_id': instance.toChainID,
       'state': _$TransferStateEnumMap[instance.state]!,
-      'packetTXs': instance.packetTXs,
+      'packet_txs': instance.packetTXs,
     };
 
 const _$TransferStateEnumMap = {
@@ -83,7 +83,7 @@ const _$TransferStateEnumMap = {
 _$TransferAssetReleaseImpl _$$TransferAssetReleaseImplFromJson(
         Map<String, dynamic> json) =>
     _$TransferAssetReleaseImpl(
-      chainID: json['chainID'] as String,
+      chainID: json['chain_id'] as String,
       denom: json['denom'] as String,
       released: json['released'] as bool,
     );
@@ -91,7 +91,7 @@ _$TransferAssetReleaseImpl _$$TransferAssetReleaseImplFromJson(
 Map<String, dynamic> _$$TransferAssetReleaseImplToJson(
         _$TransferAssetReleaseImpl instance) =>
     <String, dynamic>{
-      'chainID': instance.chainID,
+      'chain_id': instance.chainID,
       'denom': instance.denom,
       'released': instance.released,
     };
@@ -100,17 +100,17 @@ _$TxStatusResponseImpl _$$TxStatusResponseImplFromJson(
         Map<String, dynamic> json) =>
     _$TxStatusResponseImpl(
       status: $enumDecode(_$StatusStateEnumMap, json['status']),
-      transferSequence: (json['transferSequence'] as List<dynamic>)
+      transferSequence: (json['transfer_sequence'] as List<dynamic>)
           .map((e) => TransferEvent.fromJson(e as Map<String, dynamic>))
           .toList(),
-      nextBlockingTransfer: json['nextBlockingTransfer'] == null
+      nextBlockingTransfer: json['next_blocking_transfer'] == null
           ? null
           : NextBlockingTransfer.fromJson(
-              json['nextBlockingTransfer'] as Map<String, dynamic>),
-      transferAssetRelease: json['transferAssetRelease'] == null
+              json['next_blocking_transfer'] as Map<String, dynamic>),
+      transferAssetRelease: json['transfer_asset_release'] == null
           ? null
           : TransferAssetRelease.fromJson(
-              json['transferAssetRelease'] as Map<String, dynamic>),
+              json['transfer_asset_release'] as Map<String, dynamic>),
       error: json['error'] == null
           ? null
           : StatusError.fromJson(json['error'] as Map<String, dynamic>),
@@ -124,9 +124,9 @@ Map<String, dynamic> _$$TxStatusResponseImplToJson(
         _$TxStatusResponseImpl instance) =>
     <String, dynamic>{
       'status': _$StatusStateEnumMap[instance.status]!,
-      'transferSequence': instance.transferSequence,
-      'nextBlockingTransfer': instance.nextBlockingTransfer,
-      'transferAssetRelease': instance.transferAssetRelease,
+      'transfer_sequence': instance.transferSequence,
+      'next_blocking_transfer': instance.nextBlockingTransfer,
+      'transfer_asset_release': instance.transferAssetRelease,
       'error': instance.error,
       'state': _$StatusStateEnumMap[instance.state]!,
       'transfers': instance.transfers,
@@ -147,17 +147,17 @@ const _$StatusStateEnumMap = {
 _$TransferStatusImpl _$$TransferStatusImplFromJson(Map<String, dynamic> json) =>
     _$TransferStatusImpl(
       state: $enumDecode(_$StatusStateEnumMap, json['state']),
-      transferSequence: (json['transferSequence'] as List<dynamic>)
+      transferSequence: (json['transfer_sequence'] as List<dynamic>)
           .map((e) => TransferEvent.fromJson(e as Map<String, dynamic>))
           .toList(),
-      nextBlockingTransfer: json['nextBlockingTransfer'] == null
+      nextBlockingTransfer: json['next_blocking_transfer'] == null
           ? null
           : NextBlockingTransfer.fromJson(
-              json['nextBlockingTransfer'] as Map<String, dynamic>),
-      transferAssetRelease: json['transferAssetRelease'] == null
+              json['next_blocking_transfer'] as Map<String, dynamic>),
+      transferAssetRelease: json['transfer_asset_release'] == null
           ? null
           : TransferAssetRelease.fromJson(
-              json['transferAssetRelease'] as Map<String, dynamic>),
+              json['transfer_asset_release'] as Map<String, dynamic>),
       error: json['error'] == null
           ? null
           : StatusError.fromJson(json['error'] as Map<String, dynamic>),
@@ -167,28 +167,28 @@ Map<String, dynamic> _$$TransferStatusImplToJson(
         _$TransferStatusImpl instance) =>
     <String, dynamic>{
       'state': _$StatusStateEnumMap[instance.state]!,
-      'transferSequence': instance.transferSequence,
-      'nextBlockingTransfer': instance.nextBlockingTransfer,
-      'transferAssetRelease': instance.transferAssetRelease,
+      'transfer_sequence': instance.transferSequence,
+      'next_blocking_transfer': instance.nextBlockingTransfer,
+      'transfer_asset_release': instance.transferAssetRelease,
       'error': instance.error,
     };
 
 _$PacketImpl _$$PacketImplFromJson(Map<String, dynamic> json) => _$PacketImpl(
-      sendTx: json['sendTx'] == null
+      sendTx: json['send_tx'] == null
           ? null
-          : ChainTransaction.fromJson(json['sendTx'] as Map<String, dynamic>),
-      receiveTx: json['receiveTx'] == null
-          ? null
-          : ChainTransaction.fromJson(
-              json['receiveTx'] as Map<String, dynamic>),
-      acknowledgeTx: json['acknowledgeTx'] == null
+          : ChainTransaction.fromJson(json['send_tx'] as Map<String, dynamic>),
+      receiveTx: json['receive_tx'] == null
           ? null
           : ChainTransaction.fromJson(
-              json['acknowledgeTx'] as Map<String, dynamic>),
-      timeoutTx: json['timeoutTx'] == null
+              json['receive_tx'] as Map<String, dynamic>),
+      acknowledgeTx: json['acknowledge_tx'] == null
           ? null
           : ChainTransaction.fromJson(
-              json['timeoutTx'] as Map<String, dynamic>),
+              json['acknowledge_tx'] as Map<String, dynamic>),
+      timeoutTx: json['timeout_tx'] == null
+          ? null
+          : ChainTransaction.fromJson(
+              json['timeout_tx'] as Map<String, dynamic>),
       error: json['error'] == null
           ? null
           : PacketError.fromJson(json['error'] as Map<String, dynamic>),
@@ -196,10 +196,10 @@ _$PacketImpl _$$PacketImplFromJson(Map<String, dynamic> json) => _$PacketImpl(
 
 Map<String, dynamic> _$$PacketImplToJson(_$PacketImpl instance) =>
     <String, dynamic>{
-      'sendTx': instance.sendTx,
-      'receiveTx': instance.receiveTx,
-      'acknowledgeTx': instance.acknowledgeTx,
-      'timeoutTx': instance.timeoutTx,
+      'send_tx': instance.sendTx,
+      'receive_tx': instance.receiveTx,
+      'acknowledge_tx': instance.acknowledgeTx,
+      'timeout_tx': instance.timeoutTx,
       'error': instance.error,
     };
 
@@ -245,13 +245,13 @@ _$StatusErrorDetailsImpl _$$StatusErrorDetailsImplFromJson(
         Map<String, dynamic> json) =>
     _$StatusErrorDetailsImpl(
       transactionExecutionError: TransactionExecutionError.fromJson(
-          json['transactionExecutionError'] as Map<String, dynamic>),
+          json['transaction_execution_error'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$StatusErrorDetailsImplToJson(
         _$StatusErrorDetailsImpl instance) =>
     <String, dynamic>{
-      'transactionExecutionError': instance.transactionExecutionError,
+      'transaction_execution_error': instance.transactionExecutionError,
     };
 
 _$AcknowledgementErrorImpl _$$AcknowledgementErrorImplFromJson(
@@ -295,79 +295,79 @@ _$PacketErrorDetailsImpl _$$PacketErrorDetailsImplFromJson(
         Map<String, dynamic> json) =>
     _$PacketErrorDetailsImpl(
       acknowledgementError: AcknowledgementError.fromJson(
-          json['acknowledgementError'] as Map<String, dynamic>),
+          json['acknowledgement_error'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$PacketErrorDetailsImplToJson(
         _$PacketErrorDetailsImpl instance) =>
     <String, dynamic>{
-      'acknowledgementError': instance.acknowledgementError,
+      'acknowledgement_error': instance.acknowledgementError,
     };
 
 _$ChainTransactionImpl _$$ChainTransactionImplFromJson(
         Map<String, dynamic> json) =>
     _$ChainTransactionImpl(
-      chainID: json['chainID'] as String,
-      txHash: json['txHash'] as String,
-      explorerLink: json['explorerLink'] as String,
+      chainID: json['chain_id'] as String,
+      txHash: json['tx_hash'] as String,
+      explorerLink: json['explorer_link'] as String,
     );
 
 Map<String, dynamic> _$$ChainTransactionImplToJson(
         _$ChainTransactionImpl instance) =>
     <String, dynamic>{
-      'chainID': instance.chainID,
-      'txHash': instance.txHash,
-      'explorerLink': instance.explorerLink,
+      'chain_id': instance.chainID,
+      'tx_hash': instance.txHash,
+      'explorer_link': instance.explorerLink,
     };
 
 _$TrackTxRequestImpl _$$TrackTxRequestImplFromJson(Map<String, dynamic> json) =>
     _$TrackTxRequestImpl(
-      txHash: json['txHash'] as String,
-      chainID: json['chainID'] as String,
+      txHash: json['tx_hash'] as String,
+      chainID: json['chain_id'] as String,
     );
 
 Map<String, dynamic> _$$TrackTxRequestImplToJson(
         _$TrackTxRequestImpl instance) =>
     <String, dynamic>{
-      'txHash': instance.txHash,
-      'chainID': instance.chainID,
+      'tx_hash': instance.txHash,
+      'chain_id': instance.chainID,
     };
 
 _$TrackTxResponseImpl _$$TrackTxResponseImplFromJson(
         Map<String, dynamic> json) =>
     _$TrackTxResponseImpl(
-      txHash: json['txHash'] as String,
-      explorerLink: json['explorerLink'] as String,
+      txHash: json['tx_hash'] as String,
+      explorerLink: json['explorer_link'] as String,
     );
 
 Map<String, dynamic> _$$TrackTxResponseImplToJson(
         _$TrackTxResponseImpl instance) =>
     <String, dynamic>{
-      'txHash': instance.txHash,
-      'explorerLink': instance.explorerLink,
+      'tx_hash': instance.txHash,
+      'explorer_link': instance.explorerLink,
     };
 
 _$AxelarTransferInfoImpl _$$AxelarTransferInfoImplFromJson(
         Map<String, dynamic> json) =>
     _$AxelarTransferInfoImpl(
-      fromChainID: json['fromChainID'] as String,
-      toChainID: json['toChainID'] as String,
+      fromChainID: json['from_chain_id'] as String,
+      toChainID: json['to_chain_id'] as String,
       type: $enumDecode(_$AxelarTransferTypeEnumMap, json['type']),
       state: $enumDecode(_$AxelarTransferStateEnumMap, json['state']),
       txs: AxelarTransferTransactions.fromJson(
           json['txs'] as Map<String, dynamic>),
-      axelarScanLink: json['axelarScanLink'] as String,
+      axelarScanLink: json['axelar_scan_link'] as String,
     );
 
 Map<String, dynamic> _$$AxelarTransferInfoImplToJson(
         _$AxelarTransferInfoImpl instance) =>
     <String, dynamic>{
-      'fromChainID': instance.fromChainID,
-      'toChainID': instance.toChainID,
+      'from_chain_id': instance.fromChainID,
+      'to_chain_id': instance.toChainID,
       'type': _$AxelarTransferTypeEnumMap[instance.type]!,
       'state': _$AxelarTransferStateEnumMap[instance.state]!,
       'txs': instance.txs,
-      'axelarScanLink': instance.axelarScanLink,
+      'axelar_scan_link': instance.axelarScanLink,
     };
 
 const _$AxelarTransferTypeEnumMap = {
@@ -390,27 +390,27 @@ _$ContractCallWithTokenTxsImpl _$$ContractCallWithTokenTxsImplFromJson(
         Map<String, dynamic> json) =>
     _$ContractCallWithTokenTxsImpl(
       contractCallWithTokenTxs: ContractCallWithTokenTransactions.fromJson(
-          json['contractCallWithTokenTxs'] as Map<String, dynamic>),
+          json['contract_call_with_token_txs'] as Map<String, dynamic>),
       $type: json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$ContractCallWithTokenTxsImplToJson(
         _$ContractCallWithTokenTxsImpl instance) =>
     <String, dynamic>{
-      'contractCallWithTokenTxs': instance.contractCallWithTokenTxs,
+      'contract_call_with_token_txs': instance.contractCallWithTokenTxs,
       'runtimeType': instance.$type,
     };
 
 _$SendTokenTxsImpl _$$SendTokenTxsImplFromJson(Map<String, dynamic> json) =>
     _$SendTokenTxsImpl(
       sendTokenTxs: SendTokenTransactions.fromJson(
-          json['sendTokenTxs'] as Map<String, dynamic>),
+          json['send_token_txs'] as Map<String, dynamic>),
       $type: json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$SendTokenTxsImplToJson(_$SendTokenTxsImpl instance) =>
     <String, dynamic>{
-      'sendTokenTxs': instance.sendTokenTxs,
+      'send_token_txs': instance.sendTokenTxs,
       'runtimeType': instance.$type,
     };
 
@@ -418,26 +418,26 @@ _$ContractCallWithTokenTransactionsImpl
     _$$ContractCallWithTokenTransactionsImplFromJson(
             Map<String, dynamic> json) =>
         _$ContractCallWithTokenTransactionsImpl(
-          sendTx: json['sendTx'] == null
+          sendTx: json['send_tx'] == null
               ? null
               : ChainTransaction.fromJson(
-                  json['sendTx'] as Map<String, dynamic>),
-          gasPaidTx: json['gasPaidTx'] == null
+                  json['send_tx'] as Map<String, dynamic>),
+          gasPaidTx: json['gas_paid_tx'] == null
               ? null
               : ChainTransaction.fromJson(
-                  json['gasPaidTx'] as Map<String, dynamic>),
-          confirmTx: json['confirmTx'] == null
+                  json['gas_paid_tx'] as Map<String, dynamic>),
+          confirmTx: json['confirm_tx'] == null
               ? null
               : ChainTransaction.fromJson(
-                  json['confirmTx'] as Map<String, dynamic>),
-          approveTx: json['approveTx'] == null
+                  json['confirm_tx'] as Map<String, dynamic>),
+          approveTx: json['approve_tx'] == null
               ? null
               : ChainTransaction.fromJson(
-                  json['approveTx'] as Map<String, dynamic>),
-          executeTx: json['executeTx'] == null
+                  json['approve_tx'] as Map<String, dynamic>),
+          executeTx: json['execute_tx'] == null
               ? null
               : ChainTransaction.fromJson(
-                  json['executeTx'] as Map<String, dynamic>),
+                  json['execute_tx'] as Map<String, dynamic>),
           error: json['error'] == null
               ? null
               : ContractCallWithTokenError.fromJson(
@@ -447,11 +447,11 @@ _$ContractCallWithTokenTransactionsImpl
 Map<String, dynamic> _$$ContractCallWithTokenTransactionsImplToJson(
         _$ContractCallWithTokenTransactionsImpl instance) =>
     <String, dynamic>{
-      'sendTx': instance.sendTx,
-      'gasPaidTx': instance.gasPaidTx,
-      'confirmTx': instance.confirmTx,
-      'approveTx': instance.approveTx,
-      'executeTx': instance.executeTx,
+      'send_tx': instance.sendTx,
+      'gas_paid_tx': instance.gasPaidTx,
+      'confirm_tx': instance.confirmTx,
+      'approve_tx': instance.approveTx,
+      'execute_tx': instance.executeTx,
       'error': instance.error,
     };
 
@@ -477,17 +477,17 @@ const _$ContractCallWithTokenErrorTypeEnumMap = {
 _$SendTokenTransactionsImpl _$$SendTokenTransactionsImplFromJson(
         Map<String, dynamic> json) =>
     _$SendTokenTransactionsImpl(
-      sendTx: json['sendTx'] == null
+      sendTx: json['send_tx'] == null
           ? null
-          : ChainTransaction.fromJson(json['sendTx'] as Map<String, dynamic>),
-      confirmTx: json['confirmTx'] == null
-          ? null
-          : ChainTransaction.fromJson(
-              json['confirmTx'] as Map<String, dynamic>),
-      executeTx: json['executeTx'] == null
+          : ChainTransaction.fromJson(json['send_tx'] as Map<String, dynamic>),
+      confirmTx: json['confirm_tx'] == null
           ? null
           : ChainTransaction.fromJson(
-              json['executeTx'] as Map<String, dynamic>),
+              json['confirm_tx'] as Map<String, dynamic>),
+      executeTx: json['execute_tx'] == null
+          ? null
+          : ChainTransaction.fromJson(
+              json['execute_tx'] as Map<String, dynamic>),
       error: json['error'] == null
           ? null
           : SendTokenError.fromJson(json['error'] as Map<String, dynamic>),
@@ -496,9 +496,9 @@ _$SendTokenTransactionsImpl _$$SendTokenTransactionsImplFromJson(
 Map<String, dynamic> _$$SendTokenTransactionsImplToJson(
         _$SendTokenTransactionsImpl instance) =>
     <String, dynamic>{
-      'sendTx': instance.sendTx,
-      'confirmTx': instance.confirmTx,
-      'executeTx': instance.executeTx,
+      'send_tx': instance.sendTx,
+      'confirm_tx': instance.confirmTx,
+      'execute_tx': instance.executeTx,
       'error': instance.error,
     };
 
@@ -522,27 +522,27 @@ const _$SendTokenErrorTypeEnumMap = {
 _$CCTPTransferTransactionsImpl _$$CCTPTransferTransactionsImplFromJson(
         Map<String, dynamic> json) =>
     _$CCTPTransferTransactionsImpl(
-      sendTx: json['sendTx'] == null
+      sendTx: json['send_tx'] == null
           ? null
-          : ChainTransaction.fromJson(json['sendTx'] as Map<String, dynamic>),
-      receiveTx: json['receiveTx'] == null
+          : ChainTransaction.fromJson(json['send_tx'] as Map<String, dynamic>),
+      receiveTx: json['receive_tx'] == null
           ? null
           : ChainTransaction.fromJson(
-              json['receiveTx'] as Map<String, dynamic>),
+              json['receive_tx'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$CCTPTransferTransactionsImplToJson(
         _$CCTPTransferTransactionsImpl instance) =>
     <String, dynamic>{
-      'sendTx': instance.sendTx,
-      'receiveTx': instance.receiveTx,
+      'send_tx': instance.sendTx,
+      'receive_tx': instance.receiveTx,
     };
 
 _$CCTPTransferInfoImpl _$$CCTPTransferInfoImplFromJson(
         Map<String, dynamic> json) =>
     _$CCTPTransferInfoImpl(
-      fromChainID: json['fromChainID'] as String,
-      toChainID: json['toChainID'] as String,
+      fromChainID: json['from_chain_id'] as String,
+      toChainID: json['to_chain_id'] as String,
       state: $enumDecode(_$CCTPTransferStateEnumMap, json['state']),
       txs: CCTPTransferTransactions.fromJson(
           json['txs'] as Map<String, dynamic>),
@@ -551,8 +551,8 @@ _$CCTPTransferInfoImpl _$$CCTPTransferInfoImplFromJson(
 Map<String, dynamic> _$$CCTPTransferInfoImplToJson(
         _$CCTPTransferInfoImpl instance) =>
     <String, dynamic>{
-      'fromChainID': instance.fromChainID,
-      'toChainID': instance.toChainID,
+      'from_chain_id': instance.fromChainID,
+      'to_chain_id': instance.toChainID,
       'state': _$CCTPTransferStateEnumMap[instance.state]!,
       'txs': instance.txs,
     };
@@ -569,28 +569,28 @@ const _$CCTPTransferStateEnumMap = {
 _$HyperlaneTransferTransactionsImpl
     _$$HyperlaneTransferTransactionsImplFromJson(Map<String, dynamic> json) =>
         _$HyperlaneTransferTransactionsImpl(
-          sendTx: json['sendTx'] == null
+          sendTx: json['send_tx'] == null
               ? null
               : ChainTransaction.fromJson(
-                  json['sendTx'] as Map<String, dynamic>),
-          receiveTx: json['receiveTx'] == null
+                  json['send_tx'] as Map<String, dynamic>),
+          receiveTx: json['receive_tx'] == null
               ? null
               : ChainTransaction.fromJson(
-                  json['receiveTx'] as Map<String, dynamic>),
+                  json['receive_tx'] as Map<String, dynamic>),
         );
 
 Map<String, dynamic> _$$HyperlaneTransferTransactionsImplToJson(
         _$HyperlaneTransferTransactionsImpl instance) =>
     <String, dynamic>{
-      'sendTx': instance.sendTx,
-      'receiveTx': instance.receiveTx,
+      'send_tx': instance.sendTx,
+      'receive_tx': instance.receiveTx,
     };
 
 _$HyperlaneTransferInfoImpl _$$HyperlaneTransferInfoImplFromJson(
         Map<String, dynamic> json) =>
     _$HyperlaneTransferInfoImpl(
-      fromChainID: json['fromChainID'] as String,
-      toChainID: json['toChainID'] as String,
+      fromChainID: json['from_chain_id'] as String,
+      toChainID: json['to_chain_id'] as String,
       state: $enumDecode(_$HyperlaneTransferStateEnumMap, json['state']),
       txs: HyperlaneTransferTransactions.fromJson(
           json['txs'] as Map<String, dynamic>),
@@ -599,8 +599,8 @@ _$HyperlaneTransferInfoImpl _$$HyperlaneTransferInfoImplFromJson(
 Map<String, dynamic> _$$HyperlaneTransferInfoImplToJson(
         _$HyperlaneTransferInfoImpl instance) =>
     <String, dynamic>{
-      'fromChainID': instance.fromChainID,
-      'toChainID': instance.toChainID,
+      'from_chain_id': instance.fromChainID,
+      'to_chain_id': instance.toChainID,
       'state': _$HyperlaneTransferStateEnumMap[instance.state]!,
       'txs': instance.txs,
     };
@@ -617,27 +617,27 @@ const _$HyperlaneTransferStateEnumMap = {
 _$OPInitTransferTransactionsImpl _$$OPInitTransferTransactionsImplFromJson(
         Map<String, dynamic> json) =>
     _$OPInitTransferTransactionsImpl(
-      sendTx: json['sendTx'] == null
+      sendTx: json['send_tx'] == null
           ? null
-          : ChainTransaction.fromJson(json['sendTx'] as Map<String, dynamic>),
-      receiveTx: json['receiveTx'] == null
+          : ChainTransaction.fromJson(json['send_tx'] as Map<String, dynamic>),
+      receiveTx: json['receive_tx'] == null
           ? null
           : ChainTransaction.fromJson(
-              json['receiveTx'] as Map<String, dynamic>),
+              json['receive_tx'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$OPInitTransferTransactionsImplToJson(
         _$OPInitTransferTransactionsImpl instance) =>
     <String, dynamic>{
-      'sendTx': instance.sendTx,
-      'receiveTx': instance.receiveTx,
+      'send_tx': instance.sendTx,
+      'receive_tx': instance.receiveTx,
     };
 
 _$OPInitTransferInfoImpl _$$OPInitTransferInfoImplFromJson(
         Map<String, dynamic> json) =>
     _$OPInitTransferInfoImpl(
-      fromChainID: json['fromChainID'] as String,
-      toChainID: json['toChainID'] as String,
+      fromChainID: json['from_chain_id'] as String,
+      toChainID: json['to_chain_id'] as String,
       state: $enumDecode(_$OPInitTransferStateEnumMap, json['state']),
       txs: OPInitTransferTransactions.fromJson(
           json['txs'] as Map<String, dynamic>),
@@ -646,8 +646,8 @@ _$OPInitTransferInfoImpl _$$OPInitTransferInfoImplFromJson(
 Map<String, dynamic> _$$OPInitTransferInfoImplToJson(
         _$OPInitTransferInfoImpl instance) =>
     <String, dynamic>{
-      'fromChainID': instance.fromChainID,
-      'toChainID': instance.toChainID,
+      'from_chain_id': instance.fromChainID,
+      'to_chain_id': instance.toChainID,
       'state': _$OPInitTransferStateEnumMap[instance.state]!,
       'txs': instance.txs,
     };
@@ -660,39 +660,39 @@ const _$OPInitTransferStateEnumMap = {
 
 _$IbcTransferImpl _$$IbcTransferImplFromJson(Map<String, dynamic> json) =>
     _$IbcTransferImpl(
-      TransferInfo.fromJson(json['ibcTransfer'] as Map<String, dynamic>),
+      TransferInfo.fromJson(json['ibc_transfer'] as Map<String, dynamic>),
       $type: json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$IbcTransferImplToJson(_$IbcTransferImpl instance) =>
     <String, dynamic>{
-      'ibcTransfer': instance.ibcTransfer,
+      'ibc_transfer': instance.ibcTransfer,
       'runtimeType': instance.$type,
     };
 
 _$AxelarTransferImpl _$$AxelarTransferImplFromJson(Map<String, dynamic> json) =>
     _$AxelarTransferImpl(
       AxelarTransferInfo.fromJson(
-          json['axelarTransfer'] as Map<String, dynamic>),
+          json['axelar_transfer'] as Map<String, dynamic>),
       $type: json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$AxelarTransferImplToJson(
         _$AxelarTransferImpl instance) =>
     <String, dynamic>{
-      'axelarTransfer': instance.axelarTransfer,
+      'axelar_transfer': instance.axelarTransfer,
       'runtimeType': instance.$type,
     };
 
 _$CctpTransferImpl _$$CctpTransferImplFromJson(Map<String, dynamic> json) =>
     _$CctpTransferImpl(
-      CCTPTransferInfo.fromJson(json['cctpTransfer'] as Map<String, dynamic>),
+      CCTPTransferInfo.fromJson(json['cctp_transfer'] as Map<String, dynamic>),
       $type: json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$CctpTransferImplToJson(_$CctpTransferImpl instance) =>
     <String, dynamic>{
-      'cctpTransfer': instance.cctpTransfer,
+      'cctp_transfer': instance.cctpTransfer,
       'runtimeType': instance.$type,
     };
 
@@ -700,27 +700,27 @@ _$HyperlaneTransferImpl _$$HyperlaneTransferImplFromJson(
         Map<String, dynamic> json) =>
     _$HyperlaneTransferImpl(
       HyperlaneTransferInfo.fromJson(
-          json['hyperlaneTransfer'] as Map<String, dynamic>),
+          json['hyperlane_transfer'] as Map<String, dynamic>),
       $type: json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$HyperlaneTransferImplToJson(
         _$HyperlaneTransferImpl instance) =>
     <String, dynamic>{
-      'hyperlaneTransfer': instance.hyperlaneTransfer,
+      'hyperlane_transfer': instance.hyperlaneTransfer,
       'runtimeType': instance.$type,
     };
 
 _$OpInitTransferImpl _$$OpInitTransferImplFromJson(Map<String, dynamic> json) =>
     _$OpInitTransferImpl(
       OPInitTransferInfo.fromJson(
-          json['opInitTransfer'] as Map<String, dynamic>),
+          json['op_init_transfer'] as Map<String, dynamic>),
       $type: json['runtimeType'] as String?,
     );
 
 Map<String, dynamic> _$$OpInitTransferImplToJson(
         _$OpInitTransferImpl instance) =>
     <String, dynamic>{
-      'opInitTransfer': instance.opInitTransfer,
+      'op_init_transfer': instance.opInitTransfer,
       'runtimeType': instance.$type,
     };

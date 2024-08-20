@@ -20,7 +20,9 @@ SubmitTxRequest _$SubmitTxRequestFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$SubmitTxRequest {
+  @JsonKey(name: 'tx')
   String get tx => throw _privateConstructorUsedError;
+  @JsonKey(name: 'chain_id')
   String get chainID => throw _privateConstructorUsedError;
 
   /// Serializes this SubmitTxRequest to a JSON map.
@@ -39,7 +41,9 @@ abstract class $SubmitTxRequestCopyWith<$Res> {
           SubmitTxRequest value, $Res Function(SubmitTxRequest) then) =
       _$SubmitTxRequestCopyWithImpl<$Res, SubmitTxRequest>;
   @useResult
-  $Res call({String tx, String chainID});
+  $Res call(
+      {@JsonKey(name: 'tx') String tx,
+      @JsonKey(name: 'chain_id') String chainID});
 }
 
 /// @nodoc
@@ -81,7 +85,9 @@ abstract class _$$SubmitTxRequestImplCopyWith<$Res>
       __$$SubmitTxRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String tx, String chainID});
+  $Res call(
+      {@JsonKey(name: 'tx') String tx,
+      @JsonKey(name: 'chain_id') String chainID});
 }
 
 /// @nodoc
@@ -116,14 +122,18 @@ class __$$SubmitTxRequestImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$SubmitTxRequestImpl implements _SubmitTxRequest {
-  const _$SubmitTxRequestImpl({required this.tx, required this.chainID});
+  const _$SubmitTxRequestImpl(
+      {@JsonKey(name: 'tx') required this.tx,
+      @JsonKey(name: 'chain_id') required this.chainID});
 
   factory _$SubmitTxRequestImpl.fromJson(Map<String, dynamic> json) =>
       _$$SubmitTxRequestImplFromJson(json);
 
   @override
+  @JsonKey(name: 'tx')
   final String tx;
   @override
+  @JsonKey(name: 'chain_id')
   final String chainID;
 
   @override
@@ -163,15 +173,18 @@ class _$SubmitTxRequestImpl implements _SubmitTxRequest {
 
 abstract class _SubmitTxRequest implements SubmitTxRequest {
   const factory _SubmitTxRequest(
-      {required final String tx,
-      required final String chainID}) = _$SubmitTxRequestImpl;
+          {@JsonKey(name: 'tx') required final String tx,
+          @JsonKey(name: 'chain_id') required final String chainID}) =
+      _$SubmitTxRequestImpl;
 
   factory _SubmitTxRequest.fromJson(Map<String, dynamic> json) =
       _$SubmitTxRequestImpl.fromJson;
 
   @override
+  @JsonKey(name: 'tx')
   String get tx;
   @override
+  @JsonKey(name: 'chain_id')
   String get chainID;
 
   /// Create a copy of SubmitTxRequest
@@ -188,6 +201,7 @@ SubmitTxResponse _$SubmitTxResponseFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$SubmitTxResponse {
+  @JsonKey(name: 'tx_hash')
   String get txHash => throw _privateConstructorUsedError;
 
   /// Serializes this SubmitTxResponse to a JSON map.
@@ -206,7 +220,7 @@ abstract class $SubmitTxResponseCopyWith<$Res> {
           SubmitTxResponse value, $Res Function(SubmitTxResponse) then) =
       _$SubmitTxResponseCopyWithImpl<$Res, SubmitTxResponse>;
   @useResult
-  $Res call({String txHash});
+  $Res call({@JsonKey(name: 'tx_hash') String txHash});
 }
 
 /// @nodoc
@@ -243,7 +257,7 @@ abstract class _$$SubmitTxResponseImplCopyWith<$Res>
       __$$SubmitTxResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String txHash});
+  $Res call({@JsonKey(name: 'tx_hash') String txHash});
 }
 
 /// @nodoc
@@ -273,12 +287,14 @@ class __$$SubmitTxResponseImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$SubmitTxResponseImpl implements _SubmitTxResponse {
-  const _$SubmitTxResponseImpl({required this.txHash});
+  const _$SubmitTxResponseImpl(
+      {@JsonKey(name: 'tx_hash') required this.txHash});
 
   factory _$SubmitTxResponseImpl.fromJson(Map<String, dynamic> json) =>
       _$$SubmitTxResponseImplFromJson(json);
 
   @override
+  @JsonKey(name: 'tx_hash')
   final String txHash;
 
   @override
@@ -316,13 +332,15 @@ class _$SubmitTxResponseImpl implements _SubmitTxResponse {
 }
 
 abstract class _SubmitTxResponse implements SubmitTxResponse {
-  const factory _SubmitTxResponse({required final String txHash}) =
+  const factory _SubmitTxResponse(
+          {@JsonKey(name: 'tx_hash') required final String txHash}) =
       _$SubmitTxResponseImpl;
 
   factory _SubmitTxResponse.fromJson(Map<String, dynamic> json) =
       _$SubmitTxResponseImpl.fromJson;
 
   @override
+  @JsonKey(name: 'tx_hash')
   String get txHash;
 
   /// Create a copy of SubmitTxResponse
@@ -339,6 +357,7 @@ NextBlockingTransfer _$NextBlockingTransferFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$NextBlockingTransfer {
+  @JsonKey(name: 'transfer_sequence_index')
   int get transferSequenceIndex => throw _privateConstructorUsedError;
 
   /// Serializes this NextBlockingTransfer to a JSON map.
@@ -357,7 +376,8 @@ abstract class $NextBlockingTransferCopyWith<$Res> {
           $Res Function(NextBlockingTransfer) then) =
       _$NextBlockingTransferCopyWithImpl<$Res, NextBlockingTransfer>;
   @useResult
-  $Res call({int transferSequenceIndex});
+  $Res call(
+      {@JsonKey(name: 'transfer_sequence_index') int transferSequenceIndex});
 }
 
 /// @nodoc
@@ -395,7 +415,8 @@ abstract class _$$NextBlockingTransferImplCopyWith<$Res>
       __$$NextBlockingTransferImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({int transferSequenceIndex});
+  $Res call(
+      {@JsonKey(name: 'transfer_sequence_index') int transferSequenceIndex});
 }
 
 /// @nodoc
@@ -425,12 +446,15 @@ class __$$NextBlockingTransferImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$NextBlockingTransferImpl implements _NextBlockingTransfer {
-  const _$NextBlockingTransferImpl({required this.transferSequenceIndex});
+  const _$NextBlockingTransferImpl(
+      {@JsonKey(name: 'transfer_sequence_index')
+      required this.transferSequenceIndex});
 
   factory _$NextBlockingTransferImpl.fromJson(Map<String, dynamic> json) =>
       _$$NextBlockingTransferImplFromJson(json);
 
   @override
+  @JsonKey(name: 'transfer_sequence_index')
   final int transferSequenceIndex;
 
   @override
@@ -471,12 +495,14 @@ class _$NextBlockingTransferImpl implements _NextBlockingTransfer {
 
 abstract class _NextBlockingTransfer implements NextBlockingTransfer {
   const factory _NextBlockingTransfer(
-      {required final int transferSequenceIndex}) = _$NextBlockingTransferImpl;
+      {@JsonKey(name: 'transfer_sequence_index')
+      required final int transferSequenceIndex}) = _$NextBlockingTransferImpl;
 
   factory _NextBlockingTransfer.fromJson(Map<String, dynamic> json) =
       _$NextBlockingTransferImpl.fromJson;
 
   @override
+  @JsonKey(name: 'transfer_sequence_index')
   int get transferSequenceIndex;
 
   /// Create a copy of NextBlockingTransfer
@@ -493,7 +519,9 @@ StatusRequest _$StatusRequestFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$StatusRequest {
+  @JsonKey(name: 'tx_hash')
   String get txHash => throw _privateConstructorUsedError;
+  @JsonKey(name: 'chain_id')
   String get chainID => throw _privateConstructorUsedError;
 
   /// Serializes this StatusRequest to a JSON map.
@@ -512,7 +540,9 @@ abstract class $StatusRequestCopyWith<$Res> {
           StatusRequest value, $Res Function(StatusRequest) then) =
       _$StatusRequestCopyWithImpl<$Res, StatusRequest>;
   @useResult
-  $Res call({String txHash, String chainID});
+  $Res call(
+      {@JsonKey(name: 'tx_hash') String txHash,
+      @JsonKey(name: 'chain_id') String chainID});
 }
 
 /// @nodoc
@@ -554,7 +584,9 @@ abstract class _$$StatusRequestImplCopyWith<$Res>
       __$$StatusRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String txHash, String chainID});
+  $Res call(
+      {@JsonKey(name: 'tx_hash') String txHash,
+      @JsonKey(name: 'chain_id') String chainID});
 }
 
 /// @nodoc
@@ -589,14 +621,18 @@ class __$$StatusRequestImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$StatusRequestImpl implements _StatusRequest {
-  const _$StatusRequestImpl({required this.txHash, required this.chainID});
+  const _$StatusRequestImpl(
+      {@JsonKey(name: 'tx_hash') required this.txHash,
+      @JsonKey(name: 'chain_id') required this.chainID});
 
   factory _$StatusRequestImpl.fromJson(Map<String, dynamic> json) =>
       _$$StatusRequestImplFromJson(json);
 
   @override
+  @JsonKey(name: 'tx_hash')
   final String txHash;
   @override
+  @JsonKey(name: 'chain_id')
   final String chainID;
 
   @override
@@ -635,15 +671,18 @@ class _$StatusRequestImpl implements _StatusRequest {
 
 abstract class _StatusRequest implements StatusRequest {
   const factory _StatusRequest(
-      {required final String txHash,
-      required final String chainID}) = _$StatusRequestImpl;
+          {@JsonKey(name: 'tx_hash') required final String txHash,
+          @JsonKey(name: 'chain_id') required final String chainID}) =
+      _$StatusRequestImpl;
 
   factory _StatusRequest.fromJson(Map<String, dynamic> json) =
       _$StatusRequestImpl.fromJson;
 
   @override
+  @JsonKey(name: 'tx_hash')
   String get txHash;
   @override
+  @JsonKey(name: 'chain_id')
   String get chainID;
 
   /// Create a copy of StatusRequest
@@ -660,9 +699,13 @@ TransferInfo _$TransferInfoFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$TransferInfo {
+  @JsonKey(name: 'from_chain_id')
   String get fromChainID => throw _privateConstructorUsedError;
+  @JsonKey(name: 'to_chain_id')
   String get toChainID => throw _privateConstructorUsedError;
+  @JsonKey(name: 'state')
   TransferState get state => throw _privateConstructorUsedError;
+  @JsonKey(name: 'packet_txs')
   Packet get packetTXs => throw _privateConstructorUsedError;
 
   /// Serializes this TransferInfo to a JSON map.
@@ -682,10 +725,10 @@ abstract class $TransferInfoCopyWith<$Res> {
       _$TransferInfoCopyWithImpl<$Res, TransferInfo>;
   @useResult
   $Res call(
-      {String fromChainID,
-      String toChainID,
-      TransferState state,
-      Packet packetTXs});
+      {@JsonKey(name: 'from_chain_id') String fromChainID,
+      @JsonKey(name: 'to_chain_id') String toChainID,
+      @JsonKey(name: 'state') TransferState state,
+      @JsonKey(name: 'packet_txs') Packet packetTXs});
 
   $PacketCopyWith<$Res> get packetTXs;
 }
@@ -750,10 +793,10 @@ abstract class _$$TransferInfoImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {String fromChainID,
-      String toChainID,
-      TransferState state,
-      Packet packetTXs});
+      {@JsonKey(name: 'from_chain_id') String fromChainID,
+      @JsonKey(name: 'to_chain_id') String toChainID,
+      @JsonKey(name: 'state') TransferState state,
+      @JsonKey(name: 'packet_txs') Packet packetTXs});
 
   @override
   $PacketCopyWith<$Res> get packetTXs;
@@ -802,21 +845,25 @@ class __$$TransferInfoImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$TransferInfoImpl implements _TransferInfo {
   const _$TransferInfoImpl(
-      {required this.fromChainID,
-      required this.toChainID,
-      required this.state,
-      required this.packetTXs});
+      {@JsonKey(name: 'from_chain_id') required this.fromChainID,
+      @JsonKey(name: 'to_chain_id') required this.toChainID,
+      @JsonKey(name: 'state') required this.state,
+      @JsonKey(name: 'packet_txs') required this.packetTXs});
 
   factory _$TransferInfoImpl.fromJson(Map<String, dynamic> json) =>
       _$$TransferInfoImplFromJson(json);
 
   @override
+  @JsonKey(name: 'from_chain_id')
   final String fromChainID;
   @override
+  @JsonKey(name: 'to_chain_id')
   final String toChainID;
   @override
+  @JsonKey(name: 'state')
   final TransferState state;
   @override
+  @JsonKey(name: 'packet_txs')
   final Packet packetTXs;
 
   @override
@@ -861,21 +908,26 @@ class _$TransferInfoImpl implements _TransferInfo {
 
 abstract class _TransferInfo implements TransferInfo {
   const factory _TransferInfo(
-      {required final String fromChainID,
-      required final String toChainID,
-      required final TransferState state,
-      required final Packet packetTXs}) = _$TransferInfoImpl;
+          {@JsonKey(name: 'from_chain_id') required final String fromChainID,
+          @JsonKey(name: 'to_chain_id') required final String toChainID,
+          @JsonKey(name: 'state') required final TransferState state,
+          @JsonKey(name: 'packet_txs') required final Packet packetTXs}) =
+      _$TransferInfoImpl;
 
   factory _TransferInfo.fromJson(Map<String, dynamic> json) =
       _$TransferInfoImpl.fromJson;
 
   @override
+  @JsonKey(name: 'from_chain_id')
   String get fromChainID;
   @override
+  @JsonKey(name: 'to_chain_id')
   String get toChainID;
   @override
+  @JsonKey(name: 'state')
   TransferState get state;
   @override
+  @JsonKey(name: 'packet_txs')
   Packet get packetTXs;
 
   /// Create a copy of TransferInfo
@@ -892,8 +944,11 @@ TransferAssetRelease _$TransferAssetReleaseFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$TransferAssetRelease {
+  @JsonKey(name: 'chain_id')
   String get chainID => throw _privateConstructorUsedError;
+  @JsonKey(name: 'denom')
   String get denom => throw _privateConstructorUsedError;
+  @JsonKey(name: 'released')
   bool get released => throw _privateConstructorUsedError;
 
   /// Serializes this TransferAssetRelease to a JSON map.
@@ -912,7 +967,10 @@ abstract class $TransferAssetReleaseCopyWith<$Res> {
           $Res Function(TransferAssetRelease) then) =
       _$TransferAssetReleaseCopyWithImpl<$Res, TransferAssetRelease>;
   @useResult
-  $Res call({String chainID, String denom, bool released});
+  $Res call(
+      {@JsonKey(name: 'chain_id') String chainID,
+      @JsonKey(name: 'denom') String denom,
+      @JsonKey(name: 'released') bool released});
 }
 
 /// @nodoc
@@ -960,7 +1018,10 @@ abstract class _$$TransferAssetReleaseImplCopyWith<$Res>
       __$$TransferAssetReleaseImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String chainID, String denom, bool released});
+  $Res call(
+      {@JsonKey(name: 'chain_id') String chainID,
+      @JsonKey(name: 'denom') String denom,
+      @JsonKey(name: 'released') bool released});
 }
 
 /// @nodoc
@@ -1001,16 +1062,21 @@ class __$$TransferAssetReleaseImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$TransferAssetReleaseImpl implements _TransferAssetRelease {
   const _$TransferAssetReleaseImpl(
-      {required this.chainID, required this.denom, required this.released});
+      {@JsonKey(name: 'chain_id') required this.chainID,
+      @JsonKey(name: 'denom') required this.denom,
+      @JsonKey(name: 'released') required this.released});
 
   factory _$TransferAssetReleaseImpl.fromJson(Map<String, dynamic> json) =>
       _$$TransferAssetReleaseImplFromJson(json);
 
   @override
+  @JsonKey(name: 'chain_id')
   final String chainID;
   @override
+  @JsonKey(name: 'denom')
   final String denom;
   @override
+  @JsonKey(name: 'released')
   final bool released;
 
   @override
@@ -1053,18 +1119,22 @@ class _$TransferAssetReleaseImpl implements _TransferAssetRelease {
 
 abstract class _TransferAssetRelease implements TransferAssetRelease {
   const factory _TransferAssetRelease(
-      {required final String chainID,
-      required final String denom,
-      required final bool released}) = _$TransferAssetReleaseImpl;
+          {@JsonKey(name: 'chain_id') required final String chainID,
+          @JsonKey(name: 'denom') required final String denom,
+          @JsonKey(name: 'released') required final bool released}) =
+      _$TransferAssetReleaseImpl;
 
   factory _TransferAssetRelease.fromJson(Map<String, dynamic> json) =
       _$TransferAssetReleaseImpl.fromJson;
 
   @override
+  @JsonKey(name: 'chain_id')
   String get chainID;
   @override
+  @JsonKey(name: 'denom')
   String get denom;
   @override
+  @JsonKey(name: 'released')
   bool get released;
 
   /// Create a copy of TransferAssetRelease
@@ -1081,11 +1151,15 @@ TxStatusResponse _$TxStatusResponseFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$TxStatusResponse {
+  @JsonKey(name: 'status')
   StatusState get status => throw _privateConstructorUsedError;
+  @JsonKey(name: 'transfer_sequence')
   List<TransferEvent> get transferSequence =>
       throw _privateConstructorUsedError;
+  @JsonKey(name: 'next_blocking_transfer')
   NextBlockingTransfer? get nextBlockingTransfer =>
       throw _privateConstructorUsedError;
+  @JsonKey(name: 'transfer_asset_release')
   TransferAssetRelease? get transferAssetRelease =>
       throw _privateConstructorUsedError;
   StatusError? get error => throw _privateConstructorUsedError;
@@ -1109,9 +1183,11 @@ abstract class $TxStatusResponseCopyWith<$Res> {
       _$TxStatusResponseCopyWithImpl<$Res, TxStatusResponse>;
   @useResult
   $Res call(
-      {StatusState status,
-      List<TransferEvent> transferSequence,
+      {@JsonKey(name: 'status') StatusState status,
+      @JsonKey(name: 'transfer_sequence') List<TransferEvent> transferSequence,
+      @JsonKey(name: 'next_blocking_transfer')
       NextBlockingTransfer? nextBlockingTransfer,
+      @JsonKey(name: 'transfer_asset_release')
       TransferAssetRelease? transferAssetRelease,
       StatusError? error,
       StatusState state,
@@ -1231,9 +1307,11 @@ abstract class _$$TxStatusResponseImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {StatusState status,
-      List<TransferEvent> transferSequence,
+      {@JsonKey(name: 'status') StatusState status,
+      @JsonKey(name: 'transfer_sequence') List<TransferEvent> transferSequence,
+      @JsonKey(name: 'next_blocking_transfer')
       NextBlockingTransfer? nextBlockingTransfer,
+      @JsonKey(name: 'transfer_asset_release')
       TransferAssetRelease? transferAssetRelease,
       StatusError? error,
       StatusState state,
@@ -1305,10 +1383,11 @@ class __$$TxStatusResponseImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$TxStatusResponseImpl implements _TxStatusResponse {
   const _$TxStatusResponseImpl(
-      {required this.status,
+      {@JsonKey(name: 'status') required this.status,
+      @JsonKey(name: 'transfer_sequence')
       required final List<TransferEvent> transferSequence,
-      this.nextBlockingTransfer,
-      this.transferAssetRelease,
+      @JsonKey(name: 'next_blocking_transfer') this.nextBlockingTransfer,
+      @JsonKey(name: 'transfer_asset_release') this.transferAssetRelease,
       this.error,
       required this.state,
       required final List<TransferStatus> transfers})
@@ -1319,9 +1398,11 @@ class _$TxStatusResponseImpl implements _TxStatusResponse {
       _$$TxStatusResponseImplFromJson(json);
 
   @override
+  @JsonKey(name: 'status')
   final StatusState status;
   final List<TransferEvent> _transferSequence;
   @override
+  @JsonKey(name: 'transfer_sequence')
   List<TransferEvent> get transferSequence {
     if (_transferSequence is EqualUnmodifiableListView)
       return _transferSequence;
@@ -1330,8 +1411,10 @@ class _$TxStatusResponseImpl implements _TxStatusResponse {
   }
 
   @override
+  @JsonKey(name: 'next_blocking_transfer')
   final NextBlockingTransfer? nextBlockingTransfer;
   @override
+  @JsonKey(name: 'transfer_asset_release')
   final TransferAssetRelease? transferAssetRelease;
   @override
   final StatusError? error;
@@ -1399,9 +1482,12 @@ class _$TxStatusResponseImpl implements _TxStatusResponse {
 
 abstract class _TxStatusResponse implements TxStatusResponse {
   const factory _TxStatusResponse(
-      {required final StatusState status,
+      {@JsonKey(name: 'status') required final StatusState status,
+      @JsonKey(name: 'transfer_sequence')
       required final List<TransferEvent> transferSequence,
+      @JsonKey(name: 'next_blocking_transfer')
       final NextBlockingTransfer? nextBlockingTransfer,
+      @JsonKey(name: 'transfer_asset_release')
       final TransferAssetRelease? transferAssetRelease,
       final StatusError? error,
       required final StatusState state,
@@ -1411,12 +1497,16 @@ abstract class _TxStatusResponse implements TxStatusResponse {
       _$TxStatusResponseImpl.fromJson;
 
   @override
+  @JsonKey(name: 'status')
   StatusState get status;
   @override
+  @JsonKey(name: 'transfer_sequence')
   List<TransferEvent> get transferSequence;
   @override
+  @JsonKey(name: 'next_blocking_transfer')
   NextBlockingTransfer? get nextBlockingTransfer;
   @override
+  @JsonKey(name: 'transfer_asset_release')
   TransferAssetRelease? get transferAssetRelease;
   @override
   StatusError? get error;
@@ -1440,10 +1530,13 @@ TransferStatus _$TransferStatusFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$TransferStatus {
   StatusState get state => throw _privateConstructorUsedError;
+  @JsonKey(name: 'transfer_sequence')
   List<TransferEvent> get transferSequence =>
       throw _privateConstructorUsedError;
+  @JsonKey(name: 'next_blocking_transfer')
   NextBlockingTransfer? get nextBlockingTransfer =>
       throw _privateConstructorUsedError;
+  @JsonKey(name: 'transfer_asset_release')
   TransferAssetRelease? get transferAssetRelease =>
       throw _privateConstructorUsedError;
   StatusError? get error => throw _privateConstructorUsedError;
@@ -1466,8 +1559,10 @@ abstract class $TransferStatusCopyWith<$Res> {
   @useResult
   $Res call(
       {StatusState state,
-      List<TransferEvent> transferSequence,
+      @JsonKey(name: 'transfer_sequence') List<TransferEvent> transferSequence,
+      @JsonKey(name: 'next_blocking_transfer')
       NextBlockingTransfer? nextBlockingTransfer,
+      @JsonKey(name: 'transfer_asset_release')
       TransferAssetRelease? transferAssetRelease,
       StatusError? error});
 
@@ -1576,8 +1671,10 @@ abstract class _$$TransferStatusImplCopyWith<$Res>
   @useResult
   $Res call(
       {StatusState state,
-      List<TransferEvent> transferSequence,
+      @JsonKey(name: 'transfer_sequence') List<TransferEvent> transferSequence,
+      @JsonKey(name: 'next_blocking_transfer')
       NextBlockingTransfer? nextBlockingTransfer,
+      @JsonKey(name: 'transfer_asset_release')
       TransferAssetRelease? transferAssetRelease,
       StatusError? error});
 
@@ -1638,9 +1735,10 @@ class __$$TransferStatusImplCopyWithImpl<$Res>
 class _$TransferStatusImpl implements _TransferStatus {
   const _$TransferStatusImpl(
       {required this.state,
+      @JsonKey(name: 'transfer_sequence')
       required final List<TransferEvent> transferSequence,
-      this.nextBlockingTransfer,
-      this.transferAssetRelease,
+      @JsonKey(name: 'next_blocking_transfer') this.nextBlockingTransfer,
+      @JsonKey(name: 'transfer_asset_release') this.transferAssetRelease,
       this.error})
       : _transferSequence = transferSequence;
 
@@ -1651,6 +1749,7 @@ class _$TransferStatusImpl implements _TransferStatus {
   final StatusState state;
   final List<TransferEvent> _transferSequence;
   @override
+  @JsonKey(name: 'transfer_sequence')
   List<TransferEvent> get transferSequence {
     if (_transferSequence is EqualUnmodifiableListView)
       return _transferSequence;
@@ -1659,8 +1758,10 @@ class _$TransferStatusImpl implements _TransferStatus {
   }
 
   @override
+  @JsonKey(name: 'next_blocking_transfer')
   final NextBlockingTransfer? nextBlockingTransfer;
   @override
+  @JsonKey(name: 'transfer_asset_release')
   final TransferAssetRelease? transferAssetRelease;
   @override
   final StatusError? error;
@@ -1715,8 +1816,11 @@ class _$TransferStatusImpl implements _TransferStatus {
 abstract class _TransferStatus implements TransferStatus {
   const factory _TransferStatus(
       {required final StatusState state,
+      @JsonKey(name: 'transfer_sequence')
       required final List<TransferEvent> transferSequence,
+      @JsonKey(name: 'next_blocking_transfer')
       final NextBlockingTransfer? nextBlockingTransfer,
+      @JsonKey(name: 'transfer_asset_release')
       final TransferAssetRelease? transferAssetRelease,
       final StatusError? error}) = _$TransferStatusImpl;
 
@@ -1726,10 +1830,13 @@ abstract class _TransferStatus implements TransferStatus {
   @override
   StatusState get state;
   @override
+  @JsonKey(name: 'transfer_sequence')
   List<TransferEvent> get transferSequence;
   @override
+  @JsonKey(name: 'next_blocking_transfer')
   NextBlockingTransfer? get nextBlockingTransfer;
   @override
+  @JsonKey(name: 'transfer_asset_release')
   TransferAssetRelease? get transferAssetRelease;
   @override
   StatusError? get error;
@@ -1748,9 +1855,13 @@ Packet _$PacketFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Packet {
+  @JsonKey(name: 'send_tx')
   ChainTransaction? get sendTx => throw _privateConstructorUsedError;
+  @JsonKey(name: 'receive_tx')
   ChainTransaction? get receiveTx => throw _privateConstructorUsedError;
+  @JsonKey(name: 'acknowledge_tx')
   ChainTransaction? get acknowledgeTx => throw _privateConstructorUsedError;
+  @JsonKey(name: 'timeout_tx')
   ChainTransaction? get timeoutTx => throw _privateConstructorUsedError;
   PacketError? get error => throw _privateConstructorUsedError;
 
@@ -1769,10 +1880,10 @@ abstract class $PacketCopyWith<$Res> {
       _$PacketCopyWithImpl<$Res, Packet>;
   @useResult
   $Res call(
-      {ChainTransaction? sendTx,
-      ChainTransaction? receiveTx,
-      ChainTransaction? acknowledgeTx,
-      ChainTransaction? timeoutTx,
+      {@JsonKey(name: 'send_tx') ChainTransaction? sendTx,
+      @JsonKey(name: 'receive_tx') ChainTransaction? receiveTx,
+      @JsonKey(name: 'acknowledge_tx') ChainTransaction? acknowledgeTx,
+      @JsonKey(name: 'timeout_tx') ChainTransaction? timeoutTx,
       PacketError? error});
 
   $ChainTransactionCopyWith<$Res>? get sendTx;
@@ -1906,10 +2017,10 @@ abstract class _$$PacketImplCopyWith<$Res> implements $PacketCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {ChainTransaction? sendTx,
-      ChainTransaction? receiveTx,
-      ChainTransaction? acknowledgeTx,
-      ChainTransaction? timeoutTx,
+      {@JsonKey(name: 'send_tx') ChainTransaction? sendTx,
+      @JsonKey(name: 'receive_tx') ChainTransaction? receiveTx,
+      @JsonKey(name: 'acknowledge_tx') ChainTransaction? acknowledgeTx,
+      @JsonKey(name: 'timeout_tx') ChainTransaction? timeoutTx,
       PacketError? error});
 
   @override
@@ -1972,22 +2083,26 @@ class __$$PacketImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$PacketImpl implements _Packet {
   const _$PacketImpl(
-      {this.sendTx,
-      this.receiveTx,
-      this.acknowledgeTx,
-      this.timeoutTx,
+      {@JsonKey(name: 'send_tx') this.sendTx,
+      @JsonKey(name: 'receive_tx') this.receiveTx,
+      @JsonKey(name: 'acknowledge_tx') this.acknowledgeTx,
+      @JsonKey(name: 'timeout_tx') this.timeoutTx,
       this.error});
 
   factory _$PacketImpl.fromJson(Map<String, dynamic> json) =>
       _$$PacketImplFromJson(json);
 
   @override
+  @JsonKey(name: 'send_tx')
   final ChainTransaction? sendTx;
   @override
+  @JsonKey(name: 'receive_tx')
   final ChainTransaction? receiveTx;
   @override
+  @JsonKey(name: 'acknowledge_tx')
   final ChainTransaction? acknowledgeTx;
   @override
+  @JsonKey(name: 'timeout_tx')
   final ChainTransaction? timeoutTx;
   @override
   final PacketError? error;
@@ -2035,21 +2150,25 @@ class _$PacketImpl implements _Packet {
 
 abstract class _Packet implements Packet {
   const factory _Packet(
-      {final ChainTransaction? sendTx,
-      final ChainTransaction? receiveTx,
-      final ChainTransaction? acknowledgeTx,
-      final ChainTransaction? timeoutTx,
+      {@JsonKey(name: 'send_tx') final ChainTransaction? sendTx,
+      @JsonKey(name: 'receive_tx') final ChainTransaction? receiveTx,
+      @JsonKey(name: 'acknowledge_tx') final ChainTransaction? acknowledgeTx,
+      @JsonKey(name: 'timeout_tx') final ChainTransaction? timeoutTx,
       final PacketError? error}) = _$PacketImpl;
 
   factory _Packet.fromJson(Map<String, dynamic> json) = _$PacketImpl.fromJson;
 
   @override
+  @JsonKey(name: 'send_tx')
   ChainTransaction? get sendTx;
   @override
+  @JsonKey(name: 'receive_tx')
   ChainTransaction? get receiveTx;
   @override
+  @JsonKey(name: 'acknowledge_tx')
   ChainTransaction? get acknowledgeTx;
   @override
+  @JsonKey(name: 'timeout_tx')
   ChainTransaction? get timeoutTx;
   @override
   PacketError? get error;
@@ -2470,6 +2589,7 @@ StatusErrorDetails _$StatusErrorDetailsFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$StatusErrorDetails {
+  @JsonKey(name: 'transaction_execution_error')
   TransactionExecutionError get transactionExecutionError =>
       throw _privateConstructorUsedError;
 
@@ -2489,7 +2609,9 @@ abstract class $StatusErrorDetailsCopyWith<$Res> {
           StatusErrorDetails value, $Res Function(StatusErrorDetails) then) =
       _$StatusErrorDetailsCopyWithImpl<$Res, StatusErrorDetails>;
   @useResult
-  $Res call({TransactionExecutionError transactionExecutionError});
+  $Res call(
+      {@JsonKey(name: 'transaction_execution_error')
+      TransactionExecutionError transactionExecutionError});
 
   $TransactionExecutionErrorCopyWith<$Res> get transactionExecutionError;
 }
@@ -2539,7 +2661,9 @@ abstract class _$$StatusErrorDetailsImplCopyWith<$Res>
       __$$StatusErrorDetailsImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({TransactionExecutionError transactionExecutionError});
+  $Res call(
+      {@JsonKey(name: 'transaction_execution_error')
+      TransactionExecutionError transactionExecutionError});
 
   @override
   $TransactionExecutionErrorCopyWith<$Res> get transactionExecutionError;
@@ -2572,12 +2696,15 @@ class __$$StatusErrorDetailsImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$StatusErrorDetailsImpl implements _StatusErrorDetails {
-  const _$StatusErrorDetailsImpl({required this.transactionExecutionError});
+  const _$StatusErrorDetailsImpl(
+      {@JsonKey(name: 'transaction_execution_error')
+      required this.transactionExecutionError});
 
   factory _$StatusErrorDetailsImpl.fromJson(Map<String, dynamic> json) =>
       _$$StatusErrorDetailsImplFromJson(json);
 
   @override
+  @JsonKey(name: 'transaction_execution_error')
   final TransactionExecutionError transactionExecutionError;
 
   @override
@@ -2618,13 +2745,15 @@ class _$StatusErrorDetailsImpl implements _StatusErrorDetails {
 
 abstract class _StatusErrorDetails implements StatusErrorDetails {
   const factory _StatusErrorDetails(
-      {required final TransactionExecutionError
-          transactionExecutionError}) = _$StatusErrorDetailsImpl;
+          {@JsonKey(name: 'transaction_execution_error')
+          required final TransactionExecutionError transactionExecutionError}) =
+      _$StatusErrorDetailsImpl;
 
   factory _StatusErrorDetails.fromJson(Map<String, dynamic> json) =
       _$StatusErrorDetailsImpl.fromJson;
 
   @override
+  @JsonKey(name: 'transaction_execution_error')
   TransactionExecutionError get transactionExecutionError;
 
   /// Create a copy of StatusErrorDetails
@@ -3039,6 +3168,7 @@ PacketErrorDetails _$PacketErrorDetailsFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$PacketErrorDetails {
+  @JsonKey(name: 'acknowledgement_error')
   AcknowledgementError get acknowledgementError =>
       throw _privateConstructorUsedError;
 
@@ -3058,7 +3188,9 @@ abstract class $PacketErrorDetailsCopyWith<$Res> {
           PacketErrorDetails value, $Res Function(PacketErrorDetails) then) =
       _$PacketErrorDetailsCopyWithImpl<$Res, PacketErrorDetails>;
   @useResult
-  $Res call({AcknowledgementError acknowledgementError});
+  $Res call(
+      {@JsonKey(name: 'acknowledgement_error')
+      AcknowledgementError acknowledgementError});
 
   $AcknowledgementErrorCopyWith<$Res> get acknowledgementError;
 }
@@ -3108,7 +3240,9 @@ abstract class _$$PacketErrorDetailsImplCopyWith<$Res>
       __$$PacketErrorDetailsImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({AcknowledgementError acknowledgementError});
+  $Res call(
+      {@JsonKey(name: 'acknowledgement_error')
+      AcknowledgementError acknowledgementError});
 
   @override
   $AcknowledgementErrorCopyWith<$Res> get acknowledgementError;
@@ -3141,12 +3275,15 @@ class __$$PacketErrorDetailsImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$PacketErrorDetailsImpl implements _PacketErrorDetails {
-  const _$PacketErrorDetailsImpl({required this.acknowledgementError});
+  const _$PacketErrorDetailsImpl(
+      {@JsonKey(name: 'acknowledgement_error')
+      required this.acknowledgementError});
 
   factory _$PacketErrorDetailsImpl.fromJson(Map<String, dynamic> json) =>
       _$$PacketErrorDetailsImplFromJson(json);
 
   @override
+  @JsonKey(name: 'acknowledgement_error')
   final AcknowledgementError acknowledgementError;
 
   @override
@@ -3186,13 +3323,15 @@ class _$PacketErrorDetailsImpl implements _PacketErrorDetails {
 
 abstract class _PacketErrorDetails implements PacketErrorDetails {
   const factory _PacketErrorDetails(
-          {required final AcknowledgementError acknowledgementError}) =
+          {@JsonKey(name: 'acknowledgement_error')
+          required final AcknowledgementError acknowledgementError}) =
       _$PacketErrorDetailsImpl;
 
   factory _PacketErrorDetails.fromJson(Map<String, dynamic> json) =
       _$PacketErrorDetailsImpl.fromJson;
 
   @override
+  @JsonKey(name: 'acknowledgement_error')
   AcknowledgementError get acknowledgementError;
 
   /// Create a copy of PacketErrorDetails
@@ -3209,8 +3348,11 @@ ChainTransaction _$ChainTransactionFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ChainTransaction {
+  @JsonKey(name: 'chain_id')
   String get chainID => throw _privateConstructorUsedError;
+  @JsonKey(name: 'tx_hash')
   String get txHash => throw _privateConstructorUsedError;
+  @JsonKey(name: 'explorer_link')
   String get explorerLink => throw _privateConstructorUsedError;
 
   /// Serializes this ChainTransaction to a JSON map.
@@ -3229,7 +3371,10 @@ abstract class $ChainTransactionCopyWith<$Res> {
           ChainTransaction value, $Res Function(ChainTransaction) then) =
       _$ChainTransactionCopyWithImpl<$Res, ChainTransaction>;
   @useResult
-  $Res call({String chainID, String txHash, String explorerLink});
+  $Res call(
+      {@JsonKey(name: 'chain_id') String chainID,
+      @JsonKey(name: 'tx_hash') String txHash,
+      @JsonKey(name: 'explorer_link') String explorerLink});
 }
 
 /// @nodoc
@@ -3276,7 +3421,10 @@ abstract class _$$ChainTransactionImplCopyWith<$Res>
       __$$ChainTransactionImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String chainID, String txHash, String explorerLink});
+  $Res call(
+      {@JsonKey(name: 'chain_id') String chainID,
+      @JsonKey(name: 'tx_hash') String txHash,
+      @JsonKey(name: 'explorer_link') String explorerLink});
 }
 
 /// @nodoc
@@ -3317,18 +3465,21 @@ class __$$ChainTransactionImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$ChainTransactionImpl implements _ChainTransaction {
   const _$ChainTransactionImpl(
-      {required this.chainID,
-      required this.txHash,
-      required this.explorerLink});
+      {@JsonKey(name: 'chain_id') required this.chainID,
+      @JsonKey(name: 'tx_hash') required this.txHash,
+      @JsonKey(name: 'explorer_link') required this.explorerLink});
 
   factory _$ChainTransactionImpl.fromJson(Map<String, dynamic> json) =>
       _$$ChainTransactionImplFromJson(json);
 
   @override
+  @JsonKey(name: 'chain_id')
   final String chainID;
   @override
+  @JsonKey(name: 'tx_hash')
   final String txHash;
   @override
+  @JsonKey(name: 'explorer_link')
   final String explorerLink;
 
   @override
@@ -3370,18 +3521,22 @@ class _$ChainTransactionImpl implements _ChainTransaction {
 
 abstract class _ChainTransaction implements ChainTransaction {
   const factory _ChainTransaction(
-      {required final String chainID,
-      required final String txHash,
-      required final String explorerLink}) = _$ChainTransactionImpl;
+          {@JsonKey(name: 'chain_id') required final String chainID,
+          @JsonKey(name: 'tx_hash') required final String txHash,
+          @JsonKey(name: 'explorer_link') required final String explorerLink}) =
+      _$ChainTransactionImpl;
 
   factory _ChainTransaction.fromJson(Map<String, dynamic> json) =
       _$ChainTransactionImpl.fromJson;
 
   @override
+  @JsonKey(name: 'chain_id')
   String get chainID;
   @override
+  @JsonKey(name: 'tx_hash')
   String get txHash;
   @override
+  @JsonKey(name: 'explorer_link')
   String get explorerLink;
 
   /// Create a copy of ChainTransaction
@@ -3398,7 +3553,9 @@ TrackTxRequest _$TrackTxRequestFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$TrackTxRequest {
+  @JsonKey(name: 'tx_hash')
   String get txHash => throw _privateConstructorUsedError;
+  @JsonKey(name: 'chain_id')
   String get chainID => throw _privateConstructorUsedError;
 
   /// Serializes this TrackTxRequest to a JSON map.
@@ -3417,7 +3574,9 @@ abstract class $TrackTxRequestCopyWith<$Res> {
           TrackTxRequest value, $Res Function(TrackTxRequest) then) =
       _$TrackTxRequestCopyWithImpl<$Res, TrackTxRequest>;
   @useResult
-  $Res call({String txHash, String chainID});
+  $Res call(
+      {@JsonKey(name: 'tx_hash') String txHash,
+      @JsonKey(name: 'chain_id') String chainID});
 }
 
 /// @nodoc
@@ -3459,7 +3618,9 @@ abstract class _$$TrackTxRequestImplCopyWith<$Res>
       __$$TrackTxRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String txHash, String chainID});
+  $Res call(
+      {@JsonKey(name: 'tx_hash') String txHash,
+      @JsonKey(name: 'chain_id') String chainID});
 }
 
 /// @nodoc
@@ -3494,14 +3655,18 @@ class __$$TrackTxRequestImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$TrackTxRequestImpl implements _TrackTxRequest {
-  const _$TrackTxRequestImpl({required this.txHash, required this.chainID});
+  const _$TrackTxRequestImpl(
+      {@JsonKey(name: 'tx_hash') required this.txHash,
+      @JsonKey(name: 'chain_id') required this.chainID});
 
   factory _$TrackTxRequestImpl.fromJson(Map<String, dynamic> json) =>
       _$$TrackTxRequestImplFromJson(json);
 
   @override
+  @JsonKey(name: 'tx_hash')
   final String txHash;
   @override
+  @JsonKey(name: 'chain_id')
   final String chainID;
 
   @override
@@ -3541,15 +3706,18 @@ class _$TrackTxRequestImpl implements _TrackTxRequest {
 
 abstract class _TrackTxRequest implements TrackTxRequest {
   const factory _TrackTxRequest(
-      {required final String txHash,
-      required final String chainID}) = _$TrackTxRequestImpl;
+          {@JsonKey(name: 'tx_hash') required final String txHash,
+          @JsonKey(name: 'chain_id') required final String chainID}) =
+      _$TrackTxRequestImpl;
 
   factory _TrackTxRequest.fromJson(Map<String, dynamic> json) =
       _$TrackTxRequestImpl.fromJson;
 
   @override
+  @JsonKey(name: 'tx_hash')
   String get txHash;
   @override
+  @JsonKey(name: 'chain_id')
   String get chainID;
 
   /// Create a copy of TrackTxRequest
@@ -3566,7 +3734,9 @@ TrackTxResponse _$TrackTxResponseFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$TrackTxResponse {
+  @JsonKey(name: 'tx_hash')
   String get txHash => throw _privateConstructorUsedError;
+  @JsonKey(name: 'explorer_link')
   String get explorerLink => throw _privateConstructorUsedError;
 
   /// Serializes this TrackTxResponse to a JSON map.
@@ -3585,7 +3755,9 @@ abstract class $TrackTxResponseCopyWith<$Res> {
           TrackTxResponse value, $Res Function(TrackTxResponse) then) =
       _$TrackTxResponseCopyWithImpl<$Res, TrackTxResponse>;
   @useResult
-  $Res call({String txHash, String explorerLink});
+  $Res call(
+      {@JsonKey(name: 'tx_hash') String txHash,
+      @JsonKey(name: 'explorer_link') String explorerLink});
 }
 
 /// @nodoc
@@ -3627,7 +3799,9 @@ abstract class _$$TrackTxResponseImplCopyWith<$Res>
       __$$TrackTxResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String txHash, String explorerLink});
+  $Res call(
+      {@JsonKey(name: 'tx_hash') String txHash,
+      @JsonKey(name: 'explorer_link') String explorerLink});
 }
 
 /// @nodoc
@@ -3663,14 +3837,17 @@ class __$$TrackTxResponseImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$TrackTxResponseImpl implements _TrackTxResponse {
   const _$TrackTxResponseImpl(
-      {required this.txHash, required this.explorerLink});
+      {@JsonKey(name: 'tx_hash') required this.txHash,
+      @JsonKey(name: 'explorer_link') required this.explorerLink});
 
   factory _$TrackTxResponseImpl.fromJson(Map<String, dynamic> json) =>
       _$$TrackTxResponseImplFromJson(json);
 
   @override
+  @JsonKey(name: 'tx_hash')
   final String txHash;
   @override
+  @JsonKey(name: 'explorer_link')
   final String explorerLink;
 
   @override
@@ -3711,15 +3888,18 @@ class _$TrackTxResponseImpl implements _TrackTxResponse {
 
 abstract class _TrackTxResponse implements TrackTxResponse {
   const factory _TrackTxResponse(
-      {required final String txHash,
-      required final String explorerLink}) = _$TrackTxResponseImpl;
+          {@JsonKey(name: 'tx_hash') required final String txHash,
+          @JsonKey(name: 'explorer_link') required final String explorerLink}) =
+      _$TrackTxResponseImpl;
 
   factory _TrackTxResponse.fromJson(Map<String, dynamic> json) =
       _$TrackTxResponseImpl.fromJson;
 
   @override
+  @JsonKey(name: 'tx_hash')
   String get txHash;
   @override
+  @JsonKey(name: 'explorer_link')
   String get explorerLink;
 
   /// Create a copy of TrackTxResponse
@@ -3736,11 +3916,14 @@ AxelarTransferInfo _$AxelarTransferInfoFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$AxelarTransferInfo {
+  @JsonKey(name: 'from_chain_id')
   String get fromChainID => throw _privateConstructorUsedError;
+  @JsonKey(name: 'to_chain_id')
   String get toChainID => throw _privateConstructorUsedError;
   AxelarTransferType get type => throw _privateConstructorUsedError;
   AxelarTransferState get state => throw _privateConstructorUsedError;
   AxelarTransferTransactions get txs => throw _privateConstructorUsedError;
+  @JsonKey(name: 'axelar_scan_link')
   String get axelarScanLink => throw _privateConstructorUsedError;
 
   /// Serializes this AxelarTransferInfo to a JSON map.
@@ -3760,12 +3943,12 @@ abstract class $AxelarTransferInfoCopyWith<$Res> {
       _$AxelarTransferInfoCopyWithImpl<$Res, AxelarTransferInfo>;
   @useResult
   $Res call(
-      {String fromChainID,
-      String toChainID,
+      {@JsonKey(name: 'from_chain_id') String fromChainID,
+      @JsonKey(name: 'to_chain_id') String toChainID,
       AxelarTransferType type,
       AxelarTransferState state,
       AxelarTransferTransactions txs,
-      String axelarScanLink});
+      @JsonKey(name: 'axelar_scan_link') String axelarScanLink});
 
   $AxelarTransferTransactionsCopyWith<$Res> get txs;
 }
@@ -3840,12 +4023,12 @@ abstract class _$$AxelarTransferInfoImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {String fromChainID,
-      String toChainID,
+      {@JsonKey(name: 'from_chain_id') String fromChainID,
+      @JsonKey(name: 'to_chain_id') String toChainID,
       AxelarTransferType type,
       AxelarTransferState state,
       AxelarTransferTransactions txs,
-      String axelarScanLink});
+      @JsonKey(name: 'axelar_scan_link') String axelarScanLink});
 
   @override
   $AxelarTransferTransactionsCopyWith<$Res> get txs;
@@ -3904,19 +4087,21 @@ class __$$AxelarTransferInfoImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$AxelarTransferInfoImpl implements _AxelarTransferInfo {
   const _$AxelarTransferInfoImpl(
-      {required this.fromChainID,
-      required this.toChainID,
+      {@JsonKey(name: 'from_chain_id') required this.fromChainID,
+      @JsonKey(name: 'to_chain_id') required this.toChainID,
       required this.type,
       required this.state,
       required this.txs,
-      required this.axelarScanLink});
+      @JsonKey(name: 'axelar_scan_link') required this.axelarScanLink});
 
   factory _$AxelarTransferInfoImpl.fromJson(Map<String, dynamic> json) =>
       _$$AxelarTransferInfoImplFromJson(json);
 
   @override
+  @JsonKey(name: 'from_chain_id')
   final String fromChainID;
   @override
+  @JsonKey(name: 'to_chain_id')
   final String toChainID;
   @override
   final AxelarTransferType type;
@@ -3925,6 +4110,7 @@ class _$AxelarTransferInfoImpl implements _AxelarTransferInfo {
   @override
   final AxelarTransferTransactions txs;
   @override
+  @JsonKey(name: 'axelar_scan_link')
   final String axelarScanLink;
 
   @override
@@ -3972,19 +4158,22 @@ class _$AxelarTransferInfoImpl implements _AxelarTransferInfo {
 
 abstract class _AxelarTransferInfo implements AxelarTransferInfo {
   const factory _AxelarTransferInfo(
-      {required final String fromChainID,
-      required final String toChainID,
+      {@JsonKey(name: 'from_chain_id') required final String fromChainID,
+      @JsonKey(name: 'to_chain_id') required final String toChainID,
       required final AxelarTransferType type,
       required final AxelarTransferState state,
       required final AxelarTransferTransactions txs,
+      @JsonKey(name: 'axelar_scan_link')
       required final String axelarScanLink}) = _$AxelarTransferInfoImpl;
 
   factory _AxelarTransferInfo.fromJson(Map<String, dynamic> json) =
       _$AxelarTransferInfoImpl.fromJson;
 
   @override
+  @JsonKey(name: 'from_chain_id')
   String get fromChainID;
   @override
+  @JsonKey(name: 'to_chain_id')
   String get toChainID;
   @override
   AxelarTransferType get type;
@@ -3993,6 +4182,7 @@ abstract class _AxelarTransferInfo implements AxelarTransferInfo {
   @override
   AxelarTransferTransactions get txs;
   @override
+  @JsonKey(name: 'axelar_scan_link')
   String get axelarScanLink;
 
   /// Create a copy of AxelarTransferInfo
@@ -4025,25 +4215,36 @@ mixin _$AxelarTransferTransactions {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(
+            @JsonKey(name: 'contract_call_with_token_txs')
             ContractCallWithTokenTransactions contractCallWithTokenTxs)
         contractCallWithTokenTxs,
-    required TResult Function(SendTokenTransactions sendTokenTxs) sendTokenTxs,
+    required TResult Function(
+            @JsonKey(name: 'send_token_txs') SendTokenTransactions sendTokenTxs)
+        sendTokenTxs,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(
+            @JsonKey(name: 'contract_call_with_token_txs')
             ContractCallWithTokenTransactions contractCallWithTokenTxs)?
         contractCallWithTokenTxs,
-    TResult? Function(SendTokenTransactions sendTokenTxs)? sendTokenTxs,
+    TResult? Function(
+            @JsonKey(name: 'send_token_txs')
+            SendTokenTransactions sendTokenTxs)?
+        sendTokenTxs,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(
+            @JsonKey(name: 'contract_call_with_token_txs')
             ContractCallWithTokenTransactions contractCallWithTokenTxs)?
         contractCallWithTokenTxs,
-    TResult Function(SendTokenTransactions sendTokenTxs)? sendTokenTxs,
+    TResult Function(
+            @JsonKey(name: 'send_token_txs')
+            SendTokenTransactions sendTokenTxs)?
+        sendTokenTxs,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -4103,7 +4304,9 @@ abstract class _$$ContractCallWithTokenTxsImplCopyWith<$Res> {
           $Res Function(_$ContractCallWithTokenTxsImpl) then) =
       __$$ContractCallWithTokenTxsImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({ContractCallWithTokenTransactions contractCallWithTokenTxs});
+  $Res call(
+      {@JsonKey(name: 'contract_call_with_token_txs')
+      ContractCallWithTokenTransactions contractCallWithTokenTxs});
 
   $ContractCallWithTokenTransactionsCopyWith<$Res> get contractCallWithTokenTxs;
 }
@@ -4150,13 +4353,16 @@ class __$$ContractCallWithTokenTxsImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$ContractCallWithTokenTxsImpl implements _ContractCallWithTokenTxs {
   const _$ContractCallWithTokenTxsImpl(
-      {required this.contractCallWithTokenTxs, final String? $type})
+      {@JsonKey(name: 'contract_call_with_token_txs')
+      required this.contractCallWithTokenTxs,
+      final String? $type})
       : $type = $type ?? 'contractCallWithTokenTxs';
 
   factory _$ContractCallWithTokenTxsImpl.fromJson(Map<String, dynamic> json) =>
       _$$ContractCallWithTokenTxsImplFromJson(json);
 
   @override
+  @JsonKey(name: 'contract_call_with_token_txs')
   final ContractCallWithTokenTransactions contractCallWithTokenTxs;
 
   @JsonKey(name: 'runtimeType')
@@ -4194,9 +4400,12 @@ class _$ContractCallWithTokenTxsImpl implements _ContractCallWithTokenTxs {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(
+            @JsonKey(name: 'contract_call_with_token_txs')
             ContractCallWithTokenTransactions contractCallWithTokenTxs)
         contractCallWithTokenTxs,
-    required TResult Function(SendTokenTransactions sendTokenTxs) sendTokenTxs,
+    required TResult Function(
+            @JsonKey(name: 'send_token_txs') SendTokenTransactions sendTokenTxs)
+        sendTokenTxs,
   }) {
     return contractCallWithTokenTxs(this.contractCallWithTokenTxs);
   }
@@ -4205,9 +4414,13 @@ class _$ContractCallWithTokenTxsImpl implements _ContractCallWithTokenTxs {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(
+            @JsonKey(name: 'contract_call_with_token_txs')
             ContractCallWithTokenTransactions contractCallWithTokenTxs)?
         contractCallWithTokenTxs,
-    TResult? Function(SendTokenTransactions sendTokenTxs)? sendTokenTxs,
+    TResult? Function(
+            @JsonKey(name: 'send_token_txs')
+            SendTokenTransactions sendTokenTxs)?
+        sendTokenTxs,
   }) {
     return contractCallWithTokenTxs?.call(this.contractCallWithTokenTxs);
   }
@@ -4216,9 +4429,13 @@ class _$ContractCallWithTokenTxsImpl implements _ContractCallWithTokenTxs {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(
+            @JsonKey(name: 'contract_call_with_token_txs')
             ContractCallWithTokenTransactions contractCallWithTokenTxs)?
         contractCallWithTokenTxs,
-    TResult Function(SendTokenTransactions sendTokenTxs)? sendTokenTxs,
+    TResult Function(
+            @JsonKey(name: 'send_token_txs')
+            SendTokenTransactions sendTokenTxs)?
+        sendTokenTxs,
     required TResult orElse(),
   }) {
     if (contractCallWithTokenTxs != null) {
@@ -4270,12 +4487,14 @@ class _$ContractCallWithTokenTxsImpl implements _ContractCallWithTokenTxs {
 
 abstract class _ContractCallWithTokenTxs implements AxelarTransferTransactions {
   const factory _ContractCallWithTokenTxs(
-      {required final ContractCallWithTokenTransactions
+      {@JsonKey(name: 'contract_call_with_token_txs')
+      required final ContractCallWithTokenTransactions
           contractCallWithTokenTxs}) = _$ContractCallWithTokenTxsImpl;
 
   factory _ContractCallWithTokenTxs.fromJson(Map<String, dynamic> json) =
       _$ContractCallWithTokenTxsImpl.fromJson;
 
+  @JsonKey(name: 'contract_call_with_token_txs')
   ContractCallWithTokenTransactions get contractCallWithTokenTxs;
 
   /// Create a copy of AxelarTransferTransactions
@@ -4291,7 +4510,8 @@ abstract class _$$SendTokenTxsImplCopyWith<$Res> {
           _$SendTokenTxsImpl value, $Res Function(_$SendTokenTxsImpl) then) =
       __$$SendTokenTxsImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({SendTokenTransactions sendTokenTxs});
+  $Res call(
+      {@JsonKey(name: 'send_token_txs') SendTokenTransactions sendTokenTxs});
 
   $SendTokenTransactionsCopyWith<$Res> get sendTokenTxs;
 }
@@ -4333,13 +4553,16 @@ class __$$SendTokenTxsImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$SendTokenTxsImpl implements _SendTokenTxs {
-  const _$SendTokenTxsImpl({required this.sendTokenTxs, final String? $type})
+  const _$SendTokenTxsImpl(
+      {@JsonKey(name: 'send_token_txs') required this.sendTokenTxs,
+      final String? $type})
       : $type = $type ?? 'sendTokenTxs';
 
   factory _$SendTokenTxsImpl.fromJson(Map<String, dynamic> json) =>
       _$$SendTokenTxsImplFromJson(json);
 
   @override
+  @JsonKey(name: 'send_token_txs')
   final SendTokenTransactions sendTokenTxs;
 
   @JsonKey(name: 'runtimeType')
@@ -4375,9 +4598,12 @@ class _$SendTokenTxsImpl implements _SendTokenTxs {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(
+            @JsonKey(name: 'contract_call_with_token_txs')
             ContractCallWithTokenTransactions contractCallWithTokenTxs)
         contractCallWithTokenTxs,
-    required TResult Function(SendTokenTransactions sendTokenTxs) sendTokenTxs,
+    required TResult Function(
+            @JsonKey(name: 'send_token_txs') SendTokenTransactions sendTokenTxs)
+        sendTokenTxs,
   }) {
     return sendTokenTxs(this.sendTokenTxs);
   }
@@ -4386,9 +4612,13 @@ class _$SendTokenTxsImpl implements _SendTokenTxs {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(
+            @JsonKey(name: 'contract_call_with_token_txs')
             ContractCallWithTokenTransactions contractCallWithTokenTxs)?
         contractCallWithTokenTxs,
-    TResult? Function(SendTokenTransactions sendTokenTxs)? sendTokenTxs,
+    TResult? Function(
+            @JsonKey(name: 'send_token_txs')
+            SendTokenTransactions sendTokenTxs)?
+        sendTokenTxs,
   }) {
     return sendTokenTxs?.call(this.sendTokenTxs);
   }
@@ -4397,9 +4627,13 @@ class _$SendTokenTxsImpl implements _SendTokenTxs {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(
+            @JsonKey(name: 'contract_call_with_token_txs')
             ContractCallWithTokenTransactions contractCallWithTokenTxs)?
         contractCallWithTokenTxs,
-    TResult Function(SendTokenTransactions sendTokenTxs)? sendTokenTxs,
+    TResult Function(
+            @JsonKey(name: 'send_token_txs')
+            SendTokenTransactions sendTokenTxs)?
+        sendTokenTxs,
     required TResult orElse(),
   }) {
     if (sendTokenTxs != null) {
@@ -4451,11 +4685,13 @@ class _$SendTokenTxsImpl implements _SendTokenTxs {
 
 abstract class _SendTokenTxs implements AxelarTransferTransactions {
   const factory _SendTokenTxs(
-      {required final SendTokenTransactions sendTokenTxs}) = _$SendTokenTxsImpl;
+      {@JsonKey(name: 'send_token_txs')
+      required final SendTokenTransactions sendTokenTxs}) = _$SendTokenTxsImpl;
 
   factory _SendTokenTxs.fromJson(Map<String, dynamic> json) =
       _$SendTokenTxsImpl.fromJson;
 
+  @JsonKey(name: 'send_token_txs')
   SendTokenTransactions get sendTokenTxs;
 
   /// Create a copy of AxelarTransferTransactions
@@ -4472,10 +4708,15 @@ ContractCallWithTokenTransactions _$ContractCallWithTokenTransactionsFromJson(
 
 /// @nodoc
 mixin _$ContractCallWithTokenTransactions {
+  @JsonKey(name: 'send_tx')
   ChainTransaction? get sendTx => throw _privateConstructorUsedError;
+  @JsonKey(name: 'gas_paid_tx')
   ChainTransaction? get gasPaidTx => throw _privateConstructorUsedError;
+  @JsonKey(name: 'confirm_tx')
   ChainTransaction? get confirmTx => throw _privateConstructorUsedError;
+  @JsonKey(name: 'approve_tx')
   ChainTransaction? get approveTx => throw _privateConstructorUsedError;
+  @JsonKey(name: 'execute_tx')
   ChainTransaction? get executeTx => throw _privateConstructorUsedError;
   ContractCallWithTokenError? get error => throw _privateConstructorUsedError;
 
@@ -4498,11 +4739,11 @@ abstract class $ContractCallWithTokenTransactionsCopyWith<$Res> {
           ContractCallWithTokenTransactions>;
   @useResult
   $Res call(
-      {ChainTransaction? sendTx,
-      ChainTransaction? gasPaidTx,
-      ChainTransaction? confirmTx,
-      ChainTransaction? approveTx,
-      ChainTransaction? executeTx,
+      {@JsonKey(name: 'send_tx') ChainTransaction? sendTx,
+      @JsonKey(name: 'gas_paid_tx') ChainTransaction? gasPaidTx,
+      @JsonKey(name: 'confirm_tx') ChainTransaction? confirmTx,
+      @JsonKey(name: 'approve_tx') ChainTransaction? approveTx,
+      @JsonKey(name: 'execute_tx') ChainTransaction? executeTx,
       ContractCallWithTokenError? error});
 
   $ChainTransactionCopyWith<$Res>? get sendTx;
@@ -4659,11 +4900,11 @@ abstract class _$$ContractCallWithTokenTransactionsImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {ChainTransaction? sendTx,
-      ChainTransaction? gasPaidTx,
-      ChainTransaction? confirmTx,
-      ChainTransaction? approveTx,
-      ChainTransaction? executeTx,
+      {@JsonKey(name: 'send_tx') ChainTransaction? sendTx,
+      @JsonKey(name: 'gas_paid_tx') ChainTransaction? gasPaidTx,
+      @JsonKey(name: 'confirm_tx') ChainTransaction? confirmTx,
+      @JsonKey(name: 'approve_tx') ChainTransaction? approveTx,
+      @JsonKey(name: 'execute_tx') ChainTransaction? executeTx,
       ContractCallWithTokenError? error});
 
   @override
@@ -4736,11 +4977,11 @@ class __$$ContractCallWithTokenTransactionsImplCopyWithImpl<$Res>
 class _$ContractCallWithTokenTransactionsImpl
     implements _ContractCallWithTokenTransactions {
   const _$ContractCallWithTokenTransactionsImpl(
-      {this.sendTx,
-      this.gasPaidTx,
-      this.confirmTx,
-      this.approveTx,
-      this.executeTx,
+      {@JsonKey(name: 'send_tx') this.sendTx,
+      @JsonKey(name: 'gas_paid_tx') this.gasPaidTx,
+      @JsonKey(name: 'confirm_tx') this.confirmTx,
+      @JsonKey(name: 'approve_tx') this.approveTx,
+      @JsonKey(name: 'execute_tx') this.executeTx,
       this.error});
 
   factory _$ContractCallWithTokenTransactionsImpl.fromJson(
@@ -4748,14 +4989,19 @@ class _$ContractCallWithTokenTransactionsImpl
       _$$ContractCallWithTokenTransactionsImplFromJson(json);
 
   @override
+  @JsonKey(name: 'send_tx')
   final ChainTransaction? sendTx;
   @override
+  @JsonKey(name: 'gas_paid_tx')
   final ChainTransaction? gasPaidTx;
   @override
+  @JsonKey(name: 'confirm_tx')
   final ChainTransaction? confirmTx;
   @override
+  @JsonKey(name: 'approve_tx')
   final ChainTransaction? approveTx;
   @override
+  @JsonKey(name: 'execute_tx')
   final ChainTransaction? executeTx;
   @override
   final ContractCallWithTokenError? error;
@@ -4808,11 +5054,11 @@ class _$ContractCallWithTokenTransactionsImpl
 abstract class _ContractCallWithTokenTransactions
     implements ContractCallWithTokenTransactions {
   const factory _ContractCallWithTokenTransactions(
-          {final ChainTransaction? sendTx,
-          final ChainTransaction? gasPaidTx,
-          final ChainTransaction? confirmTx,
-          final ChainTransaction? approveTx,
-          final ChainTransaction? executeTx,
+          {@JsonKey(name: 'send_tx') final ChainTransaction? sendTx,
+          @JsonKey(name: 'gas_paid_tx') final ChainTransaction? gasPaidTx,
+          @JsonKey(name: 'confirm_tx') final ChainTransaction? confirmTx,
+          @JsonKey(name: 'approve_tx') final ChainTransaction? approveTx,
+          @JsonKey(name: 'execute_tx') final ChainTransaction? executeTx,
           final ContractCallWithTokenError? error}) =
       _$ContractCallWithTokenTransactionsImpl;
 
@@ -4821,14 +5067,19 @@ abstract class _ContractCallWithTokenTransactions
       _$ContractCallWithTokenTransactionsImpl.fromJson;
 
   @override
+  @JsonKey(name: 'send_tx')
   ChainTransaction? get sendTx;
   @override
+  @JsonKey(name: 'gas_paid_tx')
   ChainTransaction? get gasPaidTx;
   @override
+  @JsonKey(name: 'confirm_tx')
   ChainTransaction? get confirmTx;
   @override
+  @JsonKey(name: 'approve_tx')
   ChainTransaction? get approveTx;
   @override
+  @JsonKey(name: 'execute_tx')
   ChainTransaction? get executeTx;
   @override
   ContractCallWithTokenError? get error;
@@ -5027,8 +5278,11 @@ SendTokenTransactions _$SendTokenTransactionsFromJson(
 
 /// @nodoc
 mixin _$SendTokenTransactions {
+  @JsonKey(name: 'send_tx')
   ChainTransaction? get sendTx => throw _privateConstructorUsedError;
+  @JsonKey(name: 'confirm_tx')
   ChainTransaction? get confirmTx => throw _privateConstructorUsedError;
+  @JsonKey(name: 'execute_tx')
   ChainTransaction? get executeTx => throw _privateConstructorUsedError;
   SendTokenError? get error => throw _privateConstructorUsedError;
 
@@ -5049,9 +5303,9 @@ abstract class $SendTokenTransactionsCopyWith<$Res> {
       _$SendTokenTransactionsCopyWithImpl<$Res, SendTokenTransactions>;
   @useResult
   $Res call(
-      {ChainTransaction? sendTx,
-      ChainTransaction? confirmTx,
-      ChainTransaction? executeTx,
+      {@JsonKey(name: 'send_tx') ChainTransaction? sendTx,
+      @JsonKey(name: 'confirm_tx') ChainTransaction? confirmTx,
+      @JsonKey(name: 'execute_tx') ChainTransaction? executeTx,
       SendTokenError? error});
 
   $ChainTransactionCopyWith<$Res>? get sendTx;
@@ -5168,9 +5422,9 @@ abstract class _$$SendTokenTransactionsImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {ChainTransaction? sendTx,
-      ChainTransaction? confirmTx,
-      ChainTransaction? executeTx,
+      {@JsonKey(name: 'send_tx') ChainTransaction? sendTx,
+      @JsonKey(name: 'confirm_tx') ChainTransaction? confirmTx,
+      @JsonKey(name: 'execute_tx') ChainTransaction? executeTx,
       SendTokenError? error});
 
   @override
@@ -5227,16 +5481,22 @@ class __$$SendTokenTransactionsImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$SendTokenTransactionsImpl implements _SendTokenTransactions {
   const _$SendTokenTransactionsImpl(
-      {this.sendTx, this.confirmTx, this.executeTx, this.error});
+      {@JsonKey(name: 'send_tx') this.sendTx,
+      @JsonKey(name: 'confirm_tx') this.confirmTx,
+      @JsonKey(name: 'execute_tx') this.executeTx,
+      this.error});
 
   factory _$SendTokenTransactionsImpl.fromJson(Map<String, dynamic> json) =>
       _$$SendTokenTransactionsImplFromJson(json);
 
   @override
+  @JsonKey(name: 'send_tx')
   final ChainTransaction? sendTx;
   @override
+  @JsonKey(name: 'confirm_tx')
   final ChainTransaction? confirmTx;
   @override
+  @JsonKey(name: 'execute_tx')
   final ChainTransaction? executeTx;
   @override
   final SendTokenError? error;
@@ -5283,19 +5543,22 @@ class _$SendTokenTransactionsImpl implements _SendTokenTransactions {
 
 abstract class _SendTokenTransactions implements SendTokenTransactions {
   const factory _SendTokenTransactions(
-      {final ChainTransaction? sendTx,
-      final ChainTransaction? confirmTx,
-      final ChainTransaction? executeTx,
+      {@JsonKey(name: 'send_tx') final ChainTransaction? sendTx,
+      @JsonKey(name: 'confirm_tx') final ChainTransaction? confirmTx,
+      @JsonKey(name: 'execute_tx') final ChainTransaction? executeTx,
       final SendTokenError? error}) = _$SendTokenTransactionsImpl;
 
   factory _SendTokenTransactions.fromJson(Map<String, dynamic> json) =
       _$SendTokenTransactionsImpl.fromJson;
 
   @override
+  @JsonKey(name: 'send_tx')
   ChainTransaction? get sendTx;
   @override
+  @JsonKey(name: 'confirm_tx')
   ChainTransaction? get confirmTx;
   @override
+  @JsonKey(name: 'execute_tx')
   ChainTransaction? get executeTx;
   @override
   SendTokenError? get error;
@@ -5483,7 +5746,9 @@ CCTPTransferTransactions _$CCTPTransferTransactionsFromJson(
 
 /// @nodoc
 mixin _$CCTPTransferTransactions {
+  @JsonKey(name: 'send_tx')
   ChainTransaction? get sendTx => throw _privateConstructorUsedError;
+  @JsonKey(name: 'receive_tx')
   ChainTransaction? get receiveTx => throw _privateConstructorUsedError;
 
   /// Serializes this CCTPTransferTransactions to a JSON map.
@@ -5502,7 +5767,9 @@ abstract class $CCTPTransferTransactionsCopyWith<$Res> {
           $Res Function(CCTPTransferTransactions) then) =
       _$CCTPTransferTransactionsCopyWithImpl<$Res, CCTPTransferTransactions>;
   @useResult
-  $Res call({ChainTransaction? sendTx, ChainTransaction? receiveTx});
+  $Res call(
+      {@JsonKey(name: 'send_tx') ChainTransaction? sendTx,
+      @JsonKey(name: 'receive_tx') ChainTransaction? receiveTx});
 
   $ChainTransactionCopyWith<$Res>? get sendTx;
   $ChainTransactionCopyWith<$Res>? get receiveTx;
@@ -5577,7 +5844,9 @@ abstract class _$$CCTPTransferTransactionsImplCopyWith<$Res>
       __$$CCTPTransferTransactionsImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({ChainTransaction? sendTx, ChainTransaction? receiveTx});
+  $Res call(
+      {@JsonKey(name: 'send_tx') ChainTransaction? sendTx,
+      @JsonKey(name: 'receive_tx') ChainTransaction? receiveTx});
 
   @override
   $ChainTransactionCopyWith<$Res>? get sendTx;
@@ -5619,14 +5888,18 @@ class __$$CCTPTransferTransactionsImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$CCTPTransferTransactionsImpl implements _CCTPTransferTransactions {
-  const _$CCTPTransferTransactionsImpl({this.sendTx, this.receiveTx});
+  const _$CCTPTransferTransactionsImpl(
+      {@JsonKey(name: 'send_tx') this.sendTx,
+      @JsonKey(name: 'receive_tx') this.receiveTx});
 
   factory _$CCTPTransferTransactionsImpl.fromJson(Map<String, dynamic> json) =>
       _$$CCTPTransferTransactionsImplFromJson(json);
 
   @override
+  @JsonKey(name: 'send_tx')
   final ChainTransaction? sendTx;
   @override
+  @JsonKey(name: 'receive_tx')
   final ChainTransaction? receiveTx;
 
   @override
@@ -5667,15 +5940,18 @@ class _$CCTPTransferTransactionsImpl implements _CCTPTransferTransactions {
 
 abstract class _CCTPTransferTransactions implements CCTPTransferTransactions {
   const factory _CCTPTransferTransactions(
-      {final ChainTransaction? sendTx,
-      final ChainTransaction? receiveTx}) = _$CCTPTransferTransactionsImpl;
+          {@JsonKey(name: 'send_tx') final ChainTransaction? sendTx,
+          @JsonKey(name: 'receive_tx') final ChainTransaction? receiveTx}) =
+      _$CCTPTransferTransactionsImpl;
 
   factory _CCTPTransferTransactions.fromJson(Map<String, dynamic> json) =
       _$CCTPTransferTransactionsImpl.fromJson;
 
   @override
+  @JsonKey(name: 'send_tx')
   ChainTransaction? get sendTx;
   @override
+  @JsonKey(name: 'receive_tx')
   ChainTransaction? get receiveTx;
 
   /// Create a copy of CCTPTransferTransactions
@@ -5692,7 +5968,9 @@ CCTPTransferInfo _$CCTPTransferInfoFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$CCTPTransferInfo {
+  @JsonKey(name: 'from_chain_id')
   String get fromChainID => throw _privateConstructorUsedError;
+  @JsonKey(name: 'to_chain_id')
   String get toChainID => throw _privateConstructorUsedError;
   CCTPTransferState get state => throw _privateConstructorUsedError;
   CCTPTransferTransactions get txs => throw _privateConstructorUsedError;
@@ -5714,8 +5992,8 @@ abstract class $CCTPTransferInfoCopyWith<$Res> {
       _$CCTPTransferInfoCopyWithImpl<$Res, CCTPTransferInfo>;
   @useResult
   $Res call(
-      {String fromChainID,
-      String toChainID,
+      {@JsonKey(name: 'from_chain_id') String fromChainID,
+      @JsonKey(name: 'to_chain_id') String toChainID,
       CCTPTransferState state,
       CCTPTransferTransactions txs});
 
@@ -5782,8 +6060,8 @@ abstract class _$$CCTPTransferInfoImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {String fromChainID,
-      String toChainID,
+      {@JsonKey(name: 'from_chain_id') String fromChainID,
+      @JsonKey(name: 'to_chain_id') String toChainID,
       CCTPTransferState state,
       CCTPTransferTransactions txs});
 
@@ -5834,8 +6112,8 @@ class __$$CCTPTransferInfoImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$CCTPTransferInfoImpl implements _CCTPTransferInfo {
   const _$CCTPTransferInfoImpl(
-      {required this.fromChainID,
-      required this.toChainID,
+      {@JsonKey(name: 'from_chain_id') required this.fromChainID,
+      @JsonKey(name: 'to_chain_id') required this.toChainID,
       required this.state,
       required this.txs});
 
@@ -5843,8 +6121,10 @@ class _$CCTPTransferInfoImpl implements _CCTPTransferInfo {
       _$$CCTPTransferInfoImplFromJson(json);
 
   @override
+  @JsonKey(name: 'from_chain_id')
   final String fromChainID;
   @override
+  @JsonKey(name: 'to_chain_id')
   final String toChainID;
   @override
   final CCTPTransferState state;
@@ -5893,8 +6173,8 @@ class _$CCTPTransferInfoImpl implements _CCTPTransferInfo {
 
 abstract class _CCTPTransferInfo implements CCTPTransferInfo {
   const factory _CCTPTransferInfo(
-      {required final String fromChainID,
-      required final String toChainID,
+      {@JsonKey(name: 'from_chain_id') required final String fromChainID,
+      @JsonKey(name: 'to_chain_id') required final String toChainID,
       required final CCTPTransferState state,
       required final CCTPTransferTransactions txs}) = _$CCTPTransferInfoImpl;
 
@@ -5902,8 +6182,10 @@ abstract class _CCTPTransferInfo implements CCTPTransferInfo {
       _$CCTPTransferInfoImpl.fromJson;
 
   @override
+  @JsonKey(name: 'from_chain_id')
   String get fromChainID;
   @override
+  @JsonKey(name: 'to_chain_id')
   String get toChainID;
   @override
   CCTPTransferState get state;
@@ -5925,7 +6207,9 @@ HyperlaneTransferTransactions _$HyperlaneTransferTransactionsFromJson(
 
 /// @nodoc
 mixin _$HyperlaneTransferTransactions {
+  @JsonKey(name: 'send_tx')
   ChainTransaction? get sendTx => throw _privateConstructorUsedError;
+  @JsonKey(name: 'receive_tx')
   ChainTransaction? get receiveTx => throw _privateConstructorUsedError;
 
   /// Serializes this HyperlaneTransferTransactions to a JSON map.
@@ -5946,7 +6230,9 @@ abstract class $HyperlaneTransferTransactionsCopyWith<$Res> {
       _$HyperlaneTransferTransactionsCopyWithImpl<$Res,
           HyperlaneTransferTransactions>;
   @useResult
-  $Res call({ChainTransaction? sendTx, ChainTransaction? receiveTx});
+  $Res call(
+      {@JsonKey(name: 'send_tx') ChainTransaction? sendTx,
+      @JsonKey(name: 'receive_tx') ChainTransaction? receiveTx});
 
   $ChainTransactionCopyWith<$Res>? get sendTx;
   $ChainTransactionCopyWith<$Res>? get receiveTx;
@@ -6021,7 +6307,9 @@ abstract class _$$HyperlaneTransferTransactionsImplCopyWith<$Res>
       __$$HyperlaneTransferTransactionsImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({ChainTransaction? sendTx, ChainTransaction? receiveTx});
+  $Res call(
+      {@JsonKey(name: 'send_tx') ChainTransaction? sendTx,
+      @JsonKey(name: 'receive_tx') ChainTransaction? receiveTx});
 
   @override
   $ChainTransactionCopyWith<$Res>? get sendTx;
@@ -6064,15 +6352,19 @@ class __$$HyperlaneTransferTransactionsImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$HyperlaneTransferTransactionsImpl
     implements _HyperlaneTransferTransactions {
-  const _$HyperlaneTransferTransactionsImpl({this.sendTx, this.receiveTx});
+  const _$HyperlaneTransferTransactionsImpl(
+      {@JsonKey(name: 'send_tx') this.sendTx,
+      @JsonKey(name: 'receive_tx') this.receiveTx});
 
   factory _$HyperlaneTransferTransactionsImpl.fromJson(
           Map<String, dynamic> json) =>
       _$$HyperlaneTransferTransactionsImplFromJson(json);
 
   @override
+  @JsonKey(name: 'send_tx')
   final ChainTransaction? sendTx;
   @override
+  @JsonKey(name: 'receive_tx')
   final ChainTransaction? receiveTx;
 
   @override
@@ -6115,15 +6407,18 @@ class _$HyperlaneTransferTransactionsImpl
 abstract class _HyperlaneTransferTransactions
     implements HyperlaneTransferTransactions {
   const factory _HyperlaneTransferTransactions(
-      {final ChainTransaction? sendTx,
-      final ChainTransaction? receiveTx}) = _$HyperlaneTransferTransactionsImpl;
+          {@JsonKey(name: 'send_tx') final ChainTransaction? sendTx,
+          @JsonKey(name: 'receive_tx') final ChainTransaction? receiveTx}) =
+      _$HyperlaneTransferTransactionsImpl;
 
   factory _HyperlaneTransferTransactions.fromJson(Map<String, dynamic> json) =
       _$HyperlaneTransferTransactionsImpl.fromJson;
 
   @override
+  @JsonKey(name: 'send_tx')
   ChainTransaction? get sendTx;
   @override
+  @JsonKey(name: 'receive_tx')
   ChainTransaction? get receiveTx;
 
   /// Create a copy of HyperlaneTransferTransactions
@@ -6142,7 +6437,9 @@ HyperlaneTransferInfo _$HyperlaneTransferInfoFromJson(
 
 /// @nodoc
 mixin _$HyperlaneTransferInfo {
+  @JsonKey(name: 'from_chain_id')
   String get fromChainID => throw _privateConstructorUsedError;
+  @JsonKey(name: 'to_chain_id')
   String get toChainID => throw _privateConstructorUsedError;
   HyperlaneTransferState get state => throw _privateConstructorUsedError;
   HyperlaneTransferTransactions get txs => throw _privateConstructorUsedError;
@@ -6164,8 +6461,8 @@ abstract class $HyperlaneTransferInfoCopyWith<$Res> {
       _$HyperlaneTransferInfoCopyWithImpl<$Res, HyperlaneTransferInfo>;
   @useResult
   $Res call(
-      {String fromChainID,
-      String toChainID,
+      {@JsonKey(name: 'from_chain_id') String fromChainID,
+      @JsonKey(name: 'to_chain_id') String toChainID,
       HyperlaneTransferState state,
       HyperlaneTransferTransactions txs});
 
@@ -6234,8 +6531,8 @@ abstract class _$$HyperlaneTransferInfoImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {String fromChainID,
-      String toChainID,
+      {@JsonKey(name: 'from_chain_id') String fromChainID,
+      @JsonKey(name: 'to_chain_id') String toChainID,
       HyperlaneTransferState state,
       HyperlaneTransferTransactions txs});
 
@@ -6287,8 +6584,8 @@ class __$$HyperlaneTransferInfoImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$HyperlaneTransferInfoImpl implements _HyperlaneTransferInfo {
   const _$HyperlaneTransferInfoImpl(
-      {required this.fromChainID,
-      required this.toChainID,
+      {@JsonKey(name: 'from_chain_id') required this.fromChainID,
+      @JsonKey(name: 'to_chain_id') required this.toChainID,
       required this.state,
       required this.txs});
 
@@ -6296,8 +6593,10 @@ class _$HyperlaneTransferInfoImpl implements _HyperlaneTransferInfo {
       _$$HyperlaneTransferInfoImplFromJson(json);
 
   @override
+  @JsonKey(name: 'from_chain_id')
   final String fromChainID;
   @override
+  @JsonKey(name: 'to_chain_id')
   final String toChainID;
   @override
   final HyperlaneTransferState state;
@@ -6346,8 +6645,8 @@ class _$HyperlaneTransferInfoImpl implements _HyperlaneTransferInfo {
 
 abstract class _HyperlaneTransferInfo implements HyperlaneTransferInfo {
   const factory _HyperlaneTransferInfo(
-          {required final String fromChainID,
-          required final String toChainID,
+          {@JsonKey(name: 'from_chain_id') required final String fromChainID,
+          @JsonKey(name: 'to_chain_id') required final String toChainID,
           required final HyperlaneTransferState state,
           required final HyperlaneTransferTransactions txs}) =
       _$HyperlaneTransferInfoImpl;
@@ -6356,8 +6655,10 @@ abstract class _HyperlaneTransferInfo implements HyperlaneTransferInfo {
       _$HyperlaneTransferInfoImpl.fromJson;
 
   @override
+  @JsonKey(name: 'from_chain_id')
   String get fromChainID;
   @override
+  @JsonKey(name: 'to_chain_id')
   String get toChainID;
   @override
   HyperlaneTransferState get state;
@@ -6379,7 +6680,9 @@ OPInitTransferTransactions _$OPInitTransferTransactionsFromJson(
 
 /// @nodoc
 mixin _$OPInitTransferTransactions {
+  @JsonKey(name: 'send_tx')
   ChainTransaction? get sendTx => throw _privateConstructorUsedError;
+  @JsonKey(name: 'receive_tx')
   ChainTransaction? get receiveTx => throw _privateConstructorUsedError;
 
   /// Serializes this OPInitTransferTransactions to a JSON map.
@@ -6399,7 +6702,9 @@ abstract class $OPInitTransferTransactionsCopyWith<$Res> {
       _$OPInitTransferTransactionsCopyWithImpl<$Res,
           OPInitTransferTransactions>;
   @useResult
-  $Res call({ChainTransaction? sendTx, ChainTransaction? receiveTx});
+  $Res call(
+      {@JsonKey(name: 'send_tx') ChainTransaction? sendTx,
+      @JsonKey(name: 'receive_tx') ChainTransaction? receiveTx});
 
   $ChainTransactionCopyWith<$Res>? get sendTx;
   $ChainTransactionCopyWith<$Res>? get receiveTx;
@@ -6474,7 +6779,9 @@ abstract class _$$OPInitTransferTransactionsImplCopyWith<$Res>
       __$$OPInitTransferTransactionsImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({ChainTransaction? sendTx, ChainTransaction? receiveTx});
+  $Res call(
+      {@JsonKey(name: 'send_tx') ChainTransaction? sendTx,
+      @JsonKey(name: 'receive_tx') ChainTransaction? receiveTx});
 
   @override
   $ChainTransactionCopyWith<$Res>? get sendTx;
@@ -6516,15 +6823,19 @@ class __$$OPInitTransferTransactionsImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$OPInitTransferTransactionsImpl implements _OPInitTransferTransactions {
-  const _$OPInitTransferTransactionsImpl({this.sendTx, this.receiveTx});
+  const _$OPInitTransferTransactionsImpl(
+      {@JsonKey(name: 'send_tx') this.sendTx,
+      @JsonKey(name: 'receive_tx') this.receiveTx});
 
   factory _$OPInitTransferTransactionsImpl.fromJson(
           Map<String, dynamic> json) =>
       _$$OPInitTransferTransactionsImplFromJson(json);
 
   @override
+  @JsonKey(name: 'send_tx')
   final ChainTransaction? sendTx;
   @override
+  @JsonKey(name: 'receive_tx')
   final ChainTransaction? receiveTx;
 
   @override
@@ -6566,15 +6877,18 @@ class _$OPInitTransferTransactionsImpl implements _OPInitTransferTransactions {
 abstract class _OPInitTransferTransactions
     implements OPInitTransferTransactions {
   const factory _OPInitTransferTransactions(
-      {final ChainTransaction? sendTx,
-      final ChainTransaction? receiveTx}) = _$OPInitTransferTransactionsImpl;
+          {@JsonKey(name: 'send_tx') final ChainTransaction? sendTx,
+          @JsonKey(name: 'receive_tx') final ChainTransaction? receiveTx}) =
+      _$OPInitTransferTransactionsImpl;
 
   factory _OPInitTransferTransactions.fromJson(Map<String, dynamic> json) =
       _$OPInitTransferTransactionsImpl.fromJson;
 
   @override
+  @JsonKey(name: 'send_tx')
   ChainTransaction? get sendTx;
   @override
+  @JsonKey(name: 'receive_tx')
   ChainTransaction? get receiveTx;
 
   /// Create a copy of OPInitTransferTransactions
@@ -6591,7 +6905,9 @@ OPInitTransferInfo _$OPInitTransferInfoFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$OPInitTransferInfo {
+  @JsonKey(name: 'from_chain_id')
   String get fromChainID => throw _privateConstructorUsedError;
+  @JsonKey(name: 'to_chain_id')
   String get toChainID => throw _privateConstructorUsedError;
   OPInitTransferState get state => throw _privateConstructorUsedError;
   OPInitTransferTransactions get txs => throw _privateConstructorUsedError;
@@ -6613,8 +6929,8 @@ abstract class $OPInitTransferInfoCopyWith<$Res> {
       _$OPInitTransferInfoCopyWithImpl<$Res, OPInitTransferInfo>;
   @useResult
   $Res call(
-      {String fromChainID,
-      String toChainID,
+      {@JsonKey(name: 'from_chain_id') String fromChainID,
+      @JsonKey(name: 'to_chain_id') String toChainID,
       OPInitTransferState state,
       OPInitTransferTransactions txs});
 
@@ -6681,8 +6997,8 @@ abstract class _$$OPInitTransferInfoImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {String fromChainID,
-      String toChainID,
+      {@JsonKey(name: 'from_chain_id') String fromChainID,
+      @JsonKey(name: 'to_chain_id') String toChainID,
       OPInitTransferState state,
       OPInitTransferTransactions txs});
 
@@ -6733,8 +7049,8 @@ class __$$OPInitTransferInfoImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$OPInitTransferInfoImpl implements _OPInitTransferInfo {
   const _$OPInitTransferInfoImpl(
-      {required this.fromChainID,
-      required this.toChainID,
+      {@JsonKey(name: 'from_chain_id') required this.fromChainID,
+      @JsonKey(name: 'to_chain_id') required this.toChainID,
       required this.state,
       required this.txs});
 
@@ -6742,8 +7058,10 @@ class _$OPInitTransferInfoImpl implements _OPInitTransferInfo {
       _$$OPInitTransferInfoImplFromJson(json);
 
   @override
+  @JsonKey(name: 'from_chain_id')
   final String fromChainID;
   @override
+  @JsonKey(name: 'to_chain_id')
   final String toChainID;
   @override
   final OPInitTransferState state;
@@ -6792,8 +7110,8 @@ class _$OPInitTransferInfoImpl implements _OPInitTransferInfo {
 
 abstract class _OPInitTransferInfo implements OPInitTransferInfo {
   const factory _OPInitTransferInfo(
-          {required final String fromChainID,
-          required final String toChainID,
+          {@JsonKey(name: 'from_chain_id') required final String fromChainID,
+          @JsonKey(name: 'to_chain_id') required final String toChainID,
           required final OPInitTransferState state,
           required final OPInitTransferTransactions txs}) =
       _$OPInitTransferInfoImpl;
@@ -6802,8 +7120,10 @@ abstract class _OPInitTransferInfo implements OPInitTransferInfo {
       _$OPInitTransferInfoImpl.fromJson;
 
   @override
+  @JsonKey(name: 'from_chain_id')
   String get fromChainID;
   @override
+  @JsonKey(name: 'to_chain_id')
   String get toChainID;
   @override
   OPInitTransferState get state;
@@ -6841,32 +7161,65 @@ TransferEvent _$TransferEventFromJson(Map<String, dynamic> json) {
 mixin _$TransferEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(TransferInfo ibcTransfer) ibcTransfer,
-    required TResult Function(AxelarTransferInfo axelarTransfer) axelarTransfer,
-    required TResult Function(CCTPTransferInfo cctpTransfer) cctpTransfer,
-    required TResult Function(HyperlaneTransferInfo hyperlaneTransfer)
+    required TResult Function(
+            @JsonKey(name: 'ibc_transfer') TransferInfo ibcTransfer)
+        ibcTransfer,
+    required TResult Function(
+            @JsonKey(name: 'axelar_transfer') AxelarTransferInfo axelarTransfer)
+        axelarTransfer,
+    required TResult Function(
+            @JsonKey(name: 'cctp_transfer') CCTPTransferInfo cctpTransfer)
+        cctpTransfer,
+    required TResult Function(
+            @JsonKey(name: 'hyperlane_transfer')
+            HyperlaneTransferInfo hyperlaneTransfer)
         hyperlaneTransfer,
-    required TResult Function(OPInitTransferInfo opInitTransfer) opInitTransfer,
+    required TResult Function(
+            @JsonKey(name: 'op_init_transfer')
+            OPInitTransferInfo opInitTransfer)
+        opInitTransfer,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(TransferInfo ibcTransfer)? ibcTransfer,
-    TResult? Function(AxelarTransferInfo axelarTransfer)? axelarTransfer,
-    TResult? Function(CCTPTransferInfo cctpTransfer)? cctpTransfer,
-    TResult? Function(HyperlaneTransferInfo hyperlaneTransfer)?
+    TResult? Function(@JsonKey(name: 'ibc_transfer') TransferInfo ibcTransfer)?
+        ibcTransfer,
+    TResult? Function(
+            @JsonKey(name: 'axelar_transfer')
+            AxelarTransferInfo axelarTransfer)?
+        axelarTransfer,
+    TResult? Function(
+            @JsonKey(name: 'cctp_transfer') CCTPTransferInfo cctpTransfer)?
+        cctpTransfer,
+    TResult? Function(
+            @JsonKey(name: 'hyperlane_transfer')
+            HyperlaneTransferInfo hyperlaneTransfer)?
         hyperlaneTransfer,
-    TResult? Function(OPInitTransferInfo opInitTransfer)? opInitTransfer,
+    TResult? Function(
+            @JsonKey(name: 'op_init_transfer')
+            OPInitTransferInfo opInitTransfer)?
+        opInitTransfer,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(TransferInfo ibcTransfer)? ibcTransfer,
-    TResult Function(AxelarTransferInfo axelarTransfer)? axelarTransfer,
-    TResult Function(CCTPTransferInfo cctpTransfer)? cctpTransfer,
-    TResult Function(HyperlaneTransferInfo hyperlaneTransfer)?
+    TResult Function(@JsonKey(name: 'ibc_transfer') TransferInfo ibcTransfer)?
+        ibcTransfer,
+    TResult Function(
+            @JsonKey(name: 'axelar_transfer')
+            AxelarTransferInfo axelarTransfer)?
+        axelarTransfer,
+    TResult Function(
+            @JsonKey(name: 'cctp_transfer') CCTPTransferInfo cctpTransfer)?
+        cctpTransfer,
+    TResult Function(
+            @JsonKey(name: 'hyperlane_transfer')
+            HyperlaneTransferInfo hyperlaneTransfer)?
         hyperlaneTransfer,
-    TResult Function(OPInitTransferInfo opInitTransfer)? opInitTransfer,
+    TResult Function(
+            @JsonKey(name: 'op_init_transfer')
+            OPInitTransferInfo opInitTransfer)?
+        opInitTransfer,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -6930,7 +7283,7 @@ abstract class _$$IbcTransferImplCopyWith<$Res> {
           _$IbcTransferImpl value, $Res Function(_$IbcTransferImpl) then) =
       __$$IbcTransferImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({TransferInfo ibcTransfer});
+  $Res call({@JsonKey(name: 'ibc_transfer') TransferInfo ibcTransfer});
 
   $TransferInfoCopyWith<$Res> get ibcTransfer;
 }
@@ -6972,13 +7325,15 @@ class __$$IbcTransferImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$IbcTransferImpl implements _IbcTransfer {
-  const _$IbcTransferImpl(this.ibcTransfer, {final String? $type})
+  const _$IbcTransferImpl(@JsonKey(name: 'ibc_transfer') this.ibcTransfer,
+      {final String? $type})
       : $type = $type ?? 'ibcTransfer';
 
   factory _$IbcTransferImpl.fromJson(Map<String, dynamic> json) =>
       _$$IbcTransferImplFromJson(json);
 
   @override
+  @JsonKey(name: 'ibc_transfer')
   final TransferInfo ibcTransfer;
 
   @JsonKey(name: 'runtimeType')
@@ -7013,12 +7368,23 @@ class _$IbcTransferImpl implements _IbcTransfer {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(TransferInfo ibcTransfer) ibcTransfer,
-    required TResult Function(AxelarTransferInfo axelarTransfer) axelarTransfer,
-    required TResult Function(CCTPTransferInfo cctpTransfer) cctpTransfer,
-    required TResult Function(HyperlaneTransferInfo hyperlaneTransfer)
+    required TResult Function(
+            @JsonKey(name: 'ibc_transfer') TransferInfo ibcTransfer)
+        ibcTransfer,
+    required TResult Function(
+            @JsonKey(name: 'axelar_transfer') AxelarTransferInfo axelarTransfer)
+        axelarTransfer,
+    required TResult Function(
+            @JsonKey(name: 'cctp_transfer') CCTPTransferInfo cctpTransfer)
+        cctpTransfer,
+    required TResult Function(
+            @JsonKey(name: 'hyperlane_transfer')
+            HyperlaneTransferInfo hyperlaneTransfer)
         hyperlaneTransfer,
-    required TResult Function(OPInitTransferInfo opInitTransfer) opInitTransfer,
+    required TResult Function(
+            @JsonKey(name: 'op_init_transfer')
+            OPInitTransferInfo opInitTransfer)
+        opInitTransfer,
   }) {
     return ibcTransfer(this.ibcTransfer);
   }
@@ -7026,12 +7392,23 @@ class _$IbcTransferImpl implements _IbcTransfer {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(TransferInfo ibcTransfer)? ibcTransfer,
-    TResult? Function(AxelarTransferInfo axelarTransfer)? axelarTransfer,
-    TResult? Function(CCTPTransferInfo cctpTransfer)? cctpTransfer,
-    TResult? Function(HyperlaneTransferInfo hyperlaneTransfer)?
+    TResult? Function(@JsonKey(name: 'ibc_transfer') TransferInfo ibcTransfer)?
+        ibcTransfer,
+    TResult? Function(
+            @JsonKey(name: 'axelar_transfer')
+            AxelarTransferInfo axelarTransfer)?
+        axelarTransfer,
+    TResult? Function(
+            @JsonKey(name: 'cctp_transfer') CCTPTransferInfo cctpTransfer)?
+        cctpTransfer,
+    TResult? Function(
+            @JsonKey(name: 'hyperlane_transfer')
+            HyperlaneTransferInfo hyperlaneTransfer)?
         hyperlaneTransfer,
-    TResult? Function(OPInitTransferInfo opInitTransfer)? opInitTransfer,
+    TResult? Function(
+            @JsonKey(name: 'op_init_transfer')
+            OPInitTransferInfo opInitTransfer)?
+        opInitTransfer,
   }) {
     return ibcTransfer?.call(this.ibcTransfer);
   }
@@ -7039,12 +7416,23 @@ class _$IbcTransferImpl implements _IbcTransfer {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(TransferInfo ibcTransfer)? ibcTransfer,
-    TResult Function(AxelarTransferInfo axelarTransfer)? axelarTransfer,
-    TResult Function(CCTPTransferInfo cctpTransfer)? cctpTransfer,
-    TResult Function(HyperlaneTransferInfo hyperlaneTransfer)?
+    TResult Function(@JsonKey(name: 'ibc_transfer') TransferInfo ibcTransfer)?
+        ibcTransfer,
+    TResult Function(
+            @JsonKey(name: 'axelar_transfer')
+            AxelarTransferInfo axelarTransfer)?
+        axelarTransfer,
+    TResult Function(
+            @JsonKey(name: 'cctp_transfer') CCTPTransferInfo cctpTransfer)?
+        cctpTransfer,
+    TResult Function(
+            @JsonKey(name: 'hyperlane_transfer')
+            HyperlaneTransferInfo hyperlaneTransfer)?
         hyperlaneTransfer,
-    TResult Function(OPInitTransferInfo opInitTransfer)? opInitTransfer,
+    TResult Function(
+            @JsonKey(name: 'op_init_transfer')
+            OPInitTransferInfo opInitTransfer)?
+        opInitTransfer,
     required TResult orElse(),
   }) {
     if (ibcTransfer != null) {
@@ -7102,12 +7490,14 @@ class _$IbcTransferImpl implements _IbcTransfer {
 }
 
 abstract class _IbcTransfer implements TransferEvent {
-  const factory _IbcTransfer(final TransferInfo ibcTransfer) =
+  const factory _IbcTransfer(
+          @JsonKey(name: 'ibc_transfer') final TransferInfo ibcTransfer) =
       _$IbcTransferImpl;
 
   factory _IbcTransfer.fromJson(Map<String, dynamic> json) =
       _$IbcTransferImpl.fromJson;
 
+  @JsonKey(name: 'ibc_transfer')
   TransferInfo get ibcTransfer;
 
   /// Create a copy of TransferEvent
@@ -7123,7 +7513,8 @@ abstract class _$$AxelarTransferImplCopyWith<$Res> {
           $Res Function(_$AxelarTransferImpl) then) =
       __$$AxelarTransferImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({AxelarTransferInfo axelarTransfer});
+  $Res call(
+      {@JsonKey(name: 'axelar_transfer') AxelarTransferInfo axelarTransfer});
 
   $AxelarTransferInfoCopyWith<$Res> get axelarTransfer;
 }
@@ -7165,13 +7556,16 @@ class __$$AxelarTransferImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$AxelarTransferImpl implements _AxelarTransfer {
-  const _$AxelarTransferImpl(this.axelarTransfer, {final String? $type})
+  const _$AxelarTransferImpl(
+      @JsonKey(name: 'axelar_transfer') this.axelarTransfer,
+      {final String? $type})
       : $type = $type ?? 'axelarTransfer';
 
   factory _$AxelarTransferImpl.fromJson(Map<String, dynamic> json) =>
       _$$AxelarTransferImplFromJson(json);
 
   @override
+  @JsonKey(name: 'axelar_transfer')
   final AxelarTransferInfo axelarTransfer;
 
   @JsonKey(name: 'runtimeType')
@@ -7207,12 +7601,23 @@ class _$AxelarTransferImpl implements _AxelarTransfer {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(TransferInfo ibcTransfer) ibcTransfer,
-    required TResult Function(AxelarTransferInfo axelarTransfer) axelarTransfer,
-    required TResult Function(CCTPTransferInfo cctpTransfer) cctpTransfer,
-    required TResult Function(HyperlaneTransferInfo hyperlaneTransfer)
+    required TResult Function(
+            @JsonKey(name: 'ibc_transfer') TransferInfo ibcTransfer)
+        ibcTransfer,
+    required TResult Function(
+            @JsonKey(name: 'axelar_transfer') AxelarTransferInfo axelarTransfer)
+        axelarTransfer,
+    required TResult Function(
+            @JsonKey(name: 'cctp_transfer') CCTPTransferInfo cctpTransfer)
+        cctpTransfer,
+    required TResult Function(
+            @JsonKey(name: 'hyperlane_transfer')
+            HyperlaneTransferInfo hyperlaneTransfer)
         hyperlaneTransfer,
-    required TResult Function(OPInitTransferInfo opInitTransfer) opInitTransfer,
+    required TResult Function(
+            @JsonKey(name: 'op_init_transfer')
+            OPInitTransferInfo opInitTransfer)
+        opInitTransfer,
   }) {
     return axelarTransfer(this.axelarTransfer);
   }
@@ -7220,12 +7625,23 @@ class _$AxelarTransferImpl implements _AxelarTransfer {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(TransferInfo ibcTransfer)? ibcTransfer,
-    TResult? Function(AxelarTransferInfo axelarTransfer)? axelarTransfer,
-    TResult? Function(CCTPTransferInfo cctpTransfer)? cctpTransfer,
-    TResult? Function(HyperlaneTransferInfo hyperlaneTransfer)?
+    TResult? Function(@JsonKey(name: 'ibc_transfer') TransferInfo ibcTransfer)?
+        ibcTransfer,
+    TResult? Function(
+            @JsonKey(name: 'axelar_transfer')
+            AxelarTransferInfo axelarTransfer)?
+        axelarTransfer,
+    TResult? Function(
+            @JsonKey(name: 'cctp_transfer') CCTPTransferInfo cctpTransfer)?
+        cctpTransfer,
+    TResult? Function(
+            @JsonKey(name: 'hyperlane_transfer')
+            HyperlaneTransferInfo hyperlaneTransfer)?
         hyperlaneTransfer,
-    TResult? Function(OPInitTransferInfo opInitTransfer)? opInitTransfer,
+    TResult? Function(
+            @JsonKey(name: 'op_init_transfer')
+            OPInitTransferInfo opInitTransfer)?
+        opInitTransfer,
   }) {
     return axelarTransfer?.call(this.axelarTransfer);
   }
@@ -7233,12 +7649,23 @@ class _$AxelarTransferImpl implements _AxelarTransfer {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(TransferInfo ibcTransfer)? ibcTransfer,
-    TResult Function(AxelarTransferInfo axelarTransfer)? axelarTransfer,
-    TResult Function(CCTPTransferInfo cctpTransfer)? cctpTransfer,
-    TResult Function(HyperlaneTransferInfo hyperlaneTransfer)?
+    TResult Function(@JsonKey(name: 'ibc_transfer') TransferInfo ibcTransfer)?
+        ibcTransfer,
+    TResult Function(
+            @JsonKey(name: 'axelar_transfer')
+            AxelarTransferInfo axelarTransfer)?
+        axelarTransfer,
+    TResult Function(
+            @JsonKey(name: 'cctp_transfer') CCTPTransferInfo cctpTransfer)?
+        cctpTransfer,
+    TResult Function(
+            @JsonKey(name: 'hyperlane_transfer')
+            HyperlaneTransferInfo hyperlaneTransfer)?
         hyperlaneTransfer,
-    TResult Function(OPInitTransferInfo opInitTransfer)? opInitTransfer,
+    TResult Function(
+            @JsonKey(name: 'op_init_transfer')
+            OPInitTransferInfo opInitTransfer)?
+        opInitTransfer,
     required TResult orElse(),
   }) {
     if (axelarTransfer != null) {
@@ -7296,12 +7723,14 @@ class _$AxelarTransferImpl implements _AxelarTransfer {
 }
 
 abstract class _AxelarTransfer implements TransferEvent {
-  const factory _AxelarTransfer(final AxelarTransferInfo axelarTransfer) =
-      _$AxelarTransferImpl;
+  const factory _AxelarTransfer(
+      @JsonKey(name: 'axelar_transfer')
+      final AxelarTransferInfo axelarTransfer) = _$AxelarTransferImpl;
 
   factory _AxelarTransfer.fromJson(Map<String, dynamic> json) =
       _$AxelarTransferImpl.fromJson;
 
+  @JsonKey(name: 'axelar_transfer')
   AxelarTransferInfo get axelarTransfer;
 
   /// Create a copy of TransferEvent
@@ -7317,7 +7746,7 @@ abstract class _$$CctpTransferImplCopyWith<$Res> {
           _$CctpTransferImpl value, $Res Function(_$CctpTransferImpl) then) =
       __$$CctpTransferImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({CCTPTransferInfo cctpTransfer});
+  $Res call({@JsonKey(name: 'cctp_transfer') CCTPTransferInfo cctpTransfer});
 
   $CCTPTransferInfoCopyWith<$Res> get cctpTransfer;
 }
@@ -7359,13 +7788,15 @@ class __$$CctpTransferImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$CctpTransferImpl implements _CctpTransfer {
-  const _$CctpTransferImpl(this.cctpTransfer, {final String? $type})
+  const _$CctpTransferImpl(@JsonKey(name: 'cctp_transfer') this.cctpTransfer,
+      {final String? $type})
       : $type = $type ?? 'cctpTransfer';
 
   factory _$CctpTransferImpl.fromJson(Map<String, dynamic> json) =>
       _$$CctpTransferImplFromJson(json);
 
   @override
+  @JsonKey(name: 'cctp_transfer')
   final CCTPTransferInfo cctpTransfer;
 
   @JsonKey(name: 'runtimeType')
@@ -7400,12 +7831,23 @@ class _$CctpTransferImpl implements _CctpTransfer {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(TransferInfo ibcTransfer) ibcTransfer,
-    required TResult Function(AxelarTransferInfo axelarTransfer) axelarTransfer,
-    required TResult Function(CCTPTransferInfo cctpTransfer) cctpTransfer,
-    required TResult Function(HyperlaneTransferInfo hyperlaneTransfer)
+    required TResult Function(
+            @JsonKey(name: 'ibc_transfer') TransferInfo ibcTransfer)
+        ibcTransfer,
+    required TResult Function(
+            @JsonKey(name: 'axelar_transfer') AxelarTransferInfo axelarTransfer)
+        axelarTransfer,
+    required TResult Function(
+            @JsonKey(name: 'cctp_transfer') CCTPTransferInfo cctpTransfer)
+        cctpTransfer,
+    required TResult Function(
+            @JsonKey(name: 'hyperlane_transfer')
+            HyperlaneTransferInfo hyperlaneTransfer)
         hyperlaneTransfer,
-    required TResult Function(OPInitTransferInfo opInitTransfer) opInitTransfer,
+    required TResult Function(
+            @JsonKey(name: 'op_init_transfer')
+            OPInitTransferInfo opInitTransfer)
+        opInitTransfer,
   }) {
     return cctpTransfer(this.cctpTransfer);
   }
@@ -7413,12 +7855,23 @@ class _$CctpTransferImpl implements _CctpTransfer {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(TransferInfo ibcTransfer)? ibcTransfer,
-    TResult? Function(AxelarTransferInfo axelarTransfer)? axelarTransfer,
-    TResult? Function(CCTPTransferInfo cctpTransfer)? cctpTransfer,
-    TResult? Function(HyperlaneTransferInfo hyperlaneTransfer)?
+    TResult? Function(@JsonKey(name: 'ibc_transfer') TransferInfo ibcTransfer)?
+        ibcTransfer,
+    TResult? Function(
+            @JsonKey(name: 'axelar_transfer')
+            AxelarTransferInfo axelarTransfer)?
+        axelarTransfer,
+    TResult? Function(
+            @JsonKey(name: 'cctp_transfer') CCTPTransferInfo cctpTransfer)?
+        cctpTransfer,
+    TResult? Function(
+            @JsonKey(name: 'hyperlane_transfer')
+            HyperlaneTransferInfo hyperlaneTransfer)?
         hyperlaneTransfer,
-    TResult? Function(OPInitTransferInfo opInitTransfer)? opInitTransfer,
+    TResult? Function(
+            @JsonKey(name: 'op_init_transfer')
+            OPInitTransferInfo opInitTransfer)?
+        opInitTransfer,
   }) {
     return cctpTransfer?.call(this.cctpTransfer);
   }
@@ -7426,12 +7879,23 @@ class _$CctpTransferImpl implements _CctpTransfer {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(TransferInfo ibcTransfer)? ibcTransfer,
-    TResult Function(AxelarTransferInfo axelarTransfer)? axelarTransfer,
-    TResult Function(CCTPTransferInfo cctpTransfer)? cctpTransfer,
-    TResult Function(HyperlaneTransferInfo hyperlaneTransfer)?
+    TResult Function(@JsonKey(name: 'ibc_transfer') TransferInfo ibcTransfer)?
+        ibcTransfer,
+    TResult Function(
+            @JsonKey(name: 'axelar_transfer')
+            AxelarTransferInfo axelarTransfer)?
+        axelarTransfer,
+    TResult Function(
+            @JsonKey(name: 'cctp_transfer') CCTPTransferInfo cctpTransfer)?
+        cctpTransfer,
+    TResult Function(
+            @JsonKey(name: 'hyperlane_transfer')
+            HyperlaneTransferInfo hyperlaneTransfer)?
         hyperlaneTransfer,
-    TResult Function(OPInitTransferInfo opInitTransfer)? opInitTransfer,
+    TResult Function(
+            @JsonKey(name: 'op_init_transfer')
+            OPInitTransferInfo opInitTransfer)?
+        opInitTransfer,
     required TResult orElse(),
   }) {
     if (cctpTransfer != null) {
@@ -7489,12 +7953,14 @@ class _$CctpTransferImpl implements _CctpTransfer {
 }
 
 abstract class _CctpTransfer implements TransferEvent {
-  const factory _CctpTransfer(final CCTPTransferInfo cctpTransfer) =
+  const factory _CctpTransfer(
+          @JsonKey(name: 'cctp_transfer') final CCTPTransferInfo cctpTransfer) =
       _$CctpTransferImpl;
 
   factory _CctpTransfer.fromJson(Map<String, dynamic> json) =
       _$CctpTransferImpl.fromJson;
 
+  @JsonKey(name: 'cctp_transfer')
   CCTPTransferInfo get cctpTransfer;
 
   /// Create a copy of TransferEvent
@@ -7510,7 +7976,9 @@ abstract class _$$HyperlaneTransferImplCopyWith<$Res> {
           $Res Function(_$HyperlaneTransferImpl) then) =
       __$$HyperlaneTransferImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({HyperlaneTransferInfo hyperlaneTransfer});
+  $Res call(
+      {@JsonKey(name: 'hyperlane_transfer')
+      HyperlaneTransferInfo hyperlaneTransfer});
 
   $HyperlaneTransferInfoCopyWith<$Res> get hyperlaneTransfer;
 }
@@ -7553,13 +8021,16 @@ class __$$HyperlaneTransferImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$HyperlaneTransferImpl implements _HyperlaneTransfer {
-  const _$HyperlaneTransferImpl(this.hyperlaneTransfer, {final String? $type})
+  const _$HyperlaneTransferImpl(
+      @JsonKey(name: 'hyperlane_transfer') this.hyperlaneTransfer,
+      {final String? $type})
       : $type = $type ?? 'hyperlaneTransfer';
 
   factory _$HyperlaneTransferImpl.fromJson(Map<String, dynamic> json) =>
       _$$HyperlaneTransferImplFromJson(json);
 
   @override
+  @JsonKey(name: 'hyperlane_transfer')
   final HyperlaneTransferInfo hyperlaneTransfer;
 
   @JsonKey(name: 'runtimeType')
@@ -7595,12 +8066,23 @@ class _$HyperlaneTransferImpl implements _HyperlaneTransfer {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(TransferInfo ibcTransfer) ibcTransfer,
-    required TResult Function(AxelarTransferInfo axelarTransfer) axelarTransfer,
-    required TResult Function(CCTPTransferInfo cctpTransfer) cctpTransfer,
-    required TResult Function(HyperlaneTransferInfo hyperlaneTransfer)
+    required TResult Function(
+            @JsonKey(name: 'ibc_transfer') TransferInfo ibcTransfer)
+        ibcTransfer,
+    required TResult Function(
+            @JsonKey(name: 'axelar_transfer') AxelarTransferInfo axelarTransfer)
+        axelarTransfer,
+    required TResult Function(
+            @JsonKey(name: 'cctp_transfer') CCTPTransferInfo cctpTransfer)
+        cctpTransfer,
+    required TResult Function(
+            @JsonKey(name: 'hyperlane_transfer')
+            HyperlaneTransferInfo hyperlaneTransfer)
         hyperlaneTransfer,
-    required TResult Function(OPInitTransferInfo opInitTransfer) opInitTransfer,
+    required TResult Function(
+            @JsonKey(name: 'op_init_transfer')
+            OPInitTransferInfo opInitTransfer)
+        opInitTransfer,
   }) {
     return hyperlaneTransfer(this.hyperlaneTransfer);
   }
@@ -7608,12 +8090,23 @@ class _$HyperlaneTransferImpl implements _HyperlaneTransfer {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(TransferInfo ibcTransfer)? ibcTransfer,
-    TResult? Function(AxelarTransferInfo axelarTransfer)? axelarTransfer,
-    TResult? Function(CCTPTransferInfo cctpTransfer)? cctpTransfer,
-    TResult? Function(HyperlaneTransferInfo hyperlaneTransfer)?
+    TResult? Function(@JsonKey(name: 'ibc_transfer') TransferInfo ibcTransfer)?
+        ibcTransfer,
+    TResult? Function(
+            @JsonKey(name: 'axelar_transfer')
+            AxelarTransferInfo axelarTransfer)?
+        axelarTransfer,
+    TResult? Function(
+            @JsonKey(name: 'cctp_transfer') CCTPTransferInfo cctpTransfer)?
+        cctpTransfer,
+    TResult? Function(
+            @JsonKey(name: 'hyperlane_transfer')
+            HyperlaneTransferInfo hyperlaneTransfer)?
         hyperlaneTransfer,
-    TResult? Function(OPInitTransferInfo opInitTransfer)? opInitTransfer,
+    TResult? Function(
+            @JsonKey(name: 'op_init_transfer')
+            OPInitTransferInfo opInitTransfer)?
+        opInitTransfer,
   }) {
     return hyperlaneTransfer?.call(this.hyperlaneTransfer);
   }
@@ -7621,12 +8114,23 @@ class _$HyperlaneTransferImpl implements _HyperlaneTransfer {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(TransferInfo ibcTransfer)? ibcTransfer,
-    TResult Function(AxelarTransferInfo axelarTransfer)? axelarTransfer,
-    TResult Function(CCTPTransferInfo cctpTransfer)? cctpTransfer,
-    TResult Function(HyperlaneTransferInfo hyperlaneTransfer)?
+    TResult Function(@JsonKey(name: 'ibc_transfer') TransferInfo ibcTransfer)?
+        ibcTransfer,
+    TResult Function(
+            @JsonKey(name: 'axelar_transfer')
+            AxelarTransferInfo axelarTransfer)?
+        axelarTransfer,
+    TResult Function(
+            @JsonKey(name: 'cctp_transfer') CCTPTransferInfo cctpTransfer)?
+        cctpTransfer,
+    TResult Function(
+            @JsonKey(name: 'hyperlane_transfer')
+            HyperlaneTransferInfo hyperlaneTransfer)?
         hyperlaneTransfer,
-    TResult Function(OPInitTransferInfo opInitTransfer)? opInitTransfer,
+    TResult Function(
+            @JsonKey(name: 'op_init_transfer')
+            OPInitTransferInfo opInitTransfer)?
+        opInitTransfer,
     required TResult orElse(),
   }) {
     if (hyperlaneTransfer != null) {
@@ -7685,11 +8189,13 @@ class _$HyperlaneTransferImpl implements _HyperlaneTransfer {
 
 abstract class _HyperlaneTransfer implements TransferEvent {
   const factory _HyperlaneTransfer(
+      @JsonKey(name: 'hyperlane_transfer')
       final HyperlaneTransferInfo hyperlaneTransfer) = _$HyperlaneTransferImpl;
 
   factory _HyperlaneTransfer.fromJson(Map<String, dynamic> json) =
       _$HyperlaneTransferImpl.fromJson;
 
+  @JsonKey(name: 'hyperlane_transfer')
   HyperlaneTransferInfo get hyperlaneTransfer;
 
   /// Create a copy of TransferEvent
@@ -7705,7 +8211,8 @@ abstract class _$$OpInitTransferImplCopyWith<$Res> {
           $Res Function(_$OpInitTransferImpl) then) =
       __$$OpInitTransferImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({OPInitTransferInfo opInitTransfer});
+  $Res call(
+      {@JsonKey(name: 'op_init_transfer') OPInitTransferInfo opInitTransfer});
 
   $OPInitTransferInfoCopyWith<$Res> get opInitTransfer;
 }
@@ -7747,13 +8254,16 @@ class __$$OpInitTransferImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$OpInitTransferImpl implements _OpInitTransfer {
-  const _$OpInitTransferImpl(this.opInitTransfer, {final String? $type})
+  const _$OpInitTransferImpl(
+      @JsonKey(name: 'op_init_transfer') this.opInitTransfer,
+      {final String? $type})
       : $type = $type ?? 'opInitTransfer';
 
   factory _$OpInitTransferImpl.fromJson(Map<String, dynamic> json) =>
       _$$OpInitTransferImplFromJson(json);
 
   @override
+  @JsonKey(name: 'op_init_transfer')
   final OPInitTransferInfo opInitTransfer;
 
   @JsonKey(name: 'runtimeType')
@@ -7789,12 +8299,23 @@ class _$OpInitTransferImpl implements _OpInitTransfer {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(TransferInfo ibcTransfer) ibcTransfer,
-    required TResult Function(AxelarTransferInfo axelarTransfer) axelarTransfer,
-    required TResult Function(CCTPTransferInfo cctpTransfer) cctpTransfer,
-    required TResult Function(HyperlaneTransferInfo hyperlaneTransfer)
+    required TResult Function(
+            @JsonKey(name: 'ibc_transfer') TransferInfo ibcTransfer)
+        ibcTransfer,
+    required TResult Function(
+            @JsonKey(name: 'axelar_transfer') AxelarTransferInfo axelarTransfer)
+        axelarTransfer,
+    required TResult Function(
+            @JsonKey(name: 'cctp_transfer') CCTPTransferInfo cctpTransfer)
+        cctpTransfer,
+    required TResult Function(
+            @JsonKey(name: 'hyperlane_transfer')
+            HyperlaneTransferInfo hyperlaneTransfer)
         hyperlaneTransfer,
-    required TResult Function(OPInitTransferInfo opInitTransfer) opInitTransfer,
+    required TResult Function(
+            @JsonKey(name: 'op_init_transfer')
+            OPInitTransferInfo opInitTransfer)
+        opInitTransfer,
   }) {
     return opInitTransfer(this.opInitTransfer);
   }
@@ -7802,12 +8323,23 @@ class _$OpInitTransferImpl implements _OpInitTransfer {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(TransferInfo ibcTransfer)? ibcTransfer,
-    TResult? Function(AxelarTransferInfo axelarTransfer)? axelarTransfer,
-    TResult? Function(CCTPTransferInfo cctpTransfer)? cctpTransfer,
-    TResult? Function(HyperlaneTransferInfo hyperlaneTransfer)?
+    TResult? Function(@JsonKey(name: 'ibc_transfer') TransferInfo ibcTransfer)?
+        ibcTransfer,
+    TResult? Function(
+            @JsonKey(name: 'axelar_transfer')
+            AxelarTransferInfo axelarTransfer)?
+        axelarTransfer,
+    TResult? Function(
+            @JsonKey(name: 'cctp_transfer') CCTPTransferInfo cctpTransfer)?
+        cctpTransfer,
+    TResult? Function(
+            @JsonKey(name: 'hyperlane_transfer')
+            HyperlaneTransferInfo hyperlaneTransfer)?
         hyperlaneTransfer,
-    TResult? Function(OPInitTransferInfo opInitTransfer)? opInitTransfer,
+    TResult? Function(
+            @JsonKey(name: 'op_init_transfer')
+            OPInitTransferInfo opInitTransfer)?
+        opInitTransfer,
   }) {
     return opInitTransfer?.call(this.opInitTransfer);
   }
@@ -7815,12 +8347,23 @@ class _$OpInitTransferImpl implements _OpInitTransfer {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(TransferInfo ibcTransfer)? ibcTransfer,
-    TResult Function(AxelarTransferInfo axelarTransfer)? axelarTransfer,
-    TResult Function(CCTPTransferInfo cctpTransfer)? cctpTransfer,
-    TResult Function(HyperlaneTransferInfo hyperlaneTransfer)?
+    TResult Function(@JsonKey(name: 'ibc_transfer') TransferInfo ibcTransfer)?
+        ibcTransfer,
+    TResult Function(
+            @JsonKey(name: 'axelar_transfer')
+            AxelarTransferInfo axelarTransfer)?
+        axelarTransfer,
+    TResult Function(
+            @JsonKey(name: 'cctp_transfer') CCTPTransferInfo cctpTransfer)?
+        cctpTransfer,
+    TResult Function(
+            @JsonKey(name: 'hyperlane_transfer')
+            HyperlaneTransferInfo hyperlaneTransfer)?
         hyperlaneTransfer,
-    TResult Function(OPInitTransferInfo opInitTransfer)? opInitTransfer,
+    TResult Function(
+            @JsonKey(name: 'op_init_transfer')
+            OPInitTransferInfo opInitTransfer)?
+        opInitTransfer,
     required TResult orElse(),
   }) {
     if (opInitTransfer != null) {
@@ -7878,12 +8421,14 @@ class _$OpInitTransferImpl implements _OpInitTransfer {
 }
 
 abstract class _OpInitTransfer implements TransferEvent {
-  const factory _OpInitTransfer(final OPInitTransferInfo opInitTransfer) =
-      _$OpInitTransferImpl;
+  const factory _OpInitTransfer(
+      @JsonKey(name: 'op_init_transfer')
+      final OPInitTransferInfo opInitTransfer) = _$OpInitTransferImpl;
 
   factory _OpInitTransfer.fromJson(Map<String, dynamic> json) =
       _$OpInitTransferImpl.fromJson;
 
+  @JsonKey(name: 'op_init_transfer')
   OPInitTransferInfo get opInitTransfer;
 
   /// Create a copy of TransferEvent

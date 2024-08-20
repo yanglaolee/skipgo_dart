@@ -374,6 +374,7 @@ FeeAsset _$FeeAssetFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$FeeAsset {
   String get denom => throw _privateConstructorUsedError;
+  @JsonKey(name: 'gas_price')
   GasPriceInfo? get gasPrice => throw _privateConstructorUsedError;
 
   /// Serializes this FeeAsset to a JSON map.
@@ -391,7 +392,7 @@ abstract class $FeeAssetCopyWith<$Res> {
   factory $FeeAssetCopyWith(FeeAsset value, $Res Function(FeeAsset) then) =
       _$FeeAssetCopyWithImpl<$Res, FeeAsset>;
   @useResult
-  $Res call({String denom, GasPriceInfo? gasPrice});
+  $Res call({String denom, @JsonKey(name: 'gas_price') GasPriceInfo? gasPrice});
 
   $GasPriceInfoCopyWith<$Res>? get gasPrice;
 }
@@ -449,7 +450,7 @@ abstract class _$$FeeAssetImplCopyWith<$Res>
       __$$FeeAssetImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String denom, GasPriceInfo? gasPrice});
+  $Res call({String denom, @JsonKey(name: 'gas_price') GasPriceInfo? gasPrice});
 
   @override
   $GasPriceInfoCopyWith<$Res>? get gasPrice;
@@ -487,7 +488,8 @@ class __$$FeeAssetImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$FeeAssetImpl implements _FeeAsset {
-  const _$FeeAssetImpl({required this.denom, this.gasPrice});
+  const _$FeeAssetImpl(
+      {required this.denom, @JsonKey(name: 'gas_price') this.gasPrice});
 
   factory _$FeeAssetImpl.fromJson(Map<String, dynamic> json) =>
       _$$FeeAssetImplFromJson(json);
@@ -495,6 +497,7 @@ class _$FeeAssetImpl implements _FeeAsset {
   @override
   final String denom;
   @override
+  @JsonKey(name: 'gas_price')
   final GasPriceInfo? gasPrice;
 
   @override
@@ -534,8 +537,9 @@ class _$FeeAssetImpl implements _FeeAsset {
 
 abstract class _FeeAsset implements FeeAsset {
   const factory _FeeAsset(
-      {required final String denom,
-      final GasPriceInfo? gasPrice}) = _$FeeAssetImpl;
+          {required final String denom,
+          @JsonKey(name: 'gas_price') final GasPriceInfo? gasPrice}) =
+      _$FeeAssetImpl;
 
   factory _FeeAsset.fromJson(Map<String, dynamic> json) =
       _$FeeAssetImpl.fromJson;
@@ -543,6 +547,7 @@ abstract class _FeeAsset implements FeeAsset {
   @override
   String get denom;
   @override
+  @JsonKey(name: 'gas_price')
   GasPriceInfo? get gasPrice;
 
   /// Create a copy of FeeAsset
@@ -559,9 +564,13 @@ IbcCapabilities _$IbcCapabilitiesFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$IbcCapabilities {
+  @JsonKey(name: 'cosmos_pfm')
   bool get cosmosPfm => throw _privateConstructorUsedError;
+  @JsonKey(name: 'cosmos_ibc_hooks')
   bool get cosmosIbcHooks => throw _privateConstructorUsedError;
+  @JsonKey(name: 'cosmos_memo')
   bool get cosmosMemo => throw _privateConstructorUsedError;
+  @JsonKey(name: 'cosmos_autopilot')
   bool get cosmosAutopilot => throw _privateConstructorUsedError;
 
   /// Serializes this IbcCapabilities to a JSON map.
@@ -581,10 +590,10 @@ abstract class $IbcCapabilitiesCopyWith<$Res> {
       _$IbcCapabilitiesCopyWithImpl<$Res, IbcCapabilities>;
   @useResult
   $Res call(
-      {bool cosmosPfm,
-      bool cosmosIbcHooks,
-      bool cosmosMemo,
-      bool cosmosAutopilot});
+      {@JsonKey(name: 'cosmos_pfm') bool cosmosPfm,
+      @JsonKey(name: 'cosmos_ibc_hooks') bool cosmosIbcHooks,
+      @JsonKey(name: 'cosmos_memo') bool cosmosMemo,
+      @JsonKey(name: 'cosmos_autopilot') bool cosmosAutopilot});
 }
 
 /// @nodoc
@@ -637,10 +646,10 @@ abstract class _$$IbcCapabilitiesImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {bool cosmosPfm,
-      bool cosmosIbcHooks,
-      bool cosmosMemo,
-      bool cosmosAutopilot});
+      {@JsonKey(name: 'cosmos_pfm') bool cosmosPfm,
+      @JsonKey(name: 'cosmos_ibc_hooks') bool cosmosIbcHooks,
+      @JsonKey(name: 'cosmos_memo') bool cosmosMemo,
+      @JsonKey(name: 'cosmos_autopilot') bool cosmosAutopilot});
 }
 
 /// @nodoc
@@ -686,21 +695,25 @@ class __$$IbcCapabilitiesImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$IbcCapabilitiesImpl implements _IbcCapabilities {
   const _$IbcCapabilitiesImpl(
-      {required this.cosmosPfm,
-      required this.cosmosIbcHooks,
-      required this.cosmosMemo,
-      required this.cosmosAutopilot});
+      {@JsonKey(name: 'cosmos_pfm') required this.cosmosPfm,
+      @JsonKey(name: 'cosmos_ibc_hooks') required this.cosmosIbcHooks,
+      @JsonKey(name: 'cosmos_memo') required this.cosmosMemo,
+      @JsonKey(name: 'cosmos_autopilot') required this.cosmosAutopilot});
 
   factory _$IbcCapabilitiesImpl.fromJson(Map<String, dynamic> json) =>
       _$$IbcCapabilitiesImplFromJson(json);
 
   @override
+  @JsonKey(name: 'cosmos_pfm')
   final bool cosmosPfm;
   @override
+  @JsonKey(name: 'cosmos_ibc_hooks')
   final bool cosmosIbcHooks;
   @override
+  @JsonKey(name: 'cosmos_memo')
   final bool cosmosMemo;
   @override
+  @JsonKey(name: 'cosmos_autopilot')
   final bool cosmosAutopilot;
 
   @override
@@ -747,21 +760,26 @@ class _$IbcCapabilitiesImpl implements _IbcCapabilities {
 
 abstract class _IbcCapabilities implements IbcCapabilities {
   const factory _IbcCapabilities(
-      {required final bool cosmosPfm,
-      required final bool cosmosIbcHooks,
-      required final bool cosmosMemo,
+      {@JsonKey(name: 'cosmos_pfm') required final bool cosmosPfm,
+      @JsonKey(name: 'cosmos_ibc_hooks') required final bool cosmosIbcHooks,
+      @JsonKey(name: 'cosmos_memo') required final bool cosmosMemo,
+      @JsonKey(name: 'cosmos_autopilot')
       required final bool cosmosAutopilot}) = _$IbcCapabilitiesImpl;
 
   factory _IbcCapabilities.fromJson(Map<String, dynamic> json) =
       _$IbcCapabilitiesImpl.fromJson;
 
   @override
+  @JsonKey(name: 'cosmos_pfm')
   bool get cosmosPfm;
   @override
+  @JsonKey(name: 'cosmos_ibc_hooks')
   bool get cosmosIbcHooks;
   @override
+  @JsonKey(name: 'cosmos_memo')
   bool get cosmosMemo;
   @override
+  @JsonKey(name: 'cosmos_autopilot')
   bool get cosmosAutopilot;
 
   /// Create a copy of IbcCapabilities
@@ -964,20 +982,33 @@ Chain _$ChainFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Chain {
+  @JsonKey(name: 'chain_name')
   String get chainName => throw _privateConstructorUsedError;
+  @JsonKey(name: 'chain_id')
   String get chainID => throw _privateConstructorUsedError;
+  @JsonKey(name: 'pfm_enabled')
   bool get pfmEnabled => throw _privateConstructorUsedError;
+  @JsonKey(name: 'cosmos_sdk_version')
   String? get cosmosSDKVersion => throw _privateConstructorUsedError;
   Map<String, ModuleVersionInfo>? get modules =>
       throw _privateConstructorUsedError;
+  @JsonKey(name: 'cosmos_module_support')
   ModuleSupport get cosmosModuleSupport => throw _privateConstructorUsedError;
+  @JsonKey(name: 'supports_memo')
   bool get supportsMemo => throw _privateConstructorUsedError;
+  @JsonKey(name: 'logo_uri')
   String? get logoURI => throw _privateConstructorUsedError;
+  @JsonKey(name: 'bech32_prefix')
   String get bech32Prefix => throw _privateConstructorUsedError;
+  @JsonKey(name: 'fee_assets')
   List<FeeAsset> get feeAssets => throw _privateConstructorUsedError;
+  @JsonKey(name: 'chain_type')
   String get chainType => throw _privateConstructorUsedError;
+  @JsonKey(name: 'ibc_capabilities')
   IbcCapabilities get ibcCapabilities => throw _privateConstructorUsedError;
+  @JsonKey(name: 'is_testnet')
   bool get isTestnet => throw _privateConstructorUsedError;
+  @JsonKey(name: 'pretty_name')
   String get prettyName => throw _privateConstructorUsedError;
 
   /// Serializes this Chain to a JSON map.
@@ -995,20 +1026,20 @@ abstract class $ChainCopyWith<$Res> {
       _$ChainCopyWithImpl<$Res, Chain>;
   @useResult
   $Res call(
-      {String chainName,
-      String chainID,
-      bool pfmEnabled,
-      String? cosmosSDKVersion,
+      {@JsonKey(name: 'chain_name') String chainName,
+      @JsonKey(name: 'chain_id') String chainID,
+      @JsonKey(name: 'pfm_enabled') bool pfmEnabled,
+      @JsonKey(name: 'cosmos_sdk_version') String? cosmosSDKVersion,
       Map<String, ModuleVersionInfo>? modules,
-      ModuleSupport cosmosModuleSupport,
-      bool supportsMemo,
-      String? logoURI,
-      String bech32Prefix,
-      List<FeeAsset> feeAssets,
-      String chainType,
-      IbcCapabilities ibcCapabilities,
-      bool isTestnet,
-      String prettyName});
+      @JsonKey(name: 'cosmos_module_support') ModuleSupport cosmosModuleSupport,
+      @JsonKey(name: 'supports_memo') bool supportsMemo,
+      @JsonKey(name: 'logo_uri') String? logoURI,
+      @JsonKey(name: 'bech32_prefix') String bech32Prefix,
+      @JsonKey(name: 'fee_assets') List<FeeAsset> feeAssets,
+      @JsonKey(name: 'chain_type') String chainType,
+      @JsonKey(name: 'ibc_capabilities') IbcCapabilities ibcCapabilities,
+      @JsonKey(name: 'is_testnet') bool isTestnet,
+      @JsonKey(name: 'pretty_name') String prettyName});
 
   $ModuleSupportCopyWith<$Res> get cosmosModuleSupport;
   $IbcCapabilitiesCopyWith<$Res> get ibcCapabilities;
@@ -1133,20 +1164,20 @@ abstract class _$$ChainImplCopyWith<$Res> implements $ChainCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {String chainName,
-      String chainID,
-      bool pfmEnabled,
-      String? cosmosSDKVersion,
+      {@JsonKey(name: 'chain_name') String chainName,
+      @JsonKey(name: 'chain_id') String chainID,
+      @JsonKey(name: 'pfm_enabled') bool pfmEnabled,
+      @JsonKey(name: 'cosmos_sdk_version') String? cosmosSDKVersion,
       Map<String, ModuleVersionInfo>? modules,
-      ModuleSupport cosmosModuleSupport,
-      bool supportsMemo,
-      String? logoURI,
-      String bech32Prefix,
-      List<FeeAsset> feeAssets,
-      String chainType,
-      IbcCapabilities ibcCapabilities,
-      bool isTestnet,
-      String prettyName});
+      @JsonKey(name: 'cosmos_module_support') ModuleSupport cosmosModuleSupport,
+      @JsonKey(name: 'supports_memo') bool supportsMemo,
+      @JsonKey(name: 'logo_uri') String? logoURI,
+      @JsonKey(name: 'bech32_prefix') String bech32Prefix,
+      @JsonKey(name: 'fee_assets') List<FeeAsset> feeAssets,
+      @JsonKey(name: 'chain_type') String chainType,
+      @JsonKey(name: 'ibc_capabilities') IbcCapabilities ibcCapabilities,
+      @JsonKey(name: 'is_testnet') bool isTestnet,
+      @JsonKey(name: 'pretty_name') String prettyName});
 
   @override
   $ModuleSupportCopyWith<$Res> get cosmosModuleSupport;
@@ -1247,20 +1278,20 @@ class __$$ChainImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$ChainImpl implements _Chain {
   const _$ChainImpl(
-      {required this.chainName,
-      required this.chainID,
-      required this.pfmEnabled,
-      this.cosmosSDKVersion,
+      {@JsonKey(name: 'chain_name') required this.chainName,
+      @JsonKey(name: 'chain_id') required this.chainID,
+      @JsonKey(name: 'pfm_enabled') required this.pfmEnabled,
+      @JsonKey(name: 'cosmos_sdk_version') this.cosmosSDKVersion,
       final Map<String, ModuleVersionInfo>? modules,
-      required this.cosmosModuleSupport,
-      required this.supportsMemo,
-      this.logoURI,
-      required this.bech32Prefix,
-      required final List<FeeAsset> feeAssets,
-      required this.chainType,
-      required this.ibcCapabilities,
-      required this.isTestnet,
-      required this.prettyName})
+      @JsonKey(name: 'cosmos_module_support') required this.cosmosModuleSupport,
+      @JsonKey(name: 'supports_memo') required this.supportsMemo,
+      @JsonKey(name: 'logo_uri') this.logoURI,
+      @JsonKey(name: 'bech32_prefix') required this.bech32Prefix,
+      @JsonKey(name: 'fee_assets') required final List<FeeAsset> feeAssets,
+      @JsonKey(name: 'chain_type') required this.chainType,
+      @JsonKey(name: 'ibc_capabilities') required this.ibcCapabilities,
+      @JsonKey(name: 'is_testnet') required this.isTestnet,
+      @JsonKey(name: 'pretty_name') required this.prettyName})
       : _modules = modules,
         _feeAssets = feeAssets;
 
@@ -1268,12 +1299,16 @@ class _$ChainImpl implements _Chain {
       _$$ChainImplFromJson(json);
 
   @override
+  @JsonKey(name: 'chain_name')
   final String chainName;
   @override
+  @JsonKey(name: 'chain_id')
   final String chainID;
   @override
+  @JsonKey(name: 'pfm_enabled')
   final bool pfmEnabled;
   @override
+  @JsonKey(name: 'cosmos_sdk_version')
   final String? cosmosSDKVersion;
   final Map<String, ModuleVersionInfo>? _modules;
   @override
@@ -1286,15 +1321,20 @@ class _$ChainImpl implements _Chain {
   }
 
   @override
+  @JsonKey(name: 'cosmos_module_support')
   final ModuleSupport cosmosModuleSupport;
   @override
+  @JsonKey(name: 'supports_memo')
   final bool supportsMemo;
   @override
+  @JsonKey(name: 'logo_uri')
   final String? logoURI;
   @override
+  @JsonKey(name: 'bech32_prefix')
   final String bech32Prefix;
   final List<FeeAsset> _feeAssets;
   @override
+  @JsonKey(name: 'fee_assets')
   List<FeeAsset> get feeAssets {
     if (_feeAssets is EqualUnmodifiableListView) return _feeAssets;
     // ignore: implicit_dynamic_type
@@ -1302,12 +1342,16 @@ class _$ChainImpl implements _Chain {
   }
 
   @override
+  @JsonKey(name: 'chain_type')
   final String chainType;
   @override
+  @JsonKey(name: 'ibc_capabilities')
   final IbcCapabilities ibcCapabilities;
   @override
+  @JsonKey(name: 'is_testnet')
   final bool isTestnet;
   @override
+  @JsonKey(name: 'pretty_name')
   final String prettyName;
 
   @override
@@ -1384,50 +1428,66 @@ class _$ChainImpl implements _Chain {
 
 abstract class _Chain implements Chain {
   const factory _Chain(
-      {required final String chainName,
-      required final String chainID,
-      required final bool pfmEnabled,
-      final String? cosmosSDKVersion,
-      final Map<String, ModuleVersionInfo>? modules,
-      required final ModuleSupport cosmosModuleSupport,
-      required final bool supportsMemo,
-      final String? logoURI,
-      required final String bech32Prefix,
-      required final List<FeeAsset> feeAssets,
-      required final String chainType,
-      required final IbcCapabilities ibcCapabilities,
-      required final bool isTestnet,
-      required final String prettyName}) = _$ChainImpl;
+          {@JsonKey(name: 'chain_name') required final String chainName,
+          @JsonKey(name: 'chain_id') required final String chainID,
+          @JsonKey(name: 'pfm_enabled') required final bool pfmEnabled,
+          @JsonKey(name: 'cosmos_sdk_version') final String? cosmosSDKVersion,
+          final Map<String, ModuleVersionInfo>? modules,
+          @JsonKey(name: 'cosmos_module_support')
+          required final ModuleSupport cosmosModuleSupport,
+          @JsonKey(name: 'supports_memo') required final bool supportsMemo,
+          @JsonKey(name: 'logo_uri') final String? logoURI,
+          @JsonKey(name: 'bech32_prefix') required final String bech32Prefix,
+          @JsonKey(name: 'fee_assets') required final List<FeeAsset> feeAssets,
+          @JsonKey(name: 'chain_type') required final String chainType,
+          @JsonKey(name: 'ibc_capabilities')
+          required final IbcCapabilities ibcCapabilities,
+          @JsonKey(name: 'is_testnet') required final bool isTestnet,
+          @JsonKey(name: 'pretty_name') required final String prettyName}) =
+      _$ChainImpl;
 
   factory _Chain.fromJson(Map<String, dynamic> json) = _$ChainImpl.fromJson;
 
   @override
+  @JsonKey(name: 'chain_name')
   String get chainName;
   @override
+  @JsonKey(name: 'chain_id')
   String get chainID;
   @override
+  @JsonKey(name: 'pfm_enabled')
   bool get pfmEnabled;
   @override
+  @JsonKey(name: 'cosmos_sdk_version')
   String? get cosmosSDKVersion;
   @override
   Map<String, ModuleVersionInfo>? get modules;
   @override
+  @JsonKey(name: 'cosmos_module_support')
   ModuleSupport get cosmosModuleSupport;
   @override
+  @JsonKey(name: 'supports_memo')
   bool get supportsMemo;
   @override
+  @JsonKey(name: 'logo_uri')
   String? get logoURI;
   @override
+  @JsonKey(name: 'bech32_prefix')
   String get bech32Prefix;
   @override
+  @JsonKey(name: 'fee_assets')
   List<FeeAsset> get feeAssets;
   @override
+  @JsonKey(name: 'chain_type')
   String get chainType;
   @override
+  @JsonKey(name: 'ibc_capabilities')
   IbcCapabilities get ibcCapabilities;
   @override
+  @JsonKey(name: 'is_testnet')
   bool get isTestnet;
   @override
+  @JsonKey(name: 'pretty_name')
   String get prettyName;
 
   /// Create a copy of Chain

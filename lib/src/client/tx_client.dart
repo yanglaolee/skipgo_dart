@@ -4,7 +4,7 @@ import 'base.dart';
 import '../types/lifecycle.dart';
 
 class TxClient extends BaseClient {
-  TxClient({required super.baseUrl, required super.headers, required super.logger});
+  TxClient({required super.baseUrl, required super.headers, super.logger});
 
   /// Submit a signed base64 encoded transaction to be broadcast
   /// to the specified network. On successful submission, the status

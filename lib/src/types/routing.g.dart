@@ -35,33 +35,33 @@ Map<String, dynamic> _$$GasPriceInfoImplToJson(_$GasPriceInfoImpl instance) =>
 _$FeeAssetImpl _$$FeeAssetImplFromJson(Map<String, dynamic> json) =>
     _$FeeAssetImpl(
       denom: json['denom'] as String,
-      gasPrice: json['gasPrice'] == null
+      gasPrice: json['gas_price'] == null
           ? null
-          : GasPriceInfo.fromJson(json['gasPrice'] as Map<String, dynamic>),
+          : GasPriceInfo.fromJson(json['gas_price'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$FeeAssetImplToJson(_$FeeAssetImpl instance) =>
     <String, dynamic>{
       'denom': instance.denom,
-      'gasPrice': instance.gasPrice,
+      'gas_price': instance.gasPrice,
     };
 
 _$IbcCapabilitiesImpl _$$IbcCapabilitiesImplFromJson(
         Map<String, dynamic> json) =>
     _$IbcCapabilitiesImpl(
-      cosmosPfm: json['cosmosPfm'] as bool,
-      cosmosIbcHooks: json['cosmosIbcHooks'] as bool,
-      cosmosMemo: json['cosmosMemo'] as bool,
-      cosmosAutopilot: json['cosmosAutopilot'] as bool,
+      cosmosPfm: json['cosmos_pfm'] as bool,
+      cosmosIbcHooks: json['cosmos_ibc_hooks'] as bool,
+      cosmosMemo: json['cosmos_memo'] as bool,
+      cosmosAutopilot: json['cosmos_autopilot'] as bool,
     );
 
 Map<String, dynamic> _$$IbcCapabilitiesImplToJson(
         _$IbcCapabilitiesImpl instance) =>
     <String, dynamic>{
-      'cosmosPfm': instance.cosmosPfm,
-      'cosmosIbcHooks': instance.cosmosIbcHooks,
-      'cosmosMemo': instance.cosmosMemo,
-      'cosmosAutopilot': instance.cosmosAutopilot,
+      'cosmos_pfm': instance.cosmosPfm,
+      'cosmos_ibc_hooks': instance.cosmosIbcHooks,
+      'cosmos_memo': instance.cosmosMemo,
+      'cosmos_autopilot': instance.cosmosAutopilot,
     };
 
 _$ModuleVersionInfoImpl _$$ModuleVersionInfoImplFromJson(
@@ -81,43 +81,43 @@ Map<String, dynamic> _$$ModuleVersionInfoImplToJson(
     };
 
 _$ChainImpl _$$ChainImplFromJson(Map<String, dynamic> json) => _$ChainImpl(
-      chainName: json['chainName'] as String,
-      chainID: json['chainID'] as String,
-      pfmEnabled: json['pfmEnabled'] as bool,
-      cosmosSDKVersion: json['cosmosSDKVersion'] as String?,
+      chainName: json['chain_name'] as String,
+      chainID: json['chain_id'] as String,
+      pfmEnabled: json['pfm_enabled'] as bool,
+      cosmosSDKVersion: json['cosmos_sdk_version'] as String?,
       modules: (json['modules'] as Map<String, dynamic>?)?.map(
         (k, e) =>
             MapEntry(k, ModuleVersionInfo.fromJson(e as Map<String, dynamic>)),
       ),
       cosmosModuleSupport: ModuleSupport.fromJson(
-          json['cosmosModuleSupport'] as Map<String, dynamic>),
-      supportsMemo: json['supportsMemo'] as bool,
-      logoURI: json['logoURI'] as String?,
-      bech32Prefix: json['bech32Prefix'] as String,
-      feeAssets: (json['feeAssets'] as List<dynamic>)
+          json['cosmos_module_support'] as Map<String, dynamic>),
+      supportsMemo: json['supports_memo'] as bool,
+      logoURI: json['logo_uri'] as String?,
+      bech32Prefix: json['bech32_prefix'] as String,
+      feeAssets: (json['fee_assets'] as List<dynamic>)
           .map((e) => FeeAsset.fromJson(e as Map<String, dynamic>))
           .toList(),
-      chainType: json['chainType'] as String,
+      chainType: json['chain_type'] as String,
       ibcCapabilities: IbcCapabilities.fromJson(
-          json['ibcCapabilities'] as Map<String, dynamic>),
-      isTestnet: json['isTestnet'] as bool,
-      prettyName: json['prettyName'] as String,
+          json['ibc_capabilities'] as Map<String, dynamic>),
+      isTestnet: json['is_testnet'] as bool,
+      prettyName: json['pretty_name'] as String,
     );
 
 Map<String, dynamic> _$$ChainImplToJson(_$ChainImpl instance) =>
     <String, dynamic>{
-      'chainName': instance.chainName,
-      'chainID': instance.chainID,
-      'pfmEnabled': instance.pfmEnabled,
-      'cosmosSDKVersion': instance.cosmosSDKVersion,
+      'chain_name': instance.chainName,
+      'chain_id': instance.chainID,
+      'pfm_enabled': instance.pfmEnabled,
+      'cosmos_sdk_version': instance.cosmosSDKVersion,
       'modules': instance.modules,
-      'cosmosModuleSupport': instance.cosmosModuleSupport,
-      'supportsMemo': instance.supportsMemo,
-      'logoURI': instance.logoURI,
-      'bech32Prefix': instance.bech32Prefix,
-      'feeAssets': instance.feeAssets,
-      'chainType': instance.chainType,
-      'ibcCapabilities': instance.ibcCapabilities,
-      'isTestnet': instance.isTestnet,
-      'prettyName': instance.prettyName,
+      'cosmos_module_support': instance.cosmosModuleSupport,
+      'supports_memo': instance.supportsMemo,
+      'logo_uri': instance.logoURI,
+      'bech32_prefix': instance.bech32Prefix,
+      'fee_assets': instance.feeAssets,
+      'chain_type': instance.chainType,
+      'ibc_capabilities': instance.ibcCapabilities,
+      'is_testnet': instance.isTestnet,
+      'pretty_name': instance.prettyName,
     };

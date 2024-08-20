@@ -12,7 +12,7 @@ class BaseClient {
   Logger? logger;
 
   // Constructor
-  BaseClient({required this.baseUrl, required this.headers, required this.logger});
+  BaseClient({required this.baseUrl, required this.headers, this.logger});
 
   /// Send an HTTP request to a specific REST API endpoint and return the JSON response body.
   ///
